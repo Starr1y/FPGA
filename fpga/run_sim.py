@@ -17,7 +17,7 @@ def main():
     text=run('xsim',[a.bench+'_sim','-tclbatch','run.tcl'])
     if 'TB_PASS' not in text:raise RuntimeError('No TB_PASS')
     if a.bench=='tb_lab':
-        sys.path.insert(0,str(root.parent));from lab_engine import LabEngine
+        sys.path.insert(0,str(root.parent/'source'));from lab_engine import LabEngine
         import numpy as np
         e=LabEngine();e.ingest(bytes.fromhex((out/'wire.hex').read_text()))
         assert e.parser.errors==0 and e.audio is not None and e.audio.shape==(2048,5)

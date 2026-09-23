@@ -40,6 +40,8 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
  frame_tx transmitter(clk,rst_n,tx_start,tx_kind,tx_len,saved_tick,tx_addr,tx_payload,tx_byte,tx_valid,tx_uart_ready,tx_busy,tx_done);
  uart_tx #(.CLK_HZ(CLK_HZ)) pc_uart_tx(clk,rst_n,32'd921600,tx_byte,tx_valid,tx_uart_ready,pc_tx);
  reg [31:0] tx_drops;reg [31:0] snap_drops,snap_clips;
+ // Allow the onboard USB-UART bridge to drain between capture packets.
+ reg [19:0] capture_gap;
  reg [159:0] snap_envelope;
  wire [31:0] sample_rate=48000;wire [31:0] clock_rate=CLK_HZ;
  reg [255:0] info_bytes;
@@ -73,6 +75,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
  end
  always @(posedge clk)begin
   if(!rst_n)begin
+   capture_gap<=0;
    capture_active<=0;armed<=0;cap_ready<=0;cap_wr<=0;capture_id<=0;upload_offset<=0;previous_mix<=0;
    preview_on<=0;preview_count<=0;envelope<=0;envelope_ready<=0;status_timer<=0;status_pending<=0;
    response_pending<=0;response_kind<=0;response_code<=0;response_seq<=0;tx_start<=0;tx_kind<=0;tx_len<=0;imu_take<=0;
@@ -80,6 +83,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
    for(j=0;j<5;j=j+1)begin minima[j]<=32767;maxima[j]<=-32768;end
   end else begin
    tx_start<=0;imu_take<=0;
+   if(capture_gap!=0)capture_gap<=capture_gap-1;
    if(status_timer==CLK_HZ-1)begin status_timer<=0;status_pending<=1;end else status_timer<=status_timer+1;
    if(sample_valid)begin
     previous_mix<=samples[79:64];
@@ -122,11 +126,12 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
     end else if(imu_ready && !imu_take)begin tx_kind<=132;tx_len<=imu_len+13;tx_start<=1;end
     else if(status_pending)begin tx_kind<=133;tx_len<=8;snap_drops<=imu_drops+tx_drops+cmd_errors;snap_clips<=clips;status_pending<=0;tx_start<=1;end
     else if(envelope_ready && preview_on)begin tx_kind<=131;tx_len<=20;snap_envelope<=envelope;envelope_ready<=0;tx_start<=1;end
-    else if(cap_ready)begin tx_kind<=130;tx_len<=330;tx_start<=1;end
+    else if(cap_ready && capture_gap==0)begin tx_kind<=130;tx_len<=330;tx_start<=1;end
    end
    if(tx_done)begin
     if(tx_kind==132)imu_take<=1;
     if(tx_kind==130)begin
+     capture_gap<=CLK_HZ/100; // 10 ms; sample acquisition remains 48 kHz.
      if(upload_offset==2016)cap_ready<=0;else upload_offset<=upload_offset+32;
     end
    end

@@ -2,16 +2,16 @@
   "board": "Tang Mega 138K 普通 Dock，C 版本",
   "device": "GW5AST-LV138PG484AC1/I0",
   "firmware": "../fpga/bitstream/tanglab.fs",
-  "sha256": "a017322bc3e3911c5d783eeaee1d2da0972148459151aa4514f112e2a067cbdf",
-  "bytes": 35477929,
-  "original_file_time": "2026-09-21T19:11:32",
-  "reuse_note": "复用原先完成综合布局布线的固件，本轮未修改 RTL、未重新编译。",
+  "sha256": "b6e6b5e34eaba2f6d62decb6782319dc926c0329d8069791982d4be30e1cd673",
+  "bytes": 35860393,
+  "original_file_time": "2026-09-23T17:01:30",
+  "reuse_note": "2026-09-23 候选固件：J9 SPI 管脚约束与完整抓取分包间隔 10 ms；主工程 RTL 和 PnR 报告已同步。不是两声部专用固件。",
   "clock_hz": 50000000,
   "sample_rate_hz": 48000,
   "voice_capability": 4,
   "test_active_voices": 2,
   "spi_mode": 3,
   "spi_hz": 1000000,
-  "hardware_validation": "待实物验证",
-  "reports": "../fpga/reports"
+  "hardware_validation": "候选固件尚未完成实板复测；此前握手、参数设置和预览已见实物数据，完整抓取及 SPI/模拟音频未通过验收。",
+  "reports": "../fpga/reports/pnr"
 }

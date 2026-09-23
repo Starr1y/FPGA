@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Mon Sep 21 19:11:32 2026
+<td>Wed Sep 23 16:17:12 2026
 </td>
 </tr>
 <tr>
@@ -97,24 +97,24 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.722s, Elapsed time = 0h 0m 0.722s
-   Placement Phase 1: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
-   Placement Phase 2: CPU time = 0h 0m 13s, Elapsed time = 0h 0m 13s
-   Placement Phase 3: CPU time = 0h 0m 27s, Elapsed time = 0h 0m 27s
-   Total Placement: CPU time = 0h 0m 42s, Elapsed time = 0h 0m 42s
+   Placement Phase 0: CPU time = 0h 0m 0.756s, Elapsed time = 0h 0m 0.755s
+   Placement Phase 1: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+   Placement Phase 2: CPU time = 0h 0m 19s, Elapsed time = 0h 0m 19s
+   Placement Phase 3: CPU time = 0h 0m 34s, Elapsed time = 0h 0m 34s
+   Total Placement: CPU time = 0h 0m 56s, Elapsed time = 0h 0m 56s
 Running routing:
-   Routing Phase 0: CPU time = 0h 0m 0.671s, Elapsed time = 0h 0m 0.671s
-   Routing Phase 1: CPU time = 0h 0m 24s, Elapsed time = 0h 0m 24s
-   Routing Phase 2: CPU time = 0h 0m 0.292s, Elapsed time = 0h 0m 0.292s
+   Routing Phase 0: CPU time = 0h 0m 0.735s, Elapsed time = 0h 0m 0.736s
+   Routing Phase 1: CPU time = 0h 0m 23s, Elapsed time = 0h 0m 23s
+   Routing Phase 2: CPU time = 0h 0m 0.389s, Elapsed time = 0h 0m 0.389s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Total Routing: CPU time = 0h 0m 25s, Elapsed time = 0h 0m 25s
+   Total Routing: CPU time = 0h 0m 24s, Elapsed time = 0h 0m 24s
 Generate output files:
    CPU time = 0h 0m 10s, Elapsed time = 0h 0m 10s
 </td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 1m 16s, Elapsed time = 0h 1m 16s, Peak memory usage = 1413MB</td>
+<td>CPU time = 0h 1m 30s, Elapsed time = 0h 1m 30s, Peak memory usage = 1394MB</td>
 </tr>
 </table>
 <br/>
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>8456/138240</td>
+<td>8445/138240</td>
 <td>7%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>8456(7386 LUT, 1070 ALU, 0 ROM16)</td>
+<td>8445(7374 LUT, 1071 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>7567/139095</td>
+<td>7587/139095</td>
 <td>6%</td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>7567/138240</td>
+<td>7587/138240</td>
 <td>6%</td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>8373/69120</td>
+<td>8586/69120</td>
 <td>13%</td>
 </tr>
 <tr>
@@ -215,7 +215,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">bank 2</td>
-<td>0/50</td><td>0%</td>
+<td>4/50</td><td>8%</td>
 </tr>
 <tr>
 <td class="label">bank 3</td>
@@ -223,7 +223,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">bank 4</td>
-<td>10/50</td><td>20%</td>
+<td>6/50</td><td>12%</td>
 </tr>
 <tr>
 <td class="label">bank 5</td>
@@ -287,7 +287,7 @@ Generate output files:
 <tr>
 <td class="label">tx_addr_0_7</td>
 <td>PRIMARY</td>
-<td> PTR1 PTR2 PBR1</td>
+<td> PTR1 PTR2 PBR1 PBR2</td>
 </tr>
 <tr>
 <td class="label">imu_addr[1]</td>
@@ -395,11 +395,11 @@ Generate output files:
 <tr>
 <td class="label">imu_data</td>
 <td>-</td>
-<td>P19/4</td>
+<td>G21/2</td>
 <td>Y</td>
 <td>in</td>
-<td>IOB99[A]</td>
-<td>D06/SSPI_CLK</td>
+<td>IOR53[A]</td>
+<td>-</td>
 <td>LVCMOS33</td>
 <td>OFF</td>
 <td>UP</td>
@@ -458,11 +458,11 @@ Generate output files:
 <tr>
 <td class="label">imu_clk_tx</td>
 <td>-</td>
-<td>R19/4</td>
+<td>G22/2</td>
 <td>Y</td>
 <td>out</td>
-<td>IOB99[B]</td>
-<td>D07/SSPI_WPN</td>
+<td>IOR53[B]</td>
+<td>-</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -479,11 +479,11 @@ Generate output files:
 <tr>
 <td class="label">imu_cs_n</td>
 <td>-</td>
-<td>U21/4</td>
+<td>F18/2</td>
 <td>Y</td>
 <td>out</td>
-<td>IOB97[B]</td>
-<td>D05/SI</td>
+<td>IOR35[A]</td>
+<td>-</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -500,11 +500,11 @@ Generate output files:
 <tr>
 <td class="label">imu_mosi</td>
 <td>-</td>
-<td>T21/4</td>
+<td>F19/2</td>
 <td>Y</td>
 <td>out</td>
-<td>IOB97[A]</td>
-<td>D04</td>
+<td>IOR33[A]</td>
+<td>FBTEST_R0</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>NONE</td>
@@ -1471,15 +1471,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">T21/4</td>
-<td>imu_mosi</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOB97[A]</td>
 <td>D04</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>NONE</td>
 <td>OFF</td>
+<td>UP</td>
 <td>OFF</td>
+<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -1490,15 +1490,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">U21/4</td>
-<td>imu_cs_n</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOB97[B]</td>
 <td>D05/SI</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>NONE</td>
 <td>OFF</td>
+<td>UP</td>
 <td>OFF</td>
+<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -1509,7 +1509,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">P19/4</td>
-<td>imu_data</td>
+<td>-</td>
 <td>in</td>
 <td>IOB99[A]</td>
 <td>D06/SSPI_CLK</td>
@@ -1528,15 +1528,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">R19/4</td>
-<td>imu_clk_tx</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOB99[B]</td>
 <td>D07/SSPI_WPN</td>
 <td>LVCMOS33</td>
-<td>8</td>
-<td>NONE</td>
 <td>OFF</td>
+<td>UP</td>
 <td>OFF</td>
+<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -5005,15 +5005,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">F19/2</td>
-<td>-</td>
-<td>in</td>
+<td>imu_mosi</td>
+<td>out</td>
 <td>IOR33[A]</td>
 <td>FBTEST_R0</td>
 <td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
 <td>OFF</td>
-<td>UP</td>
 <td>OFF</td>
-<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -5043,15 +5043,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">F18/2</td>
-<td>-</td>
-<td>in</td>
+<td>imu_cs_n</td>
+<td>out</td>
 <td>IOR35[A]</td>
 <td>-</td>
 <td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
 <td>OFF</td>
-<td>UP</td>
 <td>OFF</td>
-<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
@@ -5347,7 +5347,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">G21/2</td>
-<td>-</td>
+<td>imu_data</td>
 <td>in</td>
 <td>IOR53[A]</td>
 <td>-</td>
@@ -5366,15 +5366,15 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">G22/2</td>
-<td>-</td>
-<td>in</td>
+<td>imu_clk_tx</td>
+<td>out</td>
 <td>IOR53[B]</td>
 <td>-</td>
 <td>LVCMOS33</td>
+<td>8</td>
+<td>NONE</td>
 <td>OFF</td>
-<td>UP</td>
 <td>OFF</td>
-<td>ON</td>
 <td>OFF</td>
 <td>OFF</td>
 <td>OFF</td>
