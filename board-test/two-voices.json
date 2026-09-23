@@ -1,0 +1,8 @@
+{
+  "voices": [
+    {"channel": 0, "hz": 375, "gain": 0.12, "wave": 0, "gate": true, "attack": 10, "decay": 80, "sustain": 0.7, "release": 180},
+    {"channel": 1, "hz": 750, "gain": 0.12, "wave": 0, "gate": true, "attack": 10, "decay": 80, "sustain": 0.7, "release": 180},
+    {"channel": 2, "hz": 1125, "gain": 0.12, "wave": 0, "gate": false, "attack": 10, "decay": 80, "sustain": 0.7, "release": 180},
+    {"channel": 3, "hz": 1500, "gain": 0.12, "wave": 0, "gate": false, "attack": 10, "decay": 80, "sustain": 0.7, "release": 180}
+  ]
+}

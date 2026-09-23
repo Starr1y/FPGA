@@ -1,0 +1,17 @@
+{
+  "board": "Tang Mega 138K 普通 Dock，C 版本",
+  "device": "GW5AST-LV138PG484AC1/I0",
+  "firmware": "../fpga/bitstream/tanglab.fs",
+  "sha256": "a017322bc3e3911c5d783eeaee1d2da0972148459151aa4514f112e2a067cbdf",
+  "bytes": 35477929,
+  "original_file_time": "2026-09-21T19:11:32",
+  "reuse_note": "复用原先完成综合布局布线的固件，本轮未修改 RTL、未重新编译。",
+  "clock_hz": 50000000,
+  "sample_rate_hz": 48000,
+  "voice_capability": 4,
+  "test_active_voices": 2,
+  "spi_mode": 3,
+  "spi_hz": 1000000,
+  "hardware_validation": "待实物验证",
+  "reports": "../fpga/reports"
+}

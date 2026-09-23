@@ -1,0 +1,37 @@
+# Gowin EDA: reproducible build products and per-user settings
+/fpga/impl/
+/fpga/*.gprj.user
+
+# Simulation outputs (Vivado XSim and local test runs)
+/.Xil/
+**/xsim.dir/
+**/*.wdb
+**/*.jou
+**/*.pb
+/fpga/sim-out/
+/fpga/sim-results/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local board connection settings and generated test evidence
+/board-test/本机连接.json
+/agent-results/
+/recordings/
+
+# Local secrets and operating-system/editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*~
+
+# Intentionally tracked: fpga/bitstream/tanglab.fs and fpga/reports/
