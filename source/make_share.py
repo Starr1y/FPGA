@@ -6,7 +6,7 @@ import sys
 def package(source,target):
     source=Path(source);target=Path(target)
     allowed={'TangLab.exe','TangLabCtl.exe','_internal','licenses','source','fpga','docs','board-test','使用说明.txt',
-             '两声部与SPI上板测试指南.txt','使用说明.md','THIRD_PARTY_NOTICES.md','requirements-lock.txt'}
+             '两声部与SPI上板测试指南.txt','钢琴音色使用说明.txt','piano-tail-fix-20261008','使用说明.md','THIRD_PARTY_NOTICES.md','requirements-lock.txt'}
     required=['TangLab.exe','TangLabCtl.exe','_internal','licenses','source/tanglab.py','source/lab_ui.py',
               'fpga/bitstream/tanglab.fs','使用说明.txt']
     for name in required:
@@ -15,7 +15,8 @@ def package(source,target):
         for p in sorted(source.rglob('*')):
             rel=p.relative_to(source)
             if not p.is_file() or rel.parts[0] not in allowed:continue
-            if any(x in ('recordings','__pycache__','.venv','impl') for x in rel.parts):continue
+            if any(x in ('recordings','__pycache__','.venv') for x in rel.parts):continue
+            if 'impl' in rel.parts and p.name!='tanglab_process_config.json':continue
             if p.suffix.lower() in ('.lic','.pyc','.log'):continue
             archive.write(p,Path('TangLab')/rel)
     with ZipFile(target) as archive:

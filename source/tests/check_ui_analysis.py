@@ -33,5 +33,9 @@ assert f[k]==750 and abs(db[k]+6.0206)<.01 and abs(p[k]-30)<.01
 assert np.all(np.isnan(spectrum(np.zeros(2048),48000)[2]))
 w.engine.audio=None;w.update_spectrum();assert w.spectrum_data is None and '包络' in w.spectrum_note.text()
 w.engine.make_demo_audio();w.refresh();w.tabs.setCurrentIndex(5);app.processEvents();None
+w.clear_waveforms();app.processEvents()
+assert w.engine.audio is None and not w.engine.envelope and w.engine.capture_parts=={}
+assert all(line.xData is None or len(line.xData)==0 for line in w.curves)
+assert (w.fftline.xData is None or len(w.fftline.xData)==0) and w.spectrum_data is None and '已清空' in w.audio_note.text()
 w.tabs.setCurrentIndex(0);w.focus_wave(2);app.processEvents();None
-w.close();print('PASS: five-channel cursors, drag, layouts, Chinese menu, amplitude/phase, zero/preview')
+w.close();print('PASS: five-channel cursors, drag, layouts, Chinese menu, amplitude/phase, zero/preview, clear waveforms')

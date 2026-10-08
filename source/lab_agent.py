@@ -1,5 +1,5 @@
 """Loopback-only authenticated API and shared serial command scheduler."""
-import csv,json,math,queue,secrets,threading,time,uuid
+import csv,json,math,queue,secrets,threading,time,uuid,struct
 from collections import deque
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
@@ -21,11 +21,17 @@ class CommandController:
         self.engine=engine;self.root=Path(root);self.ui_call=ui_call
         self.jobs={};self.lock=threading.RLock();self.queue=queue.Queue(64)
         self.events=deque(maxlen=100);self.active=None;self.closed=threading.Event()
+        self.capture_timeout_s=15
         self.worker=threading.Thread(target=self._work,daemon=True);self.worker.start()
     def submit(self,action,params=None):
         if action not in COMMANDS:raise ValueError('未知命令：'+action)
         if not isinstance(params or {},dict):raise ValueError('params 必须是 JSON 对象')
         with self.lock:
+            if action=='capture':
+                existing=next((j for j in self.jobs.values() if j['action']=='capture' and j['state'] not in ('completed','failed','cancelled')),None)
+                if existing:
+                    if (existing['params'].get('trigger',0),existing['params'].get('points',2048))!=((params or {}).get('trigger',0),(params or {}).get('points',2048)):raise ValueError('已有抓取等待完成，请勿同时更换触发方式或点数；过零卡住时需复位FPGA')
+                    return self.job(existing['id'])
             if len(self.jobs)>=200:
                 for key,j in list(self.jobs.items()):
                     if j['state'] in ('completed','failed','cancelled'):del self.jobs[key];break
@@ -85,7 +91,7 @@ class CommandController:
         with e.lock:
             return dict(source=e.source,ready=e.ready,status=e.status,device=e.device,
                         baud=e.serial.baudrate if e.serial else None,capabilities=e.capabilities,voices=[dict(v) for v in e.voices],stats=e.stats(),
-                        capture_revision=e.audio_revision,active_job=self.active,api_version=1)
+                        piano_settings=[dict(v) for v in e.piano_settings],capture_revision=e.audio_revision,active_job=self.active,api_version=1)
     def reports(self):
         s=self.engine.imu.snapshot()
         return dict(source=self.engine.source,mode=self.engine.mode,counts=dict(s['counts']),
@@ -130,21 +136,63 @@ class CommandController:
         for item in values:
             c=item.get('channel')
             if type(c) is not int or c not in range(4):raise ValueError('声部编号 channel 为 0～3')
-            settings=dict(self.engine.voices[c]);settings.update({k:v for k,v in item.items() if k!='channel'})
+            extras={k:item[k] for k in ('piano_hold','piano_decay_s') if k in item}
+            piano=dict(self.engine.piano_settings[c]);piano.update(extras)
+            if extras:
+                P.piano_payload(c,piano['piano_hold'],piano['piano_decay_s'],self.engine.fs)
+                if not self.engine.capabilities.get('piano_control'):raise ValueError('钢琴保持/衰减调整需要TangLab 1.3固件，请先下载配套新固件')
+            settings=dict(self.engine.voices[c]);settings.update({k:v for k,v in item.items() if k not in ('channel','piano_hold','piano_decay_s')})
             if set(settings)!=set(self.engine.voices[c]):raise ValueError('未知声部参数')
             for k,lo,hi in [('hz',1,20000),('gain',0,1),('attack',0,5000),('decay',0,5000),('sustain',0,1),('release',0,5000)]:
                 if not isinstance(settings[k],(int,float)) or not math.isfinite(settings[k]) or not lo<=settings[k]<=hi:raise ValueError(f'{k} 参数超出范围')
-            if type(settings['gate']) is not bool or type(settings['wave']) is not int or settings['wave'] not in range(4):raise ValueError('gate 使用布尔值，wave 使用 0～3')
-            prepared.append((c,settings))
-        for c,settings in prepared:self.ack(j,self.engine.set_voice(c,settings))
-        return dict(voices=[dict(v) for v in self.engine.voices],source=self.engine.source)
-    def capture(self,j,trigger=0):
+            if type(settings['gate']) is not bool or type(settings['wave']) is not int or settings['wave'] not in range(5):raise ValueError('gate 使用布尔值，wave 使用 0～4（4为钢琴，需要固件1.2）')
+            prepared.append((c,settings,piano if extras else None))
+        for c,settings,piano in prepared:
+            if piano is not None:
+                self.ack(j,self.engine.send(P.PIANO_CONFIG,P.piano_payload(c,piano['piano_hold'],piano['piano_decay_s'],self.engine.fs)))
+                self.engine.apply_piano_settings(c,piano)
+            self.ack(j,self.engine.set_voice(c,settings))
+        return dict(voices=[dict(v) for v in self.engine.voices],piano_settings=[dict(v) for v in self.engine.piano_settings],source=self.engine.source)
+    def capture(self,j,trigger=0,points=2048):
         if trigger not in (0,1):raise ValueError('trigger 必须为 0（立即）或 1（上升过零）')
-        revision=self.engine.audio_revision
-        self.ack(j,self.engine.send(P.CAPTURE,bytes([trigger])))
-        self.wait(j,lambda:self.engine.audio_revision>revision,15,'未收到完整采样；检查触发条件/传输。静音过零等待可用板上复位退出。')
-        a,fs=self.audio()
-        return dict(revision=self.engine.audio_revision,shape=list(a.shape),sample_rate=fs,source=self.engine.source)
+        if type(points) is not int or points not in (512,2048):raise ValueError('完整采样点数必须为512或2048')
+        e=self.engine;started=time.monotonic();revision=e.audio_revision
+        if points==512 and 512 not in e.capabilities.get('capture_sizes',[]):raise ValueError('快速512点采集需要TangLab 1.3固件；当前仍可使用2048点')
+        crc,gaps=e.parser.errors,e.gaps;previous_id=e.capture_id
+        d=dict(job=j['id'],request_time=time.time(),trigger=trigger,points=points,source=e.source,state='请求中',ack_ms=None,receive_ms=None,draw_ms=None,receive_to_draw_ms=None)
+        with e.lock:e.capture_diagnostics.append(d)
+        try:
+            payload=bytes([trigger]) if points==2048 else struct.pack('<BH',trigger,points)
+            ticket=e.send(P.CAPTURE,payload);d['sequence']=ticket
+            result=self.ack(j,ticket)
+            d['ack_ms']=max(0,(result.get('ack_at',time.monotonic())-started)*1000);d['state']='等待完整数据'
+            self.update(j,'simulated' if result['state']=='simulated' else 'acknowledged','等待完整采样（尚未完成）')
+            def complete():
+                if not e.ready:raise ConnectionError('通信失败：设备已断开，请检查USB和串口后重新连接')
+                return e.audio_revision>revision
+            try:self.wait(j,complete,self.capture_timeout_s,'采集等待超时')
+            except TimeoutError:
+                with e.lock:
+                    rows=sum(len(block) for block in e.capture_parts.values()) if e.capture_id!=previous_id else 0
+                    total=e.capture_total
+                if rows:
+                    raise TimeoutError(f'报文不完整：收到 {rows}/{total} 点；请检查串口传输及CRC/缺包统计，原波形已保留') from None
+                if trigger:
+                    raise TimeoutError('过零触发等待超时：静音或钢琴衰减后可能无过零；请复位FPGA并重新连接，改用立即触发。上位机无法取消板上等待') from None
+                raise TimeoutError('立即抓取超时：未收到完整样本；请检查CRC/缺包、USB及串口。若此前用过过零触发，请复位FPGA后重新连接') from None
+            a,fs=self.audio();received=e.audio_received_at or time.monotonic()
+            if len(a)!=points:raise ValueError(f'完整采样点数与请求不符：请求{points}，收到{len(a)}')
+            d.update(state='完整数据已到达',revision=e.audio_revision,received_at=received,receive_ms=max(0,(received-started)*1000),silent=not bool(np.any(a)))
+            # The GUI may already have painted while the worker was waking up.
+            if getattr(e,'last_draw_revision',None)==e.audio_revision:
+                d['draw_ms']=e.last_draw_ms;d['receive_to_draw_ms']=max(0,(e.last_draw_at-received)*1000)
+            return dict(revision=e.audio_revision,shape=list(a.shape),sample_rate=fs,source=e.source,silent=d['silent'],timing=d)
+        except Exception as exc:
+            d.update(state='失败',error=str(exc));raise
+        finally:
+            d.update(crc_delta=e.parser.errors-crc,missing_delta=e.gaps-gaps,total_ms=(time.monotonic()-started)*1000)
+            self.events.append(f"采集诊断：{d['state']}；应答 {d['ack_ms']} ms；收齐 {d['receive_ms']} ms；CRC +{d['crc_delta']}，缺包 +{d['missing_delta']}")
+            if e.recorder:e.recorder.put(dict(type='capture_diagnostic',**d))
     def preview(self,j,enabled):
         self.ack(j,self.engine.send(P.PREVIEW,bytes([bool(enabled)])))
         if enabled:
@@ -175,7 +223,7 @@ class CommandController:
             e.demo();return self.snapshot()
         if action=='voices.set':return self.voices(j,p['voices'])
         if action=='voices.release':return self.voices(j,[dict(channel=i,gate=False) for i in range(4)])
-        if action=='capture':return self.capture(j,p.get('trigger',0))
+        if action=='capture':return self.capture(j,p.get('trigger',0),p.get('points',2048))
         if action=='preview':return self.preview(j,p.get('enabled',True))
         if action=='imu.mode':
             mode=p.get('mode',2)

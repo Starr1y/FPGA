@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project><Template>FPGA</Template><Version>5</Version><Device name="GW5AST-138C" pn="GW5AST-LV138PG484AC1/I0">gw5ast138c-007</Device><FileList>
+<File path="rtl/audio_core.v" type="file.verilog" enable="1"/>
+<File path="rtl/framing.v" type="file.verilog" enable="1"/>
+<File path="rtl/imu_transport.v" type="file.verilog" enable="1"/>
+<File path="rtl/sine_lut.v" type="file.verilog" enable="1"/>
+<File path="rtl/top.v" type="file.verilog" enable="1"/>
+<File path="rtl/uart.v" type="file.verilog" enable="1"/>
+<File path="tanglab.cst" type="file.cst" enable="1"/><File path="tanglab.sdc" type="file.sdc" enable="1"/></FileList></Project>

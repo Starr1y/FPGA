@@ -40,7 +40,14 @@ def main():
     shutil.copytree(ROOT/'docs',dest/'docs',dirs_exist_ok=True)
     if (ROOT/'board-test').is_dir():shutil.copytree(ROOT/'board-test',dest/'board-test',dirs_exist_ok=True)
     for p in ROOT.glob('*指南.txt'):shutil.copy2(p,dest/p.name)
+    for p in ROOT.glob('*说明.txt'):shutil.copy2(p,dest/p.name)
     shutil.copytree(ROOT/'fpga',dest/'fpga',dirs_exist_ok=True,ignore=shutil.ignore_patterns('impl','__pycache__','*.user'))
+    # Gowin stores persistent IDE options in impl, alongside generated files.
+    # Preserve this configuration even though build intermediates are excluded.
+    config=ROOT/'fpga/impl/tanglab_process_config.json'
+    if config.is_file():
+        (dest/'fpga/impl').mkdir(parents=True,exist_ok=True)
+        shutil.copy2(config,dest/'fpga/impl'/config.name)
     source=dest/'source';source.mkdir(exist_ok=True)
     for p in ROOT.glob('*.py'):shutil.copy2(p,source/p.name)
     shutil.copytree(ROOT/'tests',source/'tests',dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__'))
@@ -55,5 +62,8 @@ def main():
         target=dest/'fpga/reports'/folder;target.mkdir(parents=True,exist_ok=True)
         for p in (ROOT/'fpga/impl'/folder).glob('*'):
             if p.suffix in ('.html','.txt'):shutil.copy2(p,target/p.name)
+    if bit.is_file():
+        from package_firmware import package,BUNDLE
+        package(ROOT,dest/BUNDLE)
     print('PORTABLE='+str(dest/'TangLab.exe'))
 if __name__=='__main__':main()

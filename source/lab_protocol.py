@@ -8,6 +8,14 @@ MAGIC=b'\xa5\x5a'
 HEADER=struct.Struct('<BBHHI')
 MAX_PAYLOAD=4096
 HELLO,VOICE,CAPTURE,MODE,IMU_TX,PING,PREVIEW=1,16,17,18,19,20,21
+PIANO_CONFIG=22
+
+def piano_payload(channel,hold,decay_s,fs=48000):
+    import math
+    if type(channel) is not int or channel not in range(4) or type(hold) is not bool:raise ValueError('钢琴声部/保持设置无效')
+    if not isinstance(decay_s,(int,float)) or not math.isfinite(decay_s) or not .2<=decay_s<=30:raise ValueError('钢琴衰减时间范围0.2～30秒')
+    coefficient=max(1,min(4096,round(-math.expm1(math.log(.1)/(decay_s*fs))*2**24)))
+    return struct.pack('<BBH',channel,hold,coefficient)
 INFO,ACK,AUDIO,ENVELOPE,IMU,STATUS,PONG=128,129,130,131,132,133,134
 
 def crc16(data,crc=0xffff):
@@ -51,11 +59,14 @@ class Parser:
             out.append(Frame(kind,seq,tick,bytes(self.buf[12:12+n])));del self.buf[:size]
         return out
 
-def voice_payload(index,hz,gain,wave,gate,attack,decay,sustain,release,fs=48000):
+def voice_payload(index,hz,gain,wave,gate,attack,decay,sustain,release,fs=48000,fine_gain=False):
     if not 0<=index<4 or not 0<hz<fs/2:raise ValueError('声部或频率超限')
+    if wave not in range(5):raise ValueError('音色编号必须为0～4')
     def step(ms):return max(1,min(65535,round(65535/max(1,ms*fs/1000))))
-    return struct.pack('<BIBBBHHHH',index,round(hz/fs*2**32),round(gain*255),wave,gate,
+    level=round(gain*(65535 if fine_gain else 255))
+    packet=struct.pack('<BIBBBHHHH',index,round(hz/fs*2**32),level&255,wave,gate,
                        step(attack),step(decay),round(sustain*65535),step(release))
+    return packet+bytes([level>>8]) if fine_gain else packet
 
 def summary(values):
     if not values:return {'n':0}

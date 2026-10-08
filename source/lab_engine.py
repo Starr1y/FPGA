@@ -15,9 +15,15 @@ class LabEngine:
         self.parser=P.Parser();self.tx=queue.Queue(256);self.seq=0;self.rxseq=None;self.gaps=0;self.frames=0
         self.status='未连接';self.source='未连接';self.ready=False;self.mode=0;self.device='—';self.fs=48000;self.clock=50000000
         self.audio=None;self.audio_revision=0;self.envelope=deque(maxlen=500);self.capture_parts={};self.capture_id=None
+        self.capture_total=0;self.audio_received_at=0;self.capture_diagnostics=deque(maxlen=30)
+        self.last_draw_revision=None;self.last_draw_at=0;self.last_draw_ms=0
+        self.audio_history=deque(maxlen=30);self.audio_count=0;self.audio_origin=time.monotonic();self.audio_session=object()
         self.bus=deque(maxlen=20000);self.processing=deque(maxlen=20000);self.rtt=deque(maxlen=20000)
         self.raw=deque(maxlen=30);self.pending={};self.onwire=None;self.retry_at=0;self.retry_count=0;self.bytes=0;self.started=time.monotonic();self.drops=0;self.clips=0;self.config={}
-        self.voices=[dict(hz=h,gain=.18,wave=0,gate=True,attack=10,decay=80,sustain=.7,release=180) for h in (375,750,1125,1500)]
+        self.voices=[dict(hz=h,gain=.002,wave=0,gate=False,attack=10,decay=80,sustain=.7,release=180) for h in (375,750,1125,1500)]
+        self.piano_settings=[dict(piano_hold=False,piano_decay_s=6.) for _ in range(4)]
+        self.demo_note_start=[time.monotonic()]*4
+        self.demo_body_at=[time.monotonic()]*4;self.demo_body_level=[1.]*4
         self.imu.disconnect();self.imu.reset_state();self.imu.protocol='UART-RVC';self.imu.source='FPGA 转发';self.imu_seq=0
     def close(self):
         self.stop.set()
@@ -41,7 +47,7 @@ class LabEngine:
         self.thread=threading.Thread(target=self.run,daemon=True);self.thread.start();return self.send(P.HELLO)
     def send(self,kind,payload=b''):
         if self.source.startswith('模拟'):
-            if kind==P.CAPTURE:self.make_demo_audio();self.record_demo_capture()
+            if kind==P.CAPTURE:self.make_demo_audio(struct.unpack_from('<H',payload,1)[0] if len(payload)==3 else 2048);self.record_demo_capture()
             with self.lock:
                 seq=self.seq;self.seq=(seq+1)&65535;self.command_results[seq]=dict(state='simulated',code=0)
             return seq
@@ -94,7 +100,8 @@ class LabEngine:
             request,self.clock,self.fs,voices,cap=struct.unpack_from('<HIIBH',p)
             if self.clock<=0 or self.fs<=0 or voices<4:raise ValueError('设备能力无效')
             self.device=p[13:].decode('ascii',errors='replace');self.ready=True;self.status='握手成功';self.pending.pop(request,None);self.onwire=None
-            self.capabilities=dict(voices=voices,capture_points=cap,protocol=1)
+            fixed=self.device in ('TangLab 1.1','TangLab 1.2','TangLab 1.3','TangLab 1.3.1');new=self.device in ('TangLab 1.3','TangLab 1.3.1')
+            self.capabilities=dict(voices=voices,capture_points=cap,protocol=1,fine_gain=fixed,headphone_attenuation_db=30.103 if fixed else 0,piano=self.device in ('TangLab 1.2','TangLab 1.3','TangLab 1.3.1'),piano_control=new,capture_sizes=[512,2048] if new else [2048])
             self.command_results[request]=dict(state='acknowledged',code=0)
         elif f.kind in (P.ACK,P.PONG):
             request,code=struct.unpack_from('<HB',p)
@@ -105,20 +112,21 @@ class LabEngine:
                 self.retry_count+=1;self.retry_at=time.monotonic()+.05;self.status='设备忙，等待重试'
             else:
                 self.onwire=None;self.retry_count=0;self.status='命令完成' if code==0 else f'设备拒绝命令，错误码 {code}'
-                self.command_results[request]=dict(state='acknowledged' if code==0 else 'failed',code=code,error='' if code==0 else self.status)
+                self.command_results[request]=dict(state='acknowledged' if code==0 else 'failed',code=code,error='' if code==0 else self.status,ack_at=time.monotonic())
         elif f.kind==P.AUDIO:
             cid,offset,total,fs=struct.unpack_from('<HHHI',p)
             if total>4096 or total==0 or fs<=0 or (len(p)-10)%10:raise ValueError('抓取长度错误')
             rows=np.frombuffer(p[10:],dtype='<i2').reshape(-1,5).copy()
             if offset+len(rows)>total:raise ValueError('抓取越界')
-            if self.capture_id!=cid:self.capture_id=cid;self.capture_parts={}
+            if self.capture_id!=cid:self.capture_id=cid;self.capture_parts={};self.capture_total=total
+            if total!=self.capture_total:raise ValueError('同一次抓取的总长度不一致')
             self.capture_parts[offset]=rows
             at=0;blocks=[]
             for off,block in sorted(self.capture_parts.items()):
                 if off!=at:return
                 blocks.append(block);at+=len(block)
             if at==total:
-                self.audio=np.concatenate(blocks);self.fs=fs;self.audio_revision+=1;self.status=f'完整抓取 {total} 点 × 5 通道';self.capture_parts={}
+                self.audio=np.concatenate(blocks);self.fs=fs;self.audio_revision+=1;self.audio_received_at=time.monotonic();self.remember_audio();self.status=f'完整抓取 {total} 点 × 5 通道'+(' · 当前采样为静音' if not np.any(self.audio) else '');self.capture_parts={}
         elif f.kind==P.ENVELOPE:
             if len(p)!=20:raise ValueError('包络长度错误')
             self.envelope.append((f.tick,np.frombuffer(p,dtype='<i2').reshape(5,2).copy()))
@@ -138,9 +146,21 @@ class LabEngine:
         elif f.kind==P.STATUS:
             self.drops,self.clips=struct.unpack_from('<II',p)
     def set_voice(self,i,settings):
-        seq=self.send(P.VOICE,P.voice_payload(i,**settings,fs=self.fs));self.voices[i]=settings.copy()
+        if settings.get('wave')==4 and not self.source.startswith('模拟') and not self.capabilities.get('piano'):
+            if settings.get('gate') and settings.get('gain',0)>0:raise ValueError('钢琴音色需要 TangLab 1.2 固件；请先下载钢琴版固件。')
+            settings=dict(settings,wave=0)  # Muting an older firmware must remain possible.
+        if not self.source.startswith('模拟') and not self.capabilities.get('fine_gain') and settings.get('gate') and settings.get('gain',0)>0:
+            raise ValueError('旧固件未修正耳机输出时序；请先下载 TangLab 1.1 耳机修复固件。静音命令仍可使用。')
+        if settings.get('gate') and (not self.voices[i]['gate'] or settings.get('wave')==4 and self.voices[i]['wave']!=4):
+            self.demo_note_start[i]=time.monotonic();self.demo_body_at[i]=time.monotonic();self.demo_body_level[i]=1.
+        seq=self.send(P.VOICE,P.voice_payload(i,**settings,fs=self.fs,fine_gain=self.capabilities.get('fine_gain',False)));self.voices[i]=settings.copy()
         if self.source.startswith('模拟'):self.make_demo_audio()
         return seq
+    def apply_piano_settings(self,i,settings):
+        now=time.monotonic();old=self.piano_settings[i]
+        if old['piano_hold'] and self.voices[i]['gate']:self.demo_body_level[i]=1.
+        else:self.demo_body_level[i]*=math.exp(math.log(.1)*max(0,now-self.demo_body_at[i])/old['piano_decay_s'])
+        self.demo_body_at[i]=now;self.piano_settings[i]=dict(settings)
     def clear_waveforms(self):
         """Discard displayed audio data without changing voice parameters."""
         with self.lock:
@@ -148,8 +168,19 @@ class LabEngine:
             self.envelope.clear()
             self.capture_parts={}
             self.capture_id=None
-            self.audio_revision+=1
+            self.audio_history.clear();self.audio_count=0;self.audio_origin=time.monotonic()
             self.status='波形已清空'
+    def remember_audio(self):
+        self.audio_count+=1
+        self.audio_history.append(dict(number=self.audio_count,received=time.time(),relative=time.monotonic()-self.audio_origin,fs=self.fs,samples=self.audio.copy()))
+    def note_audio_drawn(self,revision,started):
+        with self.lock:
+            self.last_draw_revision=revision;self.last_draw_at=time.monotonic();self.last_draw_ms=(self.last_draw_at-started)*1000
+            for d in reversed(self.capture_diagnostics):
+                if d.get('revision')==revision and d.get('draw_ms') is None:
+                    now=time.monotonic();d['draw_ms']=(now-started)*1000
+                    d['receive_to_draw_ms']=max(0,(now-d['received_at'])*1000)
+                    break
     def set_mode(self,mode):
         seq=self.send(P.MODE,bytes([mode]));self.mode=mode;self.bus.clear();self.processing.clear()
         self.imu.reset_state();self.imu.protocol='UART-RVC' if mode==0 else 'UART-SHTP'
@@ -168,15 +199,31 @@ class LabEngine:
         return tickets
     def demo(self):
         self.close();self.reset();self.source='模拟演示（非实测）';self.status='四声部模拟';self.ready=True
-        self.device='模拟固件 1.0';self.make_demo_audio();self.imu.simulate()
-    def make_demo_audio(self):
-        t=np.arange(2048)/self.fs;out=[]
-        for v in self.voices:
+        for v in self.voices:v.update(gain=.18,gate=True)
+        self.device='模拟固件 1.3';self.make_demo_audio();self.imu.simulate()
+        self.capabilities.update(piano=True,piano_control=True,capture_sizes=[512,2048])
+    def make_demo_audio(self,points=2048):
+        t=np.arange(points)/self.fs;out=[]
+        for i,v in enumerate(self.voices):
             phase=(t*v['hz'])%1
+            if v['wave']==4:
+                age=t+max(0,time.monotonic()-self.demo_note_start[i])
+                fundamental=.5*np.sin(2*np.pi*phase)
+                partial=sum((2.**-h)*np.sin(2*np.pi*h*phase) for h in (2,3,4) if h*v['hz']<self.fs/2)
+                ps=self.piano_settings[i];now=time.monotonic();elapsed=max(0,now-self.demo_body_at[i])
+                if ps['piano_hold'] and v['gate']:self.demo_body_level[i]=1.;body=np.ones_like(age)
+                else:
+                    self.demo_body_level[i]*=math.exp(math.log(.1)*elapsed/ps['piano_decay_s'])
+                    body=self.demo_body_level[i]*np.exp(math.log(.1)*t/ps['piano_decay_s'])
+                self.demo_body_at[i]=now
+                shape=(fundamental+partial*np.exp(-age/.0853))*body
+                attack=max(v['attack']/1000,1/self.fs);decay=max(v['decay']/1000,1/self.fs)
+                envelope=np.where(age<attack,age/attack,np.maximum(v['sustain'],1-(age-attack)/decay))
+                out.append(shape*envelope*32767*v['gain']*v['gate']);continue
             wave=(np.sin(2*np.pi*phase),2*phase-1,np.where(phase<.5,1.,-1.),1-4*np.abs(phase-.5))[v['wave']]
             out.append(wave*32767*v['gain']*v['sustain']*v['gate'])
         a=np.array(out).T;mix=a.sum(axis=1);self.clips=int(np.count_nonzero(np.abs(mix)>32767))
-        self.audio=np.column_stack((a,np.clip(mix,-32768,32767))).astype(np.int16);self.audio_revision+=1
+        self.audio=np.column_stack((a,np.clip(mix,-32768,32767))).astype(np.int16);self.audio_revision+=1;self.audio_received_at=time.monotonic();self.remember_audio()
     def start_record(self,path):
         if self.recorder:raise ValueError('正在记录')
         if not self.ready:raise ValueError('请先连接或模拟')
@@ -220,4 +267,5 @@ class LabEngine:
                     board_drops=self.drops,clipping=self.clips,bus_ms=P.summary(self.bus),fpga_packet_ms=P.summary(self.processing),
                     pc_roundtrip_ms=P.summary(self.rtt),clock_hz=self.clock,sample_rate=self.fs,
                     note='各延迟测点不同；SPI/UART起点不同，不能解释为动作到音频延迟',
-                    record_drops=self.recorder.dropped if self.recorder else 0,record_error=self.recorder.error if self.recorder else '')
+                    record_drops=self.recorder.dropped if self.recorder else 0,record_error=self.recorder.error if self.recorder else '',
+                    capture_diagnostics=[dict(d) for d in self.capture_diagnostics])

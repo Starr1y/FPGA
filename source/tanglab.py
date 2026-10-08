@@ -5,6 +5,7 @@ import pyqtgraph as pg
 from PySide6 import QtCore as C,QtGui as G,QtWidgets as W
 from lab_engine import LabEngine
 from lab_agent_gui import AgentGuiMixin
+from lab_live import LiveMixin
 import lab_protocol as P
 from lab_ui import AnalysisMixin,ChineseViewBox,setup_plot,chinese_qt,REPORTS,CHANNELS
 from app import PoseView,MainWindow as LegacyWindow
@@ -14,7 +15,7 @@ ROOT=Path(sys.executable).parent if getattr(sys,'frozen',False) else Path(__file
 COLORS=['#53dfc2','#79abff','#ffbd69','#e78cda','#eef5fa']
 EDA_DEFAULT='D:/GOWINeda/Gowin/Gowin_V1.9.12.03_x64'
 
-class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
+class Window(LiveMixin,AgentGuiMixin,AnalysisMixin,W.QMainWindow):
     def __init__(self):
         super().__init__();self.engine=LabEngine();self.origin=None;self.q=None;self.revision=-1;self.legacy=None
         self.setWindowTitle('TangLab · 138K 音频与 IMU 实验室');self.resize(1360,900)
@@ -53,6 +54,7 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         self.pause=W.QCheckBox('暂停绘图');r.addWidget(self.pause)
         self.stacked=W.QCheckBox('分栏显示');self.stacked.setChecked(True);self.stacked.toggled.connect(self.layout_plots);r.addWidget(self.stacked)
         self.button(r,'导出采样 CSV',self.export_audio);l.addLayout(r)
+        self.live_controls(l)
         r=W.QHBoxLayout();self.button(r,'清空波形',self.clear_waveforms);self.button(r,'恢复全部波形',lambda:self.focus_wave(None));self.button(r,'重置波形缩放',self.reset_wave_zoom)
         r.addWidget(W.QLabel('单击波形放大，再次单击恢复；滚轮独立缩放，拖动平移。'));l.addLayout(r)
         self.init_cursors(l)
@@ -63,19 +65,23 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         self.metrics=W.QLabel('峰值 —   RMS —   削波 —');l.addWidget(self.metrics)
         self.cursors=W.QLabel();self.cursors.setWordWrap(True);l.addWidget(self.cursors);self.update_cursor_readout()
     def preview(self):
+        self.stop_live('已切换到包络预览')
         self.submit_command('preview',dict(enabled=True));self.fftline.setData([],[])
     def clear_waveforms(self):
+        self.stop_live('波形已清空')
         # Stop a running preview first so that the cleared plots stay empty.
         if self.engine.ready and not self.engine.source.startswith('模拟'):
             self.submit_command('preview',dict(enabled=False))
-        self.engine.clear_waveforms()
+        with self.controller.lock:
+            self.clear_pending=any(j['state'] in ('queued','running','acknowledged','simulated') for j in self.controller.jobs.values())
+        if not self.clear_pending:self.engine.clear_waveforms()
         self.revision=self.engine.audio_revision
         for line in self.curves:line.setData([],[])
         self.fftline.setData([],[])
         self.spectrum_key=None;self.spectrum_data=None
         if hasattr(self,'spectrum_curves'):
             for line in self.spectrum_curves:line.setData([],[])
-            self.spectrum_note.setText('波形已清空；请重新抓取 2048 点后进行幅相分析。')
+            self.spectrum_note.setText('波形已清空；请重新抓取完整样本后进行幅相分析。')
         self.metrics.setText('峰值 —   RMS —   削波 —')
         self.audio_note.setText('波形已清空 · 包络预览已停止')
     def layout_plots(self):
@@ -85,6 +91,7 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         for i in range(5):
             if self.stacked.isChecked() or i==0:
                 vb=ChineseViewBox();vb.selected.connect(lambda index=i:self.focus_wave(None if self.focused==index else index))
+                vb.sigRangeChangedManually.connect(lambda *_:self.follow_latest.setChecked(False))
                 p=self.graphics.addPlot(row=i if self.stacked.isChecked() else 0,col=0,viewBox=vb);p.showGrid(x=True,y=True,alpha=.15);p.addLegend(offset=(8,0));setup_plot(p);p.setLabel('left','幅值',units='PCM');p.getAxis('left').enableAutoSIPrefix(False);p.setLabel('bottom','时间','ms');self.plots.append(p)
             self.curves.append(p.plot(pen=pg.mkPen(COLORS[i],width=1.2),name=CHANNELS[i]))
         self.mount_cursors();self.revision=-1
@@ -151,24 +158,65 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         for cells in self.controls:
             for key,w in cells:w.setToolTip(names[key])
     def control_page(self):
-        l=self.page('02  声部与包络');l.addWidget(W.QLabel('参数写入 FPGA。首次上电默认静音，点击应用后发声。'))
+        self.voice_edit_revision=0;self.voice_edit_time=0.;self.voice_job_revisions={};self.latest_voice_job=None
+        l=self.page('02  声部与包络');l.addWidget(W.QLabel('默认静音。钢琴保持/衰减需要 TangLab 1.3 固件；保留16位增益和DAC约30dB衰减。抓取为衰减前数据。'))
         self.table=W.QTableWidget(4,9);self.table.setHorizontalHeaderLabels(['声部','频率 Hz','增益','波形','按下/发声','起音 ms','衰减 ms','持续电平','释音 ms']);self.controls=[]
         for i,v in enumerate(self.engine.voices):
             self.table.setItem(i,0,W.QTableWidgetItem(CHANNELS[i]));cells=[]
-            for key,low,high in [('hz',1,20000),('gain',0,1),('wave',0,3),('gate',0,1),('attack',0,5000),('decay',0,5000),('sustain',0,1),('release',0,5000)]:
-                if key=='wave':w=W.QComboBox();w.addItems(['正弦','锯齿','方波','三角'])
-                elif key=='gate':w=W.QCheckBox();w.setChecked(True)
+            for key,low,high in [('hz',1,20000),('gain',0,1),('wave',0,4),('gate',0,1),('attack',0,5000),('decay',0,5000),('sustain',0,1),('release',0,5000)]:
+                if key=='wave':w=W.QComboBox();w.addItems(['正弦','锯齿','方波','三角','钢琴（合成）'])
+                elif key=='gate':w=W.QCheckBox();w.setChecked(v[key])
                 else:w=W.QDoubleSpinBox();w.setRange(low,high);w.setDecimals(3 if high==1 else 1);w.setValue(v[key])
+                if key=='gain':w.setDecimals(5);w.setSingleStep(.0001)
+                if key=='hz':w.setDecimals(2)
                 cells.append((key,w));self.table.setCellWidget(i,len(cells),w)
             self.controls.append(cells)
         self.table.horizontalHeader().setSectionResizeMode(W.QHeaderView.ResizeMode.Stretch);self.table.setMinimumHeight(240);l.addWidget(self.table)
         r=W.QHBoxLayout();self.button(r,'应用四个声部',self.apply_voices);self.button(r,'全部松键 / 释音',self.release);l.addLayout(r)
+        r=W.QHBoxLayout();r.addWidget(W.QLabel('钢琴设置声部'))
+        self.piano_channel=W.QComboBox();self.piano_channel.addItems(CHANNELS[:4]);r.addWidget(self.piano_channel)
+        self.piano_hold=W.QCheckBox('保持声音');r.addWidget(self.piano_hold)
+        r.addWidget(W.QLabel('自然衰减至10%（秒）'));self.piano_decay=W.QDoubleSpinBox();self.piano_decay.setRange(.2,30);self.piano_decay.setDecimals(1);self.piano_decay.setSingleStep(.2);self.piano_decay.setValue(6);r.addWidget(self.piano_decay)
+        self.piano_values=[dict(v) for v in self.engine.piano_settings];self.piano_edit_channel=0
+        for cells in self.controls:
+            for key,w in cells:
+                signal=w.currentIndexChanged if key=='wave' else w.toggled if key=='gate' else w.valueChanged
+                signal.connect(self.voice_draft_changed)
+        self.piano_channel.currentIndexChanged.connect(self.change_piano_channel)
+        self.piano_hold.toggled.connect(self.save_piano_controls);self.piano_decay.valueChanged.connect(self.save_piano_controls)
+        self.piano_hold.setToolTip('保持实际声音，不是暂停绘图。需1.3固件；增益、ADSR持续电平应大于0；松键仍可收音。')
+        self.piano_decay.setToolTip('仅钢琴主体的自然衰减；从当前能量衰减到10%的时间。关闭保持后生效，ADSR另作用于总体。')
+        l.addLayout(r);self.piano_hint=W.QLabel('保持/衰减调整需要TangLab 1.3；仍点击“应用四个声部”提交。');l.addWidget(self.piano_hint)
+        self.voice_apply_status=W.QLabel('修改参数后点击“应用四个声部”。');l.addWidget(self.voice_apply_status)
+        l.addWidget(W.QLabel('钢琴在波形下拉框中选择，仍点击“应用四个声部”。重新起音：取消发声并应用，再勾选发声并应用。'))
         l.addWidget(W.QLabel('默认测试频率 375 / 750 / 1125 / 1500 Hz，可逐路取消发声并查看频谱。\n起音/衰减/持续/释音（ADSR）按采样步进量量化；增益过高会使混音饱和。'));l.addStretch()
     def apply_voices(self):
+        self.submit_command('voices.set',dict(voices=self.voice_settings()))
+    def voice_settings(self):
+        self.save_piano_controls()
         voices=[]
         for i,cells in enumerate(self.controls):
             settings={k:(w.currentIndex() if k=='wave' else w.isChecked() if k=='gate' else w.value()) for k,w in cells};voices.append(dict(channel=i,**settings))
-        self.submit_command('voices.set',dict(voices=voices))
+            if self.engine.capabilities.get('piano_control'):voices[-1].update(self.piano_values[i])
+        return voices
+    def save_piano_controls(self,*args):
+        settings=dict(piano_hold=self.piano_hold.isChecked(),piano_decay_s=self.piano_decay.value())
+        if settings!=self.piano_values[self.piano_edit_channel]:
+            self.piano_values[self.piano_edit_channel]=settings;self.voice_draft_changed()
+    def voice_draft_changed(self,*args):
+        self.voice_edit_revision+=1;self.voice_edit_time=time.time()
+        if hasattr(self,'voice_apply_status'):self.voice_apply_status.setText('当前修改尚未应用。')
+    def change_piano_channel(self,index):
+        self.save_piano_controls();self.piano_edit_channel=index;self.show_piano_controls()
+    def show_piano_controls(self):
+        settings=self.piano_values[self.piano_edit_channel]
+        with C.QSignalBlocker(self.piano_hold),C.QSignalBlocker(self.piano_decay):
+            self.piano_hold.setChecked(settings['piano_hold']);self.piano_decay.setValue(settings['piano_decay_s'])
+    def sync_audio_capabilities(self):
+        supported=self.engine.capabilities.get('piano_control',False)
+        self.piano_hold.setEnabled(supported);self.piano_decay.setEnabled(supported)
+        warning=any(p['piano_hold'] and dict(cells)['wave'].currentIndex()==4 and (dict(cells)['gain'].value()==0 or dict(cells)['sustain'].value()==0) for p,cells in zip(self.piano_values,self.controls))
+        self.piano_hint.setText('保持仍受ADSR影响：增益和持续电平需大于0。' if warning else ('钢琴保持/衰减通过“应用四个声部”提交；松键仍可收音。' if supported else '保持/衰减调整需要TangLab 1.3；当前固件不支持。'))
     def release(self):
         for cells in self.controls:dict(cells)['gate'].setChecked(False)
         self.apply_voices()
@@ -198,6 +246,7 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         p,_=W.QFileDialog.getSaveFileName(self,'保存统计',str(ROOT/'延迟统计.json'),'JSON 文件 (*.json)')
         if p:Path(p).write_text(json.dumps(self.engine.stats(),ensure_ascii=False,indent=2),encoding='utf-8')
     def write_audio(self,p):
+        if self.clear_pending:raise ValueError('波形已清空，正在等待在途采集结束')
         if self.engine.audio is None:raise ValueError('先抓取完整采样')
         with Path(p).open('w',newline='',encoding='utf-8-sig') as f:
             w=csv.writer(f);w.writerow(['time_s','voice1','voice2','voice3','voice4','mix'])
@@ -234,20 +283,24 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         if self.process.state()!=C.QProcess.ProcessState.NotRunning:self.process.kill();self.log.appendPlainText('已停止本次 gw_sh 进程')
     def read_log(self):self.log.appendPlainText(bytes(self.process.readAllStandardOutput()).decode('utf-8',errors='replace'))
     def refresh(self):
+        self.sync_audio_capabilities()
+        self.service_live()
         e=self.engine;self.banner.setText(f'{e.source}  |  {e.device}  |  {e.status}')
-        if not self.pause.isChecked() and e.audio is not None and self.revision!=e.audio_revision:
-            a=e.audio.copy();t=np.arange(len(a))/e.fs*1000
-            for i,line in enumerate(self.curves):line.setData(t,a[:,i])
+        if not self.clear_pending and not self.pause.isChecked() and e.audio is not None and self.revision!=e.audio_revision:
+            draw_started=time.monotonic()
+            with e.lock:a=e.audio.copy();fs=e.fs;draw_revision=e.audio_revision
+            self.draw_live(a,fs)
             v=a[:,4].astype(float)/32768;window=np.hanning(len(v));spec=np.abs(np.fft.rfft(v*window))*2/max(1,window.sum())
-            self.fftline.setData(np.fft.rfftfreq(len(v),1/e.fs),20*np.log10(np.maximum(spec,1e-8)));self.fft.setXRange(0,5000)
+            self.fftline.setData(np.fft.rfftfreq(len(v),1/fs),20*np.log10(np.maximum(spec,1e-8)));self.fft.setXRange(0,5000)
             self.metrics.setText(f'混音峰值 {np.max(np.abs(v)):.4f} FS   RMS {np.sqrt(np.mean(v*v)):.4f} FS   板上削波 {e.clips}')
-            self.audio_note.setText(f'{e.source} · 完整采样 {len(a)} 点 / 通道，{e.fs} Hz；FFT 基于此抓取');self.revision=e.audio_revision
-        elif not self.pause.isChecked() and e.envelope and e.audio is None:
+            self.audio_note.setText(f'{e.source} · 完整采样 {len(a)} 点 / 通道，{fs} Hz；FFT 基于此抓取'+(' · 当前采样为静音' if not np.any(a) else ''));self.revision=draw_revision
+            e.note_audio_drawn(draw_revision,draw_started)
+        elif not self.clear_pending and not self.pause.isChecked() and e.envelope and e.audio is None:
             points=list(e.envelope);x=np.arange(len(points))*10
             for i,line in enumerate(self.curves):line.setData(np.repeat(x,2),np.array([v[1][i] for v in points]).ravel())
             self.audio_note.setText('实时最小/最大值包络预览 · 点击抓取查看完整波形与 FFT')
         self.update_cursor_readout()
-        if not self.pause.isChecked():self.update_spectrum()
+        if not self.clear_pending and not self.pause.isChecked():self.update_spectrum()
         s=e.stats()
         lines=[f"数据来源：{s['source']}",f"接口模式：{['UART-RVC','UART-SHTP','SPI'][s['mode']]}",
                f"接收速率：{s['rx_bytes_per_s']:.0f} 字节/秒",f"收到报文：{s['frames']}    缺失报文：{s['missing_frames']}",
@@ -278,12 +331,82 @@ class Window(AgentGuiMixin,AnalysisMixin,W.QMainWindow):
         event.accept()
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--demo',action='store_true');parser.add_argument('--smoke',type=str);parser.add_argument('--agent-smoke',type=str);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--demo',action='store_true');parser.add_argument('--smoke',type=str);parser.add_argument('--agent-smoke',type=str);parser.add_argument('--live-smoke',type=str);parser.add_argument('--piano-smoke',type=str);parser.add_argument('--voice-draft-smoke',type=str);args=parser.parse_args()
     app=W.QApplication(sys.argv);chinese_qt(app)
     fid=G.QFontDatabase.addApplicationFont('C:/Windows/Fonts/msyh.ttc')
     families=G.QFontDatabase.applicationFontFamilies(fid)
     app.setFont(G.QFont(families[0] if families else 'Microsoft YaHei UI',10));window=Window();window.show()
-    if args.demo or args.smoke:window.demo()
+    if args.demo or args.smoke or args.live_smoke:window.demo()
+    if args.voice_draft_smoke:
+        out=Path(args.voice_draft_smoke);out.mkdir(parents=True,exist_ok=True)
+        window.agent_timer.stop();window.engine.demo()
+        cells=dict(window.controls[0]);cells['wave'].setCurrentIndex(4);cells['gain'].setValue(.002);cells['gate'].setChecked(False)
+        window.apply_voices();stage=[0];deadline=time.monotonic()+12
+        def draft_check():
+            try:
+                job=window.controller.job(window.last_agent_job)
+                if time.monotonic()>deadline:raise TimeoutError('打包程序检查超时')
+                if job['state'] not in ('completed','failed'):return
+                assert job['state']=='completed',job
+                if stage[0]==0:
+                    cells['gate'].setChecked(True);window.refresh_agent()
+                    assert cells['gate'].isChecked(),'旧命令覆盖新发声勾选'
+                    window.piano_hold.setChecked(True);window.apply_voices();stage[0]=1;return
+                if stage[0]==1:
+                    window.refresh_agent();assert window.engine.voices[0]['gate']
+                    window.tabs.setCurrentIndex(1);app.processEvents();window.grab().save(str(out/'声部状态.png'))
+                    window.toggle_live();stage[0]=2;stage.append(window.engine.audio_count+3);return
+                if window.engine.audio_count<stage[1]:return
+                window.stop_live();window.write_audio(out/'最近一段.csv');window.write_history(out/'滚动历史.csv')
+                window.tabs.setCurrentIndex(0);window.refresh();app.processEvents();window.grab().save(str(out/'连续采集.png'))
+                (out/'result.json').write_text(json.dumps(dict(result='PASS',source='模拟',draft_preserved=True,gate=window.engine.voices[0]['gate'],segments=window.engine.audio_count,shape=list(window.engine.audio.shape)),ensure_ascii=False),encoding='utf-8')
+                window.draft_timer.stop();window.close()
+            except Exception as exc:
+                (out/'result.json').write_text(json.dumps(dict(result='FAIL',error=str(exc)),ensure_ascii=False),encoding='utf-8');window.draft_timer.stop();window.close();app.exit(1)
+        window.draft_timer=C.QTimer(window);window.draft_timer.timeout.connect(draft_check);window.draft_timer.start(10)
+    if args.piano_smoke:
+        out=Path(args.piano_smoke);out.mkdir(parents=True,exist_ok=True)
+        window.engine.demo()
+        for i,cells in enumerate(window.controls):
+            values=dict(hz=(261.63,329.63,392.,523.25)[i],gain=.002,wave=4,gate=i==0,attack=3,decay=80,sustain=.7,release=100)
+            for key,w in cells:
+                if key=='wave':w.setCurrentIndex(values[key])
+                elif key=='gate':w.setChecked(values[key])
+                else:w.setValue(values[key])
+        window.piano_hold.setChecked(True);window.piano_decay.setValue(6)
+        window.apply_voices()
+        def finish_piano():
+            try:
+                job=window.controller.job(window.last_agent_job)
+                assert job['state']=='completed',job
+                assert window.engine.voices[0]['wave']==4 and window.engine.voices[0]['gate']
+                assert window.engine.piano_settings[0]['piano_hold']
+                assert all(not v['gate'] for v in window.engine.voices[1:])
+                assert dict(window.controls[0])['wave'].currentIndex()==4
+                assert np.any(window.engine.audio[:,0]) and not np.any(window.engine.audio[:,1:4])
+                window.refresh();window.tabs.setCurrentIndex(1);app.processEvents();window.grab().save(str(out/'piano-controls.png'))
+                window.write_audio(out/'piano.csv')
+                (out/'result.json').write_text(json.dumps(dict(result='PASS',source=window.engine.source,voices=window.engine.voices,piano_settings=window.engine.piano_settings),ensure_ascii=False,indent=2),encoding='utf-8')
+            except Exception as exc:
+                (out/'result.json').write_text(json.dumps(dict(result='FAIL',error=str(exc)),ensure_ascii=False),encoding='utf-8');window.close();app.exit(1);return
+            window.close()
+        C.QTimer.singleShot(1500,finish_piano)
+    if args.live_smoke:
+        C.QTimer.singleShot(500,window.toggle_live)
+        def live_finish():
+            out=Path(args.live_smoke);out.mkdir(parents=True,exist_ok=True)
+            try:
+                window.stop_live();window.live_view.setCurrentIndex(1);window.refresh()
+                assert window.engine.audio_count>=3
+                assert window.engine.audio.shape==(512,5)
+                window.write_history(out/'滚动历史.csv');window.write_audio(out/'最近一段.csv')
+                window.grab().save(str(out/'滚动历史.png'))
+                count=window.engine.audio_count;window.clear_waveforms();window.service_live()
+                assert not window.live_running
+                assert all(c.xData is None or not len(c.xData) for c in window.curves)
+                (out/'result.json').write_text(json.dumps(dict(result='PASS',source='模拟',segments=count,points=512)),encoding='utf-8')
+            finally:window.close()
+        C.QTimer.singleShot(4200,live_finish)
     if args.agent_smoke:
         import subprocess
         out=Path(args.agent_smoke);out.mkdir(parents=True,exist_ok=True)

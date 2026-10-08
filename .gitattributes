@@ -1,0 +1,3 @@
+# Preserve exact FPGA bytes and the concentrated package's SHA256 manifest.
+*.fs -text
+/piano-tail-fix-20261008/** -text

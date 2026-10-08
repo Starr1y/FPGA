@@ -2,16 +2,16 @@
   "board": "Tang Mega 138K 普通 Dock，C 版本",
   "device": "GW5AST-LV138PG484AC1/I0",
   "firmware": "../fpga/bitstream/tanglab.fs",
-  "sha256": "b6e6b5e34eaba2f6d62decb6782319dc926c0329d8069791982d4be30e1cd673",
-  "bytes": 35860393,
-  "original_file_time": "2026-09-23T17:01:30",
-  "reuse_note": "2026-09-23 候选固件：J9 SPI 管脚约束与完整抓取分包间隔 10 ms；主工程 RTL 和 PnR 报告已同步。不是两声部专用固件。",
+  "sha256": "bbf5c2383762ff23d6652ebef95302bb0584bce347d756e5d01078b6e4b34a54",
+  "bytes": 35477929,
+  "original_file_time": "2026-10-08T17:56:30",
+  "reuse_note": "TangLab 1.3.1：本日实际重新综合布局布线，钢琴对称取整尾音修复；保留四声部、钢琴保持/衰减、512/2048点、原接线和音量保护。",
   "clock_hz": 50000000,
   "sample_rate_hz": 48000,
   "voice_capability": 4,
   "test_active_voices": 2,
   "spi_mode": 3,
   "spi_hz": 1000000,
-  "hardware_validation": "候选固件尚未完成实板复测；此前握手、参数设置和预览已见实物数据，完整抓取及 SPI/模拟音频未通过验收。",
-  "reports": "../fpga/reports/pnr"
+  "hardware_validation": "1.3音频512/2048各10段及保持/衰减已测；1.3.1两次明确松键后起音成功、CRC/缺包+0。1.3.1尾音、SPI、实际听音/模拟延迟未测。",
+  "reports": "../fpga/reports"
 }

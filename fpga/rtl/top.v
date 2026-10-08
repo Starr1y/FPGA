@@ -11,11 +11,16 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
  uart_rx #(.CLK_HZ(CLK_HZ)) pc_uart_rx(clk,rst_n,pc_rx,32'd921600,rx_data,rx_valid,rx_start,rx_error);
  wire cmd_done;wire [7:0] cmd;wire [15:0] cmd_seq;wire [6:0] cmd_len;wire [511:0] cmd_data;wire [31:0] cmd_errors;
  frame_rx command_rx(clk,rst_n,rx_data,rx_valid,cmd_done,cmd,cmd_seq,cmd_len,cmd_data,cmd_errors);
- wire voice_config=cmd_done && cmd==16 && cmd_len==16 && cmd_data[7:0]<4;
+ wire voice_config=cmd_done && cmd==16 && (cmd_len==16 || cmd_len==17) && cmd_data[7:0]<4;
+ // Legacy 8-bit gain is expanded by 257; new packets append its high byte.
+ wire [135:0] voice_data=cmd_len==17?cmd_data[135:0]:{cmd_data[47:40],cmd_data[127:0]};
  assign event_mark=voice_config;
  wire sample_tick,sample_valid;wire [79:0] samples;wire [31:0] clips;
- audio_core audio(clk,rst_n,sample_tick,voice_config,cmd_data[127:0],samples,sample_valid,clips);
- i2s_output #(.CLK_HZ(CLK_HZ)) i2s(clk,rst_n,samples[79:64],hp_bck,hp_ws,hp_din,sample_tick);
+ wire piano_config=cmd_done && cmd==22 && cmd_len==4 && cmd_data[7:0]<4 && cmd_data[15:8]<2 && cmd_data[31:16]>0 && cmd_data[31:16]<=4096;
+ audio_core audio(clk,rst_n,sample_tick,voice_config,voice_data,samples,sample_valid,clips,piano_config,cmd_data[31:0]);
+ // Fixed headphone attenuation: digital capture remains pre-attenuation.
+ wire signed [15:0] headphone_pcm=$signed(samples[79:64]) >>> 5;
+ i2s_output #(.CLK_HZ(CLK_HZ)) i2s(clk,rst_n,headphone_pcm,hp_bck,hp_ws,hp_din,sample_tick);
  assign audio_mark=sample_tick;
  wire mode_valid=cmd_done && cmd==18 && cmd_len==1 && cmd_data[7:0]<3;
  wire imu_tx_busy;wire imu_tx_req=cmd_done && cmd==19 && cmd_len>0 && !imu_tx_busy;
@@ -25,6 +30,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
  imu_transport #(.CLK_HZ(CLK_HZ)) imu(clk,rst_n,ticks,mode_valid,cmd_data[1:0],imu_tx_req,cmd_len,cmd_data,imu_tx_busy,
  imu_data,imu_int_n,imu_clk_tx,imu_cs_n,imu_mosi,imu_rst_n,imu_wake,imu_ready,imu_take,imu_len,imu_addr,imu_byte,imu_t0,imu_t1,imu_t2,imu_drops,imu_mode);
  reg [79:0] capture_mem[0:2047];reg [10:0] cap_wr;reg capture_active,armed,cap_ready;reg [15:0] capture_id,upload_offset;
+ reg [15:0] capture_points;
  reg signed [15:0] previous_mix;
  reg [79:0] cap_word;
  wire [15:0] sample_index=upload_offset+(tx_addr-10)/10;
@@ -51,7 +57,8 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
   info_bytes[87:80]=4;info_bytes[103:88]=2048;
   info_bytes[111:104]="T";info_bytes[119:112]="a";info_bytes[127:120]="n";info_bytes[135:128]="g";
   info_bytes[143:136]="L";info_bytes[151:144]="a";info_bytes[159:152]="b";info_bytes[167:160]=" ";
-  info_bytes[175:168]="1";info_bytes[183:176]=".";info_bytes[191:184]="0";
+  info_bytes[175:168]="1";info_bytes[183:176]=".";info_bytes[191:184]="3";
+  info_bytes[199:192]=".";info_bytes[207:200]="1";
   tx_payload=0;
   case(tx_kind)
    128:tx_payload=info_bytes[tx_addr*8+:8];
@@ -59,7 +66,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
    130:case(tx_addr)
     0:tx_payload=capture_id[7:0];1:tx_payload=capture_id[15:8];
     2:tx_payload=upload_offset[7:0];3:tx_payload=upload_offset[15:8];
-    4:tx_payload=0;5:tx_payload=8;6:tx_payload=sample_rate[7:0];7:tx_payload=sample_rate[15:8];8:tx_payload=0;9:tx_payload=0;
+    4:tx_payload=capture_points[7:0];5:tx_payload=capture_points[15:8];6:tx_payload=sample_rate[7:0];7:tx_payload=sample_rate[15:8];8:tx_payload=0;9:tx_payload=0;
     default:tx_payload=cap_word[((tx_addr-10)%10)*8+:8];
    endcase
    131:tx_payload=snap_envelope[tx_addr*8+:8];
@@ -75,7 +82,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
  end
  always @(posedge clk)begin
   if(!rst_n)begin
-   capture_gap<=0;
+   capture_gap<=0;capture_points<=2048;
    capture_active<=0;armed<=0;cap_ready<=0;cap_wr<=0;capture_id<=0;upload_offset<=0;previous_mix<=0;
    preview_on<=0;preview_count<=0;envelope<=0;envelope_ready<=0;status_timer<=0;status_pending<=0;
    response_pending<=0;response_kind<=0;response_code<=0;response_seq<=0;tx_start<=0;tx_kind<=0;tx_len<=0;imu_take<=0;
@@ -90,7 +97,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
     if(armed && previous_mix<0 && $signed(samples[79:64])>=0)begin armed<=0;capture_active<=1;cap_wr<=0;end
     if(capture_active)begin
      capture_mem[cap_wr]<=samples;
-     if(cap_wr==2047)begin capture_active<=0;cap_ready<=1;upload_offset<=0;end else cap_wr<=cap_wr+1;
+     if({5'b0,cap_wr}==capture_points-1'b1)begin capture_active<=0;cap_ready<=1;upload_offset<=0;end else cap_wr<=cap_wr+1;
     end
     for(j=0;j<5;j=j+1)begin
      if($signed(samples[j*16+:16])<minima[j])minima[j]<=samples[j*16+:16];
@@ -108,20 +115,22 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
     response_pending<=1;response_seq<=cmd_seq;response_kind<=129;response_code<=0;
     case(cmd)
      1:response_kind<=128;
-     16:if(cmd_len!=16 || cmd_data[7:0]>3)response_code<=2;
-     17:if(capture_active || armed || cap_ready)response_code<=1;
-        else begin capture_id<=capture_id+1;cap_wr<=0;armed<=cmd_data[0];capture_active<=!cmd_data[0];end
+     16:if((cmd_len!=16 && cmd_len!=17) || cmd_data[7:0]>3)response_code<=2;
+     17:if((cmd_len!=1 && cmd_len!=3) || cmd_data[7:0]>1 || (cmd_len==3 && cmd_data[23:8]!=512 && cmd_data[23:8]!=2048))response_code<=2;
+        else if(capture_active || armed || cap_ready)response_code<=1;
+        else begin capture_id<=capture_id+1;cap_wr<=0;armed<=cmd_data[0];capture_active<=!cmd_data[0];capture_points<=cmd_len==3?cmd_data[23:8]:16'd2048;end
      18:if(cmd_len!=1 || cmd_data[7:0]>2)response_code<=2;
      19:if(imu_tx_busy)response_code<=1;else if(cmd_len==0 || imu_mode==0)response_code<=2;
      20:response_kind<=134;
      21:preview_on<=cmd_data[0];
+     22:if(!piano_config)response_code<=2;
      default:response_code<=2;
     endcase
    end
    if(!tx_busy && !tx_start && !tx_done)begin
     saved_tick<=ticks;
     if(response_pending)begin
-     saved_seq<=response_seq;saved_code<=response_code;tx_kind<=response_kind;tx_len<=response_kind==128?24:3;
+     saved_seq<=response_seq;saved_code<=response_code;tx_kind<=response_kind;tx_len<=response_kind==128?26:3;
      tx_start<=1;response_pending<=0;
     end else if(imu_ready && !imu_take)begin tx_kind<=132;tx_len<=imu_len+13;tx_start<=1;end
     else if(status_pending)begin tx_kind<=133;tx_len<=8;snap_drops<=imu_drops+tx_drops+cmd_errors;snap_clips<=clips;status_pending<=0;tx_start<=1;end
@@ -132,7 +141,7 @@ module top(input clk,input reset_key,input pc_rx,output pc_tx,
     if(tx_kind==132)imu_take<=1;
     if(tx_kind==130)begin
      capture_gap<=CLK_HZ/100; // 10 ms; sample acquisition remains 48 kHz.
-     if(upload_offset==2016)cap_ready<=0;else upload_offset<=upload_offset+32;
+     if(upload_offset==capture_points-16'd32)cap_ready<=0;else upload_offset<=upload_offset+32;
     end
    end
   end

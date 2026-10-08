@@ -1,13 +1,13 @@
 ﻿Tang Mega 138K 普通 Dock（C 版本）——两声部＋SPI IMU 上板指南
 配套：TangLab.exe、TangLabCtl.exe、fpga/bitstream/tanglab.fs、board-test 参数文件
-目的：上板验证上位机、数字音频与 SPI 数据通路。当前候选固件尚未完成实板复测。
+目的：下午上板验证上位机、数字音频与 SPI 数据通路。当前未做实物测试。
 
 一、准备（先不要接 IMU）
 1. 将整个分享 ZIP 解压到可写目录，例如 D:/TangLab。不要只提取 EXE，也不要在压缩包里运行。
 2. 确认板卡是 Tang Mega 138K 普通 Dock、C 版，不是 Pro、60K 或其他芯片版本。
 3. 准备可传数据的 USB 线、3.3 V 逻辑的 GY-BNO085、杜邦线和耳机/有源音箱。
 4. 安装板卡 USB JTAG/UART 驱动、Gowin EDA 与 Programmer。软件不包含 EDA 本体和许可证。
-5. 本次固件为 2026-09-23 重新布局布线的四声部候选版本，加入 J9 SPI 管脚约束和抓取分包间隔；测试参数仅预设启用两声部。
+5. 当前交付固件TangLab 1.3.1，包含耳机时序、16位增益、DAC输出1/32及钢琴尾音修复。摘下耳机，选择piano-tail-fix-20261008/tanglab-piano-v1.3.1.fs下载；握手应显示1.3.1。四声部工程仅预设启用两声部。
    编译依据与 SHA256 见 board-test/固件清单.json。四声部能力保留，不能把两声部通过当成比赛 ≥4 复音验收。
 
 补充：138K Dock 的供电、数据和外设接口
@@ -70,8 +70,8 @@ SPI 模式为 Mode 3（时钟空闲高）、默认 1 MHz。CS/INT/RST/PS0 都要
 2. 应识别 138K C 版器件；配套工程型号为 GW5AST-LV138PG484AC1/I0。
    若显示其他型号，停下来检查板卡，不能强行下载此文件。
 3. 在器件配置中选择 SRAM 编程操作（英文界面名称含 SRAM Program），文件选择：
-   fpga/bitstream/tanglab.fs
-   以 board-test/固件清单.json 的 SHA256 核对文件，避免误用其他目录中的旧固件。
+   TangLab/capture-fix-20260923/tanglab-audio-spi-j9-20260923.fs
+   不要再使用 capture-paced-20260923.fs；该旧文件只能复测音频，前四根 IMU 约束不在 J9。
 4. 点击执行/下载，等待成功状态；失败时先检查供电、驱动、线缆和器件识别。
 5. SRAM 下载掉电失效，断电后重新下载。初次不要选择烧写 Flash，避免覆盖原有启动内容。
 6. 下载成功后默认静音；没有声音不代表下载失败，下一步需发送声部参数。

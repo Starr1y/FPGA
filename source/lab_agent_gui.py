@@ -38,7 +38,14 @@ class AgentGuiMixin:
         self.agent_events=W.QPlainTextEdit();self.agent_events.setReadOnly(True);l.addWidget(self.agent_events)
         self.agent_timer=C.QTimer(self);self.agent_timer.timeout.connect(self.refresh_agent);self.agent_timer.start(150)
     def submit_command(self,action,params=None):
-        job=self.controller.submit(action,params);self.last_agent_job=job['id'];return job
+        if action in ('connect','disconnect','demo','replay','test.two_voice_spi') and hasattr(self,'live_running'):
+            self.stop_live('数据源或测试模式已切换')
+        job=self.controller.submit(action,params);self.last_agent_job=job['id']
+        if action in ('voices.set','voices.release'):
+            self.voice_job_revisions[job['id']]=self.voice_edit_revision
+            self.latest_voice_job=job['id'];self.voice_edit_time=time.time()
+            self.voice_apply_status.setText('声部参数已排队，等待设备应答。')
+        return job
     def start_agent(self):
         info=self.agent.start();self.agent_address.setText(info['url']);self.agent_token.setText(info['token'])
         self.agent_session.setText('会话文件：'+str(self.agent.session_path)+'\n命令工具自动读取该文件；不要把它放入分享包。')
@@ -53,21 +60,40 @@ class AgentGuiMixin:
         c=self.controller
         with c.lock:
             events=list(c.events);jobs=[c.job(k) for k in c.jobs]
-        self.agent_events.setPlainText('\n'.join(events))
+        text='\n'.join(events)
+        if self.agent_events.toPlainText()!=text:self.agent_events.setPlainText(text)
         if c.active:
             j=c.job(c.active);self.agent_progress.setText(j['action']+'：'+j['message'])
         else:self.agent_progress.setText('命令队列空闲')
         for j in jobs:
             if j['state'] not in ('completed','failed','cancelled') or j['id'] in self.observed_jobs:continue
-            self.observed_jobs.add(j['id']);self.revision=-1
+            self.observed_jobs.add(j['id'])
+            if j['action'] in ('connect','demo','replay'):self.revision=-1
             if j['state']=='failed':self.engine.status='操作失败：'+j['message']
-            if j['action'] in ('voices.set','voices.release','demo','test.two_voice_spi'):
-                for i,cells in enumerate(self.controls):
-                    for key,w in cells:
-                        value=self.engine.voices[i][key]
-                        if key=='wave':w.setCurrentIndex(value)
-                        elif key=='gate':w.setChecked(value)
-                        else:w.setValue(value)
+            if j['action'] in ('voices.set','voices.release','connect','demo','test.two_voice_spi'):
+                # A delayed completion must never overwrite a newer checkbox/edit.
+                # Use this job's confirmed snapshot, not the engine of a later job.
+                edit_revision=self.voice_job_revisions.pop(j['id'],None)
+                unchanged=(edit_revision==self.voice_edit_revision if edit_revision is not None
+                           else self.voice_edit_time<=j['created'])
+                latest=edit_revision is None or j['id']==self.latest_voice_job
+                if j['state']=='completed' and unchanged and latest:
+                    result=j.get('result',{})
+                    voices=result.get('voices',self.engine.voices)
+                    self.piano_values=[dict(v) for v in result.get('piano_settings',self.engine.piano_settings)]
+                    self.show_piano_controls()
+                    for i,cells in enumerate(self.controls):
+                        for key,w in cells:
+                            value=voices[i][key]
+                            with C.QSignalBlocker(w):
+                                if key=='wave':w.setCurrentIndex(value)
+                                elif key=='gate':w.setChecked(value)
+                                else:w.setValue(value)
+                if j['action'] in ('voices.set','voices.release') and latest:
+                    if j['state']=='completed':
+                        label='模拟参数已应用（非硬件应答）' if self.engine.source.startswith('模拟') else '声部参数已收到设备应答'
+                        self.voice_apply_status.setText(label+('。' if unchanged else '；当前新修改尚未应用。'))
+                    else:self.voice_apply_status.setText('声部参数未完整应用：'+j['message']+'；当前编辑已保留。')
             if j['action']=='imu.mode':self.mode.setCurrentIndex(self.engine.mode)
         # Only ids from retained jobs need to be retained here.
         self.observed_jobs.intersection_update({j['id'] for j in jobs})

@@ -72,7 +72,7 @@
 | `eda.stop` | 请求停止当前编译；不下载、不执行自定义 shell |
 | `test.two_voice_spi` | `simulation` 默认 false；`reports_per_type` 默认 1000（1～1000）；`imu_timeout_s` 默认 120（1～120） |
 
-声部参数：hz 1～20000，gain/sustain 0～1，wave 0 正弦/1 锯齿/2 方波/3 三角，gate 为布尔值，起音/衰减/释音 0～5000 ms。
+声部参数：hz 1～20000，gain/sustain 0～1，wave 0 正弦/1 锯齿/2 方波/3 三角/4 钢琴（合成，需固件1.2及piano能力），gate 为布尔值，起音/衰减/释音 0～5000 ms。钢琴会自然衰减；重复敲击时，先等待voices.release完成，再提交gate=true的voices.set。低音量中央C示例：hz=261.63、gain=0.002、wave=4、gate=true、attack=3、decay=5000、sustain=0、release=100。
 
 任务阶段：queued（已排队）→ running（执行中）→ acknowledged（设备已应答）→ completed（所需结果完成）。模拟使用 simulated 阶段，不伪造设备 ACK。`failed` 与 `cancelled` 是失败/取消；多命令任务可能交替出现执行中和已应答。保留最近 200 个任务，可用历史判断停在哪一步。
 
@@ -89,3 +89,15 @@ POST `/api/v1/jobs/编号/cancel`，请求体 `{}`，取消当前等待或排队
 若无硬件，用 simulation.json；SPI 项必须保持“未执行”。分享软件只发送干净 ZIP，不发送 .agent-session.json 或 agent-results。
 
 波特率选择：主窗口串口旁可选择 115200～3000000 的预设波特率，默认 921600。必须与 FPGA 固件一致；选择后重新连接才生效。Agent connect 支持整数 baud 参数，status 返回实际 baud。
+
+## 固件1.3新增可选参数
+
+`voices.set`的每路可加`piano_hold`（布尔值）、`piano_decay_s`（0.2～30秒，默认6）。先等0x16配置应答成功，再发送原声部参数；旧固件显式请求会失败。基本波形不受影响。保持要求gate=true、gain和sustain大于零。关闭保持后从当前能量衰减；只改参数不会重敲。
+
+`capture`可加`points`为512或2048，省略仍2048，512需要能力`capture_sizes`包含512。`piano_control`表示保持/衰减支持。状态新增每路`piano_settings`。
+
+示例：`TangLabCtl.exe run voices.set --json '{"voices":[{"channel":0,"wave":4,"gate":true,"gain":0.002,"sustain":0.7,"piano_hold":true,"piano_decay_s":6}]}'`
+
+示例：`TangLabCtl.exe run capture --json '{"points":512,"trigger":0}'`
+
+两声部SPI自动测试保持既有2048点流程。

@@ -150,6 +150,8 @@ class AnalysisMixin:
         self.spectrum_channel.currentIndexChanged.connect(lambda _:self.update_spectrum(force=True))
         self.spectrum_key=None;self.spectrum_data=None
     def update_spectrum(self,force=False):
+        if getattr(self,'clear_pending',False):return
+        if self.pause.isChecked():return
         e=self.engine;key=(e.source,e.audio_revision,self.spectrum_channel.currentIndex(),e.audio is None)
         if key==self.spectrum_key and not force:return
         self.spectrum_key=key

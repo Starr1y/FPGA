@@ -37,3 +37,18 @@ Desktop.ini
 /licenses/
 
 # Intentionally tracked: fpga/bitstream/tanglab.fs, fpga/reports/, source/
+
+# TangLab portable releases and live sessions
+**/.agent-session.json
+**/agent-results/
+**/recordings/
+**/*.lic
+**/*.gprj.user
+**/.env
+/dist/
+/tmp/
+!/fpga/impl/
+/fpga/impl/*
+!/fpga/impl/tanglab_process_config.json
+/piano-tail-fix-20261008/impl/*
+!/piano-tail-fix-20261008/impl/tanglab_process_config.json
