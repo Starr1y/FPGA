@@ -1,0 +1,4 @@
+vendor/
+recordings/
+__pycache__/
+*.pyc

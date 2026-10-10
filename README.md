@@ -7,6 +7,7 @@
 - **免安装上位机**：[前往 Releases 下载 TangLab Windows 64 位 ZIP](https://github.com/Starr1y/FPGA/releases/latest)。解压整个文件夹后运行 `TangLab.exe`，无需 Python。硬件连接另需驱动，编译下载另需 Gowin。
 - **工程与烧录文件**：[`piano-tail-fix-20261008/`](piano-tail-fix-20261008/)，工程是 `tanglab.gprj`，固件是同目录 `tanglab-piano-v1.3.1.fs`。也可在 Releases 下载独立 FPGA 工程 ZIP。
 - **操作说明**：先读[使用说明](使用说明.txt)、[钢琴设置](钢琴音色使用说明.txt)，接线与 SPI 测试见[两声部与 SPI 上板指南](两声部与SPI上板测试指南.txt)。
+- **BNO085／STM32 验证上位机**：独立源码与启动说明见 [`bno085_pc/`](bno085_pc/README.md)。使用 115200 串口，与上面的 TangLab FPGA 工具分开运行。
 
 先摘下耳机，用官方 Programmer 下载到 **SRAM**，断电后失效。确认板上时钟 **50 MHz**，上位机选择实际 DEBUG-USB2 串口，波特率 **921600**，握手应为 `TangLab 1.3.1`。上电默认静音；从低增益开始设置声部。
 
@@ -25,6 +26,7 @@
 | 路径 | 用途 |
 | --- | --- |
 | `source/` | GUI、命令工具、协议、构建脚本及软件测试源码 |
+| `bno085_pc/` | STM32＋单颗 BNO085 的 Python 串口验证上位机 |
 | `run_tanglab.py` | 在仓库根目录启动源码版，正确查找说明和工程 |
 | `fpga/` | 最新 RTL、testbench、CST/SDC、Gowin 工程 |
 | `fpga/bitstream/tanglab.fs` | 与 1.3.1 集中工程完全相同的固件 |
