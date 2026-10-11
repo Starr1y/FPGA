@@ -10,3 +10,5 @@
 
 /fpga/i2cfan04/** -text -whitespace
 /fpga/tb/tb_video_hdmi.sv -text -whitespace
+
+/fpga/dualhand/** -text -whitespace

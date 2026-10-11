@@ -1,0 +1,58 @@
+{
+  "source_sha256": {
+    "fpga/dualhand/rtl/bno_i2c_hand.v": "8e550d24dd40793dbdb79777bc26b60d5fff3dbd1b29f49f69681e57bff5c187",
+    "fpga/dualhand/rtl/two_hand_event_queue.v": "2fa92393992ac3a8befe0da935c8b9095f57e734343620b232075ff89fa39f7b",
+    "fpga/dualhand/rtl/two_hand_i2c_core.v": "f121ceff4ecedad2eaf7cb13e466058aeded5b1313d7d3662ba54bbb90f055ad",
+    "fpga/dualhand/tb/bno_two_hand_peer.sv": "bd7afffd2b7cb993b8605e1c3148a72b3bc2ea97e70b05b9de368ea2ad78e2df",
+    "fpga/dualhand/tb/tb_two_hand_native.sv": "79104ab0c904a554649109e3c72e2130079a5ec67a64b4342ccffe7085d772c4",
+    "fpga/dualhand/tb/tb_two_hand_queue.sv": "f8e794c4cd3487853f0f088b5e026d8c2218d71e7e29e85a6e7ef94d55ab604e",
+    "fpga/i2cfan04/rtl/bno_i2c_host.v": "5cfc0a8a9d74451831fd4f4e0ea1f576b46fbc1de72a41764fa1b0de1f621526",
+    "fpga/i2cfan04/rtl/shtp_i2c_link.v": "7c6be0d918c8e4ebcccd544d408b39a061fe0a6f394830168758c53b40eb0975",
+    "fpga/i2cfan04/rtl/i2c_byte_master.v": "4d4c7004ee8a115d13f01343ccd2b1716ead2b97659184295085f244825cdf96",
+    "fpga/i2cfan04/rtl/shtp_report_decode.v": "1ceae9df8fdea8539d90f965fd8d72916624f1b7a264c082baa3ca21989a6931",
+    "fpga/i2cfan04/rtl/quaternion_pose.v": "e5af21a9db2324e33fd01590d5a8674fb488d5551b7e4d37fe03962e1a5bf1b1",
+    "fpga/i2cfan04/rtl/pose_math.v": "a47bc79d69cf2d5239f4ae00c2d8532cbc048961ee99457bf340cee4ee53c0ee",
+    "fpga/i2cfan04/rtl/gesture_control.v": "ecdfcd329ae68d7b75374e35aa8cd956759933cafd30cb6f8ba69b32a5220b87",
+    "fpga/i2cfan04/rtl/expression_stream_guard.v": "efba42121221310314e56362dc7819d899848d471353fc3891e0e79dd6e3a537",
+    "fpga/i2cfan04/rtl/hand_expression.v": "b5765de0f38297d2f72c6cad772ba336d16ea75b1201c1485a3ad01375f38548"
+  },
+  "tests": {
+    "queue-depth-1": {
+      "passed": true,
+      "exit_code": 0,
+      "messages": [
+        "TB_PASS depth=1 independent queues, simultaneous hits, stall stability, wrap, overflow accounting, cancel/ACK priority, healthy-hand progress, epochs; 1216 transfers in 2529 cycles"
+      ]
+    },
+    "queue-depth-3": {
+      "passed": true,
+      "exit_code": 0,
+      "messages": [
+        "TB_PASS depth=3 independent queues, simultaneous hits, stall stability, wrap, overflow accounting, cancel/ACK priority, healthy-hand progress, epochs; 1222 transfers in 2539 cycles"
+      ]
+    },
+    "queue-depth-8": {
+      "passed": true,
+      "exit_code": 0,
+      "messages": [
+        "TB_PASS depth=8 independent queues, simultaneous hits, stall stability, wrap, overflow accounting, cancel/ACK priority, healthy-hand progress, epochs; 1232 transfers in 2564 cycles"
+      ]
+    },
+    "native-dual-hand": {
+      "passed": true,
+      "exit_code": 0,
+      "messages": [
+        "TB_PASS two native 0x4A buses autonomous configuration, independent origins/layouts/yaw, negative-Z jerk, simultaneous hit buffering, per-hand strength IDs, left reset/outage/disable isolation, four-bit zone10, independent Roll/Pitch expression and release hold, mirror/re-origin, release epochs; clock-scaled simulation only"
+      ]
+    }
+  },
+  "inputs_unchanged": true,
+  "native_clock_hz": 1000000,
+  "native_pose_hz": 100,
+  "physical_dual_hand_tested": false,
+  "board_download_top": false,
+  "integrated_into_FAN04": false,
+  "audio_connected": false,
+  "passed": true,
+  "native_i2c_hz_upper_bound": 250000
+}
