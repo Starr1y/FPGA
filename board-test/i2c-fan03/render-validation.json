@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/i2cfan03/rtl/video_instrument_panel.v": "cee844ff9dd1039419e63f30251152f546ebfc56dc4d9436a47770983992273d",
+    "fpga/i2cfan03/rtl/video_font.v": "8f9bf23042e0fe7daaa0cd712474da152a609afa5c177a80201b84b071fc95f8",
+    "fpga/i2cfan03/rtl/video_font_zh.v": "14fcf95b1e1f1d206bfa184bc0667435211e868ff239841bfc05532af28d7eed",
+    "fpga/i2cfan03/rtl/video_text_zh.v": "dc189f6f1cf1210b32eb68dfced118ea6de03ad0144ae0e73a52b41d94af3355",
+    "fpga/i2cfan03/rtl/video_fan_map.v": "f1cddabdc813d086d38be375911ae5150b10a876ebca3e5097e6ab0a632b0310",
+    "fpga/i2cfan03/rtl/fan_spans.hex": "b47d1900818154396d3f1474a5cc7905e94b280fbd0847960682ec042b06a90a",
+    "fpga/i2cfan03/tb/tb_ui_render.sv": "189cbc326109896af26f7491ee2774bc440eccf7b60fbe954446f2d76e27bd84"
+  },
+  "frames_sha256": {
+    "ui-page-0-state-0.png": "e50ae49a93a12a5f5711d342a8ffb40a49abe98580839e5c6d7347c89fdde3d6",
+    "ui-page-0-state-1.png": "69d2bf60c2644cdc3afa5f49098fc87f3a4e66f2d4144f9eef91abff6c9376b9",
+    "ui-page-0-state-2.png": "e41ff69eab1b68c01fc3919ef8e970d4208ff9be061e947827ea3ffea9ed73fb",
+    "ui-page-0-state-3.png": "7f6b2d2848e62ed92551cd4dd7662615518de2d463f9fb318a557a0c0833ffea",
+    "ui-page-0-state-4.png": "763f7e0efe01eb3c46d928ba084ffeaf64f70522d3a7b06c23f339acdcce62fd",
+    "ui-page-0-state-5.png": "0ee7213dbdc33ca270f19d2b5f5ea8597ba896dd4226fe54a92cf949993101c5",
+    "ui-page-0-state-6.png": "4a53ffcc3e6dce086571168615de73d695f57b56eb2a839e300a7161a280f62d",
+    "ui-page-0-state-7.png": "51168a3abd1262f4e0c3e2ddb16a1bb85d7dbe1a9490cc39f787e09e4ae57cba",
+    "ui-page-0-state-8.png": "74a87ac2f8c78e483cd282d2e5cd5f888c71618dd71303bef9a1f50c43812df4",
+    "ui-page-0-state-9.png": "e41ff69eab1b68c01fc3919ef8e970d4208ff9be061e947827ea3ffea9ed73fb",
+    "ui-page-0-state-10.png": "92784a78f71b8627bbf149d191088098128d775633b8e96c12ab5c0cd0fe5298",
+    "ui-page-0-state-11.png": "95d05a53907e462e37dfa2675269f252ef83d366db17912c591c72561ea0bd7c",
+    "ui-page-0-state-12.png": "528d4e4382ebf156d9c9eaf7710d1bab304d3905a00d0f5a1d454d075c072faf",
+    "ui-page-0-state-13.png": "e045d24899053ea913df04e2eba09c5c7ebfea019dd0c366626ad4ab9d42bd09",
+    "ui-page-0-state-14.png": "fab0ca21ec44fe9d3f40a31390fc6afa896897493db3f784016e087902dd6661",
+    "ui-page-0-state-15.png": "39468353c6e3bcefaeebb653fd02460739deb953a9ccb59fb64568f08f0b768d",
+    "ui-page-0-state-16.png": "526494a714dba120221e9974b2eab692fb721c18ff60884f3f4e02eccf62c568",
+    "ui-page-1-state-0.png": "52dc227ffc8a73f5ddff01827817c36ec2b5bb3e4fd32fb97a348ed16745e1f7",
+    "ui-page-1-state-1.png": "8a24441578e2e263cdacd196cda2f7f7f084650bbdaf024977250ba5d506510d",
+    "ui-page-1-state-2.png": "b9a55c0a24aa69dc5061d856d03e88accfea143456063823e5d4b7f8db9436f4",
+    "ui-page-1-state-3.png": "f396babe7cf69a0d1d57b2782b811d800e3201fc46f64b639af671696ac2207a",
+    "ui-page-1-state-4.png": "d8dd9be2cd7418a62515c6130b826fd74d30849d397927316e480d94082901c4",
+    "ui-page-1-state-5.png": "9c4fba01b5229349d87975a80b44c1b0046ccb853cf7a450179b25a63dd350d9",
+    "ui-page-1-state-6.png": "3991833331f1df9e7f1c5bd222dbfafe31eef4fdee21559d1e955cbb7e9dad26",
+    "ui-page-1-state-7.png": "072a9717461663d15f11a0834d8c6d4ec6066eb866b4ba7051c6c483751d50bc",
+    "ui-page-1-state-8.png": "4dc7a1916c48bb19aa051f0a259155d0dbaa4eb58c6344754004ede0f7fde38a",
+    "ui-page-1-state-9.png": "5bb265bc87da985156b43ef0a07570e3e2129eb69828b9c388a341bbd09ae12c",
+    "ui-page-1-state-10.png": "c73a1173d2df05c47018c26bd49cf6da93e69839de1084555d972e86d677c6ad",
+    "ui-page-1-state-11.png": "25c3602112e77bf263b0f728819ef36bccc52d0d54bd0e96684d254e59ddb813",
+    "ui-page-1-state-12.png": "7beb1b39654c5f5ee01d0cacbb2f6108f7030227f0700ff4b817b9b1c80977c6",
+    "ui-page-1-state-13.png": "62dbdbc121170e8ed1170d81299e0ab87bed09a2f2d4f7c95cc0fb83b49096cc",
+    "ui-page-1-state-14.png": "a68a09fdf6e53e23cb0b2f9f2f99ce9245b063a8be1e696db73d672927661db9",
+    "ui-page-1-state-15.png": "06b04672d845f864739241e8ec2da4e7a0233a3e75e70124751df8f58f37db95",
+    "ui-page-1-state-16.png": "00a38f186d110dfad40694ee7441d4cacdad44c76c87d8ade9ad3d784b98d03a"
+  },
+  "pages": [
+    "performance",
+    "diagnostics"
+  ],
+  "states": [
+    "disabled",
+    "configuring",
+    "ready",
+    "hit",
+    "F03",
+    "low_accuracy",
+    "moving",
+    "calibration_timeout",
+    "calibrating",
+    "changed_hidden_telemetry",
+    "release_confirmation"
+  ],
+  "hidden_telemetry_pixel_invariance": true,
+  "fixture_telemetry_only": true,
+  "native": [
+    640,
+    480
+  ],
+  "version_marker": "I2C250K / FAN03",
+  "physical_hdmi_tested": false
+}

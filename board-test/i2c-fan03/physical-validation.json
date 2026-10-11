@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-11T05:54:12.964487+00:00",
+  "firmware": "fpga/bitstream/tanglab_i2c_fan03.fs",
+  "jtag_device_found": true,
+  "idcode": "0x0001081B",
+  "jtag_scan_is_physical_IMU_proof": false,
+  "imu_connected": false,
+  "source": "User: imu没有连接到fpga，测试环节等我回来",
+  "physical_test_deferred_by_user": true,
+  "sram_program_attempted": false,
+  "sram_programmed": false,
+  "nonvolatile_flash_written": false,
+  "physical_downward_strikes_verified": false,
+  "physical_thresholds_verified": false
+}

@@ -1,3 +1,9 @@
-# Preserve exact FPGA bytes and the concentrated package's SHA256 manifest.
-*.fs -text
-/piano-tail-fix-20261008/** -text
+# Preserve frozen firmware, source and validation hash bytes.
+*.fs binary
+/fpga/i2cfan03/** -text -whitespace
+/fpga/extensions/** -text
+/board-test/** -text -whitespace
+/fpga/reports/** -text -whitespace
+/piano-tail-fix-20261008/** -text -whitespace
+*.png binary
+*.pdf binary

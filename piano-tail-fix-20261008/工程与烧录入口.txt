@@ -1,9 +1,0 @@
-当前版本：TangLab 1.3.1（2026-10-08）
-直接烧录：本目录tanglab-piano-v1.3.1.fs，用官方Programmer选择SRAM下载。
-打开工程：本目录tanglab.gprj；器件GW5AST-LV138PG484AC1/I0。
-整个文件夹一起复制；impl/tanglab_process_config.json是必要IDE配置，不能删除。
-CPU/SSPI已作GPIO，以免J9出现dedicated pin约束错误。
-命令行重编译：在本目录用Gowin IDE/bin/gw_sh.exe运行build.tcl。
-重编译结果：impl/pnr/tanglab.fs；根目录交付fs不会自动覆盖。
-50MHz时钟、上电静音、921600串口、3.3V IMU接口；接线与前版相同。
-新固件未自动烧录。完整步骤见钢琴音色使用说明.txt及上板测试指南。

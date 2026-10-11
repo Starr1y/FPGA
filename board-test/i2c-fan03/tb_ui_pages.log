@@ -1,0 +1,2 @@
+TB_PASS primary diagnostics hidden, actionable states retained, atomic page snapshots, independent hit and preview
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_ui_pages.sv:32: $finish called at 85401000 (1ps)

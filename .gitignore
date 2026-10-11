@@ -1,20 +1,37 @@
-# Local Gowin build and per-user project settings
-/fpga/impl/
-/fpga/*.gprj.user
-
-# Simulation and test output
+# FPGA-only publication. Keep desktop applications local.
+/source/
+/bno085_pc/
+/tools/
+/run_tanglab.py
+/requirements-lock.txt
+/TangLab*.exe
+/_internal/
+/licenses/
+/dist/
+/*.txt
+/docs/agent*.md
+/docs/TangLab*.txt
+/docs/交付验证.txt
+/docs/协议与测量.md
+/fpga/run_sim.py
+/piano-tail-fix-20261008/run_sim.py
+/piano-tail-fix-20261008/*.txt
+!/piano-tail-fix-20261008/SHA256.txt
+# EDA intermediate output and private configuration
+**/impl/
+**/*.gprj.user
+**/*.lic
+**/.agent-session.json
+**/recordings/
+**/agent-results/
+/board-test/fan03-rebuild/
 /.Xil/
 **/xsim.dir/
-**/*.wdb
-**/*.jou
-**/*.pb
-/fpga/sim-out/
-/fpga/sim-results/
-/agent-results/
-/recordings/
-/board-test/本机连接.json
-
-# Python and editor state
+*.wdb
+*.jou
+*.vvp
+*.ppm
+# Python/editor state
 __pycache__/
 *.py[cod]
 .venv/
@@ -22,33 +39,10 @@ venv/
 .pytest_cache/
 .env
 .env.*
-!.env.example
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 Desktop.ini
 *~
-
-# Rebuildable Windows distribution; source and bitstream remain tracked
-/TangLab.exe
-/TangLabCtl.exe
-/_internal/
-/licenses/
-
-# Intentionally tracked: fpga/bitstream/tanglab.fs, fpga/reports/, source/
-
-# TangLab portable releases and live sessions
-**/.agent-session.json
-**/agent-results/
-**/recordings/
-**/*.lic
-**/*.gprj.user
-**/.env
-/dist/
-/tmp/
-!/fpga/impl/
-/fpga/impl/*
-!/fpga/impl/tanglab_process_config.json
-/piano-tail-fix-20261008/impl/*
-!/piano-tail-fix-20261008/impl/tanglab_process_config.json
+# Track selected FPGA RTL/ROM/tests, published bitstream and reports.

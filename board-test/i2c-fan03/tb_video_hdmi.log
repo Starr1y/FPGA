@@ -1,0 +1,2 @@
+TB_PASS real video wrapper: coherent RGB/sync pipeline, independent TMDS decode over active/blank raster and 1024-bit frame status
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/tb/tb_video_hdmi.sv:73: $finish called at 16800470000 (1ps)

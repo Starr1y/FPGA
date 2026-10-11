@@ -1,0 +1,2 @@
+TB_PASS all 7/5/12 centers, bidirectional 3 degree hysteresis, noncyclic +/-90 endpoints, 12th accepted hit, profile event retention, feedback and rear yaw seam protection
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_fan_control.sv:47: $finish called at 4140000 (1ps)

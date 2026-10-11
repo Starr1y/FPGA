@@ -1,0 +1,2 @@
+TB_PASS 1000 simulated hits across T1/T2/T3, 1000 positive-axis/XY/subthreshold nonhit groups, held acceleration no retrigger, event-id wrap, counters; accelerated digital soak only
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_z_repeated.sv:54: $finish called at 544110100000 (1ps)

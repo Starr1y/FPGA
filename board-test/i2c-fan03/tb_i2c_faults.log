@@ -1,0 +1,2 @@
+TB_PASS I2C NACK, SDA-stuck timeout, clock-stretch timeout, open-drain release/reset, datasheet high/low periods
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_i2c_faults.sv:24: $finish called at 91140000 (1ps)
