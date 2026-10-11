@@ -39,6 +39,17 @@ python -X utf8 fpga/tools/fan04_release.py build --gowin-shell "D:/Gowin/Gowin_V
 
 `fpga/extensions/hand_expression_rate.v` 为单独验证的 100/200 Hz 表情滤波扩展，已作为 FAN04 的基础并接入序号/时间戳保护；FAN03 保持冻结。验证入口为 `check_expression_rate.py`。实测 CSV 及 `analyse_gesture_trials.py` 用于用户回来后统计动作；当前模板无真人样本，不证明准确率或延迟达标。
 
+## 双手开发核心仿真
+
+当前下载工程与 FAN04 位流保持冻结。双手开发代码在 `fpga/dualhand/`，尚无板卡下载顶层；数字音频和传感器集成的验证入口为：
+
+```powershell
+python -X utf8 fpga/tools/check_dual_audio.py
+python -X utf8 fpga/tools/check_dual_audio.py --native-only
+```
+
+两份音频证据位于 `board-test/dual-audio/`。前者为 50 MHz/48 kHz 事件注入，后者为 1 MHz/2 kHz 原生传感器模拟链路；详细边界见 [双手音频说明](双手数字音频集成与验证.md)。
+
 ## 后续 Git 上传
 
 使用独立克隆作为发布目录，避免在包含个人文件的父目录执行 `git add .`。先同步审核后的 FPGA 文件，再检查差异并提交：
