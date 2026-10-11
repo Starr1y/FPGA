@@ -1,0 +1,78 @@
+{
+  "tb_i2c_faults": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_i2c_transport": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_i2c_host": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_i2c_guard": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_calibration_quality": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_ui_keys": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_ui_pages": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_video_hdmi": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_ui_silent_top": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_fan_control": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_fan_keys": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_z_strike": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_z_reports": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_z_repeated": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_expression_guard": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_pose_expression_path": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_fan04_expression_rate": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_fan04_expression_200": {
+    "passed": true,
+    "exit_code": 0
+  },
+  "tb_pose_metadata": {
+    "passed": true,
+    "exit_code": 0
+  }
+}

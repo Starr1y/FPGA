@@ -1,0 +1,213 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan04/tanglab_i2c_fan04.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v'
+Undeclared symbol 'v_phase', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":45)
+Undeclared symbol 'v_freq', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":45)
+Undeclared symbol 'v_preset', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":46)
+Undeclared symbol 'v_brightness', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":46)
+Undeclared symbol 'blend_gain', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":46)
+WARN  (EX3638) : 'v_phase' is already implicitly declared on line 45("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":47)
+WARN  (EX3638) : 'v_freq' is already implicitly declared on line 45("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":47)
+WARN  (EX3638) : 'v_brightness' is already implicitly declared on line 46("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":48)
+WARN  (EX3638) : 'v_preset' is already implicitly declared on line 46("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":48)
+WARN  (EX3638) : 'blend_gain' is already implicitly declared on line 46("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_core.v":49)
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pt8211_output.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\audio_delay.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\fm_limits.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\instrument_waves.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\timbre_presets.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\i2c_byte_master.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_i2c_host.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_imu_host.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\imu_io_guard.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_spi_host.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_spi_link.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_uart_host.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_uart_link.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_report_decode.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pose_math.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\gesture_control.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\instrument_keys.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\imu_ui_feedback.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\polyphony_test.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_status_cdc.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\imu_transport.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\key_zone_select.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\sine_lut.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top_i2c_fan04.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bench_manual_enable.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\uart.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_font.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_font_zh.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_text_zh.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_panel.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_hdmi.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_pll_125.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\svo_tmds.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\expression_stream_guard.v'
+Compiling module 'top_i2c_fan04'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top_i2c_fan04.v":1)
+Compiling module 'top(BENCH_MANUAL=1,AUTONOMOUS_SPI=1,UI_ONLY=1)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":2)
+Extracting RAM for identifier 'voice_zone'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":160)
+Extracting RAM for identifier 'capture_mem'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":351)
+Extracting RAM for identifier 'minima'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":357)
+Extracting RAM for identifier 'maxima'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":357)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 20("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":10)
+Compiling module 'bench_manual_enable'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bench_manual_enable.v":4)
+Compiling module 'imu_io_guard'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\imu_io_guard.v":3)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":38)
+Compiling module 'instrument_keys(ALLOW_TEST=1'b0,ALLOW_MENU=1'b0,ALLOW_LAYOUT=1)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\instrument_keys.v":4)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\instrument_keys.v":77)
+Compiling module 'uart_rx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\uart.v":1)
+Compiling module 'frame_rx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":1)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":31)
+Compiling module 'imu_ui_feedback(ZONES=12)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\imu_ui_feedback.v":3)
+Compiling module 'local_instrument(VOICES=32)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":3)
+Extracting RAM for identifier 'base_ftw'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":16)
+Extracting RAM for identifier 'gate_ticks'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":16)
+Extracting RAM for identifier 'age'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":17)
+Extracting RAM for identifier 'gain'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":17)
+Extracting RAM for identifier 'voice_event'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":17)
+Extracting RAM for identifier 'revision'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":17)
+Extracting RAM for identifier 'voice_preset'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":19)
+Extracting RAM for identifier 'voice_release'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":19)
+Extracting RAM for identifier 'ratio_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":28)
+Extracting RAM for identifier 'event_fifo'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":36)
+Compiling module 'timbre_presets'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\timbre_presets.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":30)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":95)
+Compiling module 'polyphony_test'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\polyphony_test.v":3)
+Extracting RAM for identifier 'notes'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\polyphony_test.v":6)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":249)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":250)
+Compiling module 'video_hdmi'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_hdmi.v":4)
+Extracting RAM for identifier 'peak'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_hdmi.v":27)
+Compiling module 'video_pll_125'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_pll_125.v":10)
+Compiling module 'video_status_cdc(WIDTH=1024)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_status_cdc.v":3)
+Compiling module 'video_instrument_panel'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":2)
+Extracting RAM for identifier 'bcd'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":16)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":8)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":51)
+Compiling module 'video_fan_map'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v":2)
+Extracting RAM for identifier 'spans'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v":4)
+WARN  (EX2526) : Entry size 236 at rtl/fan_spans.hex:0 does not match memory width 234("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v":6)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_fan_map.v":11)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":264)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":265)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 6("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":286)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":287)
+Compiling module 'video_text_zh'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_text_zh.v":4)
+Compiling module 'video_font_zh'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_font_zh.v":4)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":292)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_instrument_panel.v":293)
+Compiling module 'video_font'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\video_font.v":4)
+Compiling module 'svo_tmds'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\svo_tmds.v":23)
+Compiling module 'pt8211_output'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pt8211_output.v":7)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":297)
+Compiling module 'bno_imu_host(REPORT_BACKPRESSURE=1,SPI=1)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_imu_host.v":3)
+Compiling module 'bno_i2c_host(REPORT_BACKPRESSURE=1,RESET_TICKS=500000,BOOT_TICKS=37500000,RETRY_TICKS=150000000,HALF_DIV=100,RESET_SETUP_TICKS=500000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\bno_i2c_host.v":3)
+Compiling module 'shtp_i2c_link'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":5)
+Extracting RAM for identifier 'buffer'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":34)
+Compiling module 'i2c_byte_master'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\i2c_byte_master.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\i2c_byte_master.v":45)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":95)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":107)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":120)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_i2c_link.v":132)
+Compiling module 'shtp_report_decode(REPORT_BACKPRESSURE=1)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_report_decode.v":3)
+Extracting RAM for identifier 'next_sequence'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\shtp_report_decode.v":27)
+Compiling module 'quaternion_pose'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":7)
+Compiling module 'pose_atan2'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pose_math.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pose_math.v":32)
+Compiling module 'pose_isqrt'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\pose_math.v":45)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":153)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":153)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\quaternion_pose.v":169)
+Compiling module 'gesture_control'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\gesture_control.v":8)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\gesture_control.v":62)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\gesture_control.v":122)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\gesture_control.v":123)
+Compiling module 'expression_stream_guard'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\expression_stream_guard.v":3)
+Compiling module 'hand_expression'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v":42)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v":81)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\hand_expression.v":38)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":354)
+Compiling module 'frame_tx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":37)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":62)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":67)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\framing.v":68)
+Compiling module 'uart_tx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\uart.v":25)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\uart.v":37)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 20("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":410)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":417)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":428)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":437)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":459)
+NOTE  (EX0101) : Current top module is "top_i2c_fan04"
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input imu_power_good is unused("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top_i2c_fan04.v":2)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "local_instrument" instantiated to "instrument" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":121)
+WARN  (NL0002) : The module "timbre_presets" instantiated to "presets" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\local_instrument.v":26)
+WARN  (NL0002) : The module "polyphony_test" instantiated to "test_engine.test_source" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\rtl\top.v":125)
+[95%] Generate netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\gwsynthesis\tanglab_i2c_fan04.vg" completed
+[100%] Generate report file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\gwsynthesis\tanglab_i2c_fan04_syn.rpt.html" completed
+GowinSynthesis finish
+Reading netlist file: "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\gwsynthesis\tanglab_i2c_fan04.vg"
+Parsing netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\gwsynthesis\tanglab_i2c_fan04.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\tanglab_i2c_fan04.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\pnr\tanglab_i2c_fan04.power.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\pnr\tanglab_i2c_fan04.pin.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\pnr\tanglab_i2c_fan04.rpt.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\pnr\tanglab_i2c_fan04.rpt.txt" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\i2cfan04\impl\pnr\tanglab_i2c_fan04.tr.html" completed
+Sun Oct 11 14:40:32 2026
+

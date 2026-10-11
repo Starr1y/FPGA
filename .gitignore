@@ -46,3 +46,5 @@ Thumbs.db
 Desktop.ini
 *~
 # Track selected FPGA RTL/ROM/tests, published bitstream and reports.
+
+board-test/fan04-rebuild/

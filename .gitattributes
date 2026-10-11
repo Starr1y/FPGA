@@ -7,3 +7,6 @@
 /piano-tail-fix-20261008/** -text -whitespace
 *.png binary
 *.pdf binary
+
+/fpga/i2cfan04/** -text -whitespace
+/fpga/tb/tb_video_hdmi.sv -text -whitespace

@@ -1,0 +1,354 @@
+{
+  "profile": "MANUAL_I2C_FRONT_180_FAN_Z_ACCEL_OR_JERK",
+  "firmware": "fpga/bitstream/tanglab_i2c_fan04.fs",
+  "project": "fpga/i2cfan04/tanglab_i2c_fan04.gprj",
+  "top": "top_i2c_fan04",
+  "version_marker": "FAN04",
+  "sha256": "f09a0203dde42c5bcf89d0dfc46252416bcdb4c8abfb66d2e95fa7cb9badfafe",
+  "bytes": 36137471,
+  "simulations": {
+    "tb_i2c_faults": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_i2c_transport": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_i2c_host": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_i2c_guard": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_calibration_quality": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_ui_keys": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_ui_pages": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_video_hdmi": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_ui_silent_top": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_fan_control": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_fan_keys": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_z_strike": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_z_reports": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_z_repeated": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_expression_guard": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_pose_expression_path": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_fan04_expression_rate": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_fan04_expression_200": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "tb_pose_metadata": {
+      "passed": true,
+      "exit_code": 0
+    }
+  },
+  "render_validation": {
+    "passed": true,
+    "source_sha256": {
+      "fpga/i2cfan04/rtl/video_instrument_panel.v": "2654ea50b66fb17b5b770f62b6ab72e24b64fa5c21c971d4ee62a7fa9d80d96e",
+      "fpga/i2cfan04/rtl/video_font.v": "8f9bf23042e0fe7daaa0cd712474da152a609afa5c177a80201b84b071fc95f8",
+      "fpga/i2cfan04/rtl/video_font_zh.v": "14fcf95b1e1f1d206bfa184bc0667435211e868ff239841bfc05532af28d7eed",
+      "fpga/i2cfan04/rtl/video_text_zh.v": "dc189f6f1cf1210b32eb68dfced118ea6de03ad0144ae0e73a52b41d94af3355",
+      "fpga/i2cfan04/rtl/video_fan_map.v": "f1cddabdc813d086d38be375911ae5150b10a876ebca3e5097e6ab0a632b0310",
+      "fpga/i2cfan04/rtl/fan_spans.hex": "b47d1900818154396d3f1474a5cc7905e94b280fbd0847960682ec042b06a90a",
+      "fpga/i2cfan04/tb/tb_ui_render.sv": "189cbc326109896af26f7491ee2774bc440eccf7b60fbe954446f2d76e27bd84"
+    },
+    "frames_sha256": {
+      "ui-page-0-state-0.png": "daab4186a71245bc03ec03ddc357abd060ddf9c4f0cd1571d33367d2e8982e63",
+      "ui-page-0-state-1.png": "39be74a215a0413ad4ee877b5ac550535b75b980daa80c60c8a3a8a5423368e8",
+      "ui-page-0-state-2.png": "02cd8bf0348b39a59b6dd1e5f832987ca9b0fe0e6b7e5142d04a8170f6a61675",
+      "ui-page-0-state-3.png": "1308e09a8a0f4794583d658a7d6f0e70d2d32c57e1ecdc03ad627d13a6dc27a9",
+      "ui-page-0-state-4.png": "b694c8f08744d0a9b5d5e9ee93fa9b298dd9e9c3fbd9ab876eea160f1b0e5a8e",
+      "ui-page-0-state-5.png": "53ad7fc771ba12c9c6d415066d699e6da373eb6e7047e6481e297b394c0cd5fe",
+      "ui-page-0-state-6.png": "664c43c8776c25a88e5cff1a6187a1d58667c3bd204464e081f778a6fecca56a",
+      "ui-page-0-state-7.png": "7d0e3a403a8535f5c52002a64fbb3a34a2d0a99d0c450949da402e3aab715cf2",
+      "ui-page-0-state-8.png": "2faac1f4e45e323b49952b118673caa2ba6693f9a7c07227409c1ee309c4e2a9",
+      "ui-page-0-state-9.png": "02cd8bf0348b39a59b6dd1e5f832987ca9b0fe0e6b7e5142d04a8170f6a61675",
+      "ui-page-0-state-10.png": "d70c1bda020b5707a3eed835eca5c048423b35639cf6b659e55955b571568dd6",
+      "ui-page-0-state-11.png": "baf0c159d43751dd3d9e063fb9a6ec7d8fa02579ae86ef76c0318104928d5911",
+      "ui-page-0-state-12.png": "17fe0059eabc56dd7895d67f706372934b28f19de053a9893de95b07106ca409",
+      "ui-page-0-state-13.png": "e59a0d9e8af1b0ae89610c1a753a577e8ba26ae511c41f28ce43d52cb0805e14",
+      "ui-page-0-state-14.png": "02c981cec7380e9f7843d0f70beba874c94ece6a2bdec754aee97ea01f5bbfe4",
+      "ui-page-0-state-15.png": "73d40cff82fecef771ce80381016582f934c48ee0b43301ef8f24b16332c2e4c",
+      "ui-page-0-state-16.png": "9808341b23bd77e6723f4b90f324285af0803da0d95916aea500189c5f42cf45",
+      "ui-page-1-state-0.png": "4d090f0003be4a8346bb13f5ff5845d7cba1e25a50c7691177b8fc2b1e2e5e07",
+      "ui-page-1-state-1.png": "38a196b5dbc75cb3a984b2f0c600a19007f8775fc37839b0d452dfa932acd566",
+      "ui-page-1-state-2.png": "795a5174edc5244372f446c8a04d72f5ce4bfdd1a434089c04ef2817c7e77e2f",
+      "ui-page-1-state-3.png": "f971e349b5488165fc46b6f24f977872a6b8ab6b7ad6459d678c82f4800f9e32",
+      "ui-page-1-state-4.png": "588b4854edfaae45c4657bd64bed6f86cd165e879e1024a76be8b3c86dcf640c",
+      "ui-page-1-state-5.png": "7e14732e2d437e9ac25fe1b7acb7a8d86a2fb93f0652cf3e302ea1c6d406b41e",
+      "ui-page-1-state-6.png": "c061d84e8b9838cec2a7e336f74eda0db46ee3c539a00a4b987163d3414ae0fa",
+      "ui-page-1-state-7.png": "78339a0c8ca5a0076ef893f9775003e4ee8f9c4fe5e4e63562dba942964d7295",
+      "ui-page-1-state-8.png": "95bb8719c2a64a0f1b775861401894a74ba8fd0b5eb52081fbe682cddc43b411",
+      "ui-page-1-state-9.png": "a065554a97b1d6d28cc625ad04be0ab274802e361b30c5d6abf26790ee803597",
+      "ui-page-1-state-10.png": "7d18a82da3da9750132e51919b9af59ba3d04604dbc10877db6fc76b91d353a9",
+      "ui-page-1-state-11.png": "c5ce5bf9bc8eb161d332e923d0ffc4d06438a4911dbba77f9870d29c67c86807",
+      "ui-page-1-state-12.png": "f20b67689edaf89ec7892fb2144cba13d4afc6dc00d85b005aa739c3f7e38edf",
+      "ui-page-1-state-13.png": "99a83512072b435ebec6f025430595cfdc240e2e0bc776b62b7bc8eaaf06a058",
+      "ui-page-1-state-14.png": "6bedd9f20cd3b0280826d41cd4dc7607b42ce3a2a479a87c35ac3ff8c59dbafb",
+      "ui-page-1-state-15.png": "df5662115a8dfc2b200cf8786e3b6ee1d1e0fe945faec8b390d85295dc8de0f8",
+      "ui-page-1-state-16.png": "55368100b9dab33d7317957e4cbfc431685e3e03e044746bdb0a4882a5ca57f9"
+    },
+    "pages": [
+      "performance",
+      "diagnostics"
+    ],
+    "states": [
+      "disabled",
+      "configuring",
+      "ready",
+      "hit",
+      "F03",
+      "low_accuracy",
+      "moving",
+      "calibration_timeout",
+      "calibrating",
+      "changed_hidden_telemetry",
+      "release_confirmation"
+    ],
+    "hidden_telemetry_pixel_invariance": true,
+    "fixture_telemetry_only": true,
+    "native": [
+      640,
+      480
+    ],
+    "version_marker": "I2C250K / FAN04",
+    "physical_hdmi_tested": false
+  },
+  "timing_violations": {
+    "setup": 0,
+    "hold": 0
+  },
+  "fmax_mhz": {
+    "sys_clk": 55.649,
+    "core/display/pll_ser/PLL_inst/CLKOUT1.default_gen_clk": 32.117
+  },
+  "resources": {
+    "Logic": {
+      "used": 17447.0,
+      "available": 138240.0
+    },
+    "Register": {
+      "used": 6562.0,
+      "available": 139095.0
+    },
+    "BSRAM": {
+      "used": 15.0,
+      "available": 340.0
+    },
+    "DSP": {
+      "used": 23.0,
+      "available": 298.0
+    }
+  },
+  "pins": {
+    "imu_data": "C18",
+    "imu_clk_tx": "E19",
+    "imu_int_n": "E16",
+    "imu_rst_n": "D20"
+  },
+  "trigger_axis": "sensor_body_negative_Z",
+  "trigger_report_id": "0x04",
+  "gravity_removed_by_sensor": true,
+  "acceleration_threshold_m_s2": 2.5,
+  "jerk_threshold_m_s3": 80,
+  "jerk_minimum_downward_acceleration_m_s2": null,
+  "independent_negative_Z_jerk": true,
+  "jerk_dt_units_us": 100,
+  "jerk_valid_dt_us": [
+    2000,
+    40000
+  ],
+  "jerk_uses_sensor_timestamps": true,
+  "minimum_angular_velocity_to_hit": false,
+  "quiet_ms": 20,
+  "refractory_ms": 100,
+  "strength_update_ms": 4,
+  "fan_degrees": 180,
+  "cyclic": false,
+  "note_layouts": [
+    7,
+    5,
+    12
+  ],
+  "distance_gating": false,
+  "trigger_reason_codes": {
+    "T0": "none",
+    "T1": "acceleration",
+    "T2": "jerk",
+    "T3": "both"
+  },
+  "manual_enable_only": true,
+  "default_page": "performance",
+  "audio_muted": true,
+  "published_sha256_unchanged": {
+    "tanglab-audio-spi-j9-20260923.fs": "b6e6b5e34eaba2f6d62decb6782319dc926c0329d8069791982d4be30e1cd673",
+    "tanglab_gpio_check.fs": "4b13b4322a22c12cd41ff14484f3fca0299e28d978eab784317160680b36b1d4",
+    "tanglab_i2c.fs": "dcce2ee4a11fc3e5901b238c6dd75c2ab9f63ccfd92eba06119abbc17c2a34f4",
+    "tanglab_i2c_fan01.fs": "3cb7d2ed6690f4980abfa048f7bc5bd1155bb7661a1880b981301682f2e301b7",
+    "tanglab_i2c_fan02.fs": "3ea784b821c9495a605939f9f2f987ba10680b8c734d69868993de874c293823",
+    "tanglab_i2c_fix01.fs": "6832e04dcc2caaf06000cb20680f1e8c1b89537ed70c9306d3eb5c37210041e1",
+    "tanglab_i2c_grv01.fs": "d9af470073300370ac9ad18736819b08ba1850e730516fd205b8791a32ece036",
+    "tanglab_i2c_pos01.fs": "4964c83928475235a206cd7fc56924db01e6eac25cdcd19c42b76e46a4e79a21",
+    "tanglab_i2c_pos02.fs": "1ad4cb3d4a25da315e816dd59c642546f7f4a91322cc9c1b0c261c8b90d5c558",
+    "tanglab_i2c_pos03.fs": "1c2ea6343435da2e36051c6b8df044e3bd628212c7f69616a0a8b759fcf9bd86",
+    "tanglab_i2c_pos04.fs": "c397fdb64019cd799fef9d5c8a23176f2f1a3af715c94ac5cf2bfbdbe5d715d3",
+    "tanglab_i2c_pos05.fs": "86ad79b4c6d41039c24503e3682453ea081f5c976fe94b9e9b2556301b4b77ac",
+    "tanglab_i2c_ui01.fs": "e80d382f993f28def55fb30c3db5bfb005a7fe2284900769f429219d1632e4b7",
+    "tanglab_spi.fs": "5240868b50c0895413bbd470bab36fcdc831de10dac15ffbe3e05bbdb0367de6",
+    "tanglab_spi_bench.fs": "8a9f29c2b864d0cdfbc512d45e5c6af6268783f1367482f84e8fcf24a16eeb95",
+    "tanglab_spi_commfix.fs": "bea90b04c4021f9f8d29b660e6a1ef6023abd660f6d65a978a72a92c33bcc7bf",
+    "tanglab_spi_compat.fs": "a0529150ef39423169076eef12511419ad94d218dd064833370fe0572ad1c202",
+    "tanglab_spi_resetcheck.fs": "d4c7e144111e6254f0ec7120488004555c8694ef93d33fd2a1af1fe5ac2b392f"
+  },
+  "physical_thresholds_verified": false,
+  "physical_downward_strikes_verified": false,
+  "physical_i2c_communication_verified": false,
+  "original_PR1014_warning_retained": true,
+  "completed_utc": "2026-10-11T06:46:45.397627+00:00",
+  "source_sha256": {
+    "build.tcl": "06d702d590044553fce01e30440e2d86a1c190ee11b95610d05a4cc062fe3d57",
+    "tanglab_i2c_fan04.cst": "894f386213c782f2640de22d1328b5b8f3b235e2cd3c40773c311d26f16a3199",
+    "tanglab_i2c_fan04.gprj": "aa67881269e8b908497baa49291926e1255958007843e01220003e927c4691cb",
+    "tanglab_i2c_fan04.sdc": "106b66384cc1889c3e09219078a7168f7cf5cfbb559575350c79bda942ff678d",
+    "rtl/audio_core.v": "c77e0ce14644848bf920d29925c27261e64f99bf8e1da1f62c51f3e6f8c3d04f",
+    "rtl/audio_delay.v": "4294d187ebb5465a5899e73c0a12c754b82354820d377793672f70d049960566",
+    "rtl/bench_manual_enable.v": "6a494c4354652497af6311b19d0573558042310d0ef5b98e97e3f871b1a53cb3",
+    "rtl/bno_i2c_host.v": "5cfc0a8a9d74451831fd4f4e0ea1f576b46fbc1de72a41764fa1b0de1f621526",
+    "rtl/bno_imu_host.v": "31727e201bc67a2a6dd6eb91c6f0ca41cc97e99763c2972f26349dda8fd64285",
+    "rtl/bno_spi_host.v": "bd63690e7459f8467cf639891193627ca34416aa2deb0fcf5b8f06736297c566",
+    "rtl/bno_uart_host.v": "5fee8c92828e8b61bdbfa34132bfd37c36cea06807c0d2256419d511f00a5feb",
+    "rtl/cent_ratio.hex": "398377ee480c58eb21b9de9f3cdd0f2d7dcd48ce4635d4284853dd70ed9debad",
+    "rtl/expression_stream_guard.v": "efba42121221310314e56362dc7819d899848d471353fc3891e0e79dd6e3a537",
+    "rtl/fan_spans.hex": "b47d1900818154396d3f1474a5cc7905e94b280fbd0847960682ec042b06a90a",
+    "rtl/fm_limits.hex": "20a7ecbbde7052e3e0e8574d90a3958ee9cc39d6ad303dbeeb3a9c5f9b0717a0",
+    "rtl/fm_limits.v": "2666127cf80a6f6cf96d34c70c814184da163c0614926713a042758af447900c",
+    "rtl/framing.v": "6e5c17fdee0cce9da2fd4cdd89f03b5885ca086b384d488340cbe4cb3ecb1bc3",
+    "rtl/gesture_control.v": "ecdfcd329ae68d7b75374e35aa8cd956759933cafd30cb6f8ba69b32a5220b87",
+    "rtl/hand_expression.v": "b5765de0f38297d2f72c6cad772ba336d16ea75b1201c1485a3ad01375f38548",
+    "rtl/i2c_byte_master.v": "4d4c7004ee8a115d13f01343ccd2b1716ead2b97659184295085f244825cdf96",
+    "rtl/imu_io_guard.v": "1d71732e3d203326beff458673ca06e6e35df324224fa9fc5964c871ca7b2bef",
+    "rtl/imu_transport.v": "7dfb862dddead7eddfe47fd8a8fa27e9e098954d697de1a875156176907f4ce4",
+    "rtl/imu_ui_feedback.v": "f32603f0b6458796c936a579e23b8afb0bf3affbc7c2d838313071bec438d209",
+    "rtl/instrument_bright.hex": "d307a888d9988ccfe627882e8096fc0bcac35ba8977cae6466f6ace6d8d443d4",
+    "rtl/instrument_dark.hex": "8e65c178a3a1c9c59d0a30693480edd00d1f71bee8cb3afa6996c0e9a197b721",
+    "rtl/instrument_gain.hex": "c98a168fa3bc54d4e13dc006380c167288bed9d2a16b7381e6ff72b2aa857ec5",
+    "rtl/instrument_keys.v": "b4b1e55dd2d446c3a351100ec1305b04bd8f2e19a49cb95fc2bf6e87d5cf68e7",
+    "rtl/instrument_waves.v": "91a042bbb446e634fc0d9e679ee6c65c0069a88204ace578cd9c7a8e1411c42d",
+    "rtl/key_zone_select.v": "85d530c39ac41ea9caec69934c2f82874dfe334cb872851b0dc72bf69ef635c0",
+    "rtl/local_instrument.v": "a6b7e93d2d7ecc72e4f77e11724f1c63852c350335410e22a3bcba15e4937a35",
+    "rtl/midi_ftw.hex": "0dfbcbe67b4430aed1d7648872f3847939effd5bb9f924bfe95bda1e2c55412c",
+    "rtl/polyphony_test.v": "f0346ad6e9cfd7210d2853b8dfd561c96914df36b5bb8d4221eb51f569b0571f",
+    "rtl/pose_math.v": "a47bc79d69cf2d5239f4ae00c2d8532cbc048961ee99457bf340cee4ee53c0ee",
+    "rtl/pt8211_output.v": "dd3d323450ef26eaa9507c8bf6d8518fad9a8bdbfe52db0890818fd3d46d8b99",
+    "rtl/quaternion_pose.v": "e5af21a9db2324e33fd01590d5a8674fb488d5551b7e4d37fe03962e1a5bf1b1",
+    "rtl/shtp_i2c_link.v": "7c6be0d918c8e4ebcccd544d408b39a061fe0a6f394830168758c53b40eb0975",
+    "rtl/shtp_report_decode.v": "1ceae9df8fdea8539d90f965fd8d72916624f1b7a264c082baa3ca21989a6931",
+    "rtl/shtp_spi_link.v": "1b7a7139cfbe85d7a3b11208c58871b5cbbf71ef5461637307d049e1f6b27328",
+    "rtl/shtp_uart_link.v": "8c26b5ccdde19b8941f91fdea241bbaf62cc8b7b336693d759e5e08f7ee5c383",
+    "rtl/sine_lut.v": "66a200b622492b7822ab8e123b08734818c80c57999bb0e6c07d6baf9bba5329",
+    "rtl/svo_tmds.v": "281d0d5b105dc88a9a568d7585c71cccc75956b8aedd532d9dded697219e7e6d",
+    "rtl/test_ftw.hex": "711c27318bcc654ec50d6f6aefc18a3a31c76fd6bdf4ab224af106a5f247b0e1",
+    "rtl/timbre_presets.v": "449875bcac2e141039c41503404d650ced31e75489a48cf9bea0a27758f5707a",
+    "rtl/top.v": "6b08261837f283156d483d6053e0bc97b8f02b32afd2b02141b0f071bc8402bf",
+    "rtl/top_i2c_fan04.v": "5d3e9a40e3a9707805799c03cbf193ca7a7039aabfddcbfbe1e87815ffc8c01f",
+    "rtl/top_spi.v": "91a9fc4dea7cf9120efd436bbdf860740e74ed606e883fb47579ee534da0c52b",
+    "rtl/uart.v": "8b243968f8059e5e5d6068581ffcf08ec1484b6b070e57d05d00e6bbd6ed3f61",
+    "rtl/video_fan_map.v": "f1cddabdc813d086d38be375911ae5150b10a876ebca3e5097e6ab0a632b0310",
+    "rtl/video_font.v": "8f9bf23042e0fe7daaa0cd712474da152a609afa5c177a80201b84b071fc95f8",
+    "rtl/video_font_zh.v": "14fcf95b1e1f1d206bfa184bc0667435211e868ff239841bfc05532af28d7eed",
+    "rtl/video_hdmi.v": "100e8d6c5e43166daf9c2a5debb15fbcfac7fce1a4edd50282ec86e1bf784e0c",
+    "rtl/video_instrument_panel.v": "2654ea50b66fb17b5b770f62b6ab72e24b64fa5c21c971d4ee62a7fa9d80d96e",
+    "rtl/video_panel.v": "619a9373e3e495d8479fe7a0c38ffe9bace8bf187b49473ef07588f5fa403372",
+    "rtl/video_pll_125.v": "9871fb5be20b29e49e6e253c4c3ce5d20fca2ba3f03b0645f317a894fed9faeb",
+    "rtl/video_status_cdc.v": "b1bb3cb8771fe6044b1384d70e785cc00d232b3b1609743f5f3dec6670f03404",
+    "rtl/video_text_zh.v": "dc189f6f1cf1210b32eb68dfced118ea6de03ad0144ae0e73a52b41d94af3355",
+    "tb/bno_i2c_sensor_model.sv": "85b57b08757308ef6b125771134bc408970019f4143327c427712ccd21a6a0dd",
+    "tb/tb_calibration_quality.sv": "2d27a898631fe6e9ed7b027fac52537fab687c7abd8855ea9ffbd313b541b001",
+    "tb/tb_calibration_render.sv": "bf477636d5b2799d0599a42ad8371c6184120ab5888e2ce10d5b5e87ffa6a45f",
+    "tb/tb_expression_guard.sv": "ba7362bd68350c4475865b64f6f3f78f6d863cf990189f3c54e848fb31a01490",
+    "tb/tb_fan04_expression_200.sv": "54180ca1ed036786569b798ad189b9e3a11f9c55e771b42c992c2eda499c7a55",
+    "tb/tb_fan04_expression_rate.sv": "33a6092d11d7786cde7178e08fd1ac29595eb3edf02541127e3ac6f5a8f7ac95",
+    "tb/tb_fan_control.sv": "35fd04ad438e006418502b0b3aba498f8398ba0ce9dea58223881f43a5e2c191",
+    "tb/tb_fan_keys.sv": "d0ec03b28a588070afe1edf1a8ce20b3646a658bba6fd874930ab5a12fb97aa7",
+    "tb/tb_i2c_faults.sv": "58308c223789aa5f79561c504d44fa5cdc176b5f6cb2130f949318bc7d73c6f0",
+    "tb/tb_i2c_guard.sv": "00eb97a70088d16a97d118f0837130ba861445da78bdcb3aa9679546fa6c0047",
+    "tb/tb_i2c_host.sv": "9c1e31d9729f1c69a4b04ae5bd2eaba6f8183a2abf83d0900c753d0eee280e3f",
+    "tb/tb_i2c_path.sv": "d572c175e277c250a14e4835cdd06db0b15af485cdd7ae044263cf4ddb514954",
+    "tb/tb_i2c_transport.sv": "8f2e2da35911e195df802895d4293159cb300d67dc09b446919a681f44baa188",
+    "tb/tb_pose_expression_path.sv": "881d8f414a6ccfde47ccceb658dde80c523a08fc5b30ff39ae9d00d11880267d",
+    "tb/tb_pose_metadata.sv": "9207352747b3ca7e889e3fc14579b295e72a38a913fd0c0ef62ce202a07d5b65",
+    "tb/tb_ui_keys.sv": "96f785e5f8bb5609622c074f43c32acd0389f8af32b8604b16ddb98818c76c5d",
+    "tb/tb_ui_pages.sv": "638c5daef7d31eefbaf9b269411a5406e19910f9397b1c6645dfa78a8988e443",
+    "tb/tb_ui_render.sv": "189cbc326109896af26f7491ee2774bc440eccf7b60fbe954446f2d76e27bd84",
+    "tb/tb_ui_silent_top.sv": "17e79a5398c9b5d2bd4a74824b39387d50c2c7f2b33ba3b8473200c3e6f40934",
+    "tb/tb_z_repeated.sv": "7fc1e73749c6e8ca9712e14b274d617053aaa905184d8bb4b786c09630d000fa",
+    "tb/tb_z_reports.sv": "8eee84569a6e8869a492112f5bfd209259e84ffbdba3e7a9ebe0dbeaa5870165",
+    "tb/tb_z_strike.sv": "3cbec80a6ef0789eeb865254da2c2e6702ac186b46d2d8762883818a6cef5fb1"
+  },
+  "pose_report_hz": 100,
+  "expression_filter_pose_hz": 100,
+  "expression_report_dt_ticks": [
+    95,
+    105
+  ],
+  "expression_report_tick_us": 100,
+  "expression_silence_timeout_ms": 50,
+  "expression_sequence_and_timestamp_admission": true,
+  "expression_bend_limit_cents": 200,
+  "expression_vibrato_limit_cents": 30,
+  "expression_vibrato_band_hz": [
+    3,
+    10
+  ],
+  "common_test_sha256": {
+    "fpga/tb/tb_video_hdmi.sv": "dacddc8615526f15712f6592d0ee4fc0dbd68a0c5a898f483ecc000de150a578"
+  },
+  "physical_expression_verified": false,
+  "sram_downloaded": false,
+  "flash_downloaded": false,
+  "inherited_FAN03_production_path_evidence": "board-test/i2c-fan03/tb_i2c_path.log",
+  "production_path_rerun": false
+}
