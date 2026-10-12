@@ -1,0 +1,62 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/10324/Desktop/TangLab/TangLab/fpga/controls_display/menu_bridge.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\release_button.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\performance_controls.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\menu_control_core.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_display_core.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\video_status_cdc.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v'
+Analyzing included file 'rtl\menu_labels.vh'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":5)
+Back to file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":5)
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_labels.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_font.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_ascii.v'
+Compiling module 'menu_display_core'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_display_core.v":3)
+Compiling module 'menu_control_core'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\menu_control_core.v":3)
+Compiling module 'performance_controls'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\performance_controls.v":3)
+Compiling module 'release_button'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\release_button.v":4)
+Compiling module 'instrument_menu'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":38)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":18)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 14("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":21)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":65)
+Compiling module 'video_status_cdc(WIDTH=64)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\video_status_cdc.v":3)
+Compiling module 'menu_panel'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":3)
+Extracting RAM for identifier 'bcd'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":20)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":14)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":27)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 14("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":35)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":111)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":114)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_panel.v":116)
+Compiling module 'menu_labels'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_labels.v":1)
+Compiling module 'menu_font'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_font.v":2)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_font.v":3)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 12("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_font.v":6)
+Compiling module 'menu_ascii'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_ascii.v":1)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_ascii.v":19)
+WARN  (EX2526) : Entry size 16 at rtl/menu_ascii.hex:0 does not match memory width 13("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_ascii.v":20)
+WARN  (EX3791) : Expression size 15 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\rtl\menu_ascii.v":22)
+NOTE  (EX0101) : Current top module is "menu_display_core"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\impl\gwsynthesis\menu_bridge.vg" completed
+[100%] Generate report file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls_display\impl\gwsynthesis\menu_bridge_syn.rpt.html" completed
+GowinSynthesis finish

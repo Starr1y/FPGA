@@ -15,3 +15,9 @@
 /fpga/duo01/** -text -whitespace
 
 /fpga/effects/** -text -whitespace
+
+/fpga/duo02/** -text -whitespace
+
+/fpga/controls/** -text -whitespace
+
+/fpga/controls_display/** -text -whitespace

@@ -63,7 +63,24 @@ python -X utf8 fpga/tools/duo01_release.py build --gowin-shell "D:/Gowin/Gowin_V
 
 脚本均不会下载 SRAM 或 Flash。构建结果需确认时序、引脚与源码哈希后才能执行 `package_duo01.py` 冻结；2026-10-12 已完成冻结，清单为 `board-test/duo01/firmware.json`，位流为 `fpga/bitstream/tanglab_duo01.fs`。`duo01_release.py verify` 同时核对冻结位流、源码、画面与音频/板卡数字链路输入哈希；不会执行下载。接线与新按键见 [操作说明](DUO01_双手板卡接入与操作.md)，时序修正和检查边界见 [构建与验证](DUO01_构建时序与验证.md)，返回后单颗模块的测试见 [测试表](DUO01_单手返回测试表.md)。
 
-## 后续 Git 上传
+## 当前 DUO02 冻结版本
+
+工程 `fpga/duo02/tanglab_duo02.gprj`，位流 `fpga/bitstream/tanglab_duo02.fs`，清单 `board-test/duo02/firmware.json`。算法 1 重建后 setup/hold 零违例，Fmax 50.026/26.542 MHz，核心余量很小。数字验证通过，尚未下载；[操作说明](DUO02_立体声与音效接入.md)与[返回后验证](DUO02_返回后单手验证.md)。
+
+```powershell
+python -X utf8 fpga/tools/duo02_release.py verify
+python -X utf8 fpga/tools/check_duo02_audio.py
+python -X utf8 fpga/tools/check_duo02_output.py
+python -X utf8 fpga/tools/check_duo02_board.py
+python -X utf8 fpga/tools/duo02_release.py check
+python -X utf8 fpga/tools/duo02_release.py build
+```
+
+UI 校验比较 RTL/ROM/testbench 文件集合及哈希；布线脚本和约束由独立构建快照/冻结清单校验。仅修改布线算法不改变已有 RTL 仿真结果，不能因此删除时序检查或冒充已验证新的逻辑。
+
+外部控制、参数菜单绘制和跨时钟联动是独立开发组件，检查入口为 `check_performance_controls.py`、`check_menu_display.py`、`check_menu_bridge.py` 和 `synth_menu_display.py --bridge`；尚未接入 DUO02 的主显示/音频/板卡引脚。其 GPRJ 只用于综合检查，不能作为完整可下载板卡工程。
+
+## 后续 Git 上传（FPGA 范围）
 
 本机原 Git 根目录误设为 `C:/Users/10324`，不要在那里执行 `git add .`。本次使用独立克隆 `C:/Users/10324/Documents/Codex/2026-10-11/FPGA-publish-fan03`；后续先将审核后的 FPGA 文件同步到该克隆，检查 `git status`、`git diff` 后再提交。
 

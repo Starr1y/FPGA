@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="menu_display_core" Register="1" T_Register="560(1)" T_Alu="168(0)" T_Lut="1303(0)" T_Bsram="4(0)" T_Ssram="12(0)">
+ <SubModule name="controls" T_Register="249(0)" T_Alu="51(0)" T_Lut="491(0)">
+  <SubModule name="inputs_filter" Register="64" Alu="51" Lut="42" T_Register="174(64)" T_Alu="51(51)" T_Lut="258(42)">
+   <SubModule name="encoder_key" Register="29" Lut="54" T_Register="29(29)" T_Lut="54(54)"/>
+   <SubModule name="pedal" Register="27" Lut="54" T_Register="27(27)" T_Lut="54(54)"/>
+   <SubModule name="wrist[0].key" Register="27" Lut="54" T_Register="27(27)" T_Lut="54(54)"/>
+   <SubModule name="wrist[1].key" Register="27" Lut="54" T_Register="27(27)" T_Lut="54(54)"/>
+  </SubModule>
+  <SubModule name="parameters" Register="75" Lut="233" T_Register="75(75)" T_Lut="233(233)"/>
+ </SubModule>
+ <SubModule name="snapshot" Register="105" Lut="6" T_Register="105(105)" T_Lut="6(6)"/>
+ <SubModule name="panel" Register="205" Alu="96" Lut="595" Ssram="12" T_Register="205(205)" T_Alu="117(96)" T_Lut="806(595)" T_Bsram="4(0)" T_Ssram="12(12)">
+  <SubModule name="labels" Lut="186" T_Lut="186(186)"/>
+  <SubModule name="font" Alu="15" Lut="2" Bsram="3" T_Alu="15(15)" T_Lut="2(2)" T_Bsram="3(3)"/>
+  <SubModule name="ascii_font" Alu="6" Lut="23" Bsram="1" T_Alu="6(6)" T_Lut="23(23)" T_Bsram="1(1)"/>
+ </SubModule>
+</Module>

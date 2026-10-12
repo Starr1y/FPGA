@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/controls_display/rtl/menu_ascii.hex": "5ba84f4686f7ecdfcf17b07bd05de9ee6451ac412dcded01b265241fc962e5a2",
+    "fpga/controls_display/rtl/menu_ascii.v": "98bc3cac8cd640e43359fcd5af61189c35ad8ef2788ebf690d01385bd6398e74",
+    "fpga/controls_display/rtl/menu_font.hex": "d47c878918811930f2223db5bd04bc7dfa6ac920077e3a86581658956708c632",
+    "fpga/controls_display/rtl/menu_font.v": "bc818e44a29f9bceedaec90c58c27dedefe3209bf8d9f9deae0b186f51dc547d",
+    "fpga/controls_display/rtl/menu_labels.v": "a6857bca57e91e4024b906ad58ef0767d3f022a70aba1574e8d54b1115f8071d",
+    "fpga/controls_display/rtl/menu_labels.vh": "7a738bfeb5192aeb90f1fd95a1d8ab55ace1ad093ca92066b7e21559d8747462",
+    "fpga/controls_display/rtl/menu_panel.v": "94c7d2a03715c8d36dd3c7e08ffdd0e80c43e25bceea7ab302de0492174aa899",
+    "fpga/controls_display/menu_display.gprj": "eeb3ab9d52c408d1a4b320717cc96fb487996b082329b7717ad7bfa65ad5b880",
+    "fpga/controls_display/synthesis.tcl": "5ac8f3b6a324dc2833d74a8da6f8e6ee1d6ba6d864f710c60537b19ea694b3e0"
+  },
+  "resources": {
+    "T_Register": "215(215)",
+    "T_Alu": "126(105)",
+    "T_Lut": "813(582)",
+    "T_Bsram": "4(0)",
+    "T_Ssram": "12(12)"
+  },
+  "resource_scope": "menu_panel only, unplaced synthesis",
+  "timing_verified": false,
+  "pin_mapping_verified": false,
+  "board_firmware_generated": false,
+  "integrated_into_duo02": false,
+  "report_sha256": "940782de10145a8d75a64a38f94010e5aaa851427351d9ca8182631e49afc7c5"
+}
