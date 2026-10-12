@@ -12,3 +12,6 @@
 /fpga/tb/tb_video_hdmi.sv -text -whitespace
 
 /fpga/dualhand/** -text -whitespace
+/fpga/duo01/** -text -whitespace
+
+/fpga/effects/** -text -whitespace

@@ -41,7 +41,7 @@ python -X utf8 fpga/tools/fan04_release.py build --gowin-shell "D:/Gowin/Gowin_V
 
 ## 双手开发核心仿真
 
-当前下载工程与 FAN04 位流保持冻结。双手开发代码在 `fpga/dualhand/`，尚无板卡下载顶层；数字音频和传感器集成的验证入口为：
+FAN04 位流保持冻结。双手开发代码在 `fpga/dualhand/`，新板卡顶层在 `fpga/duo01/`，已冻结数字验证版本；数字音频和传感器集成的验证入口为：
 
 ```powershell
 python -X utf8 fpga/tools/check_dual_audio.py
@@ -50,13 +50,25 @@ python -X utf8 fpga/tools/check_dual_audio.py --native-only
 
 两份音频证据位于 `board-test/dual-audio/`。前者为 50 MHz/48 kHz 事件注入，后者为 1 MHz/2 kHz 原生传感器模拟链路；详细边界见 [双手音频说明](双手数字音频集成与验证.md)。
 
-## 后续 Git 上传
-
-使用独立克隆作为发布目录，避免在包含个人文件的父目录执行 `git add .`。先同步审核后的 FPGA 文件，再检查差异并提交：
+## DUO01 板卡工程检查
 
 ```powershell
-git clone https://github.com/Starr1y/FPGA.git FPGA
-cd FPGA
+python -X utf8 fpga/tools/check_duo_audio.py
+python -X utf8 fpga/tools/duo01_release.py check
+python -X utf8 fpga/tools/check_duo_board.py
+python -X utf8 fpga/tools/duo01_release.py build --gowin-shell "D:/Gowin/Gowin_V1.9.12.03_x64/IDE/bin/gw_sh.exe"
+```
+
+`check` 检查组合键及 8 张 RTL 光栅画面；`check_duo_board.py` 用 50 MHz/48 kHz 板卡顶层接两个 100 Hz 行为 IMU，并解码 PT8211 串行数据。启动/复位等待缩短、按键输出用测试激励，不等于实物测试。新工程源码已包含所需 RTL/ROM 快照，无上位机依赖；只需 Python、Pillow、WSL Ubuntu/Icarus 和构建时的 Gowin。
+
+脚本均不会下载 SRAM 或 Flash。构建结果需确认时序、引脚与源码哈希后才能执行 `package_duo01.py` 冻结；2026-10-12 已完成冻结，清单为 `board-test/duo01/firmware.json`，位流为 `fpga/bitstream/tanglab_duo01.fs`。`duo01_release.py verify` 同时核对冻结位流、源码、画面与音频/板卡数字链路输入哈希；不会执行下载。接线与新按键见 [操作说明](DUO01_双手板卡接入与操作.md)，时序修正和检查边界见 [构建与验证](DUO01_构建时序与验证.md)，返回后单颗模块的测试见 [测试表](DUO01_单手返回测试表.md)。
+
+## 后续 Git 上传
+
+本机原 Git 根目录误设为 `C:/Users/10324`，不要在那里执行 `git add .`。本次使用独立克隆 `C:/Users/10324/Documents/Codex/2026-10-11/FPGA-publish-fan03`；后续先将审核后的 FPGA 文件同步到该克隆，检查 `git status`、`git diff` 后再提交。
+
+```powershell
+cd C:/Users/10324/Documents/Codex/2026-10-11/FPGA-publish-fan03
 git status --short
 git diff --stat
 git add fpga docs board-test README.md 使用说明.md THIRD_PARTY_NOTICES.md .gitignore .gitattributes
@@ -65,4 +77,4 @@ git commit -m "Update FPGA firmware and validation"
 git push origin main
 ```
 
-本次正常提交保留 Git 历史，从最新文件树移除上位机；历史提交仍可查看旧文件，没有重写历史或强制推送。
+本次正常提交保留 Git 历史，从最新文件树移除上位机。历史提交仍可查看旧文件；没有重写历史或强制推送。

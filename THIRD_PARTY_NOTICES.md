@@ -6,6 +6,8 @@
 
 原 TTF 用于开发，不嵌入 FPGA；本仓库提供生成的 RTL 点阵、完整 OFL 和 [原始字体版本、URL、SHA256](docs/reference/fonts/wenkai-source.json)。来源：[LXGW WenKai v1.522](https://github.com/lxgw/LxgwWenKai/releases/tag/v1.522)。
 
+DUO01 使用 **TangLab Duo Bitmap**，同一字体以 20 像素栅格化到 24×24 字格，共用 ROM；同样保留上述版权及 SIL OFL 1.1 许可。生成的 `fpga/duo01/rtl/duo_font.hex` 已包含在工程中，正常构建无需 TTF。重新生成字库时需另行取得上述固定版本字体。
+
 ## HDMI 与 FPGA 工具
 
 `svo_tmds.v` 来自 SVO - Simple Video Out FPGA Core，Copyright (C) 2014 Clifford Wolf。文件保留完整版权和许可，允许使用、复制、修改、分发并要求保留声明。PLL 包装代码来自 Gowin IP，保留文件内原厂版权声明。
@@ -16,4 +18,4 @@ BNO085 协议与报告字段依据 CEVA BNO08X Datasheet、Sensor Hub Transport 
 
 PNG 重生成工具使用独立安装的 Pillow，RTL 仿真使用独立安装的 Icarus Verilog，综合布局布线使用用户安装的 Gowin。此仓库不分发这些工具二进制。
 
-历史音频 RTL 与当前静音 UI 版本分别保留，当前状态以 FAN04 清单和文档为准。项目自有源码未在本次发布中另行指定新许可证；上述第三方文件按各自许可处理。
+历史音频 RTL 与当前静音 UI 版本分别保留，当前状态以 DUO01/FAN04 各自清单和文档为准。项目自有源码未在本次发布中另行指定新许可证；上述第三方文件按各自许可处理。

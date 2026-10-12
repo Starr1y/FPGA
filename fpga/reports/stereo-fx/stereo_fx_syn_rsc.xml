@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="stereo_fx" Register="446" Alu="470" Lut="720" MULTALU27X18="10" MULT12X12="2" Bsram="32" T_Register="446(446)" T_Alu="470(470)" T_Lut="720(720)" T_MULTALU27X18="10(10)" T_MULT12X12="2(2)" T_Bsram="32(32)"/>
