@@ -108,3 +108,11 @@ python -X utf8 fpga/tools/check_controlled_audio.py --verify
 ```
 
 已提供六份与冻结合成器字节一致的 ROM；不依赖上位机、在线下载或外部字体。源文件引用 `fpga/duo02/rtl/` 和 `fpga/controls/rtl/instrument_menu.v`。范围和未完成接入项见[菜单到音频参数接入](菜单到音频参数接入.md)。
+
+## DUO03 开发候选
+
+源码与已完成的构建/控制/音频/视频检查已提供，完整操作见[DUO03 接入](DUO03_统一控制与菜单接入.md)。当前完整构建通过，Fmax 50.861/29.724 MHz、setup/hold 零违例；两项板卡级长回归未完成，尚无冻结发布清单或下载位流，当前发布版本仍是 DUO02。
+
+`python -X utf8 fpga/tools/package_duo03.py --inspect-only` 只检查已在本地构建的输入、报告、引脚及网表，不发布 FS；`package_duo03.py` 的完整模式继续要求所有数字检查通过。新源码正常构建无需重新生成字体或重跑一次性装配脚本。
+
+实物测量模板和分析器见[延迟记录说明](实机延迟记录与离线验收.md)，分析器退出码 0 仅表示进入原始波形复核，不代表物理延迟已通过。

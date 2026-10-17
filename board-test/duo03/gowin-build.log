@@ -1,0 +1,315 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/10324/Desktop/TangLab/TangLab/fpga/duo03/tanglab_duo03.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_hand.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_host.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v'
+Undeclared symbol 'v_phase', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":48)
+Undeclared symbol 'v_freq', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":48)
+Undeclared symbol 'v_preset', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":49)
+Undeclared symbol 'v_brightness', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":49)
+Undeclared symbol 'blend_gain', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":49)
+WARN  (EX3638) : 'v_phase' is already implicitly declared on line 48("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":50)
+WARN  (EX3638) : 'v_freq' is already implicitly declared on line 48("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":50)
+WARN  (EX3638) : 'v_brightness' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":51)
+WARN  (EX3638) : 'v_preset' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":51)
+WARN  (EX3638) : 'blend_gain' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":52)
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_note_map.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_controls.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_fan.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_font.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_key_events.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_keys.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v'
+Analyzing included file 'rtl\menu_labels.vh'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":5)
+Back to file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":5)
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_page_mux.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_text.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\expression_stream_guard.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\fm_limits.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\gesture_control.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\i2c_byte_master.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\instrument_waves.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_ascii.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_font.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_labels.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\parameter_stereo_output.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\performance_controls.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pose_math.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pt8211_output.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\release_button.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_report_decode.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\sine_lut.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_output_path.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\svo_tmds.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\timbre_presets.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\top_duo03.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_event_queue.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_i2c_core.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_instrument_core.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_synth.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_duo03_hdmi.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_font.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_pll_125.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_status_cdc.v'
+Compiling module 'top_duo03'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\top_duo03.v":3)
+Compiling module 'duo_controls'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_controls.v":4)
+Compiling module 'duo_key_events'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_key_events.v":3)
+Extracting RAM for identifier 'debounce'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_key_events.v":9)
+Compiling module 'performance_controls'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\performance_controls.v":3)
+Compiling module 'release_button'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\release_button.v":4)
+Compiling module 'duo_parameters'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":38)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":18)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 14("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":21)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":65)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_parameters.v":82)
+Compiling module 'two_hand_instrument_core'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_instrument_core.v":2)
+WARN  (EX3073) : Port 'accepted' remains unconnected for this instance("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_i2c_core.v":45)
+Compiling module 'two_hand_i2c_core(RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_i2c_core.v":3)
+WARN  (EX3073) : Port 'cs_n' remains unconnected for this instance("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_hand.v":50)
+WARN  (EX3073) : Port 'discontinuities' remains unconnected for this instance("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_hand.v":71)
+Compiling module 'bno_i2c_hand(RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_hand.v":3)
+Compiling module 'bno_i2c_host(REPORT_BACKPRESSURE=1,RESET_TICKS=500000,BOOT_TICKS=37500000,HALF_DIV=100,RESET_SETUP_TICKS=500000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\bno_i2c_host.v":3)
+Compiling module 'shtp_i2c_link'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":5)
+Extracting RAM for identifier 'buffer'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":34)
+Compiling module 'i2c_byte_master'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\i2c_byte_master.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\i2c_byte_master.v":45)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":95)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":107)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":120)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_i2c_link.v":132)
+Compiling module 'shtp_report_decode(REPORT_BACKPRESSURE=1)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_report_decode.v":3)
+Extracting RAM for identifier 'next_sequence'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\shtp_report_decode.v":27)
+Compiling module 'quaternion_pose'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":7)
+Compiling module 'pose_atan2'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pose_math.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pose_math.v":32)
+Compiling module 'pose_isqrt'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pose_math.v":45)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":153)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":153)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\quaternion_pose.v":169)
+Compiling module 'gesture_control'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\gesture_control.v":8)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\gesture_control.v":62)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\gesture_control.v":122)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\gesture_control.v":123)
+Compiling module 'expression_stream_guard'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\expression_stream_guard.v":3)
+Compiling module 'hand_expression'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v":42)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v":81)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\hand_expression.v":38)
+Compiling module 'two_hand_event_queue'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_event_queue.v":3)
+Extracting RAM for identifier 'mem0'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_event_queue.v":11)
+Extracting RAM for identifier 'mem1'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_event_queue.v":11)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_event_queue.v":26)
+Compiling module 'two_hand_synth(HOLD_TICKS=3000000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\two_hand_synth.v":2)
+Compiling module 'dual_voice_scheduler(HOLD_TICKS=3000000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":3)
+Extracting RAM for identifier 'ftw'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'ticks'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'epoch'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'revision'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'ids'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'age'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'gain'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'preset'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":17)
+Extracting RAM for identifier 'tail'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":17)
+Extracting RAM for identifier 'midi_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":19)
+Extracting RAM for identifier 'cent_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":19)
+Compiling module 'dual_note_map'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_note_map.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":46)
+Compiling module 'timbre_presets'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\timbre_presets.v":3)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_voice_scheduler.v":75)
+Compiling module 'dual_audio_core(VOICES=32,MASTER_SHIFT=3)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":5)
+Extracting RAM for identifier 'phase'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":17)
+Extracting RAM for identifier 'freq'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":18)
+Extracting RAM for identifier 'mod_phase'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":19)
+Extracting RAM for identifier 'mod_freq'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":20)
+Extracting RAM for identifier 'wave'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":22)
+Extracting RAM for identifier 'preset'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":23)
+Extracting RAM for identifier 'tail'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":24)
+Extracting RAM for identifier 'old_gate'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":26)
+Extracting RAM for identifier 'local_voice'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":27)
+Extracting RAM for identifier 'retrigger'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":28)
+Extracting RAM for identifier 'preset_mode'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":29)
+Extracting RAM for identifier 'attack'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":31)
+Extracting RAM for identifier 'decay'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":32)
+Extracting RAM for identifier 'sustain'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":33)
+Extracting RAM for identifier 'release_step'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":34)
+Extracting RAM for identifier 'index_env'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":35)
+Extracting RAM for identifier 'release_count'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":36)
+Extracting RAM for identifier 'release_level'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":37)
+Extracting RAM for identifier 'stage'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":38)
+Extracting RAM for identifier 'fast_release'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":39)
+Compiling module 'sine_lut'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\sine_lut.v":2)
+Compiling module 'instrument_waves'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\instrument_waves.v":3)
+Extracting RAM for identifier 'dark_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\instrument_waves.v":5)
+Extracting RAM for identifier 'bright_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\instrument_waves.v":5)
+Extracting RAM for identifier 'gain_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\instrument_waves.v":6)
+Compiling module 'fm_limits'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\fm_limits.v":4)
+Extracting RAM for identifier 'caps'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\fm_limits.v":5)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\fm_limits.v":17)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":93)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":194)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":200)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":201)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":230)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":238)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":241)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":249)
+Compiling module 'parameter_stereo_output'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\parameter_stereo_output.v":5)
+Compiling module 'stereo_fx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":4)
+Extracting RAM for identifier 'memory_left'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":13)
+Extracting RAM for identifier 'memory_right'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":14)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":83)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":84)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\stereo_fx.v":134)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\parameter_stereo_output.v":56)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\parameter_stereo_output.v":56)
+Compiling module 'pt8211_output'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\pt8211_output.v":7)
+Compiling module 'video_duo03_hdmi'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_duo03_hdmi.v":4)
+Compiling module 'video_pll_125'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_pll_125.v":10)
+Compiling module 'video_status_cdc(WIDTH=1024)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_status_cdc.v":3)
+Compiling module 'duo_page_mux'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_page_mux.v":3)
+Compiling module 'duo_panel'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":3)
+Extracting RAM for identifier 'flash'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":19)
+Extracting RAM for identifier 'old_hits'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":19)
+Extracting RAM for identifier 'bcd'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":32)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":10)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":14)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":38)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":54)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":106)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":107)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":108)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":109)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":112)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":113)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":114)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":115)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":116)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":117)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":118)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":121)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":122)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":123)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":124)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":125)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":128)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":129)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":130)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":131)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":132)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":133)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":134)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":135)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":136)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":137)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":138)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":139)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":142)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":143)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":144)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":145)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":147)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":148)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":149)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":150)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":151)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":152)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":153)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":154)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":155)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":156)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":157)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":158)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":185)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":186)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":188)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":189)
+Compiling module 'duo_text'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_text.v":1)
+Compiling module 'duo_font'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_font.v":2)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_font.v":3)
+Compiling module 'video_font'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\video_font.v":4)
+Compiling module 'duo_fan'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_fan.v":1)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_fan.v":3)
+WARN  (EX2526) : Entry size 236 at rtl/duo_spans.hex:0 does not match memory width 234("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_fan.v":4)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 9 for port 'row'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_panel.v":202)
+Compiling module 'duo_menu_panel'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":3)
+Extracting RAM for identifier 'bcd'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":20)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":14)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":27)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 14("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":35)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":116)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":119)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\duo_menu_panel.v":121)
+Compiling module 'menu_labels'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_labels.v":1)
+Compiling module 'menu_font'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_font.v":2)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_font.v":3)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 12("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_font.v":6)
+Compiling module 'menu_ascii'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_ascii.v":1)
+Extracting RAM for identifier 'rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_ascii.v":19)
+WARN  (EX2526) : Entry size 16 at rtl/menu_ascii.hex:0 does not match memory width 13("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_ascii.v":20)
+WARN  (EX3791) : Expression size 15 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\menu_ascii.v":22)
+Compiling module 'svo_tmds'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\svo_tmds.v":23)
+NOTE  (EX0101) : Current top module is "top_duo03"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "sine_lut" instantiated to "carrier_lut" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":47)
+WARN  (NL0002) : The module "sine_lut" instantiated to "mod_lut" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\rtl\dual_audio_core.v":46)
+[95%] Generate netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\gwsynthesis\tanglab_duo03.vg" completed
+[100%] Generate report file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\gwsynthesis\tanglab_duo03_syn.rpt.html" completed
+GowinSynthesis finish
+Reading netlist file: "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\gwsynthesis\tanglab_duo03.vg"
+Parsing netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\gwsynthesis\tanglab_duo03.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\tanglab_duo03.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\pnr\tanglab_duo03.power.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\pnr\tanglab_duo03.pin.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\pnr\tanglab_duo03.rpt.html" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\pnr\tanglab_duo03.rpt.txt" completed
+Generate file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo03\impl\pnr\tanglab_duo03.tr.html" completed
+Sat Oct 17 12:31:18 2026
+

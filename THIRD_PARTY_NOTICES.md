@@ -21,3 +21,5 @@ BNO085 协议与报告字段依据 CEVA BNO08X Datasheet、Sensor Hub Transport 
 PNG 重生成工具使用独立安装的 Pillow，RTL 仿真使用独立安装的 Icarus Verilog，综合布局布线使用用户安装的 Gowin。此仓库不分发这些工具二进制。
 
 历史音频 RTL 与当前静音 UI 版本分别保留，当前状态以 DUO02/DUO01/FAN04 各自清单和文档为准。项目自有源码未在本次发布中另行指定新许可证；上述第三方文件按各自许可处理。
+
+DUO03 候选继续使用 TangLab Duo Bitmap，并扩展 TangLab Menu Bitmap 的中文状态标签至 88 个字形；文楷来源、版权及 SIL OFL 1.1 同上。生成 ROM 位于 `fpga/duo03/rtl/`，普通构建无需字体 TTF。

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/duo03/rtl/video_duo03_hdmi.v": "a645ffdc9ff84daae941d8fccd469b01a6a4aa426bd3edb774ca8a2e025d590f",
+    "fpga/duo03/rtl/video_status_cdc.v": "b1bb3cb8771fe6044b1384d70e785cc00d232b3b1609743f5f3dec6670f03404",
+    "fpga/duo03/rtl/duo_page_mux.v": "68a8e3e1637d6f38e57725adabcab858cd42de6bf68835c58d27afd62c1f8b77",
+    "fpga/duo03/rtl/duo_panel.v": "fef0bd860da1113030905ef99734784a3ff8a3829c13783fe8df3d9de6c62217",
+    "fpga/duo03/rtl/duo_font.v": "030c6dce8057cef79f55204d3d7973202e4ae67416f65c69b61f571f493711d9",
+    "fpga/duo03/rtl/duo_text.v": "6024efb714d28eaee32c3a1e8cddb1b6c5fc40f607448389af03c4db778c03a8",
+    "fpga/duo03/rtl/duo_fan.v": "76e7e1e1b55dfff7f28fcef573736a3c03d7a71cf1abe6592e70b3e3ac4e8d90",
+    "fpga/duo03/rtl/video_font.v": "8f9bf23042e0fe7daaa0cd712474da152a609afa5c177a80201b84b071fc95f8",
+    "fpga/duo03/rtl/duo_menu_panel.v": "3dc4ee8f050dce006bdd57c570de86210bcc98c3331e6fb5f53e29aa99c3b994",
+    "fpga/duo03/rtl/menu_font.v": "4b36a8893d4cb0e46abe1be9f082f5f1635e3a7e365775c773e00314d4074db2",
+    "fpga/duo03/rtl/menu_ascii.v": "98bc3cac8cd640e43359fcd5af61189c35ad8ef2788ebf690d01385bd6398e74",
+    "fpga/duo03/rtl/menu_labels.v": "55273d5aa4c12931439523c3c67df41e92b068ffe583fd0c52563df0318e03e5",
+    "fpga/duo03/tb/tb_duo_video.sv": "55a59d78ae4ad05c708dc386f78f05b27211a661fa259952caca112f456c94c4",
+    "fpga/duo03/tb/tb_duo_wet.sv": "d03ad262cddc885a2c240a45e9b6b3493a656731dbda0c793b02e17c4de74c7e",
+    "fpga/duo03/rtl/cent_ratio.hex": "398377ee480c58eb21b9de9f3cdd0f2d7dcd48ce4635d4284853dd70ed9debad",
+    "fpga/duo03/rtl/duo_font.hex": "d4d359ce076419bc25a5f807d766c15b7ed2646233bc52f8bb5a18f3602e261e",
+    "fpga/duo03/rtl/duo_spans.hex": "577c64f7f4cf32ecd758b17bb5f5d93ae12b90e59b9afdabaa3dd10e70de2142",
+    "fpga/duo03/rtl/fm_limits.hex": "20a7ecbbde7052e3e0e8574d90a3958ee9cc39d6ad303dbeeb3a9c5f9b0717a0",
+    "fpga/duo03/rtl/instrument_bright.hex": "d307a888d9988ccfe627882e8096fc0bcac35ba8977cae6466f6ace6d8d443d4",
+    "fpga/duo03/rtl/instrument_dark.hex": "8e65c178a3a1c9c59d0a30693480edd00d1f71bee8cb3afa6996c0e9a197b721",
+    "fpga/duo03/rtl/instrument_gain.hex": "c98a168fa3bc54d4e13dc006380c167288bed9d2a16b7381e6ff72b2aa857ec5",
+    "fpga/duo03/rtl/menu_ascii.hex": "5ba84f4686f7ecdfcf17b07bd05de9ee6451ac412dcded01b265241fc962e5a2",
+    "fpga/duo03/rtl/menu_font.hex": "2629dc19cb9fa3750c7173aa73ce9e4bd37366afb82838b1b3dd91ca1234d15d",
+    "fpga/duo03/rtl/midi_ftw.hex": "0dfbcbe67b4430aed1d7648872f3847939effd5bb9f924bfe95bda1e2c55412c",
+    "fpga/duo03/rtl/menu_labels.vh": "3ed48e959d079be249e026ddf9f6b3bb58832c51d8b7eae6eb7eccf09d3f0dd1"
+  },
+  "frames_sha256": {
+    "page-0.png": "d3558f5187763fb2d3d0a2de24f3e189acec76946c4c10d95f08a827abc50b60",
+    "page-1.png": "22040aa50298af2a4e41e6e7ae93108e31f6d2d36666f32222d6f56c54770304",
+    "page-2.png": "74b23ed6de28c9f3c86adfd72277a4f4cbccbdc4eb5a07e0829a41cca71e34b8",
+    "page-3.png": "b2db06e24cc9fc55e33d081a342207c63f00d33d2bc72f1687b1517803eb044d",
+    "page-4.png": "044c4d5432c3b1678b28b48443b62d494ee6afc0d30754bc40004ab6788c1858",
+    "page-5.png": "d3558f5187763fb2d3d0a2de24f3e189acec76946c4c10d95f08a827abc50b60",
+    "page-6.png": "d3558f5187763fb2d3d0a2de24f3e189acec76946c4c10d95f08a827abc50b60",
+    "page-7.png": "470666795dbc9f33285903a7db7e817a9054a042d886347ee416740d2d0138c7"
+  },
+  "tests": {
+    "tb_duo_wet": [
+      "TB_PASS all256 wet percentages vs independent integer reference, bounded sequential formatter"
+    ],
+    "tb_duo_video": [
+      "TB_PASS DUO03 board video adapter: 50/25MHz, full1024 CDC/atomic visibility, equal rasters, main/diagnostic/menu targets and live effect transition, hidden telemetry; eight RTL frames"
+    ]
+  },
+  "clock_hz": 50000000,
+  "pixel_hz": 25000000,
+  "vendor_pll_and_tmds_simulated": false,
+  "native_resolution": [
+    640,
+    480
+  ],
+  "physical_hdmi_tested": false
+}

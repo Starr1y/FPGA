@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/duo03/rtl/duo_key_events.v": "eca9c37620b03e8ad8983cffb65ed10f532d9bcbbf46230b90ea566906a1a93c",
+    "fpga/duo03/rtl/duo_controls.v": "0828928ef818b2ba2b17b34543c1a9e6e42a3bc3a6aace441e0780a016413efb",
+    "fpga/duo03/rtl/duo_parameters.v": "9b9d855ab84cd03b60195f6e939b43c626fc93522a2de1670a0b1342521406a4",
+    "fpga/duo03/rtl/performance_controls.v": "352b3ecb074f2fd1c5d19d6b943ad6e95ef3d1d50c0b71f09f7007a8159ae00c",
+    "fpga/duo03/rtl/release_button.v": "e445be6fb2acd3aad10e1085d051eb5acaf71cdde7d9ef6876a8c095da95d238",
+    "fpga/duo03/tb/tb_duo_controls.sv": "da78fb2862563ba3500f7c1433bafa9bf5f01f7d76e39acd25ceae4dd43f9d99",
+    "fpga/duo03/rtl/cent_ratio.hex": "398377ee480c58eb21b9de9f3cdd0f2d7dcd48ce4635d4284853dd70ed9debad",
+    "fpga/duo03/rtl/duo_font.hex": "d4d359ce076419bc25a5f807d766c15b7ed2646233bc52f8bb5a18f3602e261e",
+    "fpga/duo03/rtl/duo_spans.hex": "577c64f7f4cf32ecd758b17bb5f5d93ae12b90e59b9afdabaa3dd10e70de2142",
+    "fpga/duo03/rtl/fm_limits.hex": "20a7ecbbde7052e3e0e8574d90a3958ee9cc39d6ad303dbeeb3a9c5f9b0717a0",
+    "fpga/duo03/rtl/instrument_bright.hex": "d307a888d9988ccfe627882e8096fc0bcac35ba8977cae6466f6ace6d8d443d4",
+    "fpga/duo03/rtl/instrument_dark.hex": "8e65c178a3a1c9c59d0a30693480edd00d1f71bee8cb3afa6996c0e9a197b721",
+    "fpga/duo03/rtl/instrument_gain.hex": "c98a168fa3bc54d4e13dc006380c167288bed9d2a16b7381e6ff72b2aa857ec5",
+    "fpga/duo03/rtl/menu_ascii.hex": "5ba84f4686f7ecdfcf17b07bd05de9ee6451ac412dcded01b265241fc962e5a2",
+    "fpga/duo03/rtl/menu_font.hex": "2629dc19cb9fa3750c7173aa73ce9e4bd37366afb82838b1b3dd91ca1234d15d",
+    "fpga/duo03/rtl/midi_ftw.hex": "0dfbcbe67b4430aed1d7648872f3847939effd5bb9f924bfe95bda1e2c55412c",
+    "fpga/duo03/rtl/menu_labels.vh": "3ed48e959d079be249e026ddf9f6b3bb58832c51d8b7eae6eb7eccf09d3f0dd1"
+  },
+  "messages": [
+    "TB_PASS DUO03 raw onboard/external single parameter owner: reset-held guard, all legacy main gestures, board menu fallback, real quadrature/press edits visible in main and menu, context isolation, wrist ownership, pedal and diagnostic return"
+  ],
+  "physical_board_tested": false,
+  "simulation_only": true
+}

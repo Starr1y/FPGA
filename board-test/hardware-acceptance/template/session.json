@@ -1,0 +1,15 @@
+{
+  "measurement_kind": "unrecorded",
+  "hands_expected": [0, 1],
+  "minimum_trials": 1000,
+  "reference_count": 0,
+  "same_instrument_timebase": true,
+  "reference_kind": "external_contact",
+  "reference_channel": "",
+  "analog_channel": "",
+  "analog_onset_method": "",
+  "instrument_model": "",
+  "instrument_sample_rate_hz": 0,
+  "firmware_sha256": "",
+  "trace_sha256": {}
+}

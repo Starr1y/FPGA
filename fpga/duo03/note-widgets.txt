@@ -1,0 +1,30 @@
+if(profile==0)begin
+if(col>=23 && col<39 && y>=308 && y<320)begin text="DO";text_len=2;tx=base+23;ty=308;end
+if(col>=44 && col<60 && y>=263 && y<275)begin text="RE";text_len=2;tx=base+44;ty=263;end
+if(col>=83 && col<99 && y>=232 && y<244)begin text="MI";text_len=2;tx=base+83;ty=232;end
+if(col>=132 && col<148 && y>=221 && y<233)begin text="FA";text_len=2;tx=base+132;ty=221;end
+if(col>=177 && col<201 && y>=232 && y<244)begin text="SOL";text_len=3;tx=base+177;ty=232;end
+if(col>=220 && col<236 && y>=263 && y<275)begin text="LA";text_len=2;tx=base+220;ty=263;end
+if(col>=241 && col<257 && y>=308 && y<320)begin text="SI";text_len=2;tx=base+241;ty=308;end
+end
+if(profile==1)begin
+if(col>=25 && col<41 && y>=298 && y<310)begin text="DO";text_len=2;tx=base+25;ty=298;end
+if(col>=66 && col<82 && y>=242 && y<254)begin text="RE";text_len=2;tx=base+66;ty=242;end
+if(col>=132 && col<148 && y>=221 && y<233)begin text="MI";text_len=2;tx=base+132;ty=221;end
+if(col>=194 && col<218 && y>=242 && y<254)begin text="SOL";text_len=3;tx=base+194;ty=242;end
+if(col>=239 && col<255 && y>=298 && y<310)begin text="LA";text_len=2;tx=base+239;ty=298;end
+end
+if(profile==2)begin
+if(col>=21 && col<37 && y>=318 && y<330)begin text="DO";text_len=2;tx=base+21;ty=318;end
+if(col>=25 && col<49 && y>=290 && y<302)begin text="DO#";text_len=3;tx=base+25;ty=290;end
+if(col>=43 && col<59 && y>=265 && y<277)begin text="RE";text_len=2;tx=base+43;ty=265;end
+if(col>=60 && col<84 && y>=244 && y<256)begin text="RE#";text_len=3;tx=base+60;ty=244;end
+if(col>=89 && col<105 && y>=230 && y<242)begin text="MI";text_len=2;tx=base+89;ty=230;end
+if(col>=117 && col<133 && y>=222 && y<234)begin text="FA";text_len=2;tx=base+117;ty=222;end
+if(col>=143 && col<167 && y>=222 && y<234)begin text="FA#";text_len=3;tx=base+143;ty=222;end
+if(col>=171 && col<195 && y>=230 && y<242)begin text="SOL";text_len=3;tx=base+171;ty=230;end
+if(col>=192 && col<224 && y>=244 && y<256)begin text="SOL#";text_len=4;tx=base+192;ty=244;end
+if(col>=221 && col<237 && y>=265 && y<277)begin text="LA";text_len=2;tx=base+221;ty=265;end
+if(col>=231 && col<255 && y>=290 && y<302)begin text="LA#";text_len=3;tx=base+231;ty=290;end
+if(col>=243 && col<259 && y>=318 && y<330)begin text="SI";text_len=2;tx=base+243;ty=318;end
+end

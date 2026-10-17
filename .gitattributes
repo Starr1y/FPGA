@@ -25,3 +25,13 @@
 /fpga/controlled_audio/** -text -whitespace
 /fpga/tools/check_controlled_audio.py -text -whitespace
 /fpga/tools/synth_controlled_audio.py -text -whitespace
+/fpga/duo03/** -text -whitespace
+/fpga/tools/check_duo03_controls.py -text -whitespace
+/fpga/tools/check_duo03_audio.py -text -whitespace
+/fpga/tools/check_duo03_video.py -text -whitespace
+/fpga/tools/check_duo03_board.py -text -whitespace
+/fpga/tools/check_duo03_board_video.py -text -whitespace
+/fpga/tools/duo03_release.py -text -whitespace
+/fpga/tools/package_duo03.py -text -whitespace
+/fpga/tools/analyze_motion_latency.py -text -whitespace
+/fpga/tools/check_motion_latency_analyzer.py -text -whitespace

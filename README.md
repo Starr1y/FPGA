@@ -83,6 +83,14 @@ setup/hold 违例为零，核心/像素 Fmax **50.026/26.542 MHz**（约束 50/2
 
 检查入口：`fpga/tools/check_controlled_audio.py`，未布局综合入口：`fpga/tools/synth_controlled_audio.py --performance`。证据校验：`fpga/tools/check_controlled_audio.py --verify`。本组件没有独立可下载位流。
 
+### DUO03 整机候选（尚未发布位流）
+
+[工程与操作](docs/DUO03_统一控制与菜单接入.md)：板载键、编码器、踏板和腕部按钮共用一份参数状态，菜单接入传感器/32 Voice/可调立体声和三页显示；KEY0＋KEY1 短按打开菜单。完整构建和引脚检查通过，Logic 35.9%、BSRAM 80、DSP 83，setup/hold 零违例、Fmax 50.861/29.724 MHz。
+
+统一控制、8/32 Voice 和八张视频光栅检查通过；原生双 I²C/DAC 与原始顶层操作到 RGB 两项长回归尚在运行。候选没有发布清单或下载位流，当前可下载版本仍是上方 DUO02，没有进行实物验证。
+
+[外部动作到模拟输出的延迟记录工具](docs/实机延迟记录与离线验收.md)及空白模板已提供；七项合成数据检查通过，不代表已取得 1000 次实测或达到 ≤10 ms。
+
 ## 构建和目录
 
 Python 3 + Pillow，仿真使用 WSL Ubuntu/Icarus，构建使用 Gowin 1.9.12.03；仓库已提供 RTL/ROM，无 PC 上位机依赖。
