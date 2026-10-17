@@ -63,7 +63,7 @@ python -X utf8 fpga/tools/duo01_release.py build --gowin-shell "D:/Gowin/Gowin_V
 
 脚本均不会下载 SRAM 或 Flash。构建结果需确认时序、引脚与源码哈希后才能执行 `package_duo01.py` 冻结；2026-10-12 已完成冻结，清单为 `board-test/duo01/firmware.json`，位流为 `fpga/bitstream/tanglab_duo01.fs`。`duo01_release.py verify` 同时核对冻结位流、源码、画面与音频/板卡数字链路输入哈希；不会执行下载。接线与新按键见 [操作说明](DUO01_双手板卡接入与操作.md)，时序修正和检查边界见 [构建与验证](DUO01_构建时序与验证.md)，返回后单颗模块的测试见 [测试表](DUO01_单手返回测试表.md)。
 
-## 当前 DUO02 冻结版本
+## 历史 DUO02 冻结版本
 
 工程 `fpga/duo02/tanglab_duo02.gprj`，位流 `fpga/bitstream/tanglab_duo02.fs`，清单 `board-test/duo02/firmware.json`。算法 1 重建后 setup/hold 零违例，Fmax 50.026/26.542 MHz，核心余量很小。数字验证通过，尚未下载；[操作说明](DUO02_立体声与音效接入.md)与[返回后验证](DUO02_返回后单手验证.md)。
 
@@ -109,10 +109,21 @@ python -X utf8 fpga/tools/check_controlled_audio.py --verify
 
 已提供六份与冻结合成器字节一致的 ROM；不依赖上位机、在线下载或外部字体。源文件引用 `fpga/duo02/rtl/` 和 `fpga/controls/rtl/instrument_menu.v`。范围和未完成接入项见[菜单到音频参数接入](菜单到音频参数接入.md)。
 
-## DUO03 开发候选
+## 当前 DUO03 冻结版本
 
-源码与已完成的构建/控制/音频/视频检查已提供，完整操作见[DUO03 接入](DUO03_统一控制与菜单接入.md)。当前完整构建通过，Fmax 50.861/29.724 MHz、setup/hold 零违例；两项板卡级长回归未完成，尚无冻结发布清单或下载位流，当前发布版本仍是 DUO02。
+工程 `fpga/duo03/tanglab_duo03.gprj`，位流 `fpga/bitstream/tanglab_duo03.fs`，清单 `board-test/duo03/firmware.json`。全部六项数字/构建门槛通过；Fmax 50.861/29.724 MHz、setup/hold 零违例。操作与接线见[DUO03 接入](DUO03_统一控制与菜单接入.md)，实际验证见[返回后单手表](DUO03_返回后单手验证.md)。
 
-`python -X utf8 fpga/tools/package_duo03.py --inspect-only` 只检查已在本地构建的输入、报告、引脚及网表，不发布 FS；`package_duo03.py` 的完整模式继续要求所有数字检查通过。新源码正常构建无需重新生成字体或重跑一次性装配脚本。
+```powershell
+python -X utf8 fpga/tools/duo03_release.py verify
+python -X utf8 fpga/tools/check_duo03_controls.py
+python -X utf8 fpga/tools/check_duo03_audio.py
+python -X utf8 fpga/tools/check_duo03_video.py
+python -X utf8 fpga/tools/check_duo03_board.py
+python -X utf8 fpga/tools/check_duo03_board_video.py
+python -X utf8 fpga/tools/duo03_release.py build
+python -X utf8 fpga/tools/package_duo03.py
+```
 
-实物测量模板和分析器见[延迟记录说明](实机延迟记录与离线验收.md)，分析器退出码 0 仅表示进入原始波形复核，不代表物理延迟已通过。
+`package_duo03.py --inspect-only` 仅检查本地构建输入、报告、引脚及网表；完整打包要求全部数字检查通过。普通构建无需重新生成字体或重跑一次性装配脚本。脚本不下载 SRAM/Flash；SRAM 掉电丢失，接入 IMU 前应先确认冷启动来源。
+
+[延迟分析器](实机延迟记录与离线验收.md)退出码 0 仅表示可进入原始波形复核；空白模板和合成测试不代表物理延迟通过。当前没有新增下载、真实传感器、外部控制和模拟音频实测。
