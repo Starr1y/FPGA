@@ -77,6 +77,12 @@ setup/hold 违例为零，核心/像素 Fmax **50.026/26.542 MHz**（约束 50/2
 
 **这些组件尚未接入 DUO02 主显示、音频或真实外部管脚。** 当前位流继续使用上方板载按键；独立菜单 GPRJ 仅供综合，不能单独下载到板卡。
 
+### 菜单到真实数字音频
+
+[菜单到实际音频参数接入](docs/菜单到音频参数接入.md)已新增独立核心：单一菜单参数源连接真实合成器、可调音效和 PT8211，复用现有传感器队列握手；音色/尾音只作用于后续音符，效果调参先降低湿声再提交。32 个不同音高同时活动、最大菜单混响反馈/湿声及动态表情的数字检查通过。尚未接入 DUO02 的外部引脚、IMU 和 HDMI 顶层，没有新位流或实物验证。
+
+检查入口：`fpga/tools/check_controlled_audio.py`，未布局综合入口：`fpga/tools/synth_controlled_audio.py --performance`。证据校验：`fpga/tools/check_controlled_audio.py --verify`。本组件没有独立可下载位流。
+
 ## 构建和目录
 
 Python 3 + Pillow，仿真使用 WSL Ubuntu/Icarus，构建使用 Gowin 1.9.12.03；仓库已提供 RTL/ROM，无 PC 上位机依赖。

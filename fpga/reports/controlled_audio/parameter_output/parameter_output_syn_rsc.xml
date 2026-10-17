@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="parameter_stereo_output" Register="83" Alu="55" Lut="93" MULTALU27X18="2" T_Register="497(83)" T_Alu="525(55)" T_Lut="766(93)" T_MULTALU27X18="12(2)" T_MULT12X12="2(0)" T_Bsram="32(0)">
+ <SubModule name="effects" Register="414" Alu="470" Lut="673" MULTALU27X18="10" MULT12X12="2" Bsram="32" T_Register="414(414)" T_Alu="470(470)" T_Lut="673(673)" T_MULTALU27X18="10(10)" T_MULT12X12="2(2)" T_Bsram="32(32)"/>
+</Module>

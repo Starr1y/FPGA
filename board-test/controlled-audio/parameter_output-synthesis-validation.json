@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/controlled_audio/rtl/menu_performance_core.v": "3b3b22dad273c895f6ee681a823da99bf9b49e1df1e0456546443d4eda3294c4",
+    "fpga/controlled_audio/rtl/parameter_stereo_output.v": "4df8db7dd26563860d28e10d4da680bc3621cc415c60678041cc4baf1288c680",
+    "fpga/controlled_audio/rtl/cent_ratio.hex": "398377ee480c58eb21b9de9f3cdd0f2d7dcd48ce4635d4284853dd70ed9debad",
+    "fpga/controlled_audio/rtl/fm_limits.hex": "20a7ecbbde7052e3e0e8574d90a3958ee9cc39d6ad303dbeeb3a9c5f9b0717a0",
+    "fpga/controlled_audio/rtl/instrument_bright.hex": "d307a888d9988ccfe627882e8096fc0bcac35ba8977cae6466f6ace6d8d443d4",
+    "fpga/controlled_audio/rtl/instrument_dark.hex": "8e65c178a3a1c9c59d0a30693480edd00d1f71bee8cb3afa6996c0e9a197b721",
+    "fpga/controlled_audio/rtl/instrument_gain.hex": "c98a168fa3bc54d4e13dc006380c167288bed9d2a16b7381e6ff72b2aa857ec5",
+    "fpga/controlled_audio/rtl/midi_ftw.hex": "0dfbcbe67b4430aed1d7648872f3847939effd5bb9f924bfe95bda1e2c55412c",
+    "fpga/controlled_audio/parameter_output.gprj": "ec303b9a6151098cd5e1154b73158f4c104fb058784fc8a9cf40e663689d217e",
+    "fpga/controlled_audio/output_synthesis.tcl": "69aa7e0f6f76ac89a42cbd5e0747eef2d38c9d4d8aa4a6e1faadaccf5b9fc178",
+    "fpga/duo02/rtl/stereo_fx.v": "dea5a894b6dbe40e7c49445234df281d6279a1a86e9eb0861f43bd02ccf3b2e5"
+  },
+  "resources": {
+    "T_Register": "497(83)",
+    "T_Alu": "525(55)",
+    "T_Lut": "766(93)",
+    "T_MULTALU27X18": "12(2)",
+    "T_MULT12X12": "2(0)",
+    "T_Bsram": "32(0)"
+  },
+  "top": "parameter_output",
+  "voices": null,
+  "ring_samples_per_channel": 16384,
+  "timing_verified": false,
+  "pin_mapping_verified": false,
+  "board_firmware_generated": false,
+  "includes_mechanical_filters": false,
+  "includes_i2c_or_hdmi": false,
+  "report_sha256": "704b316afd639b113a29423389ee6701e117bb699ec74b99a448c95563a00244"
+}

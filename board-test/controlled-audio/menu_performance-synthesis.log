@@ -1,0 +1,122 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/10324/Desktop/TangLab/TangLab/fpga/controlled_audio/menu_performance.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\menu_performance_core.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\parameter_stereo_output.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_note_map.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v'
+Undeclared symbol 'v_phase', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":48)
+Undeclared symbol 'v_freq', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":48)
+Undeclared symbol 'v_preset', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":49)
+Undeclared symbol 'v_brightness', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":49)
+Undeclared symbol 'blend_gain', assumed default net type 'wire'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":49)
+WARN  (EX3638) : 'v_phase' is already implicitly declared on line 48("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":50)
+WARN  (EX3638) : 'v_freq' is already implicitly declared on line 48("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":50)
+WARN  (EX3638) : 'v_brightness' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":51)
+WARN  (EX3638) : 'v_preset' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":51)
+WARN  (EX3638) : 'blend_gain' is already implicitly declared on line 49("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":52)
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\two_hand_synth.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\two_hand_event_queue.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\timbre_presets.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\sine_lut.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\instrument_waves.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\fm_limits.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v'
+Analyzing Verilog file 'C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\pt8211_output.v'
+Compiling module 'menu_performance_core'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\menu_performance_core.v":5)
+Compiling module 'instrument_menu'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":38)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":18)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 14("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":21)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controls\rtl\instrument_menu.v":65)
+Compiling module 'two_hand_synth(HOLD_TICKS=3000000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\two_hand_synth.v":2)
+Compiling module 'dual_voice_scheduler(HOLD_TICKS=3000000)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":3)
+Extracting RAM for identifier 'ftw'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'ticks'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'epoch'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'revision'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":15)
+Extracting RAM for identifier 'ids'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'age'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'gain'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":16)
+Extracting RAM for identifier 'preset'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":17)
+Extracting RAM for identifier 'tail'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":17)
+Extracting RAM for identifier 'midi_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":19)
+Extracting RAM for identifier 'cent_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":19)
+Compiling module 'dual_note_map'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_note_map.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":46)
+Compiling module 'timbre_presets'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\timbre_presets.v":3)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_voice_scheduler.v":75)
+Compiling module 'dual_audio_core(VOICES=32,MASTER_SHIFT=3)'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":5)
+Extracting RAM for identifier 'phase'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":17)
+Extracting RAM for identifier 'freq'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":18)
+Extracting RAM for identifier 'mod_phase'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":19)
+Extracting RAM for identifier 'mod_freq'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":20)
+Extracting RAM for identifier 'wave'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":22)
+Extracting RAM for identifier 'preset'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":23)
+Extracting RAM for identifier 'tail'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":24)
+Extracting RAM for identifier 'old_gate'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":26)
+Extracting RAM for identifier 'local_voice'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":27)
+Extracting RAM for identifier 'retrigger'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":28)
+Extracting RAM for identifier 'preset_mode'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":29)
+Extracting RAM for identifier 'attack'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":31)
+Extracting RAM for identifier 'decay'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":32)
+Extracting RAM for identifier 'sustain'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":33)
+Extracting RAM for identifier 'release_step'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":34)
+Extracting RAM for identifier 'index_env'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":35)
+Extracting RAM for identifier 'release_count'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":36)
+Extracting RAM for identifier 'release_level'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":37)
+Extracting RAM for identifier 'stage'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":38)
+Extracting RAM for identifier 'fast_release'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":39)
+Compiling module 'sine_lut'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\sine_lut.v":2)
+Compiling module 'instrument_waves'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\instrument_waves.v":3)
+Extracting RAM for identifier 'dark_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\instrument_waves.v":5)
+Extracting RAM for identifier 'bright_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\instrument_waves.v":5)
+Extracting RAM for identifier 'gain_rom'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\instrument_waves.v":6)
+Compiling module 'fm_limits'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\fm_limits.v":4)
+Extracting RAM for identifier 'caps'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\fm_limits.v":5)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\fm_limits.v":17)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":93)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":194)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":200)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":201)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":230)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":238)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":241)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":249)
+Compiling module 'parameter_stereo_output'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\parameter_stereo_output.v":5)
+Compiling module 'stereo_fx'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":4)
+Extracting RAM for identifier 'memory_left'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":13)
+Extracting RAM for identifier 'memory_right'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":14)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":83)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":84)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\stereo_fx.v":134)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\parameter_stereo_output.v":56)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\parameter_stereo_output.v":56)
+Compiling module 'pt8211_output'("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\pt8211_output.v":7)
+NOTE  (EX0101) : Current top module is "menu_performance_core"
+[5%] Running netlist conversion ...
+WARN  (CV0020) : Input event_data[14:12] is unused("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\menu_performance_core.v":10)
+WARN  (CV0020) : Input event_data[3:0] is unused("C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\rtl\menu_performance_core.v":10)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "sine_lut" instantiated to "carrier_lut" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":47)
+WARN  (NL0002) : The module "sine_lut" instantiated to "mod_lut" is swept in optimizing("C:\Users\10324\Desktop\TangLab\TangLab\fpga\duo02\rtl\dual_audio_core.v":46)
+[95%] Generate netlist file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\impl\gwsynthesis\menu_performance.vg" completed
+[100%] Generate report file "C:\Users\10324\Desktop\TangLab\TangLab\fpga\controlled_audio\impl\gwsynthesis\menu_performance_syn.rpt.html" completed
+GowinSynthesis finish

@@ -21,3 +21,7 @@
 /fpga/controls/** -text -whitespace
 
 /fpga/controls_display/** -text -whitespace
+
+/fpga/controlled_audio/** -text -whitespace
+/fpga/tools/check_controlled_audio.py -text -whitespace
+/fpga/tools/synth_controlled_audio.py -text -whitespace

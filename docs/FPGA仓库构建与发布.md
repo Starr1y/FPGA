@@ -95,3 +95,16 @@ git push origin main
 ```
 
 本次正常提交保留 Git 历史，从最新文件树移除上位机。历史提交仍可查看旧文件；没有重写历史或强制推送。
+
+## 独立菜单音频核心
+
+`fpga/controlled_audio/` 只有综合工程；没有可下载位流，DUO02 保持冻结。功能检查、未布局综合、证据校验依次运行：
+
+```powershell
+python -X utf8 fpga/tools/check_controlled_audio.py
+python -X utf8 fpga/tools/synth_controlled_audio.py
+python -X utf8 fpga/tools/synth_controlled_audio.py --performance
+python -X utf8 fpga/tools/check_controlled_audio.py --verify
+```
+
+已提供六份与冻结合成器字节一致的 ROM；不依赖上位机、在线下载或外部字体。源文件引用 `fpga/duo02/rtl/` 和 `fpga/controls/rtl/instrument_menu.v`。范围和未完成接入项见[菜单到音频参数接入](菜单到音频参数接入.md)。

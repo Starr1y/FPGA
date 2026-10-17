@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="menu_performance_core" Register="2" Lut="3" T_Register="13095(2)" T_Alu="2504(0)" T_Lut="24055(3)" T_MULTALU27X18="19(0)" T_MULT12X12="2(0)" T_MULT27X36="4(0)" T_Bsram="49(0)" T_Ssram="744(0)">
+ <SubModule name="parameters" Register="75" Lut="237" T_Register="75(75)" T_Lut="237(237)"/>
+ <SubModule name="instrument" T_Register="12461(0)" T_Alu="1990(0)" T_Lut="23023(0)" T_MULTALU27X18="7(0)" T_MULT27X36="4(0)" T_Bsram="17(0)" T_Ssram="744(0)">
+  <SubModule name="scheduler" Register="3447" Alu="1639" Lut="12670" MULT27X36="1" Bsram="4" Ssram="744" T_Register="3447(3447)" T_Alu="1655(1639)" T_Lut="12723(12670)" T_MULT27X36="1(1)" T_Bsram="4(4)" T_Ssram="744(744)">
+   <SubModule name="map" Alu="16" Lut="44" T_Alu="16(16)" T_Lut="44(44)"/>
+   <SubModule name="presets" Lut="9" T_Lut="9(9)"/>
+  </SubModule>
+  <SubModule name="audio" Register="8965" Alu="319" Lut="7632" MULTALU27X18="6" MULT27X36="3" Bsram="2" T_Register="9014(8965)" T_Alu="335(319)" T_Lut="10300(7632)" T_MULTALU27X18="7(6)" T_MULT27X36="3(3)" T_Bsram="13(2)">
+   <SubModule name="lut" Lut="17" T_Lut="17(17)"/>
+   <SubModule name="waves" Register="17" Lut="2637" Bsram="7" T_Register="17(17)" T_Lut="2637(2637)" T_Bsram="7(7)"/>
+   <SubModule name="bandwidth" Register="32" Alu="16" Lut="14" MULTALU27X18="1" Bsram="4" T_Register="32(32)" T_Alu="16(16)" T_Lut="14(14)" T_MULTALU27X18="1(1)" T_Bsram="4(4)"/>
+  </SubModule>
+ </SubModule>
+ <SubModule name="output_path" Register="77" Alu="40" Lut="71" MULTALU27X18="2" T_Register="491(77)" T_Alu="510(40)" T_Lut="713(71)" T_MULTALU27X18="12(2)" T_MULT12X12="2(0)" T_Bsram="32(0)">
+  <SubModule name="effects" Register="414" Alu="470" Lut="642" MULTALU27X18="10" MULT12X12="2" Bsram="32" T_Register="414(414)" T_Alu="470(470)" T_Lut="642(642)" T_MULTALU27X18="10(10)" T_MULT12X12="2(2)" T_Bsram="32(32)"/>
+ </SubModule>
+ <SubModule name="dac" Register="66" Alu="4" Lut="79" T_Register="66(66)" T_Alu="4(4)" T_Lut="79(79)"/>
+</Module>
