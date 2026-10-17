@@ -35,3 +35,14 @@
 /fpga/tools/package_duo03.py -text -whitespace
 /fpga/tools/analyze_motion_latency.py -text -whitespace
 /fpga/tools/check_motion_latency_analyzer.py -text -whitespace
+/fpga/audio_monitor/** -text -whitespace
+/fpga/audio_scope/** -text -whitespace
+/fpga/tools/gen_audio_monitor_rom.py -text -whitespace
+/fpga/tools/check_audio_observer.py -text -whitespace
+/fpga/tools/check_audio_observer_path.py -text -whitespace
+/fpga/tools/synth_audio_observer.py -text -whitespace
+/fpga/tools/verify_audio_observer.py -text -whitespace
+/fpga/tools/check_audio_snapshot.py -text -whitespace
+/fpga/tools/check_audio_monitor_core.py -text -whitespace
+/fpga/tools/synth_audio_monitor_core.py -text -whitespace
+/fpga/tools/verify_audio_monitor_core.py -text -whitespace

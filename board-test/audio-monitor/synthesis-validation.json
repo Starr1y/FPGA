@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/audio_monitor/rtl/fft_hann.hex": "c2e8cf6919cdfb7b55353a76b8e52da4b602d36cf6961ac9e01637e45214ab09",
+    "fpga/audio_monitor/rtl/fft_twiddle.hex": "6f121c61cd09663fd49253e5033669621e8ffed933f4e5a7ea6386a81496b6d4",
+    "fpga/audio_monitor/rtl/stereo_fft_observer.v": "689a734915d0457d58adbc4777953db09bb6c8b0d40f34128e28320975c6dfc1",
+    "fpga/audio_monitor/audio_observer.gprj": "f26e779e30cd7fd3b78f079f41af23f00f6654b9dd4da078cbe08ce4e6e68579",
+    "fpga/audio_monitor/observer_synthesis.tcl": "c4012bc54d23d9ae319864490b968b4abc7d0ae0eda3c86dbb94e7f114f78ec1",
+    "fpga/tools/synth_audio_observer.py": "02ea0f6098feff09de33fa78ab65d2be9fc8b77c697f30682337644f032f0315"
+  },
+  "resources": {
+    "T_Register": "776(776)",
+    "T_Alu": "321(321)",
+    "T_Lut": "543(543)",
+    "T_MULTALU27X18": "2(2)",
+    "T_Bsram": "9(9)"
+  },
+  "top": "stereo_fft_observer",
+  "timing_verified": false,
+  "pin_mapping_verified": false,
+  "board_firmware_generated": false,
+  "integrated_into_board_top": false,
+  "physical_tested": false,
+  "report_sha256": {
+    "fpga/reports/audio-monitor/audio_observer_syn.rpt.html": "6ec74467a994594bae11f8acfee9b228c34983942cee8285c6ffafc6da769eda",
+    "fpga/reports/audio-monitor/audio_observer_syn_resource.html": "7d3854af020e1d1572987ea380f71697df47ee3cc0bf60b7db97812596d233b3",
+    "fpga/reports/audio-monitor/audio_observer_syn_rsc.xml": "d1bc8df219914db478cb9f46c47a3e507b60b048c16d25a3f5a6c6122bde00b5"
+  }
+}

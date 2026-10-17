@@ -1,0 +1,207 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "fpga/audio_monitor/rtl/fft_hann.hex": "c2e8cf6919cdfb7b55353a76b8e52da4b602d36cf6961ac9e01637e45214ab09",
+    "fpga/audio_monitor/rtl/fft_twiddle.hex": "6f121c61cd09663fd49253e5033669621e8ffed933f4e5a7ea6386a81496b6d4",
+    "fpga/audio_monitor/rtl/stereo_fft_observer.v": "689a734915d0457d58adbc4777953db09bb6c8b0d40f34128e28320975c6dfc1",
+    "fpga/audio_monitor/coefficients.json": "f37a2a977cc57a8b1656589886c95a47c23d81364566666bccd1b342318221a5",
+    "fpga/audio_monitor/tb/tb_stereo_fft_observer.sv": "d15f1a6f09e19e94244c0133dc2224f5e016ff1a8486b2329790b704dde92645",
+    "fpga/tools/check_audio_observer.py": "f3227000065ce70d7a04a5cf755058a9e9de06529a5d587e46fd9f5a6c196011",
+    "fpga/tools/gen_audio_monitor_rom.py": "2c5e4adbfb263116828efa71425a8d270a35c4737aca7982ec7de5b6342a29ad"
+  },
+  "evidence_sha256": {
+    "input.hex": "f45bed4bb6292c9b7075759b4b8233f4b2de22dcab7cf10c58a7623ce09c22cf",
+    "numeric.txt": "5bd2d514a8cf8a45c5bfc0a95826b8af189878446c223d452d6c64c032b151e6",
+    "observer.log": "1e48a7ead62dca1c2c8c1cf9d2984e4e2791fad76691db2d208061609167b8a4"
+  },
+  "clock_hz": 50000000,
+  "native_pcm_hz": 48000,
+  "fft_size": 1024,
+  "bin_hz_nominal": 46.875,
+  "native_stereo_frames": 9,
+  "all_completed_frames": 12,
+  "complex_bins_checked": 12312,
+  "wave_columns_checked": 1536,
+  "integer_bit_exact": true,
+  "independent_reference": "NumPy rfft, norm=forward, quantized symmetric Hann window",
+  "numpy_version": "2.3.5",
+  "max_complex_error_q8": 25.652350957466947,
+  "per_channel": [
+    {
+      "phase": 1,
+      "frame": 0,
+      "channel": 0,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 0.0
+    },
+    {
+      "phase": 1,
+      "frame": 0,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 0.0
+    },
+    {
+      "phase": 1,
+      "frame": 1,
+      "channel": 0,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 7.941924174783291
+    },
+    {
+      "phase": 1,
+      "frame": 1,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 17.579477436732017
+    },
+    {
+      "phase": 1,
+      "frame": 2,
+      "channel": 0,
+      "peak_bin_excluding_dc": 54,
+      "max_complex_error_q8": 2.2332327425786613
+    },
+    {
+      "phase": 1,
+      "frame": 2,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 0.80926513671875
+    },
+    {
+      "phase": 1,
+      "frame": 3,
+      "channel": 0,
+      "peak_bin_excluding_dc": 10,
+      "max_complex_error_q8": 11.428581473861827
+    },
+    {
+      "phase": 1,
+      "frame": 3,
+      "channel": 1,
+      "peak_bin_excluding_dc": 31,
+      "max_complex_error_q8": 23.636020543296375
+    },
+    {
+      "phase": 1,
+      "frame": 4,
+      "channel": 0,
+      "peak_bin_excluding_dc": 10,
+      "max_complex_error_q8": 12.031503315232763
+    },
+    {
+      "phase": 1,
+      "frame": 4,
+      "channel": 1,
+      "peak_bin_excluding_dc": 71,
+      "max_complex_error_q8": 11.551312451462783
+    },
+    {
+      "phase": 1,
+      "frame": 5,
+      "channel": 0,
+      "peak_bin_excluding_dc": 7,
+      "max_complex_error_q8": 14.249933604504157
+    },
+    {
+      "phase": 1,
+      "frame": 5,
+      "channel": 1,
+      "peak_bin_excluding_dc": 11,
+      "max_complex_error_q8": 11.97967615378486
+    },
+    {
+      "phase": 1,
+      "frame": 6,
+      "channel": 0,
+      "peak_bin_excluding_dc": 512,
+      "max_complex_error_q8": 18.040365473116022
+    },
+    {
+      "phase": 1,
+      "frame": 6,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 25.652350957466947
+    },
+    {
+      "phase": 1,
+      "frame": 7,
+      "channel": 0,
+      "peak_bin_excluding_dc": 407,
+      "max_complex_error_q8": 6.742991286121196
+    },
+    {
+      "phase": 1,
+      "frame": 7,
+      "channel": 1,
+      "peak_bin_excluding_dc": 480,
+      "max_complex_error_q8": 7.60842482348744
+    },
+    {
+      "phase": 1,
+      "frame": 8,
+      "channel": 0,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 23.6852705225869
+    },
+    {
+      "phase": 1,
+      "frame": 8,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 13.13324150005027
+    },
+    {
+      "phase": 2,
+      "frame": 0,
+      "channel": 0,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 0.0
+    },
+    {
+      "phase": 2,
+      "frame": 0,
+      "channel": 1,
+      "peak_bin_excluding_dc": 1,
+      "max_complex_error_q8": 0.0
+    },
+    {
+      "phase": 2,
+      "frame": 6,
+      "channel": 0,
+      "peak_bin_excluding_dc": 407,
+      "max_complex_error_q8": 6.742991286121196
+    },
+    {
+      "phase": 2,
+      "frame": 6,
+      "channel": 1,
+      "peak_bin_excluding_dc": 480,
+      "max_complex_error_q8": 7.60842482348744
+    },
+    {
+      "phase": 4,
+      "frame": 0,
+      "channel": 0,
+      "peak_bin_excluding_dc": 10,
+      "max_complex_error_q8": 12.031503315232763
+    },
+    {
+      "phase": 4,
+      "frame": 0,
+      "channel": 1,
+      "peak_bin_excluding_dc": 71,
+      "max_complex_error_q8": 11.551312451462783
+    }
+  ],
+  "cycles_per_stereo_frame": 120836,
+  "overload_and_reset_checked": true,
+  "reset_aborted_partial_bins": 0,
+  "reset_aborted_partial_wave_columns": 20,
+  "physical_tested": false,
+  "integrated_into_board_top": false,
+  "hdmi_rendered": false,
+  "timing_verified": false
+}
