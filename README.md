@@ -1,3 +1,5 @@
+> **2026-10-17 新增独立交付**：[TangLab 便携上位机与 DUO02-MOUSE 1.4 测试工程](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/README.md) · [比赛要求完成情况](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/比赛要求完成情况.md)。原有 DUO02/DUO03 工程和冻结位流保持不变；下文为原主线说明。
+
 # TangLab：FPGA 姿态感知虚拟乐器
 
 Tang Mega NEO / 138K，器件 `GW5AST-LV138PG484AC1/I0`。仓库只包含 FPGA 工程、硬件参考、构建与验证材料，不依赖 PC 上位机。
