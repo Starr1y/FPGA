@@ -1,0 +1,4 @@
+source/.venv/
+source/build-cache*/
+dist/
+__pycache__/

@@ -1,0 +1,13 @@
+{
+  "version": "DUO04-LIVE 2.1",
+  "synthesis": "NOT RUN",
+  "place_route": "NOT RUN",
+  "hardware": "NOT RUN",
+  "bitstream_supplied": false,
+  "warning": "旧2.0位流不支持2.1；用户自行综合布局布线，PR1014仍待核实",
+  "date": "2026-10-18",
+  "sample_rate": 48000,
+  "clock": 50000000,
+  "voices": 32,
+  "tests": "validation/RESULT.json"
+}

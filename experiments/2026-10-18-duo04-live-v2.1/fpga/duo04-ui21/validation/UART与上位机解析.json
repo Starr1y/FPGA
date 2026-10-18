@@ -1,0 +1,15 @@
+{
+  "source": "RTL真实UART码流，非实物",
+  "frames": 78,
+  "crc": 0,
+  "discarded": 0,
+  "device": "DUO04-LIVE 2.1",
+  "bus": [
+    512,
+    5
+  ],
+  "selected_voices": [
+    512,
+    2
+  ]
+}
