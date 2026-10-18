@@ -17,6 +17,9 @@ for t in tests:
     records[t]={'sha256':sha(p),'pass_lines':[line for line in text.splitlines() if 'TB_PASS' in line]}
 host=json.loads((V/'host_compat.json').read_text(encoding='utf-8-sig'))
 assert host['status']=='PASS' and host['latest_host_interaction_enabled']
+pad_proof=json.loads((V/'imu_open_drain_netlist.json').read_text(encoding='utf-8'))
+assert pad_proof['status']=='PASS' and len(pad_proof['instances'])==6
+assert pad_proof['netlist_sha256']==sha(ROOT/'impl/gwsynthesis'/(NAME+'.vg'))
 checked=subprocess.run([sys.executable,str(ROOT/'check_implementation.py')],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
 assert checked.returncode==0,checked.stdout+checked.stderr
 implementation=json.loads(checked.stdout)
@@ -26,7 +29,7 @@ shutil.copy2(ROOT/'impl/pnr'/(NAME+'.fs'),bitdir/(NAME+'.fs'))
 for sub in ['pnr','gwsynthesis']:
     src=ROOT/'impl'/sub;dest=ROOT/'reports'/sub;dest.mkdir(parents=True,exist_ok=True)
     for p in src.iterdir():
-        if p.suffix in ('.html','.log'):shutil.copy2(p,dest/p.name)
+        if p.suffix in ('.html','.log','.txt'):shutil.copy2(p,dest/p.name)
 manifest={'version':'DUO04-LIVE 2.1+IO22','integration_revision':'2.2',
  'base_commit':'e9230dbd56654365d1219a0770a61b75a6a2a47a',
  'frozen_at':datetime.datetime.now().astimezone().isoformat(),
@@ -39,7 +42,7 @@ manifest={'version':'DUO04-LIVE 2.1+IO22','integration_revision':'2.2',
  'latency_scope':'Independent digital simulation segments; not a physical end-to-end upper bound',
  'uart_scope':'Current HELLO tested at921600 with published host parser; full inherited teaching/capture UART regression NOT rerun to completion',
  'shtp_scope':'SH2 report sequence/timestamp continuity checked; inherited transport sequence_gaps semantics unchanged',
- 'implementation':implementation},ensure_ascii=False,indent=2),encoding='utf-8')
+ 'imu_open_drain_netlist':pad_proof,'implementation':implementation},ensure_ascii=False,indent=2),encoding='utf-8')
 files=[p for p in ROOT.rglob('*') if p.is_file() and
        not any(x in p.relative_to(ROOT).parts for x in ('impl','__pycache__')) and
        p.suffix not in ('.vvp','.ppm','.csv','.hex')]

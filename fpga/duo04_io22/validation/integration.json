@@ -1,0 +1,14 @@
+{
+  "base_commit": "e9230dbd56654365d1219a0770a61b75a6a2a47a",
+  "modified_rtl": [
+    "rtl/bno_i2c_hand.v",
+    "rtl/bno_i2c_host.v",
+    "rtl/stereo_serial_output.v",
+    "rtl/top_duo04.v",
+    "rtl/two_hand_i2c_core.v"
+  ],
+  "latest_UI_menu_lesson_ROMs_byte_identical": true,
+  "source_hashes_still_match_build_snapshot": true,
+  "hello": "DUO04-LIVE 2.1+IO22",
+  "i2s_stereo_pair": "Left then right, same slot0 latch; PT path preserves original right then left"
+}

@@ -39,8 +39,23 @@ else:
     result['negative_slack_rows'] = rows
     timed = [r for r in rows if len(r)>=4 and r[1] in ('Setup','Hold')]
     result['setup_hold_zero'] = bool(timed) and all(float(r[2])==0 and int(r[3])==0 for r in timed)
+    pins = PNR/(NAME+'.pin.html')
+    expected={'i2s_bck':'C14','i2s_ws':'B13','i2s_dout':'C13',
+              'hp_bck':'Y17','hp_ws':'AB17','hp_din':'AA16'}
+    pin_rows={}
+    if pins.exists():
+        for row in re.findall(r'<tr[^>]*>(.*?)</tr>',pins.read_text(errors='replace'),re.S):
+            cells=[clean(c) for c in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>',row,re.S)]
+            if cells and cells[0] in expected and len(cells)>=10:
+                pin_rows[cells[0]]={'pin':cells[2].split('/')[0],
+                                  'direction':cells[4],'io_type':cells[7], 'pull':cells[9]}
+    result['audio_pin_rows']=pin_rows
+    result['audio_pins_match']=all(name in pin_rows and pin_rows[name]['pin']==pin and
+        pin_rows[name]['direction']=='out' and pin_rows[name]['io_type']=='LVCMOS33' and
+        pin_rows[name]['pull']=='NONE' for name,pin in expected.items())
     result['status'] = 'IMPLEMENTED, BOARD VALIDATION PENDING' if (result['sources_unchanged'] and
-        result['bitstream_generated'] and not result['errors'] and result['setup_hold_zero']) else 'CHECK FAILED'
+        result['bitstream_generated'] and not result['errors'] and result['setup_hold_zero'] and
+        result['audio_pins_match']) else 'CHECK FAILED'
     if bit.exists():
         result.update(bitstream_sha256=sha(bit), bitstream_size=bit.stat().st_size)
     result['timing_report_sha256'] = sha(report)
