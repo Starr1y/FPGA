@@ -1,0 +1,2 @@
+TB_PASS 32 mixed piano/plucked with expression pipeline, max render   674 clocks; optional mono only owning hand; stop
+tb/tb_duo04_32.sv:21: $finish called at 25795770000 (1ps)

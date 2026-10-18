@@ -1,0 +1,25 @@
+{
+  "status": "SOURCE CANDIDATE; DIGITAL CHECKS PASS; PNR RUNNING",
+  "version": "DUO04-LIVE 2.1+IO22",
+  "base_commit": "e9230dbd56654365d1219a0770a61b75a6a2a47a",
+  "passed": [
+    "serial_formats",
+    "mixed_latency",
+    "audio_latency",
+    "fan04_expression_200",
+    "tb_ui21_controls",
+    "tb_ui21_encoder",
+    "tb_ui21_lesson",
+    "tb_ui21_stop",
+    "tb_ui21_panel",
+    "tb_duo04_32",
+    "tb_io22_hello"
+  ],
+  "host_compat": "PASS",
+  "synthesis": "PASS",
+  "place_route": "RUNNING",
+  "bitstream_included": false,
+  "hardware_test": "NOT RUN",
+  "end_to_end_latency_proven": false,
+  "full_uart_teaching_capture_regression": "NOT COMPLETED"
+}

@@ -1,0 +1,475 @@
+[
+  [
+    "Register",
+    "27856"
+  ],
+  [
+    "LUT",
+    "47411"
+  ],
+  [
+    "LUT2",
+    "5398"
+  ],
+  [
+    "LUT3",
+    "19788"
+  ],
+  [
+    "LUT4",
+    "22225"
+  ],
+  [
+    "ALU",
+    "7438"
+  ],
+  [
+    "ALU",
+    "7438"
+  ],
+  [
+    "IOLOGIC",
+    "3"
+  ],
+  [
+    "DSP",
+    ""
+  ],
+  [
+    "MULTALU27X18",
+    "58"
+  ],
+  [
+    "BSRAM",
+    "120"
+  ],
+  [
+    "CLOCK",
+    "1"
+  ],
+  [
+    "Logic",
+    "59715(47537 LUT, 7438 ALU, 790 RAM16) / 138240",
+    "44%"
+  ],
+  [
+    "Register",
+    "27856 / 139095",
+    "21%"
+  ],
+  [
+    "--Register as Latch",
+    "0 / 139095",
+    "0%"
+  ],
+  [
+    "--Register as FF",
+    "27856 / 139095",
+    "21%"
+  ],
+  [
+    "BSRAM",
+    "120 / 340",
+    "36%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "24"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Clock Skew:",
+    "0.000"
+  ],
+  [
+    "Logic Level:",
+    "25"
+  ],
+  [
+    "Arrival Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ],
+  [
+    "Required Clock Path Delay:",
+    "cell: 0.000, 0.000%; route: 0.371, 100.000%"
+  ]
+]

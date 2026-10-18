@@ -1,0 +1,4 @@
+WARNING: rtl/duo04_panel.v:16: $readmemh(rtl/duo04_text.hex): Not enough words in the file for the requested range [0:8191].
+WARNING: rtl/duo04_panel.v:16: $readmemh(rtl/duo04_font.hex): Not enough words in the file for the requested range [0:10239].
+TB_PASS nine UI states rendered, no unknown pixels
+tb/tb_ui21_panel.sv:39: $finish called at 302400320000 (1ps)

@@ -1,0 +1,2 @@
+TB_PASS global STOP priority over simultaneous local edit
+tb/tb_ui21_stop.sv:19: $finish called at 700000 (1ps)

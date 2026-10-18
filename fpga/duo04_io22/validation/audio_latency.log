@@ -1,0 +1,2 @@
+TB_PASS actual32 synth + production FX/limiter/gain8 + serial; note acceptance-to-nonzero PCM=62.810us serial=88.630us render=208 clocks
+tb/tb_audio_latency.sv:29: $finish called at 240130000 (1ps)
