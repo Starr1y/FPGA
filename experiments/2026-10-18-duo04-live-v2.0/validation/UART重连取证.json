@@ -1,0 +1,45 @@
+{
+  "source": "独立串口客户端实物取证，非GUI重连闭环；没有改变驱动、未烧录",
+  "attempts": [
+    {
+      "attempt": 1,
+      "port": "COM12",
+      "baud": 921600,
+      "bytes_before_hello": 763,
+      "bytes": 5884,
+      "frames": 24,
+      "crc_errors": 0,
+      "discarded": 0,
+      "info": [
+        "DUO04-LIVE 2.0"
+      ]
+    },
+    {
+      "attempt": 2,
+      "port": "COM12",
+      "baud": 921600,
+      "bytes_before_hello": 1014,
+      "bytes": 6135,
+      "frames": 24,
+      "crc_errors": 0,
+      "discarded": 252,
+      "info": [
+        "DUO04-LIVE 2.0"
+      ]
+    },
+    {
+      "attempt": 3,
+      "port": "COM12",
+      "baud": 921600,
+      "bytes_before_hello": 1015,
+      "bytes": 6136,
+      "frames": 24,
+      "crc_errors": 1,
+      "discarded": 252,
+      "info": [
+        "DUO04-LIVE 2.0"
+      ]
+    }
+  ],
+  "conclusion": "三次均识别DUO04-LIVE2.0；开口处残帧可能出现丢弃/一次CRC，不能记为全程零错误；用户随后报告恢复，HDMI关联未隔离"
+}

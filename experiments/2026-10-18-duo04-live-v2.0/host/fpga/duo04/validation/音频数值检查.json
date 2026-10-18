@@ -1,0 +1,257 @@
+{
+  "result": "PASS",
+  "source": "RTL simulation, not physical audio",
+  "pitch_method": "Finite-window FFT near expected fundamental; not precision frequency counter",
+  "rows": [
+    {
+      "timbre": "钢琴",
+      "midi": 36,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 2759,
+      "rms": 1980.793909081383,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "钢琴",
+      "midi": 36,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 5453,
+      "rms": 4026.5734559173807,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "钢琴",
+      "midi": 48,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 2755,
+      "rms": 1969.0008190302503,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "钢琴",
+      "midi": 48,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 5438,
+      "rms": 3970.123391243554,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "钢琴",
+      "midi": 60,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 2756,
+      "rms": 1962.5296263500732,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    },
+    {
+      "timbre": "钢琴",
+      "midi": 60,
+      "velocity": 96,
+      "samples": 48000,
+      "peak": 6228,
+      "rms": 3441.124919445553,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 36,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3913,
+      "rms": 1733.1363191781807,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 36,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 7619,
+      "rms": 3418.4079225355063,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 48,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3930,
+      "rms": 1711.8165158496242,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 48,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 7824,
+      "rms": 3448.4382716745567,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 60,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3924,
+      "rms": 1720.2746557556882,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    },
+    {
+      "timbre": "马林巴",
+      "midi": 60,
+      "velocity": 96,
+      "samples": 48000,
+      "peak": 10236,
+      "rms": 1788.519832710837,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 36,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3432,
+      "rms": 2918.4175333433327,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 36,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 6862,
+      "rms": 5564.095357038008,
+      "estimated_hz": 65.5517578125,
+      "fft_estimated_cents": 3.843418947407955
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 48,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3431,
+      "rms": 2915.916536557407,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 48,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 6863,
+      "rms": 5571.487424508823,
+      "estimated_hz": 130.92041015625,
+      "fft_estimated_cents": 1.423804229202577
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 60,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 3433,
+      "rms": 2917.7809398855115,
+      "estimated_hz": 261.474609375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "电钢琴",
+      "midi": 60,
+      "velocity": 96,
+      "samples": 48000,
+      "peak": 9105,
+      "rms": 4762.3007059722895,
+      "estimated_hz": 262.02392578125,
+      "fft_estimated_cents": 2.6340343023016213
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 36,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 1028,
+      "rms": 302.3291465303947,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 36,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 2077,
+      "rms": 586.3619161856692,
+      "estimated_hz": 65.36865234375,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 48,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 892,
+      "rms": 243.56252906883327,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 48,
+      "velocity": 96,
+      "samples": 8192,
+      "peak": 1757,
+      "rms": 481.63805922370113,
+      "estimated_hz": 130.7373046875,
+      "fft_estimated_cents": -0.999196934779882
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 60,
+      "velocity": 48,
+      "samples": 8192,
+      "peak": 875,
+      "rms": 284.0582018032902,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    },
+    {
+      "timbre": "拨弦",
+      "midi": 60,
+      "velocity": 96,
+      "samples": 48000,
+      "peak": 2986,
+      "rms": 272.53065125779887,
+      "estimated_hz": 261.65771484375,
+      "fft_estimated_cents": 0.21272754528032783
+    }
+  ],
+  "uart_frames": 49,
+  "crc_errors": 0,
+  "capture_shape": [
+    512,
+    5
+  ],
+  "monitor_shape": [
+    512,
+    4
+  ]
+}

@@ -1,3 +1,10 @@
+## 2026-10-18：DUO04-LIVE 2.0 独立交付
+
+新增[四音色、双 IMU 脱机菜单与 HDMI 教学工程及 TangLab 上位机](experiments/2026-10-18-duo04-live-v2.0/README.md)，包含用户本次编译的 `.fs`、对应实现报告、便携 Windows 软件、源码、接线与测试指南。
+原工程及 2026-10-17 快照继续保留。当前报告 setup/hold 零违例，PR1014 仍存在；实物仅部分取证，不标整机验收通过。详见[完成情况与剩余工作](experiments/2026-10-18-duo04-live-v2.0/比赛要求完成情况.md)。
+
+---
+
 > **2026-10-17 新增独立交付**：[TangLab 便携上位机与 DUO02-MOUSE 1.4 测试工程](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/README.md) · [比赛要求完成情况](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/比赛要求完成情况.md)。原有 DUO02/DUO03 工程和冻结位流保持不变；下文为原主线说明。
 
 # TangLab：FPGA 姿态感知虚拟乐器

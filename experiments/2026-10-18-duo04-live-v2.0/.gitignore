@@ -1,0 +1,5 @@
+host/build-cache/
+host/dist/
+host/.venv/
+host/recordings/
+host/agent-results/

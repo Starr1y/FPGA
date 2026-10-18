@@ -1,0 +1,18 @@
+{
+  "version": "DUO04-LIVE 2.0",
+  "date": "2026-10-18",
+  "rtl": "PASS final four timbres C2/C3/C4 velocity48/96, 100ms/1s/5s immutable hold and release silence; four-voice max70 clocks",
+  "voices32": "PASS 32 mixed timbres/expression, hand isolation and stop; max674 clocks at50MHz (1041-cycle audio budget)",
+  "uart": "PASS final real-bit UART and current host parser CRC0, 512x5 bus +512x4 selected voice PCM",
+  "menu": "PASS semantic navigation/edit/bounds, lesson/mode tests",
+  "imu": "decoder boundary event/disconnect injection PASS; full dual IMU bus/hardware integration NOT RUN",
+  "display": "four pages rendered in RTL; no X pixels; real monitor not tested",
+  "primitive": "Gowin gw5a vendor PLL/OSER10/ELVDS static elaboration PASS, physical routing NOT implied",
+  "synthesis": "NOT RUN for final sources, user requested self-build",
+  "place_route": "NOT RUN for final sources; historical attempt FAILED setup and retained PR1014",
+  "board": "NOT RUN",
+  "sound_quality": "RTL audition only; user listening required",
+  "old_handshake_issue": "not reproduced/closed on physical hardware",
+  "exe": "PASS final frozen GUI+CLI simulated startup/config/mode/teaching/capture/export/record; offline behavior preserved",
+  "safety": "PASS offline/lesson no-PC, calibration watchdog, KEY2, sensor decoder-boundary disconnect"
+}

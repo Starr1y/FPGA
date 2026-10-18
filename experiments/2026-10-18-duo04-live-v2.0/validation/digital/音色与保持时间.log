@@ -1,0 +1,35 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 18 15:52:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_duo04_audio/xsim_script.tcl
+# xsim {tb_duo04_audio} -autoloadwcfg -tclbatch {run.tcl}
+Time resolution is 1 ps
+source run.tcl
+## run all
+TB_PASS hold100ms/1s/5s immutable; four timbres C2/C3/C4 velocity48/96; max=   70
+$finish called at time : 1731680305 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04/tb/tb_duo04_audio.sv" Line 59
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:58 . Memory (MB): peak = 195.227 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 12568 KB (Peak: 12568 KB), Simulation CPU Usage: 115718 ms
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 15:54:29 2026...
+5100 MB
+# Total Virtual      : 38785 MB
+# Available Virtual  : 14635 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_duo04_audio/xsim_script.tcl
+# xsim {tb_duo04_audio} -autoloadwcfg -tclbatch {run.tcl}
+Time resolution is 1 ps
+source run.tcl
+## run all
+TB_PASS hold100ms/1s/5s immutable; four timbres C2/C3/C4 velocity48/96; max=   70
+$finish called at time : 1731680305 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04/tb/tb_duo04_audio.sv" Line 59
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:58 . Memory (MB): peak = 195.227 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 12568 KB (Peak: 12568 KB), Simulation CPU Usage: 115718 ms
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 15:54:29 2026...

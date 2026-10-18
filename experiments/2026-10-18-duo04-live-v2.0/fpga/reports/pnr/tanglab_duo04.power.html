@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ENhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Power Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper { width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td {white-space:pre;  border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">Power Messages</a>
+<ul>
+<li><a href="#Configure_Info" style=" font-size: 14px;">Configure Information</a></li>
+</ul>
+</li>
+<li><a href="#Summary" style=" font-size: 16px;">Power Summary</a>
+<ul>
+<li><a href="#Power_Info" style=" font-size: 14px;">Power Information</a></li>
+<li><a href="#Thermal_Info" style=" font-size: 14px;">Thermal Information</a></li>
+<li><a href="#Supply_Summary" style=" font-size: 14px;">Supply Information</a></li>
+</ul>
+</li>
+<li><a href="#Detail" style=" font-size: 16px;">Power Details</a>
+<ul>
+<li><a href="#By_Block_Type" style=" font-size: 14px;">Power By Block Type</a></li>
+<li><a href="#By_Hierarchy" style=" font-size: 14px;">Power By Hierarchy</a></li>
+<li><a href="#By_Clock_Domain" style=" font-size: 14px;">Power By Clock Domain</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">Power Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>Power Analysis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04\impl\gwsynthesis\tanglab_duo04.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04\tanglab_duo04.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04\tanglab_duo04.sdc</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.12.03 (64-bit)</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW5AST-LV138PG484AC1/I0</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW5AST-138</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>C</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Sun Oct 18 16:24:16 2026
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2026 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h2><a name="Configure_Info">Configure Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Grade</td>
+<td>Commercial</td>
+</tr>
+<tr>
+<td class="label">Process</td>
+<td>Typical</td>
+</tr>
+<tr>
+<td class="label">Ambient Temperature</td>
+<td>25.000
+</tr>
+<tr>
+<td class="label">Use Custom Theta JA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Heat Sink</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Air Flow</td>
+<td>LFM_0</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta SA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Board Thermal Model</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta JB</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Related Vcd File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Related Saif File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Filter Glitches</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Default IO Toggle Rate</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td class="label">Default Remain Toggle Rate</td>
+<td>0.125</td>
+</tr>
+</table>
+<h1><a name="Summary">Power Summary</a></h1>
+<h2><a name="Power_Info">Power Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Total Power (mW)</td>
+<td>445.804</td>
+</tr>
+<tr>
+<td class="label">Quiescent Power (mW)</td>
+<td>100.490</td>
+</tr>
+<tr>
+<td class="label">Dynamic Power (mW)</td>
+<td>345.314</td>
+</tr>
+</table>
+<h2><a name="Thermal_Info">Thermal Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Junction Temperature</td>
+<td>32.647</td>
+</tr>
+<tr>
+<td class="label">Theta JA</td>
+<td>17.153</td>
+</tr>
+<tr>
+<td class="label">Max Allowed Ambient Temperature</td>
+<td>77.353</td>
+</tr>
+</table>
+<h2><a name="Supply_Summary">Supply Information:</a></h2>
+<table class="summary_table">
+<tr>
+<th class="label">Voltage Source</th>
+<th class="label">Voltage</th>
+<th class="label">Dynamic Current(mA)</th>
+<th class="label">Quiescent Current(mA)</th>
+<th class="label">Power(mW)</th>
+</tr>
+<tr>
+<td>VCC</td>
+<td>0.900</td>
+<td>380.572</td>
+<td>80.023</td>
+<td>414.535</td>
+</tr>
+<tr>
+<td>VCCX</td>
+<td>1.800</td>
+<td>0.549</td>
+<td>7.200</td>
+<td>13.948</td>
+</tr>
+<tr>
+<td>VCCIO15</td>
+<td>1.500</td>
+<td>0.008</td>
+<td>0.114</td>
+<td>0.183</td>
+</tr>
+<tr>
+<td>VCCIO33</td>
+<td>3.300</td>
+<td>0.545</td>
+<td>2.903</td>
+<td>11.378</td>
+</tr>
+<tr>
+<td>VCCLDO</td>
+<td>1.200</td>
+<td>0.000</td>
+<td>4.800</td>
+<td>5.760</td>
+</tr>
+</table>
+<h1><a name="Detail">Power Details</a></h1>
+<h2><a name="By_Block_Type">Power By Block Type:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Block Type</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Static Power(mW)</th>
+<th class="label">Average Toggle Rate(millions of transitions/sec)</th>
+</tr>
+<tr>
+<td>Logic</td>
+<td>18.360</td>
+<td>NA</td>
+<td>5.877</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>15.607
+<td>12.297
+<td>6.458
+</tr>
+<tr>
+<td>BSRAM</td>
+<td>226.539
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>PLL</td>
+<td>13.007
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>DSP</td>
+<td>84.088
+<td>NA</td>
+<td>3.803
+</tr>
+</table>
+<h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Hierarchy Entity</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Block Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>top_duo04</td>
+<td>341.993</td>
+<td>341.993(296.265)</td>
+<tr>
+<td>top_duo04/audio_path/</td>
+<td>92.702</td>
+<td>92.702(90.260)</td>
+<tr>
+<td>top_duo04/audio_path/effects/</td>
+<td>87.741</td>
+<td>87.741(0.000)</td>
+<tr>
+<td>top_duo04/audio_path/makeup.limiter/</td>
+<td>2.519</td>
+<td>2.519(0.000)</td>
+<tr>
+<td>top_duo04/calibration/</td>
+<td>2.640</td>
+<td>2.640(0.182)</td>
+<tr>
+<td>top_duo04/calibration/lut/</td>
+<td>0.182</td>
+<td>0.182(0.000)</td>
+<tr>
+<td>top_duo04/commands/</td>
+<td>0.115</td>
+<td>0.115(0.000)</td>
+<tr>
+<td>top_duo04/dac/</td>
+<td>0.024</td>
+<td>0.024(0.000)</td>
+<tr>
+<td>top_duo04/display/</td>
+<td>3.484</td>
+<td>3.484(3.482)</td>
+<tr>
+<td>top_duo04/display/enc_b/</td>
+<td>0.033</td>
+<td>0.033(0.000)</td>
+<tr>
+<td>top_duo04/display/enc_g/</td>
+<td>0.032</td>
+<td>0.032(0.000)</td>
+<tr>
+<td>top_duo04/display/enc_r/</td>
+<td>0.032</td>
+<td>0.032(0.000)</td>
+<tr>
+<td>top_duo04/display/panel/</td>
+<td>3.368</td>
+<td>3.368(1.886)</td>
+<tr>
+<td>top_duo04/display/panel/fans/</td>
+<td>1.886</td>
+<td>1.886(0.000)</td>
+<tr>
+<td>top_duo04/display/status_cdc/</td>
+<td>0.017</td>
+<td>0.017(0.000)</td>
+<tr>
+<td>top_duo04/encoder/</td>
+<td>0.073</td>
+<td>0.073(0.012)</td>
+<tr>
+<td>top_duo04/encoder/encoder_key/</td>
+<td>0.012</td>
+<td>0.012(0.000)</td>
+<tr>
+<td>top_duo04/expression_lfo/</td>
+<td>1.000</td>
+<td>1.000(0.364)</td>
+<tr>
+<td>top_duo04/expression_lfo/left_lfo/</td>
+<td>0.182</td>
+<td>0.182(0.000)</td>
+<tr>
+<td>top_duo04/expression_lfo/right_lfo/</td>
+<td>0.182</td>
+<td>0.182(0.000)</td>
+<tr>
+<td>top_duo04/lesson/</td>
+<td>0.056</td>
+<td>0.056(0.000)</td>
+<tr>
+<td>top_duo04/lesson_map/</td>
+<td>0.009</td>
+<td>0.009(0.000)</td>
+<tr>
+<td>top_duo04/main_pll/</td>
+<td>13.007</td>
+<td>13.007(0.000)</td>
+<tr>
+<td>top_duo04/menu/</td>
+<td>0.066</td>
+<td>0.066(0.000)</td>
+<tr>
+<td>top_duo04/queue/</td>
+<td>0.150</td>
+<td>0.150(0.000)</td>
+<tr>
+<td>top_duo04/rx/</td>
+<td>0.018</td>
+<td>0.018(0.000)</td>
+<tr>
+<td>top_duo04/sensors/</td>
+<td>45.641</td>
+<td>45.641(45.640)</td>
+<tr>
+<td>top_duo04/sensors/events/</td>
+<td>0.125</td>
+<td>0.125(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/</td>
+<td>22.757</td>
+<td>22.757(22.757)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/cadence/</td>
+<td>0.119</td>
+<td>0.119(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/expression/</td>
+<td>0.359</td>
+<td>0.359(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/gesture/</td>
+<td>1.715</td>
+<td>1.715(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/host/</td>
+<td>4.478</td>
+<td>4.478(4.294)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/host/decoder/</td>
+<td>1.453</td>
+<td>1.453(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/host/link/</td>
+<td>2.840</td>
+<td>2.840(0.077)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/host/link/engine/</td>
+<td>0.077</td>
+<td>0.077(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/pose/</td>
+<td>16.086</td>
+<td>16.086(0.341)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/pose/atan/</td>
+<td>0.258</td>
+<td>0.258(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[0].endpoint/pose/sqrt/</td>
+<td>0.083</td>
+<td>0.083(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/</td>
+<td>22.758</td>
+<td>22.758(22.758)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/cadence/</td>
+<td>0.119</td>
+<td>0.119(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/expression/</td>
+<td>0.359</td>
+<td>0.359(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/gesture/</td>
+<td>1.716</td>
+<td>1.716(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/host/</td>
+<td>4.477</td>
+<td>4.477(4.292)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/host/decoder/</td>
+<td>1.453</td>
+<td>1.453(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/host/link/</td>
+<td>2.839</td>
+<td>2.839(0.076)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/host/link/engine/</td>
+<td>0.076</td>
+<td>0.076(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/pose/</td>
+<td>16.087</td>
+<td>16.087(0.341)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/pose/atan/</td>
+<td>0.258</td>
+<td>0.258(0.000)</td>
+<tr>
+<td>top_duo04/sensors/hand[1].endpoint/pose/sqrt/</td>
+<td>0.083</td>
+<td>0.083(0.000)</td>
+<tr>
+<td>top_duo04/synth/</td>
+<td>137.200</td>
+<td>137.200(137.200)</td>
+<tr>
+<td>top_duo04/synth/audio/</td>
+<td>110.158</td>
+<td>110.158(87.949)</td>
+<tr>
+<td>top_duo04/synth/audio/lut/</td>
+<td>0.200</td>
+<td>0.200(0.000)</td>
+<tr>
+<td>top_duo04/synth/audio/models/</td>
+<td>87.632</td>
+<td>87.632(0.182)</td>
+<tr>
+<td>top_duo04/synth/audio/models/partial1/</td>
+<td>0.182</td>
+<td>0.182(0.000)</td>
+<tr>
+<td>top_duo04/synth/audio/piano_lut/</td>
+<td>0.117</td>
+<td>0.117(0.000)</td>
+<tr>
+<td>top_duo04/synth/scheduler/</td>
+<td>27.042</td>
+<td>27.042(0.031)</td>
+<tr>
+<td>top_duo04/synth/scheduler/map/</td>
+<td>0.029</td>
+<td>0.029(0.000)</td>
+<tr>
+<td>top_duo04/synth/scheduler/presets_0/</td>
+<td>0.001</td>
+<td>0.001(0.000)</td>
+<tr>
+<td>top_duo04/transmitter/</td>
+<td>0.052</td>
+<td>0.052(0.000)</td>
+<tr>
+<td>top_duo04/tx/</td>
+<td>0.027</td>
+<td>0.027(0.000)</td>
+</table>
+<h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Clock Domain</th>
+<th class="label">Clock Frequency(Mhz)</th>
+<th class="label">Total Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>main_pll/PLL_inst/CLKOUT2.default_gen_clk</td>
+<td>50.000</td>
+<td>325.518</td>
+</tr>
+<tr>
+<td>NO CLOCK DOMAIN</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>main_pll/PLL_inst/CLKOUT1.default_gen_clk</td>
+<td>25.000</td>
+<td>3.474</td>
+</tr>
+<tr>
+<td>main_pll/PLL_inst/CLKOUT0.default_gen_clk</td>
+<td>125.000</td>
+<td>0.003</td>
+</tr>
+<tr>
+<td>ref_clk</td>
+<td>50.000</td>
+<td>13.007</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

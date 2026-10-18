@@ -1,0 +1,23 @@
+{
+  "run": true,
+  "profiles": [
+    0,
+    0
+  ],
+  "presets": [
+    0,
+    1
+  ],
+  "chord": false,
+  "effect": 0,
+  "wet": 128,
+  "gain": 16,
+  "hold_ms": [
+    1500,
+    1500
+  ],
+  "release_ids": [
+    1,
+    1
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/Starr1y/FPGA",
+  "commit": "9e577cd06350327c956613da686851feb118dfb4",
+  "frozen_duo02_sha256": "2875c715b1bab84e3e427295e7fe4742cd5c297e43b7fafd92e15d2b79409e13",
+  "purpose": "独立UART鼠标事件测试，不改冻结DUO02；IMU停用"
+}
