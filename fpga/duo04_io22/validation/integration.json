@@ -13,8 +13,20 @@
   "menu_semantics_preserved_timing_pipeline_added": true,
   "source_hashes_still_match_build_snapshot": true,
   "hello": "DUO04-LIVE 2.1+IO22",
-  "attempt": 3,
+  "attempt": 4,
   "i2s_stereo_pair": "Left then right, same slot0 latch; PT path preserves original right then left",
   "source_transition_backpressure": true,
-  "lookup_ROM": "dedicated synchronous block ROM read, isolated scheduler synthesis passed"
+  "lookup_ROM": "dedicated synchronous block ROM read, isolated scheduler synthesis passed",
+  "build_options": {
+    "flow": "run pnr using verified existing netlist",
+    "route_option": 2,
+    "previous_route_option": 1,
+    "timing_driven": 1,
+    "core_constraint_mhz": 50,
+    "hold_correction": true,
+    "synthesis_skipped": true,
+    "RTL_unchanged": true,
+    "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
+    "measured_speedup": "PENDING full route2 completion; no speedup factor claimed"
+  }
 }

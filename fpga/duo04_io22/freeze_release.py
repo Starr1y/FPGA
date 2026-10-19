@@ -29,7 +29,7 @@ shutil.copy2(ROOT/'impl/pnr'/(NAME+'.fs'),bitdir/(NAME+'.fs'))
 for sub in ['pnr','gwsynthesis']:
     src=ROOT/'impl'/sub;dest=ROOT/'reports'/sub;dest.mkdir(parents=True,exist_ok=True)
     for p in src.iterdir():
-        if p.suffix in ('.html','.log','.txt'):shutil.copy2(p,dest/p.name)
+        if p.suffix in ('.html','.log','.txt') or p.name=='cmd.do':shutil.copy2(p,dest/p.name)
 manifest={'version':'DUO04-LIVE 2.1+IO22','integration_revision':'2.2',
  'base_commit':'e9230dbd56654365d1219a0770a61b75a6a2a47a',
  'frozen_at':datetime.datetime.now().astimezone().isoformat(),

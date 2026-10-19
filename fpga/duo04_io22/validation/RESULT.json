@@ -1,5 +1,5 @@
 {
-  "status": "13 DIGITAL TESTS AND SYNTHESIS PASS; PNR RUNNING; NO ACCEPTED BITSTREAM",
+  "status": "13 DIGITAL TESTS AND SYNTHESIS PASS; FAST ROUTE2 PNR RUNNING; NO ACCEPTED BITSTREAM",
   "tests": {
     "serial_formats": {
       "sha256": "73326dd8181349be96b1715f7064de3cfc3b6a23cb64472abd5235f4c7892fa6",
@@ -124,11 +124,26 @@
       }
     ]
   },
-  "implementation_attempt": 3,
+  "implementation_attempt": 4,
   "previous_implementation": "timing-attempt01/implementation.json (FAILED, not a downloadable release)",
   "bitstream_included": false,
   "hardware_test": "NOT RUN",
   "end_to_end_10ms_or_5ms_proven": false,
   "latency_scope": "Independent digital simulation segments, not a physical end-to-end upper bound",
-  "uart_scope": "HELLO/parser and decoded-command pipeline tested; full inherited teaching/capture UART regression NOT completed"
+  "uart_scope": "HELLO/parser and decoded-command pipeline tested; full inherited teaching/capture UART regression NOT completed",
+  "build_options": {
+    "flow": "run pnr using verified existing netlist",
+    "route_option": 2,
+    "previous_route_option": 1,
+    "timing_driven": 1,
+    "core_constraint_mhz": 50,
+    "hold_correction": true,
+    "synthesis_skipped": true,
+    "RTL_unchanged": true,
+    "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
+    "measured_speedup": "PENDING full route2 completion; no speedup factor claimed",
+    "actual_command_sha256": "7b014cf0e5742555b4fb5989fed9e4c63d11d45658296ca673e003eb41b2461c",
+    "started_at": "2026-10-19T11:01:28.696506+08:00"
+  },
+  "tests_reused_no_RTL_change": true
 }

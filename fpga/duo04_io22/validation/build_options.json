@@ -1,0 +1,14 @@
+{
+  "flow": "run pnr using verified existing netlist",
+  "route_option": 2,
+  "previous_route_option": 1,
+  "timing_driven": 1,
+  "core_constraint_mhz": 50,
+  "hold_correction": true,
+  "synthesis_skipped": true,
+  "RTL_unchanged": true,
+  "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
+  "measured_speedup": "PENDING full route2 completion; no speedup factor claimed",
+  "actual_command_sha256": "7b014cf0e5742555b4fb5989fed9e4c63d11d45658296ca673e003eb41b2461c",
+  "started_at": "2026-10-19T11:01:28.696506+08:00"
+}

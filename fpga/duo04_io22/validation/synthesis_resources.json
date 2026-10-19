@@ -1,6 +1,6 @@
 {
   "scope": "synthesis estimate, not routed resource report",
-  "source_snapshot_sha256": "2c429c2faec22af97094201c08d9b1a9b5ddca7603fdf629c3f48180d2c081bf",
+  "source_snapshot_sha256": "9898da5240e6729adf2e38d1bcdc1c74118f615e40f3c76077152efc95c414e5",
   "report_sha256": "fd75658f36e70d74bb29810b65cdacef30d7b6dd934c569736e0974a1c449d0b",
   "whole_design": {
     "name": "top_duo04",
@@ -42,5 +42,6 @@
     "T_Lut": "3247(2)",
     "T_MULT12X12": "5(0)",
     "T_Bsram": "20(0)"
-  }
+  },
+  "synthesis_reused_RTL_unchanged": true
 }

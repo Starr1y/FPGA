@@ -18,6 +18,17 @@ result = {'project': 'DUO04-LIVE 2.2', 'base_commit': 'e9230db',
           'hardware_test': 'NOT RUN', 'starts_eda_or_programmer': False}
 snapshot = json.loads((ROOT/'validation/source_before_build.json').read_text(encoding='utf-8'))
 result['sources_unchanged'] = all((ROOT/p).is_file() and sha(ROOT/p)==h for p,h in snapshot['sha256'].items())
+result['netlist_provenance_verified'] = True
+if 'reused_netlist_sha256' in snapshot:
+    reuse=json.loads((ROOT/'validation/netlist_reuse.json').read_text(encoding='utf-8'))
+    pads=json.loads((ROOT/'validation/imu_open_drain_netlist.json').read_text(encoding='utf-8'))
+    rtl={n:h for n,h in snapshot['sha256'].items() if n.startswith('rtl/')}
+    result['netlist_provenance_verified'] = (rtl==reuse['rtl_hashes'] and
+        snapshot['sha256']['tanglab_duo04_io22.gprj']==reuse['old_sources_sha256']['tanglab_duo04_io22.gprj'] and
+        snapshot['reused_netlist_sha256']==reuse['reused_netlist_sha256']==pads['netlist_sha256'])
+    netlist=ROOT/'impl/gwsynthesis'/(NAME+'.vg')
+    if netlist.exists():
+        result['netlist_provenance_verified'] &= sha(netlist)==snapshot['reused_netlist_sha256']
 log = PNR / (NAME+'.log')
 bit = PNR / (NAME+'.fs')
 if not bit.exists():
@@ -58,6 +69,10 @@ else:
     result['core_pixel_frequencies_met'] = all(any(f['clock']==c and
         f['constraint_mhz']==hz and f['actual_fmax_mhz']>=hz for f in frequencies) for c,hz in required.items())
     result['timing_scope'] = 'Routed internal setup/hold; external I2S DAC and physical end-to-end latency NOT measured'
+    command=PNR/'cmd.do'
+    options=re.search(r'-route_option\s+(\d+)',command.read_text(errors='replace')) if command.exists() else None
+    result['route_option'] = int(options.group(1)) if options else None
+    result['routing_options_match'] = result['route_option']==snapshot.get('expected_route_option',1)
     pins = PNR/(NAME+'.pin.html')
     expected={'i2s_bck':'C14','i2s_ws':'B13','i2s_dout':'C13',
               'hp_bck':'Y17','hp_ws':'AB17','hp_din':'AA16'}
@@ -72,9 +87,9 @@ else:
     result['audio_pins_match']=all(name in pin_rows and pin_rows[name]['pin']==pin and
         pin_rows[name]['direction']=='out' and pin_rows[name]['io_type']=='LVCMOS33' and
         pin_rows[name]['pull']=='NONE' for name,pin in expected.items())
-    result['status'] = 'IMPLEMENTED, BOARD VALIDATION PENDING' if (result['sources_unchanged'] and
+    result['status'] = 'IMPLEMENTED, BOARD VALIDATION PENDING' if (result['sources_unchanged'] and result['netlist_provenance_verified'] and
         result['bitstream_generated'] and not result['errors'] and result['setup_hold_zero'] and
-        result['report_is_from_current_build'] and result['core_pixel_frequencies_met'] and result['audio_pins_match']) else 'CHECK FAILED'
+        result['report_is_from_current_build'] and result['routing_options_match'] and result['core_pixel_frequencies_met'] and result['audio_pins_match']) else 'CHECK FAILED'
     if bit.exists():
         result.update(bitstream_sha256=sha(bit), bitstream_size=bit.stat().st_size)
     result['timing_report_sha256'] = sha(report)

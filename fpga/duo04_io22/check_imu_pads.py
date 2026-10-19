@@ -5,7 +5,11 @@ import datetime, hashlib, json, re
 root=Path(__file__).resolve().parent
 netlist=root/'impl/gwsynthesis/tanglab_duo04_io22.vg'
 snapshot=json.loads((root/'validation/source_before_build.json').read_text(encoding='utf-8'))
-assert netlist.stat().st_mtime>=datetime.datetime.fromisoformat(snapshot['timestamp']).timestamp(), 'stale netlist'
+assert netlist.stat().st_mtime>=datetime.datetime.fromisoformat(snapshot.get('synthesis_started_at',snapshot['timestamp'])).timestamp(), 'stale netlist'
+if 'reused_netlist_sha256' in snapshot:
+    assert hashlib.sha256(netlist.read_bytes()).hexdigest()==snapshot['reused_netlist_sha256'], 'reused netlist changed'
+    reuse=json.loads((root/'validation/netlist_reuse.json').read_text(encoding='utf-8'))
+    assert all(hashlib.sha256((root/n).read_bytes()).hexdigest()==h for n,h in reuse['rtl_hashes'].items()), 'RTL changed after synthesis'
 text=netlist.read_text(errors='replace')
 instances=[]
 seen=set()

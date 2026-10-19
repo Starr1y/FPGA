@@ -1,8 +1,11 @@
 {
-  "timestamp": "2026-10-19T09:48:09.926085+08:00",
-  "attempt": 3,
+  "timestamp": "2026-10-19T11:01:28.696506+08:00",
+  "synthesis_started_at": "2026-10-19T09:48:09.926085+08:00",
+  "attempt": 4,
+  "expected_route_option": 2,
+  "reused_netlist_sha256": "6ab8f087af8ce59e3e055791467a297786612927cd32f7577d8eae90f5f2b77f",
   "sha256": {
-    "build.tcl": "e67e6062a60fe7c51821fb112507e06e3a6a01c6df4b24f255a326f4848328a8",
+    "build.tcl": "a61f0543c7ebd2a0ba9e62f1d9d7a774fe8279369c284750b1adc13b1242bcac",
     "rtl/bno_i2c_hand.v": "1d62ce2397ab6f4f7eb346274aead486d6f8f91ce9639f3fdcab0b3a5bb4517f",
     "rtl/bno_i2c_host.v": "bf21821e4c2b701cebb403f885dd74d3dcbba60378fac912edda24caa1d4463f",
     "rtl/cent_ratio.hex": "398377ee480c58eb21b9de9f3cdd0f2d7dcd48ce4635d4284853dd70ed9debad",
@@ -83,6 +86,8 @@
     "rtl/video_status_cdc.v": "b1bb3cb8771fe6044b1384d70e785cc00d232b3b1609743f5f3dec6670f03404",
     "tanglab_duo04_io22.cst": "9e35750d6751db8bf83226cb15260ea97d489eb9ee57cb031508707e07720ff5",
     "tanglab_duo04_io22.gprj": "7e21da14dd654fa8384d47f91b3293a34d7dde58d4cf11b0a8f8db5b25b4d22e",
-    "tanglab_duo04_io22.sdc": "c8e887a6fd6377683cef588b6e61ca58303a439cb802052caea7796cf76f004e"
+    "tanglab_duo04_io22.sdc": "c8e887a6fd6377683cef588b6e61ca58303a439cb802052caea7796cf76f004e",
+    "build_quality.tcl": "2b70497bf86507da7a9b32ae928f7fd700cb814454c524022303a1a8aa049901",
+    "pnr_only.tcl": "438bd78f8eb29a35201d03e4a2231265a0a4385e15f5003fea709487f10946c9"
   }
 }
