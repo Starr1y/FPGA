@@ -1,0 +1,2 @@
+TB_PASS control pipeline validation, remote data pairing, STOP flush/bypass, source transition backpressure incl auto-start lesson
+tb/tb_io22_control_pipeline.sv:49: $finish called at 2380000 (1ps)

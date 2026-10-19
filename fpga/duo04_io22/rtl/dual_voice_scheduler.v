@@ -23,7 +23,8 @@ module dual_voice_scheduler #(
  reg[7:0]ids[0:VOICES-1],age[0:VOICES-1],gain[0:VOICES-1];
  reg[6:0]midi[0:VOICES-1];reg[2:0]preset[0:VOICES-1];reg[1:0]tail[0:VOICES-1];
  reg[VOICES-1:0]dirty,retrigger,fast_stop;
- reg[31:0]midi_rom[0:127];reg[19:0]cent_rom[0:511];
+ reg[31:0]midi_rom[0:127];
+ reg[19:0]cent_rom[0:511] /* synthesis syn_ramstyle="block_ram" */;
  initial begin
   if(VOICES<8 || VOICES%2!=0)$fatal(1,"Use an even VOICES count >=8 for two triad-capable banks");
   $readmemh("rtl/midi_ftw.hex",midi_rom);$readmemh("rtl/cent_ratio.hex",cent_rom);
@@ -44,7 +45,7 @@ module dual_voice_scheduler #(
  wire input_valid=event_data[63:32]==input_epoch && input_profile<3 &&
   input_zone<(input_profile==1 ? 5 : input_profile==2 ? 12 : 7) && event_data[31:30]<2;
  assign event_ready=alloc_state==0 && !release_pending[event_data[29]] && !releasing[event_data[29]];
- reg[1:0]cfg_state;reg[VB-1:0]cfg_scan,current;
+ reg[2:0]cfg_state;reg[VB-1:0]cfg_scan,current;
  reg[15:0]captured_revision;reg[31:0]captured_epoch;reg[7:0]captured_id,captured_gain;
  reg captured_gate,captured_trigger,captured_stop;reg[2:0]captured_preset;reg[1:0]captured_tail;
  reg[48:0]frequency_product;
@@ -53,7 +54,10 @@ module dual_voice_scheduler #(
  assign committed_id=captured_id;assign committed_hand=cfg_hand;
  wire signed[16:0]cents=$signed(bend_cents[cfg_hand*16+:16])+$signed(vibrato_cents[cfg_hand*16+:16]);
  wire[8:0]ratio_address=cents< -230 ? 0 : cents>230 ? 460 : cents+230;
- wire[19:0]ratio_word=cent_rom[ratio_address];
+ reg[8:0]ratio_address_q;reg[19:0]ratio_word_q;
+ // Dedicated synchronous ROM read: no state-dependent feedback/reset mux
+ // around the memory output (Gowin V1.9.12.03 inference compatibility).
+ always @(posedge clk)ratio_word_q<=cent_rom[ratio_address_q];
  wire[1:0]wave;wire[15:0]attack,decay,sustain,release_step;
  timbre_presets presets(.preset_id(captured_preset),.release_id(captured_tail),.waveform(wave),
   .attack(attack),.decay(decay),.sustain(sustain),.release_coefficient(release_step));
@@ -69,7 +73,7 @@ module dual_voice_scheduler #(
    alloc_state<=0;pending<=0;pending_chord<=0;member<=0;pending_preset<=0;pending_tail<=0;
    scan<=0;choice<=0;idle_choice<=0;release_choice<=0;active_choice<=0;
    idle_found<=0;release_found<=0;active_found<=0;quietest<=65535;oldest<=0;
-   cfg_state<=0;cfg_scan<=0;current<=0;config_valid<=0;config_data<=0;frequency_product<=0;
+   cfg_state<=0;cfg_scan<=0;current<=0;config_valid<=0;config_data<=0;frequency_product<=0;ratio_address_q<=230;
    captured_revision<=0;captured_epoch<=0;captured_id<=0;captured_gain<=0;
    captured_gate<=0;captured_trigger<=0;captured_stop<=0;captured_preset<=0;captured_tail<=0;
    invalid_events<=0;stolen_notes<=0;map_valid_q<=0;mapped_note_q<=0;
@@ -81,9 +85,14 @@ module dual_voice_scheduler #(
    map_valid_q<=map_valid;mapped_note_q<=mapped_note;
    // Config channel is immutable under backpressure. Revisions preserve later changes.
    case(cfg_state)
-    0:begin if(dirty[cfg_scan])begin current<=cfg_scan;cfg_state<=1;end cfg_scan<=cfg_scan==VOICES-1 ? 0 : cfg_scan+1'b1;end
+    0:begin if(dirty[cfg_scan])begin current<=cfg_scan;cfg_state<=4;end cfg_scan<=cfg_scan==VOICES-1 ? 0 : cfg_scan+1'b1;end
+    // Split bend/vibrato addition, saturated ROM address, ROM read and DSP
+    // multiplication into separate clocks. The owning Voice remains locked
+    // in current and the existing revision/backpressure checks are retained.
+    4:begin ratio_address_q<=ratio_address;captured_revision<=revision[current];cfg_state<=5;end
+    5:cfg_state<=1;
     1:begin
-     frequency_product<=ftw[current]*ratio_word[16:0];captured_revision<=revision[current];
+     frequency_product<=ftw[current]*ratio_word_q[16:0];
      captured_epoch<=epoch[current];captured_id<=ids[current];captured_gain<=gain[current];
      captured_gate<=gates[current];captured_trigger<=retrigger[current];captured_stop<=fast_stop[current];
      captured_preset<=preset[current];captured_tail<=tail[current];cfg_state<=2;

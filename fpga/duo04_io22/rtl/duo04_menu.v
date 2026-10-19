@@ -19,7 +19,7 @@ module duo04_menu(input clk,rst_n,step,direction,short_press,long_press,
  4:field_at=n==0 ? 19 : n==1 ? 23 : 27;
  default:case(n)0:field_at=0;1:field_at=8;2:field_at=21;default:field_at=28;endcase
  endcase end endfunction
- reg[15:0]minimum,maximum,increment;
+ reg[15:0]minimum,maximum,increment,upper_start,lower_start;
  always @*begin
   minimum=0;maximum=1;increment=1;
   case(field)
@@ -31,6 +31,10 @@ module duo04_menu(input clk,rst_n,step,direction,short_press,long_press,
    11,12:begin minimum=100;maximum=10000;increment=100;end
    default:begin end
   endcase
+  // These thresholds depend only on field (constants after synthesis).
+  // Compare before the add/subtract rather than feeding a 16-bit adder into
+  // a second 16-bit comparator on every menu edit.
+  upper_start=maximum-increment;lower_start=minimum+increment;
   action=0;valid_action=1;
   if(keys[11] || (remote_valid && remote_action==11))action=11;
   else if(keys[9])action=9;else if(keys[10])action=10;
@@ -67,8 +71,8 @@ module duo04_menu(input clk,rst_n,step,direction,short_press,long_press,
     end else if(action==0 || action==1 || action==6 || action==7)begin
      if(level==4)begin
       if(teaching_active && (field==3 || field==4 || field==5 || field==6 || field==7))notice<=3;
-      else begin value<=(action==1 || action==6) ? (current_value>=maximum || current_value+increment>maximum ? maximum : current_value+increment) :
-        (current_value<=minimum || current_value<minimum+increment ? minimum : current_value-increment);write<=1;end
+      else begin value<=(action==1 || action==6) ? (current_value>=upper_start ? maximum : current_value+increment) :
+        (current_value<=lower_start ? minimum : current_value-increment);write<=1;end
      end else if(level==1 || level==2 || level==3)begin
       if(action==1 || action==6)begin
        if(item+1 >= (level==1 ? 5 : level==2 ? 6 : count(group_id)))item<=0;else item<=item+1'b1;

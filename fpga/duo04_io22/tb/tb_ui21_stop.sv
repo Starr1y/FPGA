@@ -12,7 +12,7 @@ module tb_ui21_stop;
   force dut.cmd_done=1;force dut.cmd=61;force dut.cmd_len=1;force dut.cmd_data=512'd11;
   force dut.key_actions=12'h040;
   @(negedge clk);
-  if(!dut.ui_stop || dut.response_code!=0)$fatal(1,"remote STOP lost to local timbre action");
+  if(dut.running || dut.stop_reason!=3 || dut.response_code!=0)$fatal(1,"remote STOP did not bypass UI pipeline");
   release dut.cmd_done;release dut.cmd;release dut.cmd_len;release dut.cmd_data;release dut.key_actions;
   repeat(3)@(negedge clk);
   if(dut.running || dut.stop_reason!=3)$fatal(1,"STOP not applied");

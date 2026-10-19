@@ -3,12 +3,18 @@
   "modified_rtl": [
     "rtl/bno_i2c_hand.v",
     "rtl/bno_i2c_host.v",
+    "rtl/dual_voice_scheduler.v",
+    "rtl/duo04_menu.v",
     "rtl/stereo_serial_output.v",
     "rtl/top_duo04.v",
     "rtl/two_hand_i2c_core.v"
   ],
-  "latest_UI_menu_lesson_ROMs_byte_identical": true,
+  "latest_UI_raster_lesson_ROMs_byte_identical": true,
+  "menu_semantics_preserved_timing_pipeline_added": true,
   "source_hashes_still_match_build_snapshot": true,
   "hello": "DUO04-LIVE 2.1+IO22",
-  "i2s_stereo_pair": "Left then right, same slot0 latch; PT path preserves original right then left"
+  "attempt": 3,
+  "i2s_stereo_pair": "Left then right, same slot0 latch; PT path preserves original right then left",
+  "source_transition_backpressure": true,
+  "lookup_ROM": "dedicated synchronous block ROM read, isolated scheduler synthesis passed"
 }

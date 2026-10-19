@@ -1,25 +1,134 @@
 {
-  "status": "SOURCE CANDIDATE; DIGITAL CHECKS PASS; PNR RUNNING",
-  "version": "DUO04-LIVE 2.1+IO22",
-  "base_commit": "e9230dbd56654365d1219a0770a61b75a6a2a47a",
-  "passed": [
-    "serial_formats",
-    "mixed_latency",
-    "audio_latency",
-    "fan04_expression_200",
-    "tb_ui21_controls",
-    "tb_ui21_encoder",
-    "tb_ui21_lesson",
-    "tb_ui21_stop",
-    "tb_ui21_panel",
-    "tb_duo04_32",
-    "tb_io22_hello"
-  ],
-  "host_compat": "PASS",
-  "synthesis": "PASS",
-  "place_route": "RUNNING",
+  "status": "13 DIGITAL TESTS AND SYNTHESIS PASS; PNR RUNNING; NO ACCEPTED BITSTREAM",
+  "tests": {
+    "serial_formats": {
+      "sha256": "73326dd8181349be96b1715f7064de3cfc3b6a23cb64472abd5235f4c7892fa6",
+      "pass_lines": [
+        "TB_PASS PT golden cycle equality; Philips I2S 1-bit WS lead, L/R polarity,16-bit stereo,48k,locked pair,reset; ticks=528 words=1054"
+      ]
+    },
+    "mixed_latency": {
+      "sha256": "99690cab2e8f97fb996761086a796c301913776b4ed17c0f7fb66a8a8a243cb6",
+      "pass_lines": [
+        "TB_PASS mixed 400Hz linear/200Hz pose+gyro/50Hz auxiliary; no backlog,overrun,missing SH2 report sequences; calibration and pure negative-Z jerk; linear availability-to-decode max=1720.720us report-to-note=1240.360us largest transfer=1717.480us min SCL low/high=1300.0/1360.0ns"
+      ]
+    },
+    "audio_latency": {
+      "sha256": "3e40971916b8b17b903de632435b6c2dd84ad6736504d733b71674426b43500e",
+      "pass_lines": [
+        "TB_PASS actual32 synth + production FX/limiter/gain8 + serial; note acceptance-to-nonzero PCM=62.810us serial=88.630us render=208 clocks"
+      ]
+    },
+    "fan04_expression_200": {
+      "sha256": "da29cd9a738c55b97a0b8daf9aa66bf9b05f1e7c990e6ca144b834abdeab85d4",
+      "pass_lines": [
+        "TB_PASS independent Roll/Pitch, limits, freeze/re-reference, 3/5/8/10Hz accepted and 1/2/12/15Hz rejected at actual declared rate and restart"
+      ]
+    },
+    "tb_ui21_controls": {
+      "sha256": "0714eedaeceb7ea255a042191d29df9e314664909209db48168a95592cdf1d41",
+      "pass_lines": [
+        "TB_PASS UI keys debounce/reset/chords/menu/encoder/context/bounds/STOP"
+      ]
+    },
+    "tb_ui21_encoder": {
+      "sha256": "71053679427f94198554c11afbdad04dad9515af8da225ea88cc9f5e9e649797",
+      "pass_lines": [
+        "TB_PASS raw EC11 quadrature direction/illegal transition/short-long exclusivity"
+      ]
+    },
+    "tb_ui21_lesson": {
+      "sha256": "01f59258e19b15d581284de59f4823c7f6401b777ca27947d943c69f80adc662",
+      "pass_lines": [
+        "TB_PASS lesson 250/180ms, wrong hand, repeated hit, pause/resume, completion/restart"
+      ]
+    },
+    "tb_ui21_stop": {
+      "sha256": "bab4068c6360ec9801fb7cc7cc92feae6f25ebd9d74bec4ebb46c1eef368699c",
+      "pass_lines": [
+        "TB_PASS global STOP priority over simultaneous local edit"
+      ]
+    },
+    "tb_ui21_panel": {
+      "sha256": "940fd85b136147421f758e85cd9cea03f854e6077b7d9620b5bea0b980741cfe",
+      "pass_lines": [
+        "TB_PASS nine UI states rendered, no unknown pixels"
+      ]
+    },
+    "tb_duo04_32": {
+      "sha256": "61d113eb34134a0d97fcf8314a31f9e05ad5f8f1a63d771ea8fadaebf12da3d3",
+      "pass_lines": [
+        "TB_PASS 32 mixed piano/plucked with expression pipeline, max render   674 clocks; optional mono only owning hand; stop"
+      ]
+    },
+    "tb_io22_hello": {
+      "sha256": "751bb2c9375e97ae3bdf744519b8c68aee468803ef2dafb2f389601fa67b8b86",
+      "pass_lines": [
+        "TB_PASS real921600 UART HELLO DUO04-LIVE 2.1+IO22, compatible prefix and explicit I/O revision"
+      ]
+    },
+    "tb_scheduler_pipeline": {
+      "sha256": "2142e1756adcca164870addd9913f04bb32894a0f4bef3aac3926a31015c1606",
+      "pass_lines": [
+        "TB_PASS scheduler lookup pipeline preserves mid-flight bend/revision and immutable backpressure"
+      ]
+    },
+    "tb_io22_control_pipeline": {
+      "sha256": "79c83187b88a3269f6099144a20bf25fe013f7ec41f7a29cfcf74a33b83786a3",
+      "pass_lines": [
+        "TB_PASS control pipeline validation, remote data pairing, STOP flush/bypass, source transition backpressure incl auto-start lesson"
+      ]
+    }
+  },
+  "host_compat": {
+    "status": "PASS",
+    "source": "RTL UART simulation, no serial port",
+    "device": "DUO04-LIVE 2.1+IO22",
+    "frames": 1,
+    "crc_errors": 0,
+    "latest_host_interaction_enabled": true
+  },
+  "imu_open_drain_netlist": {
+    "status": "PASS",
+    "netlist_sha256": "6ab8f087af8ce59e3e055791467a297786612927cd32f7577d8eae90f5f2b77f",
+    "instances": [
+      {
+        "kind": "IOBUF",
+        "instance": "imu_scl_0_iobuf",
+        "ports": ".O(imu_scl_in[0]),\n    .IO(imu_scl[0]),\n    .I(GND),\n    .OEN(imu_scl_0_7)"
+      },
+      {
+        "kind": "IOBUF",
+        "instance": "imu_scl_1_iobuf",
+        "ports": ".O(imu_scl_in[1]),\n    .IO(imu_scl[1]),\n    .I(GND),\n    .OEN(imu_scl_1_7)"
+      },
+      {
+        "kind": "IOBUF",
+        "instance": "imu_sda_0_iobuf",
+        "ports": ".O(imu_sda_in[0]),\n    .IO(imu_sda[0]),\n    .I(GND),\n    .OEN(imu_sda_0_7)"
+      },
+      {
+        "kind": "IOBUF",
+        "instance": "imu_sda_1_iobuf",
+        "ports": ".O(imu_sda_in[1]),\n    .IO(imu_sda[1]),\n    .I(GND),\n    .OEN(imu_sda_1_7)"
+      },
+      {
+        "kind": "TBUF",
+        "instance": "imu_rst_n_1_s1",
+        "ports": ".O(imu_rst_n[0]),\n    .I(GND),\n    .OEN(imu_rst_n_0_6)"
+      },
+      {
+        "kind": "TBUF",
+        "instance": "imu_rst_n_1_s2",
+        "ports": ".O(imu_rst_n[1]),\n    .I(GND),\n    .OEN(imu_rst_n_1_8)"
+      }
+    ]
+  },
+  "implementation_attempt": 3,
+  "previous_implementation": "timing-attempt01/implementation.json (FAILED, not a downloadable release)",
   "bitstream_included": false,
   "hardware_test": "NOT RUN",
-  "end_to_end_latency_proven": false,
-  "full_uart_teaching_capture_regression": "NOT COMPLETED"
+  "end_to_end_10ms_or_5ms_proven": false,
+  "latency_scope": "Independent digital simulation segments, not a physical end-to-end upper bound",
+  "uart_scope": "HELLO/parser and decoded-command pipeline tested; full inherited teaching/capture UART regression NOT completed"
 }

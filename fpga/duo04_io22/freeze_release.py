@@ -8,7 +8,7 @@ V=ROOT/'validation'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 tests=['serial_formats','mixed_latency','audio_latency','fan04_expression_200',
        'tb_ui21_controls','tb_ui21_encoder','tb_ui21_lesson','tb_ui21_stop',
-       'tb_ui21_panel','tb_duo04_32','tb_io22_hello']
+       'tb_ui21_panel','tb_duo04_32','tb_io22_hello','tb_scheduler_pipeline','tb_io22_control_pipeline']
 records={}
 for t in tests:
     p=V/(t+'.log')

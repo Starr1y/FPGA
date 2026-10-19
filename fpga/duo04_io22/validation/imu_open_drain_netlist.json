@@ -1,26 +1,26 @@
 {
   "status": "PASS",
-  "netlist_sha256": "b78d927db2bbeafc7613fc9db51e4a750f984218fc011b59cd3e19d0d3d95fb3",
+  "netlist_sha256": "6ab8f087af8ce59e3e055791467a297786612927cd32f7577d8eae90f5f2b77f",
   "instances": [
     {
       "kind": "IOBUF",
       "instance": "imu_scl_0_iobuf",
-      "ports": ".O(imu_scl_in[0]),\n    .IO(imu_scl[0]),\n    .I(GND),\n    .OEN(imu_scl_0_9)"
+      "ports": ".O(imu_scl_in[0]),\n    .IO(imu_scl[0]),\n    .I(GND),\n    .OEN(imu_scl_0_7)"
     },
     {
       "kind": "IOBUF",
       "instance": "imu_scl_1_iobuf",
-      "ports": ".O(imu_scl_in[1]),\n    .IO(imu_scl[1]),\n    .I(GND),\n    .OEN(imu_scl_1_9)"
+      "ports": ".O(imu_scl_in[1]),\n    .IO(imu_scl[1]),\n    .I(GND),\n    .OEN(imu_scl_1_7)"
     },
     {
       "kind": "IOBUF",
       "instance": "imu_sda_0_iobuf",
-      "ports": ".O(imu_sda_in[0]),\n    .IO(imu_sda[0]),\n    .I(GND),\n    .OEN(imu_sda_0_9)"
+      "ports": ".O(imu_sda_in[0]),\n    .IO(imu_sda[0]),\n    .I(GND),\n    .OEN(imu_sda_0_7)"
     },
     {
       "kind": "IOBUF",
       "instance": "imu_sda_1_iobuf",
-      "ports": ".O(imu_sda_in[1]),\n    .IO(imu_sda[1]),\n    .I(GND),\n    .OEN(imu_sda_1_9)"
+      "ports": ".O(imu_sda_in[1]),\n    .IO(imu_sda[1]),\n    .I(GND),\n    .OEN(imu_sda_1_7)"
     },
     {
       "kind": "TBUF",

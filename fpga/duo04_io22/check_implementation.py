@@ -1,6 +1,6 @@
 """Read saved implementation evidence only. Does not run EDA or Programmer."""
 from pathlib import Path
-import hashlib, html, json, re, sys
+import datetime, hashlib, html, json, re, sys
 
 ROOT = Path(__file__).resolve().parent
 PNR = ROOT / 'impl/pnr'
@@ -31,6 +31,9 @@ else:
     result['clock_warnings'] = re.findall(r'^.*PR1014.*$', text, re.M)
     result['bitstream_generated'] = bit.exists() and 'Bitstream generation completed' in text
     raw = report.read_text(errors='replace')
+    started = datetime.datetime.fromisoformat(snapshot['timestamp']).timestamp()
+    result['report_is_from_current_build'] = min(log.stat().st_mtime,
+        report.stat().st_mtime,bit.stat().st_mtime if bit.exists() else 0) >= started
     section = raw.split('Total Negative Slack Summary:',1)[-1].split('Timing Details',1)[0]
     rows = []
     for row in re.findall(r'<tr[^>]*>(.*?)</tr>',section,re.S):
@@ -38,7 +41,23 @@ else:
         if cells: rows.append(cells)
     result['negative_slack_rows'] = rows
     timed = [r for r in rows if len(r)>=4 and r[1] in ('Setup','Hold')]
-    result['setup_hold_zero'] = bool(timed) and all(float(r[2])==0 and int(r[3])==0 for r in timed)
+    expected_clocks = ['ref_clk'] + [f'main_pll/PLL_inst/CLKOUT{i}.default_gen_clk' for i in range(3)]
+    result['setup_hold_zero'] = (len(timed)==8 and
+        {(r[0],r[1]) for r in timed} == {(c,a) for c in expected_clocks for a in ('Setup','Hold')} and
+        all(float(r[2])==0 and int(r[3])==0 for r in timed))
+    frequencies = []
+    freq_section = raw.split('Max Frequency Summary:',1)[-1].split('Total Negative Slack Summary:',1)[0]
+    for row in re.findall(r'<tr[^>]*>(.*?)</tr>',freq_section,re.S):
+        cells = [clean(c) for c in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>',row,re.S)]
+        if len(cells)>=4 and cells[1] in expected_clocks:
+            frequencies.append({'clock':cells[1],
+                'constraint_mhz':float(cells[2].split('(')[0]),
+                'actual_fmax_mhz':float(cells[3].split('(')[0])})
+    result['routed_frequencies'] = frequencies
+    required = {expected_clocks[2]:25.0, expected_clocks[3]:50.0}
+    result['core_pixel_frequencies_met'] = all(any(f['clock']==c and
+        f['constraint_mhz']==hz and f['actual_fmax_mhz']>=hz for f in frequencies) for c,hz in required.items())
+    result['timing_scope'] = 'Routed internal setup/hold; external I2S DAC and physical end-to-end latency NOT measured'
     pins = PNR/(NAME+'.pin.html')
     expected={'i2s_bck':'C14','i2s_ws':'B13','i2s_dout':'C13',
               'hp_bck':'Y17','hp_ws':'AB17','hp_din':'AA16'}
@@ -55,7 +74,7 @@ else:
         pin_rows[name]['pull']=='NONE' for name,pin in expected.items())
     result['status'] = 'IMPLEMENTED, BOARD VALIDATION PENDING' if (result['sources_unchanged'] and
         result['bitstream_generated'] and not result['errors'] and result['setup_hold_zero'] and
-        result['audio_pins_match']) else 'CHECK FAILED'
+        result['report_is_from_current_build'] and result['core_pixel_frequencies_met'] and result['audio_pins_match']) else 'CHECK FAILED'
     if bit.exists():
         result.update(bitstream_sha256=sha(bit), bitstream_size=bit.stat().st_size)
     result['timing_report_sha256'] = sha(report)

@@ -29,13 +29,24 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
  reg lesson_restart;reg[1:0]calibrate;
  wire local_step,local_direction,local_short,local_long;
  wire[11:0]key_actions;wire ui_stop,ui_hand;wire[2:0]ui_level,ui_group;wire[3:0]ui_item;wire[7:0]ui_notice;
- wire remote_ui;
+ reg remote_ui;reg[3:0]remote_action_q;
+ wire remote_stop;
  wire[15:0]ui_serial;reg lesson_clear;
  reg lesson_mouse,lesson_saved;reg[3:0]saved_profiles,saved_octaves;reg saved_chord;
  reg[1:0]sensor_force_reset;reg[1:0]calibration_result;reg[1:0]calibration_mask;reg[31:0]calibration_age;reg calibration_seen;
- wire use_host=operating_mode==1 || (operating_mode==2 && lesson_mouse);
+ // Mode changes cancel the old source before admitting a new source.
+ // Register the source predicate to avoid decode+mux+epoch-compare+bank-write
+ // on one high-fanout timing path. The one-clock transition stays muted.
+ reg use_host;
+ wire requested_host=operating_mode==1 || (operating_mode==2 && lesson_mouse);
+ wire source_ready=use_host==requested_host;
+ always @(posedge core_clk)begin
+  if(!rst_n)use_host<=0;
+  else use_host<=requested_host;
+ end
  wire[1:0]lesson_phase;wire feedback_hand;wire[3:0]feedback_zone;wire[15:0]lesson_serial;
- wire key_stop=key_actions[11] || ui_stop;
+ // STOP bypasses the ordinary UI command pipeline and cancels queued edits.
+ wire key_stop=key_actions[11] || ui_stop || remote_stop;
  wire[1:0]wrist_short,wrist_long;wire[3:0]buttons_ready;wire[15:0]encoder_errors;wire unused_pedal;
 
  wire[1:0]menu_page;wire[4:0]menu_field;wire menu_editing,menu_write;wire[15:0]menu_value;reg[15:0]menu_current;
@@ -69,17 +80,28 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
  wire[7:0]rx_byte;wire rx_valid;wire[31:0]rx_errors;
  uart_rx rx(.clk(core_clk),.rst_n(rst_n),.rx(pc_rx),.baud(32'd921600),.data(rx_byte),.valid(rx_valid),.start(),.error());
  wire cmd_done;wire[7:0]cmd;wire[15:0]cmd_seq;wire[6:0]cmd_len;wire[511:0]cmd_data;
- assign remote_ui=cmd_done && cmd==61 && cmd_len==1 && cmd_data[7:0]<12 && (cmd_data[7:0]==11 || !(local_step || local_short || local_long || key_actions!=0));
+ assign remote_stop=cmd_done && cmd==61 && cmd_len==1 && cmd_data[7:0]==11;
+ always @(posedge core_clk)begin
+  if(!rst_n)begin remote_ui<=0;remote_action_q<=0;end
+  else begin
+   remote_ui<=cmd_done && cmd==61 && cmd_len==1 && cmd_data[7:0]<12 &&
+     (cmd_data[7:0]==11 || !(local_step || local_short || local_long || key_actions!=0));
+   remote_action_q<=cmd_data[3:0];
+  end
+ end
  frame_rx commands(core_clk,rst_n,rx_byte,rx_valid,cmd_done,cmd,cmd_seq,cmd_len,cmd_data,rx_errors);
  reg[1:0]push,cancel,clear_history;reg[63:0]push_data;wire[1:0]accepted,release_pending,release_ack;
  wire[63:0]epochs,events,drops,cancelled;wire event_valid,event_ready;
  wire host_valid,host_ready;wire[63:0]host_events,host_epochs;wire[1:0]host_release;wire[1:0]host_ack;
- assign event_valid=running && (use_host ? host_valid : sensor_valid);
+ assign event_valid=running && source_ready && (use_host ? host_valid : sensor_valid);
  assign events=use_host ? host_events : mapped_sensor_events;
  assign epochs=use_host ? host_epochs : sensor_epochs;
  assign release_pending=host_release | sensor_release;
  assign host_ack=release_ack;assign sensor_ack=release_ack;
- assign host_ready=use_host && (running ? event_ready : 1'b1);assign sensor_ready=!use_host && (running ? event_ready : 1'b1);
+ // Auto-starting a lesson may change mode and running together. Neither
+ // source may consume a queued event during the one-clock selection change.
+ assign host_ready=source_ready && use_host && (running ? event_ready : 1'b1);
+ assign sensor_ready=source_ready && !use_host && (running ? event_ready : 1'b1);
  two_hand_event_queue #(.DEPTH(8)) queue(.clk(core_clk),.rst_n(rst_n),.push_valid(push),.push_payload(push_data),
   .cancel(cancel),.release_ack(host_ack),.release_pending(host_release),.epochs(host_epochs),
   .event_valid(host_valid),.event_ready(host_ready),.event_data(host_events),.drops(drops),.cancelled_events(cancelled),.accepted(accepted));
@@ -124,9 +146,23 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
   default:valid_edit=0;
  endcase end endfunction
  reg local_write;reg[7:0]local_field;reg[15:0]local_value;
- wire apply_local=menu_write || local_write;
- wire[7:0]edit_field=menu_write ? {3'b0,menu_field} : local_field;
- wire[15:0]edit_value=menu_write ? menu_value : local_value;
+ reg apply_local;reg[7:0]edit_field;reg[15:0]edit_value;
+ // Separate menu source selection from the parameter-bank validation and
+ // writes. STOP flushes this one-cycle queue; it can never replay an edit.
+ always @(posedge core_clk)begin
+  if(!rst_n || key_stop)begin apply_local<=0;edit_field<=0;edit_value<=0;end
+  else begin
+   apply_local<=menu_write || local_write;
+   edit_field<=menu_write ? {3'b0,menu_field} : local_field;
+   edit_value<=menu_write ? menu_value : local_value;
+  end
+ end
+ reg[3:0]menu_expression_flags;
+ always @(posedge core_clk)begin
+  if(!rst_n)menu_expression_flags<=0;
+  else menu_expression_flags<={expression_config[127:104]!=0,expression_config[63:40]!=0,
+                              expression_config[103:96]!=0,expression_config[39:32]!=0};
+ end
  reg[255:0]local_display;
  always @*begin
   local_display=0;local_display[1:0]=operating_mode;local_display[3:2]=menu_page;
@@ -148,8 +184,8 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
    3:menu_current=profiles[1:0];4:menu_current=profiles[3:2];5:menu_current=octave_left;6:menu_current=octave_right;
    7:menu_current=chord;8:menu_current=test_gain;9:menu_current=effect_mode;10:menu_current=wet;
    11:menu_current=hold_ms_left;12:menu_current=hold_ms_right;13:menu_current=release_ids[1:0];14:menu_current=release_ids[3:2];
-   15:menu_current=expression_config[39:32]!=0;16:menu_current=expression_config[103:96]!=0;
-   17:menu_current=expression_config[63:40]!=0;18:menu_current=expression_config[127:104]!=0;
+   15:menu_current=menu_expression_flags[0];16:menu_current=menu_expression_flags[1];
+   17:menu_current=menu_expression_flags[2];18:menu_current=menu_expression_flags[3];
    19:menu_current=lesson_song;23:menu_current=lesson_mouse;default:menu_current=running;
   endcase
  end
@@ -282,7 +318,7 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
   (cmd_data[63:56]<2 || cmd_data[63:56]>=254) && cmd_data[71:64]>0 && cmd_data[71:64]<128 && cmd_data[79:72]<2;
  performance_controls #(.LONG_MS(800)) encoder(.clk(core_clk),.rst_n(rst_n),.enabled(1'b1),.encoder_a(encoder_a),.encoder_b(encoder_b),.encoder_button_n(encoder_button_n),.pedal_n(1'b1),.wrist_button_n(2'b11),.encoder_step(local_step),.encoder_direction(local_direction),.encoder_short(local_short),.encoder_long(local_long),.pedal_toggle(unused_pedal),.wrist_short(wrist_short),.wrist_long(wrist_long),.button_ready(buttons_ready),.invalid_transitions(encoder_errors));
  duo04_menu menu(.clk(core_clk),.rst_n(rst_n),.step(local_step),.direction(local_direction),.short_press(local_short),.long_press(local_long),
- .keys(key_actions),.remote_valid(remote_ui),.remote_action(cmd_data[3:0]),.running(running),.mode(operating_mode),.teaching_active(operating_mode==2),.finished(lesson_finished),
+ .keys(key_actions),.remote_valid(remote_ui),.remote_action(remote_action_q),.running(running),.mode(operating_mode),.teaching_active(operating_mode==2),.finished(lesson_finished),
  .profiles(profiles),.presets(presets),.volume(test_gain),.current_value(menu_current),.page(menu_page),.field(menu_field),.editing(menu_editing),
  .write(menu_write),.value(menu_value),.active_hand(ui_hand),.level(ui_level),.group_id(ui_group),.item(ui_item),.stop(ui_stop),.notice(ui_notice),.serial(ui_serial));
  two_hand_i2c_core sensors(.clk(core_clk),.rst_n(rst_n),.enabled({2{!use_host && !config_wait}}),.force_reset(sensor_force_reset),.calibrate(calibrate),.express(2'b11),.mirror(2'b00),.layout_profile(operating_mode==2 ? 4'b0 : profiles),.scl_in(imu_scl),.sda_in(imu_sda),.int_n(imu_int_n),.scl_low(scl_low),.sda_low(sda_low),.reset_low(reset_low),.online(online),.status(sensor_status),.report_rates(sensor_rates),.processing_overruns(sensor_overruns),.event_valid(sensor_valid),.event_ready(sensor_ready),.event_data(sensor_events),.release_pending(sensor_release),.release_ack(sensor_ack),.epochs(sensor_epochs),.event_drops(sensor_drops),.cancelled_events(sensor_cancelled));
