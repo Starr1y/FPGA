@@ -22,22 +22,23 @@
   "lookup_ROM": "dedicated synchronous block ROM read, isolated scheduler synthesis passed",
   "build_options": {
     "flow": "run pnr automatically recompiled identical sources; evidence rebound to actual netlist",
-    "route_option": 2,
+    "route_option": 1,
     "timing_driven": 1,
     "core_constraint_mhz": 50,
     "hold_correction": true,
     "synthesis_skipped": false,
     "RTL_unchanged": true,
-    "started_at": "2026-10-20T13:14:12.980165+08:00",
-    "actual_command_sha256": "06c238877cac8a56fb5f6930fe37d887cdb2dded38eb9a372ec71d12b173061d",
-    "measured_speedup": "No controlled full-run ratio claimed",
+    "started_at": "2026-10-20T13:35:46.307151+08:00",
+    "actual_command_sha256": "6c848c4b84e611560c594ba107daa840765eea47b9cb0e98dd31be8217f2680b",
+    "measured_speedup": "See routing-comparison reports; selected for timing margin, not runtime",
     "implicit_synthesis_before_pnr": true,
-    "tool_invocation_started_at": "2026-10-20T13:09:47.019163+08:00",
-    "measured_wall_seconds": 1057.351,
+    "tool_invocation_started_at": "2026-10-20T13:31:54.954708+08:00",
+    "previous_route_option": 2,
+    "measured_wall_seconds": 7114.847,
     "tool_phase_times": [
-      "Total Placement: CPU time = 0h 10m 10s, Elapsed time = 0h 10m 10s",
-      "Total Routing: CPU time = 0h 6m 37s, Elapsed time = 0h 6m 37s",
-      "Total Time and Memory Usage: CPU time = 0h 16m 59s, Elapsed time = 0h 16m 59s, Peak memory usage = 2122MB"
+      "Total Placement: CPU time = 0h 8m 36s, Elapsed time = 0h 8m 36s",
+      "Total Routing: CPU time = 1h 48m 29s, Elapsed time = 1h 48m 29s",
+      "Total Time and Memory Usage: CPU time = 1h 57m 29s, Elapsed time = 1h 57m 29s, Peak memory usage = 2146MB"
     ]
   },
   "timing_repairs": [

@@ -1,6 +1,6 @@
 {
   "scope": "actual implicit synthesis used by routed candidate, not routed resources",
-  "source_snapshot_sha256": "fcf9e0ef85cc8c140b7797c4aa02b124d3b962d49f06b166b2fbf33ca2d140f3",
+  "source_snapshot_sha256": "12b6d75788b63acd4dcc09fa83073820f2f928a437611c28bf26b69af019ccc1",
   "report_sha256": "85647add2f6774ffbf4d9027942643ecff3dc4d136cbf94db9d5753bc97d7b0f",
   "whole_design": {
     "name": "top_duo04",

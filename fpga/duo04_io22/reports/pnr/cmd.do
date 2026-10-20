@@ -1,9 +1,9 @@
--d C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg
+-d C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg
 -p GW5AST-138C-PBGA484A-1
 -pn GW5AST-LV138PG484AC1/I0
--cst C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\tanglab_duo04_io22.cst
--cfg C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\device.cfg
--sdc C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\tanglab_duo04_io22.sdc
+-cst C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\tanglab_duo04_io22.cst
+-cfg C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\device.cfg
+-sdc C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\tanglab_duo04_io22.sdc
 -bit
 -tr
 -ph
@@ -14,7 +14,7 @@
 -cst_error
 -convert_sdp32_36_to_sdp16_18
 -place_option 3
--route_option 2
+-route_option 1
 -clock_route_order 0
 -correct_hold 1
 -route_maxfan 23

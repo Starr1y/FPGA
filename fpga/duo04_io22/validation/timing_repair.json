@@ -237,17 +237,17 @@
       {
         "clock": "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
         "constraint_mhz": 25.0,
-        "actual_fmax_mhz": 36.061
+        "actual_fmax_mhz": 36.247
       },
       {
         "clock": "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
         "constraint_mhz": 50.0,
-        "actual_fmax_mhz": 50.012
+        "actual_fmax_mhz": 51.091
       }
     ],
     "core_pixel_frequencies_met": true,
     "timing_scope": "Routed internal setup/hold; external I2S DAC and physical end-to-end latency NOT measured",
-    "route_option": 2,
+    "route_option": 1,
     "routing_options_match": true,
     "audio_pin_rows": {
       "hp_bck": {
@@ -289,8 +289,8 @@
     },
     "audio_pins_match": true,
     "status": "IMPLEMENTED, BOARD VALIDATION PENDING",
-    "bitstream_sha256": "d0565971a81a94c914e42da5070ca059922e3b08aea93896eccc84de555c5e2d",
+    "bitstream_sha256": "2dfc78ea35d0c4e6d5b86a8ff722bddc746a510a02fa0ebd54f1f517b8e8462b",
     "bitstream_size": 39751339,
-    "timing_report_sha256": "d45bfdfd7081327e9568d17366b0e91ccfe46402e31ec9a9f31695af86c94385"
+    "timing_report_sha256": "81af023fcbed9cf1bdea70eba9079f5054874737d4edf099d76929215ad0c798"
   }
 }

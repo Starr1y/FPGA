@@ -113,18 +113,16 @@ I²S独立按左/右顺序串行化，PT8211保留右/左顺序，两者共享�
 
 共17项数字仿真通过，证据与输入哈希见 `validation/timing_repair.json`。没有改变时钟约束、音符映射、字体ROM或音频精度；本次修复已通过重新实现时序验收，详见下方报告。
 
-## 路由策略状态
-
-当前交付器件默认算法2：已完整通过50 MHz核心、25 MHz像素时钟及全部setup/hold检查。最差setup裕量为0.005 ns，裕量较紧，实板仍待验证。算法1仍在独立对照构建，尚无最终时序结论；本次交付不宣称算法2优于尚未完成的算法1。
-
 ## 本次实现验收
 
-本次使用路由算法 2，验证其实际综合网表与输入快照；布局布线墙钟耗时约 17.6 分钟。
+本次使用路由算法 1，验证其实际综合网表与输入快照；布局布线墙钟耗时约 118.6 分钟。
+
+已对同一RTL、ROM与约束的独立综合结果（每个网表单独验证）执行算法1与2，按全部时序检查通过、最差setup裕量、hold裕量、CLS占用依次选择；完整结果见 [实现对比](validation/routing-comparison/README.md)。复现选定策略请使用 `build_selected.tcl`。
 
 源文件哈希与本次构建一致，setup/hold 负裕量总和及违例端点均为0，六路音频输出管脚与约束一致。
 
-- `main_pll/PLL_inst/CLKOUT1.default_gen_clk`：约束 25.000 MHz，报告 Fmax 36.061 MHz。
-- `main_pll/PLL_inst/CLKOUT2.default_gen_clk`：约束 50.000 MHz，报告 Fmax 50.012 MHz。
+- `main_pll/PLL_inst/CLKOUT1.default_gen_clk`：约束 25.000 MHz，报告 Fmax 36.247 MHz。
+- `main_pll/PLL_inst/CLKOUT2.default_gen_clk`：约束 50.000 MHz，报告 Fmax 51.091 MHz。
 
 PR1014 时钟路由警告仍保留，见实现报告；它不等于实物接口已验收。
 

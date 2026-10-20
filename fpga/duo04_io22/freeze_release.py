@@ -1,11 +1,14 @@
 """Freeze only a completed, checked build. Never launches EDA or Programmer."""
 from pathlib import Path
-import hashlib,json,shutil,subprocess,sys,datetime
+import hashlib,json,shutil,stat,subprocess,sys,datetime
 
 ROOT=Path(__file__).resolve().parent
 NAME='tanglab_duo04_io22'
 V=ROOT/'validation'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def copy_generated(src,dest):
+    if dest.exists():dest.chmod(dest.stat().st_mode|stat.S_IWRITE)
+    return shutil.copy2(src,dest)
 tests=['serial_formats','mixed_latency','audio_latency','fan04_expression_200',
        'tb_ui21_controls','tb_ui21_encoder','tb_ui21_lesson','tb_ui21_stop',
        'tb_ui21_panel','tb_duo04_32','tb_io22_hello','tb_scheduler_pipeline','tb_io22_control_pipeline']
@@ -43,11 +46,11 @@ if repair.exists():
     repair.write_text(json.dumps(proof,ensure_ascii=False,indent=2),encoding='utf-8')
 (V/'implementation.json').write_text(json.dumps(implementation,ensure_ascii=False,indent=2),encoding='utf-8')
 bitdir=ROOT/'bitstream';bitdir.mkdir(exist_ok=True)
-shutil.copy2(ROOT/'impl/pnr'/(NAME+'.fs'),bitdir/(NAME+'.fs'))
+copy_generated(ROOT/'impl/pnr'/(NAME+'.fs'),bitdir/(NAME+'.fs'))
 for sub in ['pnr','gwsynthesis']:
     src=ROOT/'impl'/sub;dest=ROOT/'reports'/sub;dest.mkdir(parents=True,exist_ok=True)
     for p in src.iterdir():
-        if p.suffix in ('.html','.log','.txt') or p.name=='cmd.do':shutil.copy2(p,dest/p.name)
+        if p.suffix in ('.html','.log','.txt') or p.name=='cmd.do':copy_generated(p,dest/p.name)
 manifest={'version':'DUO04-LIVE 2.1+IO22','integration_revision':'2.2',
  'base_commit':'e9230dbd56654365d1219a0770a61b75a6a2a47a',
  'frozen_at':datetime.datetime.now().astimezone().isoformat(),

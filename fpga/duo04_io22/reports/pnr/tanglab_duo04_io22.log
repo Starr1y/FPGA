@@ -1,7 +1,7 @@
-Reading netlist file: "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg"
-Parsing netlist file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg" completed
+Reading netlist file: "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg"
+Parsing netlist file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\gwsynthesis\tanglab_duo04_io22.vg" completed
 Processing netlist completed
-Reading constraint file: "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\tanglab_duo04_io22.cst"
+Reading constraint file: "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\tanglab_duo04_io22.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -21,10 +21,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\tanglab_duo04_io22.power.html" completed
-Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\tanglab_duo04_io22.pin.html" completed
-Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\tanglab_duo04_io22.rpt.html" completed
-Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\tanglab_duo04_io22.rpt.txt" completed
-Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-timing-repair2\impl\pnr\tanglab_duo04_io22.tr.html" completed
-Tue Oct 20 13:31:50 2026
+Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\tanglab_duo04_io22.power.html" completed
+Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\tanglab_duo04_io22.pin.html" completed
+Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\tanglab_duo04_io22.rpt.html" completed
+Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\tanglab_duo04_io22.rpt.txt" completed
+Generate file "C:\Users\10324\Documents\Codex\2026-10-18\io22-quality-route1-repair2\impl\pnr\tanglab_duo04_io22.tr.html" completed
+Tue Oct 20 15:34:21 2026
 

@@ -1,10 +1,10 @@
 {
   "status": "PASS",
   "sources_unchanged": true,
-  "previous_netlist_sha256": "f79e03fc3b403322cff74a288b4c20c63efdcb2484103795e5f318cdefcefd3f",
-  "actual_netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
+  "previous_netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
+  "actual_netlist_sha256": "2604269f33dd0a7dfba4cd6360d1dc11e6e0599a3fe1cedfc244affca5bb688c",
   "routed_netlist_path_confirmed": true,
   "six_open_drain_pads_rechecked": true,
-  "actual_pnr_started_at": "2026-10-20T13:14:12.980165+08:00",
+  "actual_pnr_started_at": "2026-10-20T13:35:46.307151+08:00",
   "timing_accepted": false
 }

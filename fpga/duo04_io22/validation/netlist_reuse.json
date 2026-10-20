@@ -1,7 +1,7 @@
 {
   "scope": "Fresh repaired RTL synthesis; any implicit resynthesis must be rebound to its own verified proof",
-  "synthesis_started_at": "2026-10-20T13:09:47.019163+08:00",
-  "reused_netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
+  "synthesis_started_at": "2026-10-20T13:31:54.954708+08:00",
+  "reused_netlist_sha256": "2604269f33dd0a7dfba4cd6360d1dc11e6e0599a3fe1cedfc244affca5bb688c",
   "old_sources_sha256": {
     "build.tcl": "a61f0543c7ebd2a0ba9e62f1d9d7a774fe8279369c284750b1adc13b1242bcac",
     "build_quality.tcl": "2b70497bf86507da7a9b32ae928f7fd700cb814454c524022303a1a8aa049901",
@@ -211,6 +211,6 @@
     "rtl/video_pll_125.v": "9871fb5be20b29e49e6e253c4c3ce5d20fca2ba3f03b0645f317a894fed9faeb",
     "rtl/video_status_cdc.v": "b1bb3cb8771fe6044b1384d70e785cc00d232b3b1609743f5f3dec6670f03404"
   },
-  "previous_netlist_sha256": "f79e03fc3b403322cff74a288b4c20c63efdcb2484103795e5f318cdefcefd3f",
+  "previous_netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
   "implicit_synthesis_before_pnr": true
 }
