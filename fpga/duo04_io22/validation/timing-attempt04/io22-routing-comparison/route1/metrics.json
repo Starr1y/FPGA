@@ -1,0 +1,10 @@
+{
+  "status": "INTERRUPTED_FOR_RTL_REPAIR",
+  "at": "2026-10-20T08:16:04.358712+08:00",
+  "route_option": 1,
+  "completed": false,
+  "timing_result": "NOT AVAILABLE",
+  "reason": "Overnight routing still incomplete; prioritize structurally repaired RTL with15 passing regressions. This is not a failed timing result and not a valid completed A/B comparison.",
+  "preserved_cpu_seconds_at_last_query": 16113.22,
+  "source_work": "C:\\Users\\10324\\Documents\\Codex\\2026-10-18\\io22-quality-route1"
+}

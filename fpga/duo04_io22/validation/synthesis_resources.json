@@ -1,37 +1,35 @@
 {
-  "scope": "synthesis estimate, not routed resource report",
-  "source_snapshot_sha256": "9898da5240e6729adf2e38d1bcdc1c74118f615e40f3c76077152efc95c414e5",
-  "report_sha256": "fd75658f36e70d74bb29810b65cdacef30d7b6dd934c569736e0974a1c449d0b",
+  "scope": "actual implicit synthesis used by routed candidate, not routed resources",
+  "source_snapshot_sha256": "fcf9e0ef85cc8c140b7797c4aa02b124d3b962d49f06b166b2fbf33ca2d140f3",
+  "report_sha256": "85647add2f6774ffbf4d9027942643ecff3dc4d136cbf94db9d5753bc97d7b0f",
   "whole_design": {
     "name": "top_duo04",
-    "Register": "3241",
+    "Register": "3306",
     "Alu": "431",
-    "Lut": "5315",
+    "Lut": "5324",
     "MULTALU27X18": "3",
     "Bsram": "16",
-    "T_Register": "27883(3241)",
-    "T_Alu": "7441(431)",
-    "T_Lut": "47016(5315)",
+    "T_Register": "30539(3306)",
+    "T_Alu": "7537(431)",
+    "T_Lut": "47210(5324)",
     "T_MULTALU27X18": "58(3)",
     "T_MULT12X12": "9(0)",
     "T_MULT27X36": "16(0)",
-    "T_Bsram": "121(16)",
-    "T_Ssram": "790(0)"
+    "T_Bsram": "117(16)",
+    "T_Ssram": "110(0)"
   },
   "scheduler": {
     "name": "scheduler",
-    "Register": "1847",
-    "Alu": "1577",
-    "Lut": "7847",
+    "Register": "4226",
+    "Alu": "1545",
+    "Lut": "8137",
     "MULT27X36": "1",
-    "Bsram": "6",
-    "Ssram": "680",
-    "T_Register": "1847(1847)",
-    "T_Alu": "1593(1577)",
-    "T_Lut": "7909(7847)",
+    "Bsram": "2",
+    "T_Register": "4226(4226)",
+    "T_Alu": "1561(1545)",
+    "T_Lut": "8199(8137)",
     "T_MULT27X36": "1(1)",
-    "T_Bsram": "6(6)",
-    "T_Ssram": "680(680)"
+    "T_Bsram": "2(2)"
   },
   "display": {
     "name": "display",
@@ -39,9 +37,10 @@
     "Lut": "2",
     "T_Register": "719(30)",
     "T_Alu": "383(0)",
-    "T_Lut": "3247(2)",
+    "T_Lut": "3131(2)",
     "T_MULT12X12": "5(0)",
     "T_Bsram": "20(0)"
   },
-  "synthesis_reused_RTL_unchanged": true
+  "synthesis_reused_RTL_unchanged": true,
+  "implicit_synthesis_before_pnr": true
 }

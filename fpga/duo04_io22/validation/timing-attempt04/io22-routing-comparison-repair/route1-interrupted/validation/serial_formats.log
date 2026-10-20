@@ -1,0 +1,2 @@
+TB_PASS PT golden cycle equality; Philips I2S 1-bit WS lead, L/R polarity,16-bit stereo,48k,locked pair,reset; ticks=528 words=1054
+tb/tb_serial_formats.sv:41: $finish called at 11000260000 (1ps)

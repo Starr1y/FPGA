@@ -1,0 +1,11 @@
+{
+  "status": "INTERRUPTED_FOR_SECOND_REPAIR",
+  "at": "2026-10-20T13:04:41.456259+08:00",
+  "eligible": false,
+  "timing_verdict": "NOT AVAILABLE: routing was interrupted, not a completed failure",
+  "reason": "route1 CPU exceeded65minutes, prior route1 also did not converge promptly; prioritize tested structural repair, avoid concurrent EDA under1.4GB free memory",
+  "interrupted_pid": 21048,
+  "cpu_seconds_last_observed": 3930.25,
+  "report_dir": "C:\\Users\\10324\\Documents\\Codex\\2026-10-18\\io22-routing-comparison-repair\\route1-interrupted",
+  "next_work": "C:\\Users\\10324\\Documents\\Codex\\2026-10-18\\io22-timing-repair2"
+}

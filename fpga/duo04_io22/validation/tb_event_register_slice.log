@@ -1,0 +1,2 @@
+TB_PASS event register: stable backpressure, isolated ready, paired payload, hand-specific cancel, epochs, STOP/source flush, no duplicates
+tb/tb_event_register_slice.sv:29: $finish called at 371000 (1ps)

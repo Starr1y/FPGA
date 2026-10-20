@@ -1,0 +1,130 @@
+{
+  "project": "DUO04-LIVE 2.2",
+  "base_commit": "e9230db",
+  "hardware_test": "NOT RUN",
+  "starts_eda_or_programmer": false,
+  "sources_unchanged": true,
+  "netlist_provenance_verified": true,
+  "errors": [],
+  "clock_warnings": [
+    "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+  ],
+  "bitstream_generated": true,
+  "report_is_from_current_build": true,
+  "negative_slack_rows": [
+    [
+      "Clock Name",
+      "Analysis Type",
+      "Endpoints TNS",
+      "Number of Endpoints"
+    ],
+    [
+      "ref_clk",
+      "Setup",
+      "0.000",
+      "0"
+    ],
+    [
+      "ref_clk",
+      "Hold",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT0.default_gen_clk",
+      "Setup",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT0.default_gen_clk",
+      "Hold",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+      "Setup",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+      "Hold",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+      "Setup",
+      "0.000",
+      "0"
+    ],
+    [
+      "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+      "Hold",
+      "0.000",
+      "0"
+    ]
+  ],
+  "setup_hold_zero": true,
+  "routed_frequencies": [
+    {
+      "clock": "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+      "constraint_mhz": 25.0,
+      "actual_fmax_mhz": 36.061
+    },
+    {
+      "clock": "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+      "constraint_mhz": 50.0,
+      "actual_fmax_mhz": 50.012
+    }
+  ],
+  "core_pixel_frequencies_met": true,
+  "timing_scope": "Routed internal setup/hold; external I2S DAC and physical end-to-end latency NOT measured",
+  "route_option": 2,
+  "routing_options_match": true,
+  "audio_pin_rows": {
+    "hp_bck": {
+      "pin": "Y17",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    },
+    "hp_ws": {
+      "pin": "AB17",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    },
+    "hp_din": {
+      "pin": "AA16",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    },
+    "i2s_bck": {
+      "pin": "C14",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    },
+    "i2s_ws": {
+      "pin": "B13",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    },
+    "i2s_dout": {
+      "pin": "C13",
+      "direction": "out",
+      "io_type": "LVCMOS33",
+      "pull": "NONE"
+    }
+  },
+  "audio_pins_match": true,
+  "status": "IMPLEMENTED, BOARD VALIDATION PENDING",
+  "bitstream_sha256": "d0565971a81a94c914e42da5070ca059922e3b08aea93896eccc84de555c5e2d",
+  "bitstream_size": 39751339,
+  "timing_report_sha256": "d45bfdfd7081327e9568d17366b0e91ccfe46402e31ec9a9f31695af86c94385"
+}

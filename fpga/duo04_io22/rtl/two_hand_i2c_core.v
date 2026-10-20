@@ -10,7 +10,7 @@ module two_hand_i2c_core #(
  output[511:0]status,output[95:0]report_rates,output[63:0]processing_overruns,
  output event_valid,input event_ready,output[63:0]event_data,
  output[1:0]release_pending,input[1:0]release_ack,
- output[63:0]epochs,event_drops,cancelled_events
+ output[63:0]epochs,event_drops,cancelled_events,output[1:0]cancel_now
 );
  wire[1:0]sensor_restarted,note_on,velocity_update,push_valid,cancel;
  wire[7:0]hit_zone;wire[3:0]hit_profile,hit_octave,reason;
@@ -22,6 +22,7 @@ module two_hand_i2c_core #(
  end
  assign cancel=sensor_restarted | force_reset | calibrate | (previous_online & ~online) |
   (previous_enabled & ~enabled) | (previous_mirror ^ mirror);
+ assign cancel_now=cancel;
  genvar h;
  generate for(h=0;h<2;h=h+1)begin:hand
   bno_i2c_hand #(.CLK_HZ(CLK_HZ),.HALF_DIV(HALF_DIV),.RESET_TICKS(RESET_TICKS),

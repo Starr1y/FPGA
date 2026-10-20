@@ -37,12 +37,13 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
  // Mode changes cancel the old source before admitting a new source.
  // Register the source predicate to avoid decode+mux+epoch-compare+bank-write
  // on one high-fanout timing path. The one-clock transition stays muted.
- reg use_host;
+ reg use_host,epoch_source;
+ reg[63:0]selected_epochs;
  wire requested_host=operating_mode==1 || (operating_mode==2 && lesson_mouse);
- wire source_ready=use_host==requested_host;
+ wire source_ready=use_host==requested_host && epoch_source==use_host;
  always @(posedge core_clk)begin
-  if(!rst_n)use_host<=0;
-  else use_host<=requested_host;
+  if(!rst_n)begin use_host<=0;epoch_source<=0;selected_epochs<=0;end
+  else begin use_host<=requested_host;epoch_source<=use_host;selected_epochs<=use_host ? host_epochs : sensor_epochs;end
  end
  wire[1:0]lesson_phase;wire feedback_hand;wire[3:0]feedback_zone;wire[15:0]lesson_serial;
  // STOP bypasses the ordinary UI command pipeline and cancels queued edits.
@@ -51,9 +52,9 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
 
  wire[1:0]menu_page;wire[4:0]menu_field;wire menu_editing,menu_write;wire[15:0]menu_value;reg[15:0]menu_current;
 
- wire[1:0]sensor_release,sensor_ack;wire[63:0]sensor_epochs,sensor_events,sensor_drops,sensor_cancelled,sensor_overruns;wire[95:0]sensor_rates;wire[511:0]sensor_status;wire sensor_valid,sensor_ready;
+ wire[1:0]sensor_release,sensor_ack,sensor_cancel_now;wire[63:0]sensor_epochs,sensor_events,sensor_drops,sensor_cancelled,sensor_overruns;wire[95:0]sensor_rates;wire[511:0]sensor_status;wire sensor_valid,sensor_ready;
 
- wire[6:0]lesson_note;wire mapped_valid;wire[6:0]played_note;
+ wire[6:0]lesson_note;wire lesson_hit,played_hand;wire[6:0]played_note;wire[3:0]played_zone;
  wire[63:0]mapped_sensor_events={sensor_events[63:23],(operating_mode==2 ? 2'b00 : (sensor_events[29] ? octave_right : octave_left)),sensor_events[20:0]};
 
  wire[4:0]lesson_position;wire[15:0]lesson_correct,lesson_wrong;wire lesson_hand,lesson_finished,lesson_feedback;wire[3:0]lesson_zone;
@@ -93,15 +94,21 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
  reg[1:0]push,cancel,clear_history;reg[63:0]push_data;wire[1:0]accepted,release_pending,release_ack;
  wire[63:0]epochs,events,drops,cancelled;wire event_valid,event_ready;
  wire host_valid,host_ready;wire[63:0]host_events,host_epochs;wire[1:0]host_release;wire[1:0]host_ack;
- assign event_valid=running && source_ready && (use_host ? host_valid : sensor_valid);
- assign events=use_host ? host_events : mapped_sensor_events;
- assign epochs=use_host ? host_epochs : sensor_epochs;
+ wire source_event_valid=running && source_ready && (use_host ? host_valid : sensor_valid);
+ wire selected_ready;
+ wire[63:0]selected_events=use_host ? host_events : mapped_sensor_events;
+ assign epochs=selected_epochs;
+ event_register_slice event_stage(.clk(core_clk),.rst_n(rst_n),
+  .flush(!running || !source_ready || key_stop || lesson_restart || config_wait),
+  .cancel(cancel | (use_host ? 2'b00 : sensor_cancel_now)),.epochs(epochs),
+  .in_valid(source_event_valid),.in_ready(selected_ready),.in_data(selected_events),
+  .out_valid(event_valid),.out_ready(event_ready),.out_data(events));
  assign release_pending=host_release | sensor_release;
  assign host_ack=release_ack;assign sensor_ack=release_ack;
  // Auto-starting a lesson may change mode and running together. Neither
  // source may consume a queued event during the one-clock selection change.
- assign host_ready=source_ready && use_host && (running ? event_ready : 1'b1);
- assign sensor_ready=source_ready && !use_host && (running ? event_ready : 1'b1);
+ assign host_ready=source_ready && use_host && (running ? selected_ready : 1'b1);
+ assign sensor_ready=source_ready && !use_host && (running ? selected_ready : 1'b1);
  two_hand_event_queue #(.DEPTH(8)) queue(.clk(core_clk),.rst_n(rst_n),.push_valid(push),.push_payload(push_data),
   .cancel(cancel),.release_ack(host_ack),.release_pending(host_release),.epochs(host_epochs),
   .event_valid(host_valid),.event_ready(host_ready),.event_data(host_events),.drops(drops),.cancelled_events(cancelled),.accepted(accepted));
@@ -321,10 +328,15 @@ module top_duo04 #(parameter BOOT_CYCLES=524288, WATCHDOG_CYCLES=100000000, KEY_
  .keys(key_actions),.remote_valid(remote_ui),.remote_action(remote_action_q),.running(running),.mode(operating_mode),.teaching_active(operating_mode==2),.finished(lesson_finished),
  .profiles(profiles),.presets(presets),.volume(test_gain),.current_value(menu_current),.page(menu_page),.field(menu_field),.editing(menu_editing),
  .write(menu_write),.value(menu_value),.active_hand(ui_hand),.level(ui_level),.group_id(ui_group),.item(ui_item),.stop(ui_stop),.notice(ui_notice),.serial(ui_serial));
- two_hand_i2c_core sensors(.clk(core_clk),.rst_n(rst_n),.enabled({2{!use_host && !config_wait}}),.force_reset(sensor_force_reset),.calibrate(calibrate),.express(2'b11),.mirror(2'b00),.layout_profile(operating_mode==2 ? 4'b0 : profiles),.scl_in(imu_scl),.sda_in(imu_sda),.int_n(imu_int_n),.scl_low(scl_low),.sda_low(sda_low),.reset_low(reset_low),.online(online),.status(sensor_status),.report_rates(sensor_rates),.processing_overruns(sensor_overruns),.event_valid(sensor_valid),.event_ready(sensor_ready),.event_data(sensor_events),.release_pending(sensor_release),.release_ack(sensor_ack),.epochs(sensor_epochs),.event_drops(sensor_drops),.cancelled_events(sensor_cancelled));
- dual_note_map lesson_map(.profile(events[24:23]),.zone(events[28:25]),.octave(events[22:21]),.chord(1'b0),.member(2'b00),.valid(mapped_valid),.midi_note(played_note));
+ two_hand_i2c_core sensors(.clk(core_clk),.rst_n(rst_n),.enabled({2{!use_host && !config_wait}}),.force_reset(sensor_force_reset),.calibrate(calibrate),.express(2'b11),.mirror(2'b00),.layout_profile(operating_mode==2 ? 4'b0 : profiles),.scl_in(imu_scl),.sda_in(imu_sda),.int_n(imu_int_n),.scl_low(scl_low),.sda_low(sda_low),.reset_low(reset_low),.online(online),.status(sensor_status),.report_rates(sensor_rates),.processing_overruns(sensor_overruns),.event_valid(sensor_valid),.event_ready(sensor_ready),.event_data(sensor_events),.release_pending(sensor_release),.release_ack(sensor_ack),.epochs(sensor_epochs),.event_drops(sensor_drops),.cancelled_events(sensor_cancelled),.cancel_now(sensor_cancel_now));
+ // Keep accepted event payload/hand/zone together across both observation
+ // stages. Stop/restart/mode changes discard delayed teaching feedback.
+ lesson_event_pipeline lesson_events(.clk(core_clk),.rst_n(rst_n),
+ .flush(!running || !source_ready || operating_mode!=2 || lesson_restart || key_stop || cancel!=0),
+ .accepted(event_valid && event_ready),.event_data(events),.epochs(epochs),
+ .hit(lesson_hit),.hand(played_hand),.note(played_note),.zone(played_zone));
  duo04_lesson lesson(.clk(core_clk),.rst_n(rst_n),.enabled(running && operating_mode==2),.restart(lesson_restart),.clear_feedback(lesson_clear),.song(lesson_song),
- .hit(event_valid && event_ready && events[31:30]==0 && mapped_valid),.hand(events[29]),.note(played_note),.zone(events[28:25]),
+ .hit(lesson_hit),.hand(played_hand),.note(played_note),.zone(played_zone),
  .position(lesson_position),.correct(lesson_correct),.wrong(lesson_wrong),.target_hand(lesson_hand),.target_note(lesson_note),.target_zone(lesson_zone),
  .finished(lesson_finished),.last_correct(lesson_feedback),.feedback(lesson_phase),.feedback_hand(feedback_hand),.feedback_zone(feedback_zone),.event_serial(lesson_serial));
  always @(posedge core_clk)begin

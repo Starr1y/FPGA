@@ -1,0 +1,2 @@
+TB_PASS real921600 UART HELLO DUO04-LIVE 2.1+IO22, compatible prefix and explicit I/O revision
+tb/tb_io22_hello.sv:84: $finish called at 652700000 (1ps)

@@ -1,0 +1,2 @@
+TB_PASS four-timbre release cycle/bit equivalence,         300 frames,         275 quiet-tail frames, repeated trigger/expiry/fast release, max render   145
+tb/tb_release_pipeline.sv:54: $finish called at 6248700000 (1ps)

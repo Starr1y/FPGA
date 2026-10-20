@@ -1,0 +1,2 @@
+TB_PASS mixed 400Hz linear/200Hz pose+gyro/50Hz auxiliary; no backlog,overrun,missing SH2 report sequences; calibration and pure negative-Z jerk; linear availability-to-decode max=1720.720us report-to-note=1240.360us largest transfer=1717.480us min SCL low/high=1300.0/1360.0ns
+tb/tb_mixed_latency.sv:62: $finish called at 416908720000 (1ps)

@@ -108,7 +108,7 @@ output config_ready,output [63:0] envelopes,
  reg [25:0] depth_product;reg [15:0] fm_depth;
  reg [31:0] release_source;reg [47:0] release_product;
  wire [31:0] release_delta=release_product[47:16]==0 ? 32'd1 : release_product[47:16];
- wire [31:0] release_next=release_source-release_delta;
+ reg[31:0]release_delta_q,release_next_q;reg release_exhausted_q;
  wire [17:0] release_limit=v_tail==0 ? 18'd9600 : v_tail==1 ? 18'd24000 : 18'd72000;
  wire fm_voice=v_preset_mode && (v_preset==2 || v_preset==3);
  wire signed [15:0] saw={~v_phase[31],v_phase[30:16]};
@@ -142,6 +142,7 @@ output config_ready,output [63:0] envelopes,
    samples<=0;sample_valid<=0;clips<=0;prod1<=0;prod2<=0;voice_value<=0;
    blend_dark<=0;blend_bright<=0;oscillator_sample<=0;modulator_sample<=0;depth_product<=0;fm_depth<=0;
    mod_product<=0;carrier_phase<=0;release_product<=0;release_source<=0;v_trigger<=0;
+   release_delta_q<=1;release_next_q<=0;release_exhausted_q<=0;
    voice_samples<=0;underflows<=0;last_render_cycles<=0;max_render_cycles<=0;render_cycles<=0;
    v_fast_release<=0;
    v_body<=0;v_fraction<=0;v_piano_coefficient<=134;v_piano_hold<=0;body_product<=0;body_wave_product<=0;
@@ -177,6 +178,12 @@ output config_ready,output [63:0] envelopes,
     preset[i]<=0;tail[i]<=0;preset_mode[i]<=0;index_env[i]<=0;release_count[i]<=0;release_level[i]<=0;piano_body[i]<=0;piano_fraction[i]<=0;
    end
   end else begin
+   // The four production timbres already wait for the model renderer. Use
+   // that time to split minimum-step decode and 32-bit release subtraction,
+   // avoiding the routed 25-level release_product -> envelope-DSP path.
+   release_delta_q<=release_delta;
+   release_next_q<=release_source-release_delta_q;
+   release_exhausted_q<=(release_source<=release_delta_q);
    sample_valid<=0;release_due<=0;
    if(ENABLE_EXPRESSION && active_voices==0)last_pitch_valid<=0;
    if(sample_tick && state!=0)underflows<=underflows+1'b1;
@@ -287,17 +294,21 @@ output config_ready,output [63:0] envelopes,
       blend_dark<=(v_preset_mode ? dark_wave : osc)*$signed(10'd256-{2'b0,v_brightness});
       blend_bright<=(v_preset_mode ? bright_wave : saw)*$signed({2'b0,v_brightness});
      end else oscillator_sample<=osc;
-     state<=v_preset_mode && v_preset<4 ? 27 : 3;
+     state<=v_preset_mode && v_preset<4 ? 27 : 28;
     end
+    // Generic legacy waveforms have no model wait; preserve release arithmetic
+    // with two explicit clocks. The four production timbres add no render cycle.
+    28:state<=29;
+    29:state<=3;
     27:if(model_done)begin oscillator_sample<=model_value;state<=3;end
     3:begin
      // Preserve 16 fractional bits; a minimum whole-envelope step would make
      // long quiet tails end prematurely. The selected duration remains bounded.
      if(v_preset_mode && !v_gate && !v_trigger && !v_fast_release && v_env!=0)begin
-      if(v_env<=32 || release_source<=release_delta || v_release_count>=release_limit-1)begin
+      if(v_env<=32 || release_exhausted_q || v_release_count>=release_limit-1)begin
        v_env<=0;v_release_level<=0;
       end else begin
-       v_env<=release_next[31:16];v_release_level<=release_next;
+       v_env<=release_next_q[31:16];v_release_level<=release_next_q;
        v_release_count<=v_release_count+1'b1;
       end
      end

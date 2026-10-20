@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "sources_unchanged": true,
+  "previous_netlist_sha256": "2432463582faacc7a597267ffd1067caa9c8dfbd5cf337eb149a56f4fddc7285",
+  "actual_netlist_sha256": "8f0902b240cb0ce8634a373e71a00421595d09063d661514b43d50df694063fe",
+  "routed_netlist_path_confirmed": true,
+  "six_open_drain_pads_rechecked": true,
+  "actual_pnr_started_at": "2026-10-20T08:29:27.556060+08:00",
+  "timing_accepted": false
+}

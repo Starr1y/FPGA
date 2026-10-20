@@ -1,14 +1,20 @@
 {
-  "flow": "run pnr using verified existing netlist",
+  "flow": "run pnr automatically recompiled identical sources; evidence rebound to actual netlist",
   "route_option": 2,
-  "previous_route_option": 1,
   "timing_driven": 1,
   "core_constraint_mhz": 50,
   "hold_correction": true,
-  "synthesis_skipped": true,
+  "synthesis_skipped": false,
   "RTL_unchanged": true,
-  "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
-  "measured_speedup": "PENDING full route2 completion; no speedup factor claimed",
-  "actual_command_sha256": "7b014cf0e5742555b4fb5989fed9e4c63d11d45658296ca673e003eb41b2461c",
-  "started_at": "2026-10-19T11:01:28.696506+08:00"
+  "started_at": "2026-10-20T13:14:12.980165+08:00",
+  "actual_command_sha256": "06c238877cac8a56fb5f6930fe37d887cdb2dded38eb9a372ec71d12b173061d",
+  "measured_speedup": "No controlled full-run ratio claimed",
+  "implicit_synthesis_before_pnr": true,
+  "tool_invocation_started_at": "2026-10-20T13:09:47.019163+08:00",
+  "measured_wall_seconds": 1057.351,
+  "tool_phase_times": [
+    "Total Placement: CPU time = 0h 10m 10s, Elapsed time = 0h 10m 10s",
+    "Total Routing: CPU time = 0h 6m 37s, Elapsed time = 0h 6m 37s",
+    "Total Time and Memory Usage: CPU time = 0h 16m 59s, Elapsed time = 0h 16m 59s, Peak memory usage = 2122MB"
+  ]
 }

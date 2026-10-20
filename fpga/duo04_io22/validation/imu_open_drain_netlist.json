@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "netlist_sha256": "6ab8f087af8ce59e3e055791467a297786612927cd32f7577d8eae90f5f2b77f",
+  "netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
   "instances": [
     {
       "kind": "IOBUF",

@@ -1,5 +1,5 @@
 {
-  "status": "13 DIGITAL TESTS AND SYNTHESIS PASS; FAST ROUTE2 PNR RUNNING; NO ACCEPTED BITSTREAM",
+  "status": "DIGITAL CHECKS AND IMPLEMENTATION PASS; HARDWARE PENDING",
   "tests": {
     "serial_formats": {
       "sha256": "73326dd8181349be96b1715f7064de3cfc3b6a23cb64472abd5235f4c7892fa6",
@@ -78,6 +78,30 @@
       "pass_lines": [
         "TB_PASS control pipeline validation, remote data pairing, STOP flush/bypass, source transition backpressure incl auto-start lesson"
       ]
+    },
+    "tb_lesson_event_pipeline": {
+      "sha256": "75c2b9a5f7a491319f8091622dabdf565c454bc05c8186c82352fd3746f2a526",
+      "pass_lines": [
+        "TB_PASS lesson observer: paired back-to-back hands, accepted-only hits, gain/invalid rejection, epoch cancellation, STOP flush/restart"
+      ]
+    },
+    "tb_scheduler_predecode": {
+      "sha256": "a920003d32b9eee7ca3766539a0524dd66935ca09e1e0da8d7401de166829528",
+      "pass_lines": [
+        "TB_PASS scheduler cycle equivalence: accepted        1512, cancellations         192, steals        537; chord, gain, expiry, expression, mono and backpressure"
+      ]
+    },
+    "tb_event_register_slice": {
+      "sha256": "59ffba9be38a3c8be5c48bbe9788951fd650ddbd328e83431fd2de8a9a61f707",
+      "pass_lines": [
+        "TB_PASS event register: stable backpressure, isolated ready, paired payload, hand-specific cancel, epochs, STOP/source flush, no duplicates"
+      ]
+    },
+    "tb_release_pipeline": {
+      "sha256": "5f12f21a37365679d1b6cf80fd89cc48f23c27867419b374cdd471323132e14d",
+      "pass_lines": [
+        "TB_PASS four-timbre release cycle/bit equivalence,         300 frames,         275 quiet-tail frames, repeated trigger/expiry/fast release, max render   145"
+      ]
     }
   },
   "host_compat": {
@@ -88,9 +112,13 @@
     "crc_errors": 0,
     "latest_host_interaction_enabled": true
   },
+  "hardware_test": "NOT RUN",
+  "latency_scope": "Independent digital simulation segments; not a physical end-to-end upper bound",
+  "uart_scope": "Current HELLO tested at921600 with published host parser; full inherited teaching/capture UART regression NOT rerun to completion",
+  "shtp_scope": "SH2 report sequence/timestamp continuity checked; inherited transport sequence_gaps semantics unchanged",
   "imu_open_drain_netlist": {
     "status": "PASS",
-    "netlist_sha256": "6ab8f087af8ce59e3e055791467a297786612927cd32f7577d8eae90f5f2b77f",
+    "netlist_sha256": "8e3ca33dba0b87331f68f3ce58ae186d7480a697c834030423820a6cdd3d255a",
     "instances": [
       {
         "kind": "IOBUF",
@@ -124,26 +152,134 @@
       }
     ]
   },
-  "implementation_attempt": 4,
-  "previous_implementation": "timing-attempt01/implementation.json (FAILED, not a downloadable release)",
-  "bitstream_included": false,
-  "hardware_test": "NOT RUN",
-  "end_to_end_10ms_or_5ms_proven": false,
-  "latency_scope": "Independent digital simulation segments, not a physical end-to-end upper bound",
-  "uart_scope": "HELLO/parser and decoded-command pipeline tested; full inherited teaching/capture UART regression NOT completed",
-  "build_options": {
-    "flow": "run pnr using verified existing netlist",
+  "implementation": {
+    "project": "DUO04-LIVE 2.2",
+    "base_commit": "e9230db",
+    "hardware_test": "NOT RUN",
+    "starts_eda_or_programmer": false,
+    "sources_unchanged": true,
+    "netlist_provenance_verified": true,
+    "errors": [],
+    "clock_warnings": [
+      "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+    ],
+    "bitstream_generated": true,
+    "report_is_from_current_build": true,
+    "negative_slack_rows": [
+      [
+        "Clock Name",
+        "Analysis Type",
+        "Endpoints TNS",
+        "Number of Endpoints"
+      ],
+      [
+        "ref_clk",
+        "Setup",
+        "0.000",
+        "0"
+      ],
+      [
+        "ref_clk",
+        "Hold",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT0.default_gen_clk",
+        "Setup",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT0.default_gen_clk",
+        "Hold",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+        "Setup",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+        "Hold",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+        "Setup",
+        "0.000",
+        "0"
+      ],
+      [
+        "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+        "Hold",
+        "0.000",
+        "0"
+      ]
+    ],
+    "setup_hold_zero": true,
+    "routed_frequencies": [
+      {
+        "clock": "main_pll/PLL_inst/CLKOUT1.default_gen_clk",
+        "constraint_mhz": 25.0,
+        "actual_fmax_mhz": 36.061
+      },
+      {
+        "clock": "main_pll/PLL_inst/CLKOUT2.default_gen_clk",
+        "constraint_mhz": 50.0,
+        "actual_fmax_mhz": 50.012
+      }
+    ],
+    "core_pixel_frequencies_met": true,
+    "timing_scope": "Routed internal setup/hold; external I2S DAC and physical end-to-end latency NOT measured",
     "route_option": 2,
-    "previous_route_option": 1,
-    "timing_driven": 1,
-    "core_constraint_mhz": 50,
-    "hold_correction": true,
-    "synthesis_skipped": true,
-    "RTL_unchanged": true,
-    "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
-    "measured_speedup": "PENDING full route2 completion; no speedup factor claimed",
-    "actual_command_sha256": "7b014cf0e5742555b4fb5989fed9e4c63d11d45658296ca673e003eb41b2461c",
-    "started_at": "2026-10-19T11:01:28.696506+08:00"
-  },
-  "tests_reused_no_RTL_change": true
+    "routing_options_match": true,
+    "audio_pin_rows": {
+      "hp_bck": {
+        "pin": "Y17",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      },
+      "hp_ws": {
+        "pin": "AB17",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      },
+      "hp_din": {
+        "pin": "AA16",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      },
+      "i2s_bck": {
+        "pin": "C14",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      },
+      "i2s_ws": {
+        "pin": "B13",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      },
+      "i2s_dout": {
+        "pin": "C13",
+        "direction": "out",
+        "io_type": "LVCMOS33",
+        "pull": "NONE"
+      }
+    },
+    "audio_pins_match": true,
+    "status": "IMPLEMENTED, BOARD VALIDATION PENDING",
+    "bitstream_sha256": "d0565971a81a94c914e42da5070ca059922e3b08aea93896eccc84de555c5e2d",
+    "bitstream_size": 39751339,
+    "timing_report_sha256": "d45bfdfd7081327e9568d17366b0e91ccfe46402e31ec9a9f31695af86c94385"
+  }
 }

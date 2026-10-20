@@ -7,26 +7,45 @@
     "rtl/duo04_menu.v",
     "rtl/stereo_serial_output.v",
     "rtl/top_duo04.v",
-    "rtl/two_hand_i2c_core.v"
+    "rtl/two_hand_i2c_core.v",
+    "rtl/lesson_event_pipeline.v",
+    "rtl/dual_audio_core.v",
+    "rtl/event_register_slice.v"
   ],
   "latest_UI_raster_lesson_ROMs_byte_identical": true,
   "menu_semantics_preserved_timing_pipeline_added": true,
   "source_hashes_still_match_build_snapshot": true,
   "hello": "DUO04-LIVE 2.1+IO22",
-  "attempt": 4,
+  "attempt": 8,
   "i2s_stereo_pair": "Left then right, same slot0 latch; PT path preserves original right then left",
   "source_transition_backpressure": true,
   "lookup_ROM": "dedicated synchronous block ROM read, isolated scheduler synthesis passed",
   "build_options": {
-    "flow": "run pnr using verified existing netlist",
+    "flow": "run pnr automatically recompiled identical sources; evidence rebound to actual netlist",
     "route_option": 2,
-    "previous_route_option": 1,
     "timing_driven": 1,
     "core_constraint_mhz": 50,
     "hold_correction": true,
-    "synthesis_skipped": true,
+    "synthesis_skipped": false,
     "RTL_unchanged": true,
-    "reference": "Installed SUG100-4.4.6E, printed p39 / PDF51; route2 default for138; route1 sacrifices compile speed",
-    "measured_speedup": "PENDING full route2 completion; no speedup factor claimed"
-  }
+    "started_at": "2026-10-20T13:14:12.980165+08:00",
+    "actual_command_sha256": "06c238877cac8a56fb5f6930fe37d887cdb2dded38eb9a372ec71d12b173061d",
+    "measured_speedup": "No controlled full-run ratio claimed",
+    "implicit_synthesis_before_pnr": true,
+    "tool_invocation_started_at": "2026-10-20T13:09:47.019163+08:00",
+    "measured_wall_seconds": 1057.351,
+    "tool_phase_times": [
+      "Total Placement: CPU time = 0h 10m 10s, Elapsed time = 0h 10m 10s",
+      "Total Routing: CPU time = 0h 6m 37s, Elapsed time = 0h 6m 37s",
+      "Total Time and Memory Usage: CPU time = 0h 16m 59s, Elapsed time = 0h 16m 59s, Peak memory usage = 2122MB"
+    ]
+  },
+  "timing_repairs": [
+    "Registered accepted teaching event and note mapping; two observation clocks, no first-repair audio delay",
+    "Predecoded allocation writes; 40000-cycle scheduler reference equivalence,1512 events,192 cancellations,537 steals",
+    "Registered event handoff removes combinational scheduler-ready feedback to producer queues; one event latency clock(20ns), one bubble, per-hand immediate cancellation, epoch/source/STOP flush",
+    "Registered selected epochs with source-coherence handshake; preserve cancellation acknowledgement and block source transition",
+    "Split release minimum-step decode and subtraction; four production timbres cycle/bit-identical for300frames including275release-tailframes; generic legacy renderer adds two clocks per rendered voice"
+  ],
+  "implementation_status": "IMPLEMENTED, BOARD VALIDATION PENDING"
 }

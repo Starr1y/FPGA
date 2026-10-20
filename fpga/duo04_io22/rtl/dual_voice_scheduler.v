@@ -33,6 +33,11 @@ module dual_voice_scheduler #(
  reg[31:0]old_bend,old_vibrato;
  reg[2:0]alloc_state;reg[63:0]pending;reg pending_chord;reg[1:0]member,pending_tail;reg[2:0]pending_preset;
  reg[VB-1:0]scan,choice,idle_choice,release_choice,active_choice;
+ // Predecode the allocation write enables before touching the Voice bank.
+ // This removes the choice-bit -> wide variable-index register-write fanout
+ // seen in the routed critical paths, without adding an allocation cycle.
+ reg[VOICES-1:0]choice_mask;
+ wire[VB-1:0]allocation_choice=idle_found ? idle_choice : release_found ? release_choice : active_choice;
  reg idle_found,release_found,active_found;reg[15:0]quietest;reg[7:0]oldest;
  wire pending_hand=pending[29];wire[31:0]pending_epoch=pending[63:32];
  wire map_valid;wire[6:0]mapped_note;
@@ -71,7 +76,7 @@ module dual_voice_scheduler #(
    owned<=0;gates<=0;dirty<=0;retrigger<=0;fast_stop<=0;release_ack<=0;releasing<=0;
    old_epoch[0]<=0;old_epoch[1]<=0;old_bend<=0;old_vibrato<=0;
    alloc_state<=0;pending<=0;pending_chord<=0;member<=0;pending_preset<=0;pending_tail<=0;
-   scan<=0;choice<=0;idle_choice<=0;release_choice<=0;active_choice<=0;
+   scan<=0;choice<=0;choice_mask<=0;idle_choice<=0;release_choice<=0;active_choice<=0;
    idle_found<=0;release_found<=0;active_found<=0;quietest<=65535;oldest<=0;
    cfg_state<=0;cfg_scan<=0;current<=0;config_valid<=0;config_data<=0;frequency_product<=0;ratio_address_q<=230;
    captured_revision<=0;captured_epoch<=0;captured_id<=0;captured_gain<=0;
@@ -134,28 +139,33 @@ module dual_voice_scheduler #(
      if(scan==(pending_hand ? VOICES-1 : BANK-1))alloc_state<=3;else scan<=scan+1'b1;
     end
     3:begin
-     choice<=idle_found ? idle_choice : release_found ? release_choice : active_choice;
+     choice<=allocation_choice;
+     for(i=0;i<VOICES;i=i+1)choice_mask[i]<=allocation_choice==i;
      alloc_state<=4;
     end
     4:begin
      if(!map_valid_q)begin invalid_events<=invalid_events+1'b1;alloc_state<=0;end
      else if(gates[choice] || envelopes[choice*16+:16]!=0 || retrigger[choice] || dirty[choice] || (cfg_state!=0 && current==choice))begin
-      gates[choice]<=0;fast_stop[choice]<=1;dirty[choice]<=1;retrigger[choice]<=0;
-      revision[choice]<=revision[choice]+1'b1;stolen_notes<=stolen_notes+1'b1;alloc_state<=5;
+      for(i=0;i<VOICES;i=i+1)if(choice_mask[i])begin
+       gates[i]<=0;fast_stop[i]<=1;dirty[i]<=1;retrigger[i]<=0;revision[i]<=revision[i]+1'b1;
+      end
+      stolen_notes<=stolen_notes+1'b1;alloc_state<=5;
      end else alloc_state<=6;
     end
     5:if(envelopes[choice*16+:16]==0 && !dirty[choice] && !(cfg_state!=0 && current==choice))alloc_state<=6;
     6:begin
      if(mono_glide[pending_hand] && !pending_chord)begin
-      for(i=0;i<VOICES;i=i+1)if(i!=choice && owned[i] && (i>=BANK)==pending_hand)begin
+      for(i=0;i<VOICES;i=i+1)if(!choice_mask[i] && owned[i] && (i>=BANK)==pending_hand)begin
        gates[i]<=0;fast_stop[i]<=1;dirty[i]<=1;retrigger[i]<=0;revision[i]<=revision[i]+1'b1;
       end
      end
-     owned[choice]<=1;gates[choice]<=1;dirty[choice]<=1;retrigger[choice]<=1;fast_stop[choice]<=0;
-     ftw[choice]<=midi_rom[mapped_note_q];midi[choice]<=mapped_note_q;
-     epoch[choice]<=pending_epoch;ids[choice]<=pending[11:4];gain[choice]<={pending[20:14],1'b0};
-     preset[choice]<=pending_preset;tail[choice]<=pending_tail;ticks[choice]<=0;age[choice]<=0;revision[choice]<=revision[choice]+1'b1;
-     for(i=0;i<VOICES;i=i+1)if(i!=choice && owned[i] && (i>=BANK)==pending_hand && age[i]!=255)age[i]<=age[i]+1'b1;
+     for(i=0;i<VOICES;i=i+1)if(choice_mask[i])begin
+      owned[i]<=1;gates[i]<=1;dirty[i]<=1;retrigger[i]<=1;fast_stop[i]<=0;
+      ftw[i]<=midi_rom[mapped_note_q];midi[i]<=mapped_note_q;
+      epoch[i]<=pending_epoch;ids[i]<=pending[11:4];gain[i]<={pending[20:14],1'b0};
+      preset[i]<=pending_preset;tail[i]<=pending_tail;ticks[i]<=0;age[i]<=0;revision[i]<=revision[i]+1'b1;
+     end
+     for(i=0;i<VOICES;i=i+1)if(!choice_mask[i] && owned[i] && (i>=BANK)==pending_hand && age[i]!=255)age[i]<=age[i]+1'b1;
      if(pending_chord && member<2)begin member<=member+1'b1;alloc_state<=1;end else alloc_state<=0;
     end
     // Latch the queue event before updating all matching Voice revisions.
