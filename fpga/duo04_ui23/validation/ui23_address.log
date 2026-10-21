@@ -1,0 +1,2 @@
+TB_PASS 16384 grid/label addresses equal constant multiply reference
+/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/duo04_ui23/validation/ui23_address_equivalence.sv:17: $finish called at 8192000 (1ps)

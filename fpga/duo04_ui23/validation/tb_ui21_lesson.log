@@ -1,0 +1,2 @@
+TB_PASS lesson 250/180ms, wrong hand, repeated hit, pause/resume, completion/restart
+tb/tb_ui21_lesson.sv:24: $finish called at 47810000 (1ps)

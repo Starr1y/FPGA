@@ -1,3 +1,11 @@
+<!-- UI23_PROJECT_START -->
+## 2026-10-21：UI23 浅色双手界面
+
+[独立FPGA工程](fpga/duo04_ui23/README.md) · [四页RTL仿真示例](fpga/duo04_ui23/preview/ui23-four-pages.png)
+
+按参考图实现浅色卡片、橙红/金色双手扇区、分组菜单、逐音教学和归中诊断；真实击发反馈与预选分开。**完整综合、14个页面场景和交互验证通过；布局布线进行中，尚未发布通过验收的UI23位流。** 本次仅提交FPGA相关内容，原IO22保留。
+<!-- UI23_PROJECT_END -->
+
 ## 2026-10-20：最新2.1上的I²S与IMU节拍优化实现
 
 [FPGA独立工程](fpga/duo04_io22/README.md) · [下载位流](fpga/duo04_io22/bitstream/tanglab_duo04_io22.fs) · [冻结清单](fpga/duo04_io22/FIRMWARE.json) · [实板验证顺序](fpga/duo04_io22/BOARD_VALIDATION.md)

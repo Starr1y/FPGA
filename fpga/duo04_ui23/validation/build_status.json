@@ -1,0 +1,8 @@
+{
+  "status": "RUNNING",
+  "pid": 42200,
+  "runner_pid": 6932,
+  "started": "2026-10-21T20:45:09.767938+08:00",
+  "route_option": 1,
+  "hardware_test": "NOT RUN"
+}
