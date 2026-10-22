@@ -1,8 +1,15 @@
 {
-  "status": "RUNNING",
-  "pid": 42200,
-  "runner_pid": 6932,
-  "started": "2026-10-21T20:45:09.767938+08:00",
-  "route_option": 1,
-  "hardware_test": "NOT RUN"
+  "status": "IMPLEMENTED_BOARD_PENDING",
+  "runner_pid": 45512,
+  "at": "2026-10-22T09:23:23.935724+08:00",
+  "path": "C:\\Users\\10324\\Documents\\Codex\\2026-10-18\\ui23-route2-comparison",
+  "hardware_test": "NOT RUN",
+  "exit_code": 0,
+  "idle_frontend_closed_after_complete_artifacts": false,
+  "same_netlist": false,
+  "actual_netlist_sha256": "06f0ab26ce76e429e3638e7b77a21399868a1aead2e0bc2dac5cb48e75c98303",
+  "pads_exit_code": 0,
+  "check_exit_code": 0,
+  "selected_route_option": 2,
+  "scope": "Independent same-source route2; route1 rejected due to 192 unrouted nets"
 }

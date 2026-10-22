@@ -3,10 +3,16 @@
 按用户提供的四页示意图实现 FPGA HDMI UI。以已验证 IO22 / `554124f` 为基线，现有 RTL 只改动 `duo04_panel.v`、`duo_fan.v`；IMU、音频、事件、菜单按键逻辑与原版相同。工程：`tanglab_duo04_ui23.gprj`，顶层 `top_duo04`，器件及原始 50 MHz / 25 MHz 时钟约束不变。
 
 <!-- UI23_RELEASE_STATUS_START -->
-**当前状态：完整综合、交互/页面验证及 16,384 组地址等价检查通过；正在进行布局布线，尚未发布通过时序验收的 UI23 位流。**
+**本版本已通过当前源码的完整综合、布局布线 setup/hold 与 50 MHz / 25 MHz 检查，以及页面/交互和地址等价验证。实板与实际音频/动作延迟仍待测试。**
 
-[四页 RTL 仿真预览](preview/ui23-four-pages.png) · [全部页面示例](preview/index.html)
+[下载 UI23 位流](bitstream/tanglab_duo04_ui23.fs) · [冻结清单](FIRMWARE.json) · [实际 RTL 页面预览](preview/index.html)
 <!-- UI23_RELEASE_STATUS_END --> 构建状态见（Git 中为提交时快照，本机为实际进程记录） `validation/build_status.json`，验收必须执行本目录的 `check_implementation.py` 并确认对应位流与源码哈希。
+
+**2026-10-22：选定路由算法 2，可以开始 SRAM 实板验证。** 算法 1 报 PR0004、192 条未布通网络，未生成可用位流。算法 2 的最差 setup 为 **+0.032 ns**、hold 为 **+0.126 ns**，全部 8 行 setup/hold 负裕量端点为 0；50 MHz 核心与 25 MHz 像素时钟通过。
+
+正式重建入口为 **`gw_sh.exe build_selected.tcl`**（算法 2）。`build.tcl` 保留为原算法 1 构建输入，用于追溯失败候选，不作为选定版本的重建入口。位流 SHA256：`16229624c93d847f78b89bc78fec123812c91e258eeec3c81ad8dffa28a5a7fa`。
+
+setup 余量较小，工具仍有 `PR1014 / clk_d` 使用通用时钟路由的警告；已通过内部时序检查，HDMI、实际 IMU、DAC、整机延迟及功耗仍需实板验证。[路由选择证据](ROUTING_SELECTION.md)与[实板步骤](BOARD_VALIDATION.md)给出具体范围。
 
 ## 页面
 
@@ -43,7 +49,7 @@
 
 1. `python generate_ui23.py <LXGWWenKaiMono-Medium.ttf路径>` 重生成字模和静态掩模。可使用项目 `docs/reference/fonts/` 中的原字体，许可见 `OFL-WenKai.txt`。
 2. WSL / Linux 安装 Icarus 后执行 `bash run_ui23_tests.sh`：真实计数击发、按键、EC11、教学、停止五项语义测试，以及十四个完整 640×480 栅格状态。
-3. Gowin 1.9.12.03 执行 `gw_sh.exe build.tcl`。算法 1 延续既有 IO22 选定策略，本 UI23 版本还需独立取得最终时序结果。
+3. Gowin 1.9.12.03 执行 `gw_sh.exe build_selected.tcl`，采用已通过本版时序验收的算法 2。重建后仍须检查这一次生成的报告和哈希；时序余量不能由旧报告代替。
 4. 使用源码快照、当前实际综合网表、六个 IMU 开漏管脚、完整 setup/hold 和音频管脚报告验收，再进入 SRAM 验证。不能用 IO22 的通过报告证明 UI23。
 
 硬件连接沿用 IO22：两路独立 I²C，EC11、HDMI、板载 PT8211 和标准 I²S 输出管脚均不变。具体见 [实板说明](BOARD_VALIDATION.md)。
@@ -61,3 +67,17 @@
 | MULT12X12 | 9 | 6 |
 
 以上为综合计数，不能代替实际布局布线占用或功耗。两手 IMU、音频、控制及 CST/SDC 均沿用已验证基线。
+
+## 选定版本的实际布局布线占用
+
+| 整工程项目 | 使用 / 容量 | 工具报告占比 |
+|---|---:|---:|
+| Logic | 57052 / 138240 | 42% |
+| Register | 31020 / 139095 | 23% |
+| CLS | 42722 / 69120 | 62% |
+| BSRAM | 120 / 340 | 36% |
+| DSP | 93 / 298 | 32% |
+
+这是包含 IMU、音频、教学和显示的整工程占用，不能算作 UI 单独的资源。综合与布局布线报告的 BSRAM 数值属于不同统计阶段。算法 2 的工具报告中布局为 12 分 2 秒，布线为 9 分 12 秒，布局布线流程合计 21 分 38 秒；不包含此前自动重新综合的时间，也不是未来每次构建的耗时承诺。
+
+本次算法 2 与原 UI 仿真使用完全一致的 RTL、ROM、字模生成器、静态资产、测试代码、工程和约束，复用了已经完成的 14 个完整页面场景、交互测试及 16,384 组地址等价结果，没有重复运行并声称新的仿真。文件哈希关联见 `validation/ui_test_reuse.json`、原始快照和原始测试记录；`check_implementation.py` 同时核验这些关联。

@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "scope": "actual production synthesis; timing/hardware not implied",
-  "source_snapshot_sha256": "f0100545a779d3dd59dfeae60fc4cea73bcced7f4d12e26ff01006a2dc9c8063",
+  "source_snapshot_sha256": "1c07913ad862ed737c70850fb8d6135e004c75e2977a0b6fe0b400d03a1f6554",
   "synthesized_inputs": {
     "rtl/bno_i2c_hand.v": "1d62ce2397ab6f4f7eb346274aead486d6f8f91ce9639f3fdcab0b3a5bb4517f",
     "rtl/bno_i2c_host.v": "bf21821e4c2b701cebb403f885dd74d3dcbba60378fac912edda24caa1d4463f",
@@ -97,16 +97,17 @@
     "generate_ui23.py": "296810cf1f10c04569dfbeecfbfc6c1c37dc156cb8226b0e15f33d4ec83d3288",
     "ui23-assets.json": "12021adc8a2fbc7494470f33a2f94b5bb8d7084153541f75f5f40c496a2fc82f",
     "tb/tb_ui23_events.sv": "68ff7e0184c32b7dce14088e0cb7dac55c74b48b41a3aef461b934239a639964",
-    "tb/tb_ui23_panel.sv": "ff5c4c730a23bf9d97cf32e09fe13b1892964dae85fb7fd6001d24e2211cbb64"
+    "tb/tb_ui23_panel.sv": "ff5c4c730a23bf9d97cf32e09fe13b1892964dae85fb7fd6001d24e2211cbb64",
+    "pnr_only.tcl": "fff740b58abde1ab721f4631acb3c1ffbf758add7c830d482dec5d984259a98d"
   },
   "supplemental_inherited_root_rom_sha256": {
     "hello_wire.hex": "2956ceb3a53946de8a96cba8f1e13116b6ab5d2740dce61e0d31bd450b5cc1b2",
     "io22_wire.hex": "3dcfa31c77b9325b19457a4dc933ebfec5979d1af384d4f179cc51607c6cd7ea"
   },
   "root_rom_note": "Inherited ROMs copied before build; fingerprint archived after synthesis, with unchanged pre-build modification time",
-  "netlist_sha256": "b4ff5614c5efd84773892c89813470a0c3d4d068c1019fcac5afbfe15e3d6a86",
-  "netlist_absolute_path": "C:\\Users\\10324\\Desktop\\TangLab\\TangLab\\fpga\\duo04_ui23\\impl\\gwsynthesis\\tanglab_duo04_ui23.vg",
-  "synthesis_log_sha256": "53466933eeb3d4381f96d6f7405790e67a028d2ab0c1b84d94d65821b33d9c4b",
+  "netlist_sha256": "06f0ab26ce76e429e3638e7b77a21399868a1aead2e0bc2dac5cb48e75c98303",
+  "netlist_absolute_path": "C:\\Users\\10324\\Documents\\Codex\\2026-10-18\\ui23-route2-comparison\\impl\\gwsynthesis\\tanglab_duo04_ui23.vg",
+  "synthesis_log_sha256": "8cbd1f2925d54557e9bfdff8a5cc441bb5438a22559b47b4b79208a3e8a50482",
   "resource_report_sha256": "e2d40c5efa036db1da082e855560f5df90b8ef3543690226e1f2b29cda28929c",
   "totals": {
     "Register": 31020,

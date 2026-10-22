@@ -132,8 +132,47 @@ manifest_path=ROOT/'FIRMWARE.json'
 if manifest_path.exists():
     manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
     result['manifest_matches']=(manifest['source_snapshot_sha256']==sha(ROOT/'validation/source_before_build.json') and
+        manifest['synthesis_provenance_sha256']==sha(ROOT/'validation/synthesis_provenance.json') and
         bit.exists() and sha(bit)==manifest['bitstream']['sha256'] and
         all((ROOT/n).exists() and sha(ROOT/n)==h for n,h in manifest['reports'].items()))
     if not result['manifest_matches'] and result['status']=='IMPLEMENTED, BOARD VALIDATION PENDING':result['status']='CHECK FAILED'
+    ui_path=ROOT/'validation/ui23_tests.json'
+    address_path=ROOT/'validation/ui23_address.json'
+    ui=json.loads(ui_path.read_text(encoding='utf-8'))
+    address=json.loads(address_path.read_text(encoding='utf-8'))
+    result['ui_address_evidence_matches']=(sha(ui_path)==manifest['ui_tests_sha256'] and
+        sha(address_path)==manifest['address_tests_sha256'] and ui['status']=='PASS' and
+        ui['source_snapshot_sha256']==sha(ROOT/'validation/source_before_build.json') and
+        ui['full_raster_scenes']==14 and address['status']=='PASS' and address['checks']==16384 and
+        address['rtl_sha256']==sha(ROOT/'rtl/duo04_panel.v') and
+        all(sha(ROOT/'validation'/(n+'.log'))==h for n,h in ui['test_logs'].items()))
+    if 'reuse_proof_sha256' in ui:
+        reuse_path=ROOT/'validation/ui_test_reuse.json'
+        reuse=json.loads(reuse_path.read_text(encoding='utf-8'))
+        original_snapshot=ROOT/'validation/original_source_before_build.json'
+        original_tests=ROOT/'validation/original_ui23_tests.json'
+        old=json.loads(original_snapshot.read_text(encoding='utf-8'))
+        old_ui=json.loads(original_tests.read_text(encoding='utf-8'))
+        result['ui_reuse_matches']=(reuse['status']=='PASS' and sha(reuse_path)==ui['reuse_proof_sha256'] and
+            sha(original_snapshot)==reuse['original_snapshot_sha256']==old_ui['source_snapshot_sha256'] and
+            sha(original_tests)==reuse['original_tests_sha256'] and
+            reuse['selected_snapshot_sha256']==sha(ROOT/'validation/source_before_build.json') and
+            reuse['identical_inputs']==old['sha256'] and
+            set(snapshot['sha256'])-set(old['sha256'])=={'pnr_only.tcl'} and
+            all(snapshot['sha256'][n]==h and sha(ROOT/n)==h for n,h in old['sha256'].items()) and
+            reuse['test_logs']==old_ui['test_logs']==ui['test_logs'])
+        result['ui_address_evidence_matches'] &= result['ui_reuse_matches']
+    if 'rebuild_scripts' in manifest:
+        result['selected_rebuild_scripts_match']=all((ROOT/n).exists() and sha(ROOT/n)==h for n,h in manifest['rebuild_scripts'].items())
+        result['manifest_matches'] &= result['selected_rebuild_scripts_match']
+    if 'routing_selection_sha256' in manifest:
+        selection_path=ROOT/'validation/routing_selection.json'
+        selection=json.loads(selection_path.read_text(encoding='utf-8'))['selection']
+        result['routing_selection_matches']=(sha(selection_path)==manifest['routing_selection_sha256'] and
+            selection['selected_route_option']==manifest['selected_route_option']==result['route_option'] and
+            selection['selected_bitstream_sha256']==manifest['bitstream']['sha256'])
+        result['manifest_matches'] &= result['routing_selection_matches']
+    if not result['ui_address_evidence_matches'] or not result['manifest_matches']:
+        result['status']='CHECK FAILED'
 print(json.dumps(result,ensure_ascii=False,indent=2))
 sys.exit(0 if result['status']=='IMPLEMENTED, BOARD VALIDATION PENDING' else 1)

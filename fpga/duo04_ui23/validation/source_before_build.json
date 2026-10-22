@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-21T20:45:09.122273+08:00",
-  "expected_route_option": 1,
+  "timestamp": "2026-10-22T08:54:22.327174+08:00",
+  "expected_route_option": 2,
   "sha256": {
     "rtl/bno_i2c_hand.v": "1d62ce2397ab6f4f7eb346274aead486d6f8f91ce9639f3fdcab0b3a5bb4517f",
     "rtl/bno_i2c_host.v": "bf21821e4c2b701cebb403f885dd74d3dcbba60378fac912edda24caa1d4463f",
@@ -96,6 +96,7 @@
     "generate_ui23.py": "296810cf1f10c04569dfbeecfbfc6c1c37dc156cb8226b0e15f33d4ec83d3288",
     "ui23-assets.json": "12021adc8a2fbc7494470f33a2f94b5bb8d7084153541f75f5f40c496a2fc82f",
     "tb/tb_ui23_events.sv": "68ff7e0184c32b7dce14088e0cb7dac55c74b48b41a3aef461b934239a639964",
-    "tb/tb_ui23_panel.sv": "ff5c4c730a23bf9d97cf32e09fe13b1892964dae85fb7fd6001d24e2211cbb64"
+    "tb/tb_ui23_panel.sv": "ff5c4c730a23bf9d97cf32e09fe13b1892964dae85fb7fd6001d24e2211cbb64",
+    "pnr_only.tcl": "fff740b58abde1ab721f4631acb3c1ffbf758add7c830d482dec5d984259a98d"
   }
 }

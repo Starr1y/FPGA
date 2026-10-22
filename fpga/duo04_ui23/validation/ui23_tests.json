@@ -12,7 +12,7 @@
   "address_proof_sha256": "733984b3a81431fdee5399e57d85986326ce22eca3345c639edd90c89e226d28",
   "full_raster_scenes": 14,
   "pixels_per_scene": 307200,
-  "source_snapshot_sha256": "f0100545a779d3dd59dfeae60fc4cea73bcced7f4d12e26ff01006a2dc9c8063",
+  "source_snapshot_sha256": "1c07913ad862ed737c70850fb8d6135e004c75e2977a0b6fe0b400d03a1f6554",
   "equivalent_after_width_fix": true,
   "intentional_changed_scene": "ui23-3: disconnected IMU shows unknown centering instead of a derived result",
   "additional_scene": "ui23-13: computer input does not require or impersonate physical IMU links",
@@ -38,5 +38,7 @@
     "scope": "useful monochrome data, not inferred/routed block count or measured power"
   },
   "hardware_test": "NOT RUN",
-  "implementation_test": "See current build_status.json; not implied by UI tests"
+  "implementation_test": "See current build_status.json; not implied by UI tests",
+  "reuse_proof_sha256": "7085b222e0b1be4dfedb29ce5251f9e54a6095f7c65e08eba5299aefdade01ea",
+  "reuse_scope": "Reuse completed UI/interaction and 16384-address tests by exact RTL, ROM, generator, asset, testbench, project and constraints hashes. No second simulation run claimed."
 }

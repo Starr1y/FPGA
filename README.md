@@ -1,9 +1,13 @@
 <!-- UI23_PROJECT_START -->
-## 2026-10-21：UI23 浅色双手界面
+## 2026-10-22：UI23 浅色双手界面
 
 [独立FPGA工程](fpga/duo04_ui23/README.md) · [四页RTL仿真示例](fpga/duo04_ui23/preview/ui23-four-pages.png)
 
-按参考图实现浅色卡片、橙红/金色双手扇区、分组菜单、逐音教学和归中诊断；真实击发反馈与预选分开。**完整综合、14个页面场景和交互验证通过；布局布线进行中，尚未发布通过验收的UI23位流。** 本次仅提交FPGA相关内容，原IO22保留。
+按参考图实现浅色卡片、橙红/金色双手扇区、分组菜单、逐音教学和归中诊断；真实击发反馈与预选分开。**当前源码的综合、50MHz/25MHz时序与全部setup/hold检查通过，已发布UI23位流；实板仍待验证。** 本次仅提交FPGA相关内容，原IO22保留。
+
+采用算法2，最差setup +0.032ns、hold +0.126ns；余量较小，实板稳定性、DAC和整机延迟待测。重建使用 `build_selected.tcl`。
+
+[下载UI23位流](fpga/duo04_ui23/bitstream/tanglab_duo04_ui23.fs) · [冻结清单](fpga/duo04_ui23/FIRMWARE.json)
 <!-- UI23_PROJECT_END -->
 
 ## 2026-10-20：最新2.1上的I²S与IMU节拍优化实现
