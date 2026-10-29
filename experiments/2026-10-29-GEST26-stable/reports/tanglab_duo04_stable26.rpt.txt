@@ -1,0 +1,502 @@
+//Copyright (C)2014-2026 Gowin Semiconductor Corporation.
+//All rights reserved.
+
+
+1. PnR Messages
+
+  <Report Title>: PnR Report
+  <Design File>: C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\gwsynthesis\tanglab_duo04_stable26.vg
+  <Physical Constraints File>: C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\tanglab_duo04_stable26.cst
+  <Timing Constraints File>: C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\tanglab_duo04_stable26.sdc
+  <Tool Version>: V1.9.12.03 (64-bit)
+  <Part Number>: GW5AST-LV138PG484AC1/I0
+  <Device>: GW5AST-138
+  <Device Version>: C
+  <Created Time>:Thu Oct 29 19:26:38 2026
+
+
+2. PnR Details
+
+  Running placement:
+    Placement Phase 0: CPU time = 0h 0m 48s, Elapsed time = 0h 0m 48s
+    Placement Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Placement Phase 2: CPU time = 0h 7m 45s, Elapsed time = 0h 7m 45s
+    Placement Phase 3: CPU time = 0h 4m 17s, Elapsed time = 0h 4m 17s
+    Total Placement: CPU time = 0h 12m 53s, Elapsed time = 0h 12m 53s
+ Running routing:
+    Routing Phase 0: CPU time = 0h 0m 0.82s, Elapsed time = 0h 0m 0.82s
+    Routing Phase 1: CPU time = 1h 49m 36s, Elapsed time = 1h 49m 36s
+    Routing Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+    ERROR  (PR0004) : There are total 10893 unrouted nets
+    Total Routing: CPU time = 1h 49m 37s, Elapsed time = 1h 49m 37s
+ Generate output files:
+    CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
+
+ Total Time and Memory Usage: CPU time = 2h 2m 29s, Elapsed time = 2h 2m 29s, Peak memory usage = 2314MB
+
+
+3. Resource Usage Summary
+
+  --------------------------------------------------------------------------------
+  Resources                   | Usage                               | Utilization
+  --------------------------------------------------------------------------------
+  Logic                       | 76939/138240                        |  56%
+    --LUT,ALU,ROM16           | 74173(61069 LUT, 13104 ALU, 0 ROM16)| -
+    --SSRAM(RAM16)            | 461                                 | -
+  Register                    | 38643/139095                        |  28%
+    --Logic Register as Latch | 0/138240                            |  0%
+    --Logic Register as FF    | 38643/138240                        |  28%
+    --I/O Register as Latch   | 0/855                               |  0%
+    --I/O Register as FF      | 0/855                               |  0%
+  CLS                         | 51950/69120                         |  76%
+  I/O Port                    | 35/297                              |  12%
+  I/O Buf                     | 31                                  | -
+    --Input Buf               | 13                                  | -
+    --Output Buf              | 14                                  | -
+    --Inout Buf               | 4                                   | -
+  IOLOGIC                     | 6/285                               | 3%
+    --OSER10                  | 3
+  BSRAM                       | 129/340                             | 38%
+    --SDPB                    | 74
+    --SDPX9B                  | 16
+    --pROM                    | 37
+    --pROMX9                  | 2
+  DSP                         | 105/298                             | 36%
+    --MULT12X12               | 6
+    --MULT27X36               | 22
+    --MULTALU27X18            | 58
+  ================================================================================
+
+
+
+4. I/O Bank Usage Summary
+
+  --------------------------------------
+  I/O Bank  | Usage       | Utilization 
+  --------------------------------------
+  bank 2   | 16/50       | 32%         
+  bank 3   | 8/50        | 16%         
+  bank 4   | 1/50        | 2%          
+  bank 5   | 9/35        | 26%         
+  bank 6   | 0/50        | 0%          
+  bank 7   | 1/50        | 2%          
+  bank 10  | 0/12        | 0%          
+  ======================================
+
+
+5. Clock Resource Usage Summary
+
+  ------------------------------------------
+  Clock Resource| Usage         | Utilization 
+  ------------------------------------------
+  PRIMARY       | 8/8           | 100%
+  LW            | 8/8           | 100%
+  GCLK_PIN      | 3/24          | 13%
+  PLL           | 1/12          | 9%
+  ==========================================
+
+
+6. Global Clock Signals
+
+  -------------------------------------------
+  Signal         | Global Clock   | Location
+  -------------------------------------------
+  clk_d          | PRIMARY        |  PBR3
+  pixel_clk      | PRIMARY        |  PTR2 PTR3 PBR3
+  core_clk       | PRIMARY        |  PTR0 PTR1 PTR2 PTR3 PBR0 PBR1 PBR2 PBR3
+  synth/audio/voice_3_41| PRIMARY        |  PTR0 PTR1
+  synth/audio/voice[0]| PRIMARY        |  PTR0 PTR1 PBR0 PBR1
+  synth/audio/voice[1]| PRIMARY        |  PTR0 PTR1 PBR0 PBR1
+  synth/audio/voice[2]| PRIMARY        |  PTR0 PTR1 PBR0 PBR1
+  synth/audio/voice[3]| PRIMARY        |  PTR0 PTR1 PBR0 PBR1
+  n118743_3      | LW             |  -
+  serial_clk     | LW             |  -
+  n1651_5        | LW             |  -
+  synth/audio/n10753_11| LW             |  -
+  synth/audio/n12_10| LW             |  -
+  synth/audio/n12_11| LW             |  -
+  display/status_cdc/n6_3| LW             |  -
+  sensors/n922_6 | LW             |  -
+  serial_clk     | HCLK           | BANK3_HCLK3
+  ===========================================
+
+
+7. Pinout by Port Name
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Port Name          | Diff Pair | Loc./Bank     | Constraint | Dir.  | Site     | CFG             | IO Type    | Drive | Pull Mode | PCI Clamp | Hysteresis | Open Drain | Vref       | Single Resistor | Diff Resistor | BankVccio  | Pull Strength | Ctle         
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk                | -         | V22/4         | Y          | in    | IOB104[B] | EMCCLK          | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+reset_key          | -         | F4/7          | Y          | in    | IOL1[A]  | -               | LVCMOS15   | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 1.5        | MEDIUM        | NONE         
+key0_n             | -         | AA13/5        | Y          | in    | IOB89[A] | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+key1_n             | -         | Y12/5         | Y          | in    | IOB60[B] | SGCLKC_6/BPLL0_C_IN0/BPLL1_C_IN0 | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+key2_n             | -         | AB13/5        | Y          | in    | IOB89[B] | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+pc_rx              | -         | V14/5         | Y          | in    | IOB66[B] | MGCLKC_7/BPLL0_C_FB0/BPLL1_C_FB0 | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+encoder_a          | -         | E14/2         | Y          | in    | IOR2[B]  | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+encoder_b          | -         | E13/2         | Y          | in    | IOR2[A]  | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+encoder_button_n   | -         | C15/2         | Y          | in    | IOR8[B]  | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+wrist_button_n[0]  | -         | D15/2         | Y          | in    | IOR4[B]  | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+wrist_button_n[1]  | -         | D14/2         | Y          | in    | IOR4[A]  | -               | LVCMOS33   | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_int_n[0]       | -         | E16/2         | Y          | in    | IOR6[A]  | -               | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_int_n[1]       | -         | E17/2         | Y          | in    | IOR13[B] | -               | LVCMOS33   | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+hp_bck             | -         | Y17/5         | Y          | out   | IOB91[A] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+hp_ws              | -         | AB17/5        | Y          | out   | IOB80[B] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+hp_din             | -         | AA16/5        | Y          | out   | IOB78[B] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+pa_en              | -         | AB16/5        | Y          | out   | IOB80[A] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+pc_tx              | -         | U15/5         | Y          | out   | IOB68[A] | SGCLKT_7/BPLL0_T_FB1/BPLL1_T_FB1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+i2s_bck            | -         | C14/2         | Y          | out   | IOR8[A]  | -               | LVCMOS33   | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+i2s_ws             | -         | B13/2         | Y          | out   | IOR17[B] | -               | LVCMOS33   | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+i2s_dout           | -         | C13/2         | Y          | out   | IOR17[A] | -               | LVCMOS33   | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_clk_p_0       | tmds_clk_n_0 | G15/3         | Y          | out   | IOR105[A] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_clk_n_0       | tmds_clk_p_0 | G16/3         | Y          | out   | IOR105[B] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_p_0[0]      | tmds_d_n_0[0] | J14/3         | Y          | out   | IOR103[A] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_p_0[1]      | tmds_d_n_0[1] | J15/3         | Y          | out   | IOR101[A] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_p_0[2]      | tmds_d_n_0[2] | K17/3         | Y          | out   | IOR58[A] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_n_0[0]      | tmds_d_p_0[0] | H14/3         | Y          | out   | IOR103[B] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_n_0[1]      | tmds_d_p_0[1] | H15/3         | Y          | out   | IOR101[B] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+tmds_d_n_0[2]      | tmds_d_p_0[2] | J17/3         | Y          | out   | IOR58[B] | -               | LVCMOS33D  | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_scl[0]         | -         | E19/2         | Y          | io    | IOR29[A] | SGCLKT_0/RPLL0_T_IN0/RPLL1_T_IN0 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_scl[1]         | -         | D19/2         | Y          | io    | IOR29[B] | SGCLKC_0/RPLL0_C_IN0/RPLL1_C_IN0 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_sda[0]         | -         | C18/2         | Y          | io    | IOR31[A] | MGCLKT_0/RPLL0_T_IN1/RPLL1_T_IN1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_sda[1]         | -         | C19/2         | Y          | io    | IOR31[B] | MGCLKC_0/RPLL0_C_IN1/RPLL1_C_IN1 | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_rst_n[0]       | -         | D20/2         | Y          | io    | IOR47[A] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+imu_rst_n[1]       | -         | F16/2         | Y          | io    | IOR13[A] | -               | LVCMOS33   | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3        | MEDIUM        | NONE         
+==========================================================================================================================================================================================================================
+
+
+
+
+8. All Package Pins
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Loc./Bank| Signal             | Dir.  | Site     | CFG             | IO Type  | Drive | Pull Mode | PCI Clamp | Hysteresis | Open Drain | Vref       | Single Resistor | Diff Resistor | Bank Vccio | Pull Strength | Ctle         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AB11/5   | -                  | out   | IOB51[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB12/5   | -                  | out   | IOB51[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA9/5    | -                  | out   | IOB53[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB10/5   | -                  | out   | IOB53[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA10/5   | -                  | out   | IOB56[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA11/5   | -                  | out   | IOB56[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V10/5    | -                  | out   | IOB58[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W10/5    | -                  | out   | IOB58[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y11/5    | -                  | out   | IOB60[A] | SGCLKT_6/BPLL0_T_IN0/BPLL1_T_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y12/5    | key1_n             | in    | IOB60[B] | SGCLKC_6/BPLL0_C_IN0/BPLL1_C_IN0 | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+W11/5    | -                  | out   | IOB62[A] | MGCLKT_6/BPLL0_T_IN1/BPLL1_T_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W12/5    | -                  | out   | IOB62[B] | MGCLKC_6/BPLL0_C_IN1/BPLL1_C_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V13/5    | -                  | out   | IOB66[A] | MGCLKT_7/BPLL0_T_FB0/BPLL1_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V14/5    | pc_rx              | in    | IOB66[B] | MGCLKC_7/BPLL0_C_FB0/BPLL1_C_FB0 | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+U15/5    | pc_tx              | out   | IOB68[A] | SGCLKT_7/BPLL0_T_FB1/BPLL1_T_FB1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+V15/5    | -                  | out   | IOB68[B] | SGCLKC_7/BPLL0_C_FB1/BPLL1_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T14/5    | -                  | out   | IOB70[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T15/5    | -                  | out   | IOB70[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W15/5    | -                  | out   | IOB72[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W16/5    | -                  | out   | IOB72[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T16/5    | -                  | out   | IOB76[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U16/5    | -                  | out   | IOB76[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y16/5    | -                  | out   | IOB78[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA16/5   | hp_din             | out   | IOB78[B] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+AB16/5   | pa_en              | out   | IOB80[A] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+AB17/5   | hp_ws              | out   | IOB80[B] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+AA15/5   | -                  | out   | IOB83[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB15/5   | -                  | out   | IOB83[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W14/5    | -                  | out   | IOB85[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y14/5    | -                  | out   | IOB85[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y13/5    | -                  | out   | IOB87[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA14/5   | -                  | out   | IOB87[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA13/5   | key0_n             | in    | IOB89[A] | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+AB13/5   | key2_n             | in    | IOB89[B] | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+Y17/5    | hp_bck             | out   | IOB91[A] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+P20/4    | -                  | out   | IOB92[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P22/4    | -                  | out   | IOB93[A] | D00/MOSI        | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R22/4    | -                  | out   | IOB93[B] | D01/DIN         | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P21/4    | -                  | out   | IOB95[A] | D02             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R21/4    | -                  | out   | IOB95[B] | D03             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T21/4    | -                  | out   | IOB97[A] | D04             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U21/4    | -                  | out   | IOB97[B] | D05/SI          | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P19/4    | -                  | out   | IOB99[A] | D06/SSPI_CLK    | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R19/4    | -                  | out   | IOB99[B] | D07/SSPI_WPN    | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T19/4    | -                  | out   | IOB102[A] | MCS_N           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T20/4    | -                  | out   | IOB102[B] | D08/SO          | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U22/4    | -                  | out   | IOB104[A] | PUDC_B          | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V22/4    | clk                | in    | IOB104[B] | EMCCLK          | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+V17/4    | -                  | out   | IOB106[A] | CSI_B           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W17/4    | -                  | out   | IOB106[B] | D31             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA18/4   | -                  | out   | IOB108[A] | D30             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB18/4   | -                  | out   | IOB108[B] | D29             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA19/4   | -                  | out   | IOB110[A] | RDWR            | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB20/4   | -                  | out   | IOB110[B] | DOUT_CSO_B      | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U17/4    | -                  | out   | IOB112[A] | D28             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U18/4    | -                  | out   | IOB112[B] | D27             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V18/4    | -                  | out   | IOB114[A] | SGCLKT_4/BPLL2_T_FB1/BPLL3_T_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V19/4    | -                  | out   | IOB114[B] | SGCLKC_4/BPLL2_C_FB1/BPLL3_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y18/4    | -                  | out   | IOB116[A] | MGCLKT_4/BPLL2_T_FB0/BPLL3_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y19/4    | -                  | out   | IOB116[B] | MGCLKC_4/BPLL2_C_FB0/BPLL3_C_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U20/4    | -                  | out   | IOB120[A] | SGCLKT_5/BPLL2_T_IN0/BPLL3_T_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V20/4    | -                  | out   | IOB120[B] | SGCLKC_5/BPLL2_C_IN0/BPLL3_C_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W19/4    | -                  | out   | IOB122[A] | MGCLKT_5/BPLL2_T_IN1/BPLL3_T_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W20/4    | -                  | out   | IOB122[B] | MGCLKC_5/BPLL2_C_IN1/BPLL3_C_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W21/4    | -                  | out   | IOB124[A] | D09             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W22/4    | -                  | out   | IOB124[B] | D10             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA20/4   | -                  | out   | IOB126[A] | D11             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA21/4   | -                  | out   | IOB126[B] | D12             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB21/4   | -                  | out   | IOB129[A] | D14             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB22/4   | -                  | out   | IOB129[B] | D15             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y21/4    | -                  | out   | IOB131[A] | SSPI_CS_N       | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y22/4    | -                  | out   | IOB131[B] | D13             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P14/4    | -                  | out   | IOB133[A] | D26             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R14/4    | -                  | out   | IOB133[B] | D25             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N17/4    | -                  | out   | IOB135[A] | CLKHOLD_N       | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P17/4    | -                  | out   | IOB135[B] | D22             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R18/4    | -                  | out   | IOB138[A] | D24             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T18/4    | -                  | out   | IOB138[B] | D23             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P15/4    | -                  | out   | IOB140[A] | D21             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R16/4    | -                  | out   | IOB140[B] | D20             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N13/4    | -                  | out   | IOB142[A] | D19             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N14/4    | -                  | out   | IOB142[B] | D18             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+P16/4    | -                  | out   | IOB144[A] | D17             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R17/4    | -                  | out   | IOB144[B] | D16             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N15/4    | -                  | out   | IOB146[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U13/10   | -                  | out   | IOB169[A] | TDO             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T13/10   | -                  | out   | IOB169[B] | TMS             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U12/10   | -                  | out   | IOB171[A] | READY           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G11/10   | -                  | out   | IOB171[B] | DONE            | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V12/10   | -                  | out   | IOB173[A] | TCK             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R13/10   | -                  | out   | IOB173[B] | TDI             | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U11/10   | -                  | out   | IOB175[A] | MODE0           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L12/10   | -                  | out   | IOB175[B] | CCLK            | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U10/10   | -                  | out   | IOB177[A] | MODE1           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U9/10    | -                  | out   | IOB177[B] | MODE2           | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U8/10    | -                  | out   | IOB179[A] | CFGBVS          | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N12/10   | -                  | out   | IOB179[B] | RECONFIG_N      | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+F4/7     | reset_key          | in    | IOL1[A]  | -               | LVCMOS15 | OFF   | DOWN      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 1.5   | MEDIUM        | NONE         
+B1/7     | -                  | out   | IOL2[A]  | ADCINCK0        | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+A1/7     | -                  | out   | IOL2[B]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+E1/7     | -                  | out   | IOL4[A]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+D1/7     | -                  | out   | IOL4[B]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+C2/7     | -                  | out   | IOL6[A]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+B2/7     | -                  | out   | IOL6[B]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+E2/7     | -                  | out   | IOL8[A]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+D2/7     | -                  | out   | IOL8[B]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+G1/7     | -                  | out   | IOL11[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+F1/7     | -                  | out   | IOL11[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+F3/7     | -                  | out   | IOL13[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+E3/7     | -                  | out   | IOL13[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+K1/7     | -                  | out   | IOL15[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+J1/7     | -                  | out   | IOL15[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+H2/7     | -                  | out   | IOL17[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+G2/7     | -                  | out   | IOL17[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+J5/7     | -                  | out   | IOL20[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+H5/7     | -                  | out   | IOL20[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+K2/7     | -                  | out   | IOL22[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+J2/7     | -                  | out   | IOL22[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+H4/7     | -                  | out   | IOL24[A] | MGCLKT_11/LPLL0_T_IN1/LPLL1_T_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+G4/7     | -                  | out   | IOL24[B] | MGCLKC_11/LPLL0_C_IN1/LPLL1_C_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+H3/7     | -                  | out   | IOL26[A] | SGCLKT_11/LPLL0_T_IN0/LPLL1_T_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+G3/7     | -                  | out   | IOL26[B] | SGCLKC_11/LPLL0_C_IN0/LPLL1_C_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+K4/7     | -                  | out   | IOL29[A] | MGCLKT_10/LPLL0_T_FB1/LPLL1_T_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+J4/7     | -                  | out   | IOL29[B] | MGCLKC_10/LPLL0_C_FB1/LPLL1_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+L3/7     | -                  | out   | IOL31[A] | SGCLKT_10/LPLL0_T_FB0/LPLL1_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+K3/7     | -                  | out   | IOL31[B] | SGCLKC_10/LPLL0_C_FB0/LPLL1_C_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+M3/7     | -                  | out   | IOL33[A] | FBTEST_L0       | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+M2/7     | -                  | out   | IOL33[B] | CLKTEST_L0      | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+M1/7     | -                  | out   | IOL35[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+L1/7     | -                  | out   | IOL35[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+K6/7     | -                  | out   | IOL38[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+J6/7     | -                  | out   | IOL38[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+L5/7     | -                  | out   | IOL40[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+L4/7     | -                  | out   | IOL40[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+N4/7     | -                  | out   | IOL42[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+N3/7     | -                  | out   | IOL42[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+R1/7     | -                  | out   | IOL44[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+P1/7     | -                  | out   | IOL44[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+P2/7     | -                  | out   | IOL47[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+N2/7     | -                  | out   | IOL47[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+P5/7     | -                  | out   | IOL49[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+P4/7     | -                  | out   | IOL49[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+M6/7     | -                  | out   | IOL51[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+M5/7     | -                  | out   | IOL51[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+P6/7     | -                  | out   | IOL53[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+N5/7     | -                  | out   | IOL53[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+L6/7     | -                  | out   | IOL55[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 1.5   | UNKNOWN       | NONE         
+T1/6     | -                  | out   | IOL56[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U1/6     | -                  | out   | IOL56[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U2/6     | -                  | out   | IOL58[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V2/6     | -                  | out   | IOL58[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U3/6     | -                  | out   | IOL60[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V3/6     | -                  | out   | IOL60[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W2/6     | -                  | out   | IOL62[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y2/6     | -                  | out   | IOL62[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R3/6     | -                  | out   | IOL65[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R2/6     | -                  | out   | IOL65[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W1/6     | -                  | out   | IOL67[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y1/6     | -                  | out   | IOL67[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y3/6     | -                  | out   | IOL69[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA3/6    | -                  | out   | IOL69[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA1/6    | -                  | out   | IOL71[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB1/6    | -                  | out   | IOL71[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T3/6     | -                  | out   | IOL73[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB3/6    | -                  | out   | IOL74[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB2/6    | -                  | out   | IOL74[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA5/6    | -                  | out   | IOL76[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB5/6    | -                  | out   | IOL76[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y4/6     | -                  | out   | IOL78[A] | SGCLKT_8/LPLL2_T_IN0/LPLL3_T_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA4/6    | -                  | out   | IOL78[B] | SGCLKC_8/LPLL2_C_IN0/LPLL3_C_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V4/6     | -                  | out   | IOL80[A] | MGCLKT_8/LPLL2_T_IN1/LPLL3_T_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W4/6     | -                  | out   | IOL80[B] | MGCLKC_8/LPLL2_C_IN1/LPLL3_C_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R4/6     | -                  | out   | IOL83[A] | MGCLKT_9/LPLL2_T_FB1/LPLL3_T_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T4/6     | -                  | out   | IOL83[B] | MGCLKC_9/LPLL2_C_FB1/LPLL3_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T5/6     | -                  | out   | IOL85[A] | SGCLKT_9/LPLL2_T_FB0/LPLL3_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U5/6     | -                  | out   | IOL85[B] | SGCLKC_9/LPLL2_C_FB0/LPLL3_C_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U6/6     | -                  | out   | IOL87[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V5/6     | -                  | out   | IOL87[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+R6/6     | -                  | out   | IOL89[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+T6/6     | -                  | out   | IOL89[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y6/6     | -                  | out   | IOL92[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA6/6    | -                  | out   | IOL92[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W6/6     | -                  | out   | IOL94[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W5/6     | -                  | out   | IOL94[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V9/6     | -                  | out   | IOL96[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V8/6     | -                  | out   | IOL96[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB7/6    | -                  | out   | IOL98[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB6/6    | -                  | out   | IOL98[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AA8/6    | -                  | out   | IOL101[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+AB8/6    | -                  | out   | IOL101[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y8/6     | -                  | out   | IOL103[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y7/6     | -                  | out   | IOL103[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W9/6     | -                  | out   | IOL105[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+Y9/6     | -                  | out   | IOL105[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+V7/6     | -                  | out   | IOL107[A] | MCKTEST         | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+W7/6     | -                  | out   | IOL107[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+U7/6     | -                  | out   | IOL109[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+F15/2    | -                  | out   | IOR1[A]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+E13/2    | encoder_b          | in    | IOR2[A]  | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+E14/2    | encoder_a          | in    | IOR2[B]  | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+D14/2    | wrist_button_n[1]  | in    | IOR4[A]  | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+D15/2    | wrist_button_n[0]  | in    | IOR4[B]  | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+E16/2    | imu_int_n[0]       | in    | IOR6[A]  | -               | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+D16/2    | -                  | out   | IOR6[B]  | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+C14/2    | i2s_bck            | out   | IOR8[A]  | -               | LVCMOS33 | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+C15/2    | encoder_button_n   | in    | IOR8[B]  | -               | LVCMOS33 | OFF   | UP        | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+F13/2    | -                  | out   | IOR11[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+F14/2    | -                  | out   | IOR11[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+F16/2    | imu_rst_n[1]       | out   | IOR13[A] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+E17/2    | imu_int_n[1]       | in    | IOR13[B] | -               | LVCMOS33 | OFF   | NONE      | OFF       | ON         | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+A13/2    | -                  | out   | IOR15[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A14/2    | -                  | out   | IOR15[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+C13/2    | i2s_dout           | out   | IOR17[A] | -               | LVCMOS33 | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+B13/2    | i2s_ws             | out   | IOR17[B] | -               | LVCMOS33 | 4     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+A15/2    | -                  | out   | IOR20[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A16/2    | -                  | out   | IOR20[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B15/2    | -                  | out   | IOR22[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B16/2    | -                  | out   | IOR22[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B17/2    | -                  | out   | IOR24[A] | SGCLKT_1/RPLL0_T_FB0/RPLL1_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B18/2    | -                  | out   | IOR24[B] | SGCLKC_1/RPLL0_C_FB0/RPLL1_C_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+D17/2    | -                  | out   | IOR26[A] | MGCLKT_1/RPLL0_T_FB1/RPLL1_T_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+C17/2    | -                  | out   | IOR26[B] | MGCLKC_1/RPLL0_C_FB1/RPLL1_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+E19/2    | imu_scl[0]         | io    | IOR29[A] | SGCLKT_0/RPLL0_T_IN0/RPLL1_T_IN0 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+D19/2    | imu_scl[1]         | io    | IOR29[B] | SGCLKC_0/RPLL0_C_IN0/RPLL1_C_IN0 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+C18/2    | imu_sda[0]         | io    | IOR31[A] | MGCLKT_0/RPLL0_T_IN1/RPLL1_T_IN1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+C19/2    | imu_sda[1]         | io    | IOR31[B] | MGCLKC_0/RPLL0_C_IN1/RPLL1_C_IN1 | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+F19/2    | -                  | out   | IOR33[A] | FBTEST_R0       | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+F20/2    | -                  | out   | IOR33[B] | CLKTEST_R0      | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+F18/2    | -                  | out   | IOR35[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+E18/2    | -                  | out   | IOR35[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A18/2    | -                  | out   | IOR38[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A19/2    | -                  | out   | IOR38[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B20/2    | -                  | out   | IOR40[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A20/2    | -                  | out   | IOR40[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+C22/2    | -                  | out   | IOR42[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B22/2    | -                  | out   | IOR42[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+B21/2    | -                  | out   | IOR44[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+A21/2    | -                  | out   | IOR44[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+D20/2    | imu_rst_n[0]       | out   | IOR47[A] | -               | LVCMOS33 | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+C20/2    | -                  | out   | IOR47[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+E22/2    | -                  | out   | IOR49[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+D22/2    | -                  | out   | IOR49[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+E21/2    | -                  | out   | IOR51[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+D21/2    | -                  | out   | IOR51[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G21/2    | -                  | out   | IOR53[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G22/2    | -                  | out   | IOR53[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+F21/2    | -                  | out   | IOR55[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M13/3    | -                  | out   | IOR56[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L13/3    | -                  | out   | IOR56[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K17/3    | tmds_d_p_0[2]      | out   | IOR58[A] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+J17/3    | tmds_d_n_0[2]      | out   | IOR58[B] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+K13/3    | -                  | out   | IOR60[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K14/3    | -                  | out   | IOR60[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L14/3    | -                  | out   | IOR62[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L15/3    | -                  | out   | IOR62[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L16/3    | -                  | out   | IOR65[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K16/3    | -                  | out   | IOR65[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M15/3    | -                  | out   | IOR67[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M16/3    | -                  | out   | IOR67[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H20/3    | -                  | out   | IOR69[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G20/3    | -                  | out   | IOR69[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M21/3    | -                  | out   | IOR71[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L21/3    | -                  | out   | IOR71[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M17/3    | -                  | out   | IOR73[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J22/3    | -                  | out   | IOR74[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H22/3    | -                  | out   | IOR74[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K21/3    | -                  | out   | IOR76[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K22/3    | -                  | out   | IOR76[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J20/3    | -                  | out   | IOR78[A] | SGCLKT_3/RPLL2_T_FB0/RPLL3_T_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J21/3    | -                  | out   | IOR78[B] | SGCLKC_3/RPLL2_C_FB0/RPLL3_C_FB0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J19/3    | -                  | out   | IOR80[A] | MGCLKT_3/RPLL2_T_FB1/RPLL3_T_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H19/3    | -                  | out   | IOR80[B] | MGCLKC_3/RPLL2_C_FB1/RPLL3_C_FB1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K18/3    | -                  | out   | IOR83[A] | MGCLKT_2/RPLL2_T_IN1/RPLL3_T_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+K19/3    | -                  | out   | IOR83[B] | MGCLKC_2/RPLL2_C_IN1/RPLL3_C_IN1 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L19/3    | -                  | out   | IOR85[A] | SGCLKT_2/RPLL2_T_IN0/RPLL3_T_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L20/3    | -                  | out   | IOR85[B] | SGCLKC_2/RPLL2_C_IN0/RPLL3_C_IN0 | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M18/3    | -                  | out   | IOR87[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+L18/3    | -                  | out   | IOR87[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N22/3    | -                  | out   | IOR89[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M22/3    | -                  | out   | IOR89[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N18/3    | -                  | out   | IOR92[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N19/3    | -                  | out   | IOR92[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+N20/3    | -                  | out   | IOR94[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+M20/3    | -                  | out   | IOR94[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H17/3    | -                  | out   | IOR96[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H18/3    | -                  | out   | IOR96[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+H13/3    | -                  | out   | IOR98[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G13/3    | -                  | out   | IOR98[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J15/3    | tmds_d_p_0[1]      | out   | IOR101[A] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+H15/3    | tmds_d_n_0[1]      | out   | IOR101[B] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+J14/3    | tmds_d_p_0[0]      | out   | IOR103[A] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+H14/3    | tmds_d_n_0[0]      | out   | IOR103[B] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+G15/3    | tmds_clk_p_0       | out   | IOR105[A] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+G16/3    | tmds_clk_n_0       | out   | IOR105[B] | -               | LVCMOS33D | 8     | NONE      | OFF       | OFF        | OFF        | OFF        | OFF             | OFF           | 3.3   | MEDIUM        | NONE         
+G17/3    | -                  | out   | IOR107[A] | ADCINCK1        | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+G18/3    | -                  | out   | IOR107[B] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+J16/3    | -                  | out   | IOR109[A] | -               | UNKNOWN  | UNKNOWN | UNKNOWN   | UNKNOWN   | UNKNOWN    | UNKNOWN    | UNKNOWN    | UNKNOWN         | UNKNOWN       | 3.3   | UNKNOWN       | NONE         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+N9/ADC   | -                  | in    | ADCTN  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+N10/ADC  | -                  | in    | ADCTP  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+M9/ADC   | -                  | in    | ADCVN  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+L10/ADC  | -                  | in    | ADCVP  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+A8/Q0    | -                  | in    | Q0_LN0_RXM_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+B8/Q0    | -                  | in    | Q0_LN0_RXP_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+A4/Q0    | -                  | out   | Q0_LN0_TXM_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+B4/Q0    | -                  | out   | Q0_LN0_TXP_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+C9/Q0    | -                  | in    | Q0_LN1_RXM_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+D9/Q0    | -                  | in    | Q0_LN1_RXP_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+C7/Q0    | -                  | out   | Q0_LN1_TXM_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+D7/Q0    | -                  | out   | Q0_LN1_TXP_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+A10/Q0   | -                  | in    | Q0_LN2_RXM_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+B10/Q0   | -                  | in    | Q0_LN2_RXP_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+A6/Q0    | -                  | out   | Q0_LN2_TXM_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+B6/Q0    | -                  | out   | Q0_LN2_TXP_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+C11/Q0   | -                  | in    | Q0_LN3_RXM_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+D11/Q0   | -                  | in    | Q0_LN3_RXP_I  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+C5/Q0    | -                  | out   | Q0_LN3_TXM_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+D5/Q0    | -                  | out   | Q0_LN3_TXP_O  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+E6/Q0    | -                  | in    | Q0_REFCLKM_0  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+E10/Q0   | -                  | in    | Q0_REFCLKM_1  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+F6/Q0    | -                  | in    | Q0_REFCLKP_0  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+F10/Q0   | -                  | in    | Q0_REFCLKP_1  | -               | -          | -     | -         | -         | -          | -          | -          | -               | -             | -          | -             | -            
+===============================================================================================================================================================================================
+
+

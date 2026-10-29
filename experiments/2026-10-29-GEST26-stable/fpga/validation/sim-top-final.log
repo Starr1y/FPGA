@@ -1,0 +1,68 @@
+compile 0 : [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/duo04_panel.v" into library work
+INFO: [VRFC 10-311] analyzing module duo04_panel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/stereo_serial_output.v" into library work
+INFO: [VRFC 10-311] analyzing module stereo_serial_output
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/lesson_event_pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module lesson_event_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/event_register_slice.v" into library work
+INFO: [VRFC 10-311] analyzing module event_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/wrist_gesture.v" into library work
+INFO: [VRFC 10-311] analyzing module wrist_gesture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/prehit_snapshot.v" into library work
+INFO: [VRFC 10-311] analyzing module prehit_snapshot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stable26_top
+
+tb_stable26_top-elaborate 0 imbres_default
+Compiling module work.dual_audio_core(VOICES=32,MASTER...
+Compiling module work.two_hand_synth(ENABLE_EXPRESSION...
+Compiling module work.stereo_fx_default
+Compiling module work.stereo_makeup_limiter
+Compiling module work.stereo_output_path(MAKEUP_SHIFT=...
+Compiling module work.sine_calibrator
+Compiling module work.stereo_serial_output
+Compiling module work.duo04_keys
+Compiling module work.video_duo_hdmi
+Compiling module work.frame_tx
+Compiling module work.uart_tx
+Compiling module work.wrist_gesture
+Compiling module work.release_button(LONG_MS=800)
+Compiling module work.performance_controls(LONG_MS=800...
+Compiling module work.duo04_menu
+Compiling module work.prehit_snapshot
+Compiling module work.i2c_byte_master(HALF_DIV=65)
+Compiling module work.shtp_i2c_link(HALF_DIV=65)
+Compiling module work.shtp_report_decode(REPORT_BACKPR...
+Compiling module work.bno_i2c_host(REPORT_BACKPRESSURE...
+Compiling module work.pose_atan2
+Compiling module work.pose_isqrt
+Compiling module work.quaternion_pose_default
+Compiling module work.gesture_control_default
+Compiling module work.expression_stream_guard(POSE_HZ=...
+Compiling module work.hand_expression(POSE_HZ=200)
+Compiling module work.bno_i2c_hand(RESET_TICKS=500000,...
+Compiling module work.two_hand_i2c_core_default
+Compiling module work.lesson_event_pipeline
+Compiling module work.duo04_lesson
+Compiling module work.top_duo04(BOOT_CYCLES=16)
+Compiling module work.tb_stable26_top
+Built simulation snapshot tb_stable26_top_sim
+
+tb_stable26_top 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:42:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stable26_top_sim/xsim_script.tcl
+# xsim {tb_stable26_top_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS diagnostic layout / output-only mute / immediate hit notification / 25ms cadence
+$finish called at time : 1120 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_top.sv" Line 38
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:42:07 2026...
+

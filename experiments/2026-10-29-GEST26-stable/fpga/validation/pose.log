@@ -1,0 +1,45 @@
+compile 0 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/pose_math.v" into library work
+INFO: [VRFC 10-311] analyzing module pose_atan2
+INFO: [VRFC 10-311] analyzing module pose_isqrt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/quaternion_pose.v" into library work
+INFO: [VRFC 10-311] analyzing module quaternion_pose
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/tasks/2026-10-25/tanglab-stable26/pose-axis-check/tb_pose_axes.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pose_axes
+
+elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_pose_axes -s axes_sim -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'pose_sequence' remains unconnected for this instance [D:/codex/tasks/2026-10-25/tanglab-stable26/pose-axis-check/tb_pose_axes.sv:7]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.pose_atan2
+Compiling module work.pose_isqrt
+Compiling module work.quaternion_pose(CLK_HZ=1000,CAL_...
+Compiling module work.tb_pose_axes
+Built simulation snapshot axes_sim
+
+run 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:28:35 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/axes_sim/xsim_script.tcl
+# xsim {axes_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+CHECKS         375 FAILURES           0
+TB_PASS
+$finish called at time : 4643450 ns : File "D:/codex/tasks/2026-10-25/tanglab-stable26/pose-axis-check/tb_pose_axes.sv" Line 415
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:28:37 2026...
+

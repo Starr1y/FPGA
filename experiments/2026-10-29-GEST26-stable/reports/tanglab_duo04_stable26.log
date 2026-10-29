@@ -1,0 +1,21 @@
+Reading netlist file: "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\gwsynthesis\tanglab_duo04_stable26.vg"
+Parsing netlist file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\gwsynthesis\tanglab_duo04_stable26.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\tanglab_duo04_stable26.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+ERROR  (PR0004) : There are total 10893 unrouted nets
+Generate file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\pnr\tanglab_duo04_stable26.pin.html" completed
+Generate file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\pnr\tanglab_duo04_stable26.rpt.html" completed
+Generate file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-stable26\impl\pnr\tanglab_duo04_stable26.rpt.txt" completed
+Thu Oct 29 19:26:39 2026
+

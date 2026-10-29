@@ -1,0 +1,271 @@
+compile 0 : [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_report_backpressure.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_report_backpressure
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_prehit_snapshot.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_prehit_snapshot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_zones.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stable26_zones
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_hand.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stable26_hand
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable25_wrist.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_stable25_wrist
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_wrist_group.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_wrist_group
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_duo04_32.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_duo04_32
+
+tb_report_backpressure-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_report_backpressure -s tb_report_backpressure_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'quat_sequence' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_report_backpressure.sv:6]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.shtp_report_decode(REPORT_BACKPR...
+Compiling module work.tb_report_backpressure
+Built simulation snapshot tb_report_backpressure_sim
+
+tb_report_backpressure 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:39:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_report_backpressure_sim/xsim_script.tcl
+# xsim {tb_report_backpressure_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS batched quaternion and linear reports honor readiness without loss
+$finish called at time : 2490 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_report_backpressure.sv" Line 26
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:39:40 2026...
+
+tb_prehit_snapshot-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_prehit_snapshot -s tb_prehit_snapshot_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.prehit_snapshot
+Compiling module work.tb_prehit_snapshot
+Built simulation snapshot tb_prehit_snapshot_sim
+
+tb_prehit_snapshot 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:39:42 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_prehit_snapshot_sim/xsim_script.tcl
+# xsim {tb_prehit_snapshot_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS prehit coherent pairing, 30/80ms, out-of-order, epoch, wrap, invalid
+$finish called at time : 2280 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_prehit_snapshot.sv" Line 25
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:39:44 2026...
+
+tb_stable26_zones-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_stable26_zones -s tb_stable26_zones_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'snapshot_required' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_zones.sv:6]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gesture_control(CLK_HZ=1000)
+Compiling module work.tb_stable26_zones
+Built simulation snapshot tb_stable26_zones_sim
+
+tb_stable26_zones 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:39:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stable26_zones_sim/xsim_script.tcl
+# xsim {tb_stable26_zones_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS 7/5/12 zone symmetric endpoints,20/45deg,pure pitch,stale display retention
+$finish called at time : 19250 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_zones.sv" Line 26
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:39:48 2026...
+
+tb_stable26_hand-elaborate 0  -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'hit_snapshot_tick' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_hand.sv:8]
+WARNING: [VRFC 10-3645] port 'cs_n' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/bno_i2c_hand.v:97]
+WARNING: [VRFC 10-3645] port 'discontinuities' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/rtl/bno_i2c_hand.v:128]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.prehit_snapshot
+Compiling module work.i2c_byte_master(HALF_DIV=65,TIME...
+Compiling module work.shtp_i2c_link(CLK_HZ=100000,HALF...
+Compiling module work.shtp_report_decode(REPORT_BACKPR...
+Compiling module work.bno_i2c_host(REPORT_BACKPRESSURE...
+Compiling module work.pose_atan2
+Compiling module work.pose_isqrt
+Compiling module work.quaternion_pose(CLK_HZ=100000)
+Compiling module work.gesture_control(CLK_HZ=100000)
+Compiling module work.expression_stream_guard(CLK_HZ=1...
+Compiling module work.hand_expression(POSE_HZ=200)
+Compiling module work.bno_i2c_hand(CLK_HZ=100000)
+Compiling module work.tb_stable26_hand
+Built simulation snapshot tb_stable26_hand_sim
+
+tb_stable26_hand 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:39:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stable26_hand_sim/xsim_script.tcl
+# xsim {tb_stable26_hand_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS real hand trigger + paired prehit snapshot + offline/recovery guard
+$finish called at time : 235080 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable26_hand.sv" Line 28
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:39:55 2026...
+
+tb_stable25_wrist-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_stable25_wrist -s tb_stable25_wrist_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.wrist_gesture(CLK_HZ=1000)
+Compiling module work.tb_stable25_wrist
+Built simulation snapshot tb_stable25_wrist_sim
+
+tb_stable25_wrist 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:39:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_stable25_wrist_sim/xsim_script.tcl
+# xsim {tb_stable25_wrist_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS stable octave loss/recovery and direct C2/C5 within65ms, prehit snapshot, gesture glide
+$finish called at time : 22360 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_stable25_wrist.sv" Line 37
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:39:59 2026...
+
+tb_wrist_group-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_wrist_group -s tb_wrist_group_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'release_ack' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_wrist_group.sv:7]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dual_note_map
+Compiling module work.timbre_presets
+Compiling module work.dual_voice_scheduler(VOICES=8)
+Compiling module work.tb_wrist_group
+Built simulation snapshot tb_wrist_group_sim
+
+tb_wrist_group 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:40:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_wrist_group_sim/xsim_script.tcl
+# xsim {tb_wrist_group_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS chord shared bend, stealing and event id wrap isolation
+$finish called at time : 36140 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_wrist_group.sv" Line 27
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:40:03 2026...
+
+tb_duo04_32-elaborate 0 Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/FPGA_VIVADO/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_duo04_32 -s tb_duo04_32_sim -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'wrist_enabled' is not connected on this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_duo04_32.sv:7]
+WARNING: [VRFC 10-3645] port 'samples' remains unconnected for this instance [C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_duo04_32.sv:7]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.dual_note_map
+Compiling module work.timbre_presets
+Compiling module work.dual_voice_scheduler(HOLD_TICKS=...
+Compiling module work.sine_lut
+Compiling module work.four_timbres_default
+Compiling module work.dual_audio_core(VOICES=32,MASTER...
+Compiling module work.two_hand_synth(ENABLE_EXPRESSION...
+Compiling module work.tb_duo04_32
+Built simulation snapshot tb_duo04_32_sim
+
+tb_duo04_32 0 
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 25 14:40:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_duo04_32_sim/xsim_script.tcl
+# xsim {tb_duo04_32_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS 32 mixed piano/plucked with expression pipeline, max render   674 clocks; optional mono only owning hand; stop
+$finish called at time : 25795770 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-stable26/tb/tb_duo04_32.sv" Line 21
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 204.266 ; gain = 0.070
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 25 14:40:14 2026...
+

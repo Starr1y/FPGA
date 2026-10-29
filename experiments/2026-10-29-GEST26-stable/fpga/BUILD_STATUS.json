@@ -1,0 +1,14 @@
+{
+  "version": "GEST26",
+  "rtl": "FROZEN_2026-10-25_14:41",
+  "clock_mhz": 50,
+  "audio_hz": 48000,
+  "synthesis": "USER_COMPLETED_LOG_CONFIRMED",
+  "synthesis_netlist_sha256": "9e39d1e55d1fe8134ffe0d64aaf0f1c4ab5058fb7f5175a41aa85e28fc80605d",
+  "synthesis_netlist_mtime": "2026-10-25T14:53:25.939481",
+  "place_route": "USER_RUNNING_RESULT_PENDING",
+  "timing": "PENDING_FINAL_REPORT",
+  "hardware": "NOT_TESTED",
+  "simulation": "375_POSE_CASES_AND_9_RTL_BENCHES_PASS",
+  "exe": "DIAGNOSTIC_RECORD_REPLAY_CLI_CHECK_PASS_SYNTHETIC"
+}

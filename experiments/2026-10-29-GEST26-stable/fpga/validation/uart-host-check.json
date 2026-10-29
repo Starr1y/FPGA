@@ -1,0 +1,14 @@
+{
+  "source": "RTL UART仿真，非硬件",
+  "parser_errors": 0,
+  "frames": 56,
+  "device": "DUO04-LIVE 2.1+GEST26",
+  "audio_shape": [
+    512,
+    5
+  ],
+  "voice_shape": [
+    512,
+    4
+  ]
+}
