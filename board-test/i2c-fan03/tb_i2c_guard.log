@@ -1,2 +1,0 @@
-TB_PASS I2C pad guard: disabled/fault/permission loss high-Z, idle high-Z, only low drive, unused SPI outputs high-Z
-/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_i2c_guard.sv:18: $finish called at 383000 (1ps)

@@ -1,0 +1,17 @@
+{
+  "tool": "D:\\Gowin\\Gowin_V1.9.12.03_x64\\IDE\\bin\\gw_sh.exe",
+  "script": "build_yforward_v14.tcl",
+  "cwd": "C:\\Users\\starry\\Documents\\Codex\\2026-10-29\\fpga-handoff-md-tanglab-ui23\\work\\gest27-mpu-yforward-v14-20261102\\project",
+  "script_sha256": "38b3d22f0362c78140db30ed474ebb2ff8de80c5a443c55404a6123d738afb68",
+  "started_at": "2026-11-02T11:22:52.423720+00:00",
+  "input_manifest_sha256": "5b20b1c3f537eadf4bb5e7b25837a8aabf029f29cd63309e25d5f8e99386e57b",
+  "status": "FINISHED",
+  "source_inputs_verified_before": true,
+  "process_id": 32492,
+  "cpu_seconds": 1679.03125,
+  "cpu_time_basis": "Windows GetProcessTimes on retained child-process handle",
+  "exit_code": 0,
+  "wall_seconds": 1687.2339999999967,
+  "source_inputs_verified_after": true,
+  "finished_at": "2026-11-02T11:50:59.790767+00:00"
+}

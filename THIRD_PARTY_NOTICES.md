@@ -1,5 +1,7 @@
 # FPGA 第三方来源与许可
 
+2026-11-02 当前发布入口为 `fpga/current/`；下文旧目录名是历史来源记录，对应清理前标签。当前工程保留同一字模许可、SVO TMDS 与 Gowin IP 文件内声明；MPU6050 直接采样和融合 RTL 为本项目实现。本次未引入新的第三方固件库，不分发 Gowin/Icarus 工具或许可证。
+
 ## 字体
 
 当前衍生点阵字库 **TangLab HDMI Bitmap** 由霞鹜文楷等宽 Medium v1.522 栅格化生成。Copyright 2021–2026 LXGW；Copyright 2020 The Klee Project Authors；衍生字形 Copyright 2026 TangLab contributors。原始字体及衍生字库遵循 SIL Open Font License 1.1，完整版权及许可见 [WenKai-OFL.txt](docs/reference/fonts/WenKai-OFL.txt)。字库使用自己的衍生名称，原字体来源署名保留。

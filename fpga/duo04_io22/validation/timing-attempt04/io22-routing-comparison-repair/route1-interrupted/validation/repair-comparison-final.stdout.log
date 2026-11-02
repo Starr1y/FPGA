@@ -1,2 +1,0 @@
-{"status": "WAITING_FOR_ROUTE2", "at": "2026-10-20T08:37:29.737964+08:00", "pid": 2512, "expected_head": "9177a6f31606102243a785d97ace8eabc460ed15"}
-{"status": "PREPARING_ROUTE1", "at": "2026-10-20T09:01:13.431728+08:00", "route2_eligible": false}

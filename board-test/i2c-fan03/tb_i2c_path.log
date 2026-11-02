@@ -1,2 +1,0 @@
-TB_PASS native I2C 0x08 at 100Hz, production 50MHz windows, online quality0 blocked with reason, quality recovery and stable origin, yaw selects LA, strike flashes UI, stale suppression
-/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_i2c_path.sv:69: $finish called at 1046184270000 (1ps)

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="menu_panel" Register="215" Alu="105" Lut="582" Ssram="12" T_Register="215(215)" T_Alu="126(105)" T_Lut="813(582)" T_Bsram="4(0)" T_Ssram="12(12)">
- <SubModule name="labels" Lut="206" T_Lut="206(206)"/>
- <SubModule name="font" Alu="15" Lut="2" Bsram="3" T_Alu="15(15)" T_Lut="2(2)" T_Bsram="3(3)"/>
- <SubModule name="ascii_font" Alu="6" Lut="23" Bsram="1" T_Alu="6(6)" T_Lut="23(23)" T_Bsram="1(1)"/>
-</Module>

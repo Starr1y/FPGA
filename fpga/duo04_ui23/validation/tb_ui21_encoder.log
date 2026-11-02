@@ -1,2 +1,0 @@
-TB_PASS raw EC11 quadrature direction/illegal transition/short-long exclusivity
-tb/tb_ui21_encoder.sv:19: $finish called at 1550000 (1ps)

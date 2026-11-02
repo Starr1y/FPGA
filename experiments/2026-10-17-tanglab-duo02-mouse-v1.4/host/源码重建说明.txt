@@ -1,7 +1,0 @@
-开发源码重建说明
-1. 新建一个开发目录，把source目录中的文件复制进去。
-2. 把程序目录中的fpga、docs、board-test、使用说明.txt、使用说明.md、各指南txt、THIRD_PARTY_NOTICES.md也复制到该开发目录。
-3. 使用Windows 64位Python，创建.venv，按requirements-lock.txt安装依赖。Python只用于开发；便携EXE使用者无需Python。
-4. build_exe.py为现有构建入口；WORK是构建临时位置，可按本机情况修改，不要修改系统PATH或全局TEMP。
-5. 新鼠标工程单独放在duo02-mouse-20261016，打开其中gprj；完整工程/位流/ROM不能拆散。重编译需要另装Gowin和许可证。
-6. 新协议与验证命令见docs/DUO02鼠标协议与验证.md。硬件烧录和实物验收不会由构建脚本自动执行。

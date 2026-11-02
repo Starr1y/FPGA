@@ -1,0 +1,3 @@
+CHECKS         375 FAILURES           0
+TB_PASS
+C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\release-v14-publish\fpga\current\tb\tb_pose_axes.sv:415: $finish called at 4643450000 (1ps)

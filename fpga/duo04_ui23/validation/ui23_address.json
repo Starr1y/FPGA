@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "checks": 16384,
-  "rtl_sha256": "878e11fb0f983948f6c73d6565aab8ce30e9a552955a7e02b0a60736198381ff",
-  "actual_grid_expression": "{page,10'b0}+{page,7'b0}+{page,5'b0}+{page,4'b0}+{cell_y,5'b0}+{cell_y,3'b0}+{7'b0,cell_x}",
-  "golden_reference": "p*1200+r*40+c; 4800+id*20+col with col<20 guard"
-}

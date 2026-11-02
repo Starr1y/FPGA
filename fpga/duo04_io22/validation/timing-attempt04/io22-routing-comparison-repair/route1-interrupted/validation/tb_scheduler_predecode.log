@@ -1,2 +1,0 @@
-TB_PASS scheduler cycle equivalence: accepted        1512, cancellations         192, steals        537; chord, gain, expiry, expression, mono and backpressure
-tb/tb_scheduler_predecode.sv:77: $finish called at 800080000 (1ps)

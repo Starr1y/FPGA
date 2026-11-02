@@ -1,0 +1,3 @@
+CHECKS         375 FAILURES           0
+TB_PASS
+tb/tb_pose_axes.sv:415: $finish called at 4643450000 (1ps)

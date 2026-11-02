@@ -1,2 +1,0 @@
-TB_PASS production silent top, DAC zeros, amplifier muted, key page/permission independent
-/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_ui_silent_top.sv:33: $finish called at 401980000 (1ps)

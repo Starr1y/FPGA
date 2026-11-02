@@ -1,144 +1,45 @@
-<!-- UI23_PROJECT_START -->
-## 2026-10-22：UI23 浅色双手界面
+# TangLab：FPGA 姿态选音乐器
 
-[独立FPGA工程](fpga/duo04_ui23/README.md) · [四页RTL仿真示例](fpga/duo04_ui23/preview/ui23-four-pages.png)
+当前发布：**V14 / 2026-11-02，左手 MPU6050 + 右手 BNO085，外接按钮发声**。不是双 MPU6050。正式演奏链路由 FPGA 执行，PC 上位机用于调试与曲谱导入。
 
-按参考图实现浅色卡片、橙红/金色双手扇区、分组菜单、逐音教学和归中诊断；真实击发反馈与预选分开。**当前源码的综合、50MHz/25MHz时序与全部setup/hold检查通过，已发布UI23位流；实板仍待验证。** 本次仅提交FPGA相关内容，原IO22保留。
+- [当前工程与操作](fpga/current/README.md) · [位流](fpga/current/bitstream/MPU_LEFT_YFORWARD_V14_TIMING_PASS.fs)
+- [三分钟演示拍摄脚本](docs/三分钟演示拍摄脚本.md)
+- [任务书逐项对照与剩余工作](docs/任务书对照_20261102.md)
+- [接线与无声排查](docs/V14接线与操作.md) · [仓库清理与历史恢复](docs/版本清理与恢复.md)
 
-采用算法2，最差setup +0.032ns、hold +0.126ns；余量较小，实板稳定性、DAC和整机延迟待测。重建使用 `build_selected.tcl`。
+完整布局布线已通过：Setup **+0.029 ns**、Hold **+0.164 ns**、未布通网络 **0**；PR1014 告警保留。这是数字实现结果，不能替代整机实测。当前用户已反馈左路可在线、可归中及选区；仍报告归中后方向异常、区域手感不均、按钮拉低后无声，不能称为整机验收完成。
 
-[下载UI23位流](fpga/duo04_ui23/bitstream/tanglab_duo04_ui23.fs) · [冻结清单](fpga/duo04_ui23/FIRMWARE.json)
-<!-- UI23_PROJECT_END -->
+显示为 **1024×600、49 MHz、约59.852 Hz**；画面逻辑仍由640×480布局映射并旋转180°。七音区默认覆盖−90°到+90°，FA边界约±12.875°，每区约25.714°，有3°滞回及30 ms确认。
 
-## 2026-10-20：最新2.1上的I²S与IMU节拍优化实现
+## 快速开始
 
-[FPGA独立工程](fpga/duo04_io22/README.md) · [下载位流](fpga/duo04_io22/bitstream/tanglab_duo04_io22.fs) · [冻结清单](fpga/duo04_io22/FIRMWARE.json) · [实板验证顺序](fpga/duo04_io22/BOARD_VALIDATION.md)
+1. 断电按[接线表](docs/V14接线与操作.md)接线。左 MPU 不是接右手接口。
+2. Gowin Programmer 手动将上述 `.fs` 下载到 SRAM。断电后需重新下载。
+3. KEY0 归中成功后，**从主页面短按并松开旋钮，打开“快捷设置”，第一项确认开始演奏**。归中完成不等于已启动音频。
+4. 松开发声按钮再按下；IMU只选音，运动本身不击发。默认音量仍为 **8 / 256**，按需调高。用户要求的默认80尚未进入此冻结位流。
 
-保留2.1交互与教学画面，新增标准I²S、400Hz线性加速度请求及菜单/音高配置流水线。**17项数字仿真与本次实现时序检查通过，实板和整机延迟仍待测。** HELLO为 `DUO04-LIVE 2.1+IO22`。PR1014若存在则保留在报告中，本次仅提交FPGA内容。
+下一版已确定：**双手MPU6050、默认音量80**，单独构建与验收，不替换本次V14冻结记录。
 
----
+## 工程与验证
 
-## 2026-10-18：DUO04-LIVE 2.1 交互升级
-
-新增独立的[按键＋编码器、双扇区教学工程与便携上位机](experiments/2026-10-18-duo04-live-v2.1/README.md)，附源码、操作图解、接线、Agent协议、数字验证记录和[比赛完成情况](experiments/2026-10-18-duo04-live-v2.1/比赛要求完成情况.md)。保留全部旧工程及旧位流。
-
-**2.1未执行综合布线、未提供新版.fs，需自行生成；PR1014与实物验收仍待确认。**
-
----
-
-## 2026-10-18：DUO04-LIVE 2.0 独立交付
-
-新增[四音色、双 IMU 脱机菜单与 HDMI 教学工程及 TangLab 上位机](experiments/2026-10-18-duo04-live-v2.0/README.md)，包含用户本次编译的 `.fs`、对应实现报告、便携 Windows 软件、源码、接线与测试指南。
-原工程及 2026-10-17 快照继续保留。当前报告 setup/hold 零违例，PR1014 仍存在；实物仅部分取证，不标整机验收通过。详见[完成情况与剩余工作](experiments/2026-10-18-duo04-live-v2.0/比赛要求完成情况.md)。
-
----
-
-> **2026-10-17 新增独立交付**：[TangLab 便携上位机与 DUO02-MOUSE 1.4 测试工程](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/README.md) · [比赛要求完成情况](experiments/2026-10-17-tanglab-duo02-mouse-v1.4/比赛要求完成情况.md)。原有 DUO02/DUO03 工程和冻结位流保持不变；下文为原主线说明。
-
-# TangLab：FPGA 姿态感知虚拟乐器
-
-Tang Mega NEO / 138K，器件 `GW5AST-LV138PG484AC1/I0`。仓库只包含 FPGA 工程、硬件参考、构建与验证材料，不依赖 PC 上位机。
-
-## 当前版本 DUO03
-
-[工程](fpga/duo03/tanglab_duo03.gprj) · [下载位流](fpga/bitstream/tanglab_duo03.fs) · [冻结清单](board-test/duo03/firmware.json) · [接线与操作](docs/DUO03_统一控制与菜单接入.md)
-
-- 两路独立 I²C，自主读取 BNO085；每手独立启停、归中、选区、击发和表情。
-- KEY0 设置基准方向，前方 180° 非循环 7/5/12 音区；取消距离选音。
-- 去重力的本体负 Z 加速度 ≤−2.5 m/s² **或**负向急动度 ≤−80 m/s³ 击发，含数据新鲜度、回位和防连击检查。
-- 两个独立 16 Voice 池，共 32 Voice；四种音色、ADSR、尾音、旋律/和弦和 Roll/Pitch 表情。
-- 独立左右声道、可调延迟/合唱/简化混响、静音渐变；PT8211 48 kHz / 16 位。
-- 板载键、编码器、踏板、腕部按钮共用参数；菜单改动连接实际合成与音效链路。
-- 双扇区演奏页、按键打开的诊断页、中文菜单；文楷字体、英文唱名、青色预选和品红击发。
-
-**已完成数字验证与位流冻结，尚未下载或进行本版实物测试。** 上电两手未使能、静音；手动启停没有新增限流、PGOOD 或掉电隔离。返回后按[单手验证顺序](docs/DUO03_返回后单手验证.md)先确认启动来源，再接模块；SRAM 下载掉电后不保留。
-
-## 常用板载操作
-
-主页面所有动作在合格松键后执行，上电先松开全部按键。
-
-| 操作 | 功能 |
-| --- | --- |
-| KEY0 短按 / 长按约 1.5 秒 | 当前手归中 / 切换 7、5、12 音区 |
-| KEY1 短按少于 300 ms / 按住至少 300 ms | 当前手音色 / 表情 |
-| KEY2 短按 / 长按约 1.5 秒 | 切换操作手 / 复位当前手 |
-| KEY0＋KEY1 短按 / 长按约两秒 | 打开菜单 / 双旋律与左和弦右旋律切换 |
-| KEY1＋KEY2 短按 / 长按约两秒 | 演奏与诊断切换 / 启停当前手 IMU |
-| KEY0＋KEY2 长按约两秒 | 静音切换 |
-| 三键短按 / 长按约两秒 | 湿声简易加档 / 切换音效 |
-
-菜单内 KEY1 下一项/增加，KEY2 上一项/减少，KEY0 确认/退出编辑，KEY0 长按返回；KEY0＋KEY1 短按关闭。外部输入可先留空，用板载键完成操作。
-
-## 接线
-
-整体断电接线，使用实际测得的 3.3 V 和可靠共地。引脚已按 NEO Rev1.4 原理图追踪；新版本实体接线仍待核对。
-
-| IMU 焊盘 | 手 0（左） | 手 1（右） |
-| --- | --- | --- |
-| SCL | E19 / J13.38 | D19 / J13.37 |
-| SDA | C18 / J13.40 | C19 / J13.39 |
-| INT | E16 / J13.28 | E17 / J13.31 |
-| RST | D20 / J13.36 | F16 / J13.32 |
-
-每颗模块 PS1、PS0、ADO、CS 共地，独立总线地址均为 0x4A。D14/D15/F15 留空；**J13.11 是 5 V，不能作 3.3 V**。F16 是第二手 RST，不能保留旧 SPI CS 接法。[六个外部无源触点输入表](docs/DUO03_统一控制与菜单接入.md)与 IMU 接线分别核对。
-
-## 验证与资源
-
-| 资源 | 使用/可用 |
-| --- | --- |
-| Logic | 49630/138240（35.9%） |
-| Register | 22546/139095 |
-| BSRAM | 80/340 |
-| DSP | 83/298 |
-
-setup/hold 零违例，核心/像素 Fmax **50.861/29.724 MHz**，实际约束 50/25 MHz；核心余量约 1.722%。相对 DUO02 增加 193 Logic、557 Register、6 BSRAM，DSP 不变。PR1014 通用时钟路由告警保留。
-
-- 原始按键、编码器、踏板和腕部输入的统一参数与上下文检查通过。
-- 2048 音符映射，8/32 Voice 的所有权、背压、取消、PCM 和 DAC 检查通过；32 Voice 场景最大合成 369 周期，无丢样或削波。
-- 50 MHz/48 kHz 顶层连接两个 100 Hz 行为 IMU；独立归中、负 Z 旋律/和弦、静音、单手停用通过，解码 83449 个 PT8211 字，其中 7960 非零。
-- 完整帧快照、256 个湿声百分比、13 张 RTL 画面，以及原始板载键/编码器到 RGB 检查通过。
-
-仿真缩短部分等待，原生传感器链路使用强制参数激励，视频跳过厂商 PLL/TMDS 原语，边界记录在各 JSON。**这些证据不代表实物 HDMI、模拟声音或 ≤10 ms 延迟已通过。** 原生输出仍为 640×480 / 25 MHz；显示器缩放不等于多分辨率或 EDID 自动协商。
-
-位流 SHA256：`35d614acc54a10d6de17f6ad111aa71a6643dc8dadb6d7c185c750e987b62c9a`。
-
-## 构建和复核
-
-Python 3 + Pillow，数字仿真使用 WSL Ubuntu/Icarus，构建使用 Gowin 1.9.12.03。RTL、ROM 已包含，普通构建不需要下载字体或运行上位机。
+使用 Gowin V1.9.12.03，器件 `GW5AST-LV138PG484AC1/I0`。在 `fpga/current/` 打开 `.gprj`，或运行 `gw_sh build_selected.tcl`；RTL、ROM与约束已包含，不需要外置STM32。
 
 ```powershell
-python -X utf8 fpga/tools/duo03_release.py verify
-python -X utf8 fpga/tools/check_duo03_controls.py
-python -X utf8 fpga/tools/check_duo03_audio.py
-python -X utf8 fpga/tools/check_duo03_video.py
-python -X utf8 fpga/tools/check_duo03_board.py
-python -X utf8 fpga/tools/check_duo03_board_video.py
-python -X utf8 fpga/tools/duo03_release.py build
-python -X utf8 fpga/tools/package_duo03.py
+python tools/verify_current_release.py
+python tools/run_current_regressions.py --iverilog-bin <Icarus的bin目录>
 ```
 
-脚本不下载 SRAM/Flash；重构建不保证字节一致，打包拒绝以不同哈希覆盖冻结位流。[详细构建说明](docs/FPGA仓库构建与发布.md) · [许可与来源](THIRD_PARTY_NOTICES.md)
+校验工具区分冻结输入、位流和原始构建记录；回归输出写到独立目录，不覆盖冻结证据。仿真通过不代表实板声音、双手、延迟或长稳已通过。
 
-### 波形、频谱与 Voice 观测开发核心
+本次上传前已从归档目录重跑六项回归，全部通过，见[本轮验证记录](verification/v14-publication-20261102/VERIFICATION.json)。没有重新运行EDA或自动烧录板卡。
 
-[FPGA 内音频观测](docs/FPGA音频波形与频谱采集.md)已实现真实 PCM 的 1024 点双声道 FFT、64 列波形极值、64×2 频段及 32 Voice 元数据整帧缓冲。实际 32 Voice/混响/DAC 路径采样核对、两时钟像素读回和过载/复位检查通过。组合组件未布局综合为 Register 2000、LUT 1666、BSRAM 11、MULTALU27X18 2。
+## 仓库组织
 
-**尚未加入当前下载位流或绘制中文观测页**，没有整机新增时序或实物频谱结论。DUO03 保持原哈希，下一步接观测页面和实际 Voice 总线；WS2812、原生多分辨率与实测继续保留在完整任务范围。
-
-## 未完成的验收
-
-实际双 IMU、外部控制、模拟音频、真人识别率、十分钟漂移和两小时最大负载待测。Voice/实际音频波形、FPGA 频谱、WS2812 教学、原生多分辨率仍在完整任务范围内。详见[任务审计](docs/当前任务书执行与验收.md)。
-
-[延迟记录工具与空白模板](docs/实机延迟记录与离线验收.md)已提供，七项合成数据检查通过；没有 1000 次实测数据，分析器通过仅表示进入原始波形复核。
-
-## 目录和历史版本
-
-| 目录 | 内容 |
+| 入口 | 内容 |
 | --- | --- |
-| `fpga/duo03/` | 当前独立 RTL、ROM、约束、测试和工程 |
-| `fpga/bitstream/`、`fpga/reports/duo03/` | 冻结位流、资源/时序/引脚报告 |
-| `board-test/duo03/` | 数字证据、哈希、仿真画面 |
-| `fpga/tools/` | 仿真、构建、冻结与离线实测统计工具 |
-| `docs/` | 操作、任务书、参考原理图及许可 |
+| `fpga/current/` | 唯一当前FPGA工程、位流、ROM、测试、构建和报告 |
+| `experiments/2026-10-29-GEST26-stable/` | 保留的历史稳定基线；传感器和击发方式与V14不同 |
+| `host/TangLab-2.7.2-Windows-x64.zip` | 远端已有上位机包原样保留；不承诺所有V14 MPU诊断字段均已适配 |
+| `docs/` | 当前操作、任务对照、演示脚本、硬件参考与历史文档 |
 
-[DUO02](docs/DUO02_立体声与音效接入.md)、[DUO01](docs/DUO01_双手板卡接入与操作.md)、[FAN04](docs/I2C_FAN04_表情采样与验证.md)保持冻结，按各自文档使用。当前文件树不含上位机源码、GUI、EXE 或运行环境；历史提交保留原记录。
+旧迭代从当前工作树移除，保留在清理前的Git标签和提交历史中；没有重写历史。`docs/`中早期文档保留作历史依据，其完成状态和旧路径不得替代上述当前入口。第三方许可见[来源说明](THIRD_PARTY_NOTICES.md)。

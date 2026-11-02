@@ -1,2 +1,0 @@
-TB_PASS I2C address4A, 17us stretch, continuation reads, native 12-byte 0x08 pose, five 100Hz features, independent Q/A/G quality, freshness/reset
-/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_i2c_host.sv:29: $finish called at 99503250000 (1ps)

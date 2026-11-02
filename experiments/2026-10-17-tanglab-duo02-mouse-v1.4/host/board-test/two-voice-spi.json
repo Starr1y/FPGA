@@ -1,5 +1,0 @@
-{
-  "simulation": false,
-  "reports_per_type": 1000,
-  "imu_timeout_s": 120
-}

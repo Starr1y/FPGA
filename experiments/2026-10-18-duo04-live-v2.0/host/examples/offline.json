@@ -1,9 +1,0 @@
-{
-  "mode": 0,
-  "left_timbre": 0,
-  "right_timbre": 1,
-  "left_hold_ms": 1500,
-  "right_hold_ms": 1500,
-  "volume": 16,
-  "run": true
-}

@@ -1,0 +1,1 @@
+{"implementation_pass": true, "source_mismatches": [], "errors": [], "synthesis_worst_path": {"from": "reset_sync_1_s0", "to": "display/pixel_reset_pipe_0_s0"}, "unrouted_nets": 0, "bitstream": {"path": "impl\\pnr\\tanglab_duo04_score27_routefix2.fs", "bytes": 41175809, "sha256": "8ba0470c1df1ac357156439d23122be474c355b1ec2593f43e918f5ec9bfebdb"}}

@@ -1,2 +1,0 @@
-TB_PASS local -Z acceleration OR timestamped directional jerk; no wrist-turn gate; independent negative jerk with positive/zero acceleration; gravity/XY/positive Z/noise/held-hit blocked; dt/sequence/wrap/stale/origin/layout/quality/range/signed guards
-/mnt/c/Users/10324/Desktop/TangLab/TangLab/fpga/i2cfan03/tb/tb_z_strike.sv:86: $finish called at 3720250000 (1ps)

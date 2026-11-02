@@ -1,0 +1,21 @@
+-d C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\impl\gwsynthesis\tanglab_duo04_score27_routefix2.vg
+-p GW5AST-138C-PBGA484A-1
+-pn GW5AST-LV138PG484AC1/I0
+-cst C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\tanglab_duo04_score27_routefix2.cst
+-cfg C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\impl\pnr\device.cfg
+-sdc C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\tanglab_duo04_score27_routefix2.sdc
+-bit
+-tr
+-ph
+-timing
+-ireg_not_in_iob
+-oreg_not_in_iob
+-ioreg_not_in_iob
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 3
+-route_option 2
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

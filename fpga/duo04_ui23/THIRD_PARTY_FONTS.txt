@@ -1,5 +1,0 @@
-UI23 使用 LXGW WenKai Mono Medium 的渲染字形和 TANGLAB 文字标志。
-Source: https://github.com/lxgw/LxgwWenKai
-License: SIL Open Font License 1.1，见 OFL-WenKai.txt。
-字体哈希记录在 ui23-assets.json。本目录仅提供生成后的 ROM，不附加字体二进制。
-继承的旧 Noto 字模不在 UI23 活动绘制路径中；原许可见 OFL-Noto.txt。

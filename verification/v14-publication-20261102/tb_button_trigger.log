@@ -1,0 +1,2 @@
+TB_PASS button-only: selection/downstroke silent,bounce,one press one note,hold,release,reconnect-held,offline press,stale press
+C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\release-v14-publish\fpga\current\tb\tb_button_trigger.sv:49: $finish called at 1092550000 (1ps)

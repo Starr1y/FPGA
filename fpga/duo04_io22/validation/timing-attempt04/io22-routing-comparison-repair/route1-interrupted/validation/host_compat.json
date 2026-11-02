@@ -1,8 +1,0 @@
-{
-  "status": "PASS",
-  "source": "RTL UART simulation, no serial port",
-  "device": "DUO04-LIVE 2.1+IO22",
-  "frames": 1,
-  "crc_errors": 0,
-  "latest_host_interaction_enabled": true
-}

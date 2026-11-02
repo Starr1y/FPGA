@@ -1,8 +1,0 @@
-{
-  "validation": "PASS",
-  "lesson_and_capture": "PASS simulated",
-  "http_auth": "PASS",
-  "timeout": "PASS",
-  "old_firmware_gating": "PASS",
-  "replay": "PASS simulated recording"
-}

@@ -1,7 +1,6 @@
-# FPGA-only publication. Keep desktop applications local.
+# Publish current FPGA and the existing host archive; keep local app state private.
 /source/
 /bno085_pc/
-/tools/
 /run_tanglab.py
 /requirements-lock.txt
 /TangLab*.exe
@@ -48,3 +47,9 @@ Desktop.ini
 # Track selected FPGA RTL/ROM/tests, published bitstream and reports.
 
 board-test/fan04-rebuild/
+
+# Local credentials, private records and generated replay artifacts
+**/api_keys*
+**/secrets*
+**/credentials*
+/replay-output/

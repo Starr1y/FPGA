@@ -1,0 +1,402 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_host.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_note_map.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_lesson.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_pll.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_controls.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_fan.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_font.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_key_events.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_keys.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_menu_panel.v'
+Analyzing included file 'rtl\menu_labels.vh'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_menu_panel.v":5)
+Back to file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_menu_panel.v'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_menu_panel.v":5)
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_page_mux.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_panel.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_parameters.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_text.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\expression_stream_guard.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\fm_limits.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\gesture_control.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\i2c_byte_master.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\instrument_waves.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\menu_ascii.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\menu_font.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\menu_labels.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\parameter_stereo_output.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_controls.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_vibrato.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\pose_math.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\pt8211_output.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\release_button.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_report_decode.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\sine_calibrator.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\sine_lut.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_makeup_limiter.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_output_path.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\svo_tmds.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\timbre_presets.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo02.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_event_queue.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_i2c_core.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_instrument_core.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_synth.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\uart.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_duo_hdmi.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_font.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_pll_125.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_status_cdc.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v'
+Analyzing included file 'rtl\ui23_labels.vh'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":36)
+Back to file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":36)
+Analyzing included file 'rtl\ui_decimal_u8.vh'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":91)
+Back to file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":91)
+Analyzing included file 'rtl\ui23_note_labels.vh'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":210)
+Back to file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":210)
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_serial_output.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\lesson_event_pipeline.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\event_register_slice.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\prehit_snapshot.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_store.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_lesson.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo27_lesson.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_uart_stream.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video70h_pll.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\ui_decimal_cache.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu_register_transaction.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_raw_host.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_quaternion_normalize.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_divide64.v'
+Analyzing Verilog file 'C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu_byte_master.v'
+Compiling module 'top_duo04'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v":2)
+Extracting RAM for identifier 'capture_mem'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v":241)
+Compiling module 'video70h_pll'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video70h_pll.v":11)
+Compiling module 'duo04_pll'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_pll.v":10)
+Compiling module 'performance_vibrato'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_vibrato.v":3)
+Extracting RAM for identifier 'cent_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_vibrato.v":13)
+Compiling module 'sine_lut'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\sine_lut.v":3)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_vibrato.v":12)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_vibrato.v":12)
+Compiling module 'uart_rx'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\uart.v":1)
+Compiling module 'frame_rx'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":1)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":31)
+Compiling module 'event_register_slice'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\event_register_slice.v":4)
+Compiling module 'epoch_match32'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":246)
+Compiling module 'two_hand_event_queue'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_event_queue.v":3)
+Extracting RAM for identifier 'mem0'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_event_queue.v":11)
+Extracting RAM for identifier 'mem1'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_event_queue.v":11)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_event_queue.v":26)
+Compiling module 'two_hand_synth(ENABLE_EXPRESSION=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_synth.v":2)
+Compiling module 'dual_voice_scheduler(HOLD_TICKS=3000000)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":3)
+Extracting RAM for identifier 'ftw'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":20)
+Extracting RAM for identifier 'ticks'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":20)
+Extracting RAM for identifier 'epoch'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":20)
+Extracting RAM for identifier 'revision'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":24)
+Extracting RAM for identifier 'ids'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":25)
+Extracting RAM for identifier 'age'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":25)
+Extracting RAM for identifier 'gain'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":25)
+Extracting RAM for identifier 'preset'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":26)
+Extracting RAM for identifier 'tail'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":26)
+Extracting RAM for identifier 'midi_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":28)
+Extracting RAM for identifier 'cent_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":29)
+Extracting RAM for identifier 'voice_bend'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":75)
+WARN  (EX2526) : Entry size 20 at rtl/wrist_ratio.hex:0 does not match memory width 17("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":32)
+Compiling module 'dual_note_map'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_note_map.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":83)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":84)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":85)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":87)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 11("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":88)
+Compiling module 'timbre_presets'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\timbre_presets.v":2)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":122)
+Compiling module 'dual_audio_core(VOICES=32,MASTER_SHIFT=4,ENABLE_EXPRESSION=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":5)
+Extracting RAM for identifier 'render_memory'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":24)
+Extracting RAM for identifier 'envelope_config'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":29)
+Extracting RAM for identifier 'freq'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":39)
+Extracting RAM for identifier 'mod_freq'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":41)
+Extracting RAM for identifier 'wave'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":43)
+Extracting RAM for identifier 'preset'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":44)
+Extracting RAM for identifier 'piano_body'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":47)
+Extracting RAM for identifier 'piano_fraction'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":48)
+Extracting RAM for identifier 'tail'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":49)
+Extracting RAM for identifier 'old_gate'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":51)
+Extracting RAM for identifier 'local_voice'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":52)
+Extracting RAM for identifier 'retrigger'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":53)
+Extracting RAM for identifier 'preset_mode'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":54)
+Extracting RAM for identifier 'index_env'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":60)
+Extracting RAM for identifier 'stage'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":63)
+Extracting RAM for identifier 'fast_release'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":64)
+Extracting RAM for identifier 'hold_remaining'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":67)
+Extracting RAM for identifier 'hold_snapshot'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":68)
+Extracting RAM for identifier 'pitch_start'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":75)
+Extracting RAM for identifier 'pitch_target'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":76)
+Extracting RAM for identifier 'pitch_position'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":77)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":166)
+Compiling module 'four_timbres'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":3)
+Extracting RAM for identifier 'energy'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":10)
+Extracting RAM for identifier 'fraction'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":10)
+Extracting RAM for identifier 'seed_words'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'pointer'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'valid_words'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'delay_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":12)
+Extracting RAM for identifier 'reciprocal_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":13)
+Extracting RAM for identifier 'previous'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":16)
+Extracting RAM for identifier 'string_memory'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":17)
+WARN  (EX2526) : Entry size 24 at rtl/string_delays.hex:0 does not match memory width 23("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":37)
+WARN  (EX2526) : Entry size 24 at rtl/string_reciprocal.hex:0 does not match memory width 23("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":37)
+WARN  (EX3791) : Expression size 39 truncated to fit in target size 23("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":15)
+WARN  (EX3791) : Expression size 40 truncated to fit in target size 24("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":89)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":98)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 18("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":102)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":107)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":108)
+WARN  (EX3791) : Expression size 33 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":113)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":336)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_audio_core.v":428)
+Compiling module 'stereo_output_path(MAKEUP_SHIFT=3)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_output_path.v":3)
+Compiling module 'stereo_fx'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":4)
+Extracting RAM for identifier 'memory_left'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":13)
+Extracting RAM for identifier 'memory_right'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":14)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":83)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":84)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_fx.v":134)
+Compiling module 'stereo_makeup_limiter'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_makeup_limiter.v":4)
+Compiling module 'sine_calibrator'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\sine_calibrator.v":3)
+Compiling module 'stereo_serial_output'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\stereo_serial_output.v":5)
+Compiling module 'duo04_keys'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v":120)
+Extracting RAM for identifier 'db'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v":122)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v":201)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 8("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v":202)
+Compiling module 'score_store'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_store.v":3)
+Extracting RAM for identifier 'bank0'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_store.v":10)
+Extracting RAM for identifier 'bank1'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_store.v":11)
+Compiling module 'video_duo_hdmi'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_duo_hdmi.v":3)
+Compiling module 'video_status_cdc(WIDTH=1088)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\video_status_cdc.v":3)
+Compiling module 'duo04_panel'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":2)
+Extracting RAM for identifier 'text_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":31)
+Extracting RAM for identifier 'font_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":32)
+Extracting RAM for identifier 'hand_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":33)
+Extracting RAM for identifier 'logo_rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":34)
+Extracting RAM for identifier 'seen_hits'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":120)
+Extracting RAM for identifier 'hit_timer'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":120)
+Extracting RAM for identifier 'last_hit_zone'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":121)
+Extracting RAM for identifier 'last_hit_profile'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":121)
+WARN  (EX2526) : Entry size 12 at rtl/ui23_text.hex:0 does not match memory width 9("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":35)
+Compiling module 'ui_decimal_cache'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\ui_decimal_cache.v":3)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":142)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":148)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":151)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":159)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":160)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":161)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":162)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":103)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":187)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":187)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":188)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":188)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":190)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":190)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":191)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":193)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":3)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":4)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":4)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":5)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":6)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":6)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":7)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":7)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":8)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":8)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":9)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":9)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":12)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":12)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":13)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":13)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":14)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":14)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":15)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":15)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":16)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":16)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":19)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":19)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":20)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":20)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":21)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":21)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":22)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":22)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":23)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":23)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":24)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":24)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":25)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":25)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":26)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":26)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":27)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":27)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":28)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":28)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":29)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":29)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":30)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":30)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":214)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":214)
+Compiling module 'duo_fan'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_fan.v":1)
+Extracting RAM for identifier 'rom'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_fan.v":3)
+WARN  (EX2526) : Entry size 236 at rtl/ui23_spans.hex:0 does not match memory width 234("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo_fan.v":4)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":240)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":243)
+Compiling module 'svo_tmds'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\svo_tmds.v":23)
+Compiling module 'frame_tx'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":37)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":65)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":72)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\framing.v":73)
+Compiling module 'uart_tx'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\uart.v":25)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\uart.v":37)
+Compiling module 'wrist_gesture'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":3)
+Extracting RAM for identifier 'history'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":16)
+Extracting RAM for identifier 'history_ms'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":16)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":89)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":90)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 6("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":98)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\wrist_gesture.v":130)
+Compiling module 'performance_controls(LONG_MS=800)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_controls.v":3)
+Compiling module 'release_button(LONG_MS=800)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\release_button.v":4)
+Compiling module 'duo04_menu'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v":2)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v":73)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_menu.v":95)
+WARN  (EX3073) : Port 'accepted' remains unconnected for this instance("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_i2c_core.v":51)
+Compiling module 'two_hand_i2c_core(LEFT_DIRECT_MPU=1,BUTTON_TRIGGER=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\two_hand_i2c_core.v":3)
+WARN  (EX3073) : Port 'discontinuities' remains unconnected for this instance("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":217)
+Compiling module 'bno_i2c_hand(DIRECT_MPU=1'b1,BUTTON_TRIGGER=1,EXTERNAL_STREAM=1'b0,RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":3)
+Compiling module 'prehit_snapshot'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\prehit_snapshot.v":3)
+Extracting RAM for identifier 'memory'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\prehit_snapshot.v":11)
+Compiling module 'mpu6050_raw_host(ALLOW_WHO75_DIAG=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_raw_host.v":4)
+Compiling module 'mpu_register_transaction'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu_register_transaction.v":3)
+Compiling module 'mpu_byte_master'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu_byte_master.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu_byte_master.v":45)
+Compiling module 'mpu6050_fusion'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":4)
+Extracting RAM for identifier 'gyro_dt'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":11)
+Extracting RAM for identifier 'accel_dt'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":11)
+Extracting RAM for identifier 'sum'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":15)
+Extracting RAM for identifier 'bias'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":15)
+Compiling module 'imu_divide64'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_divide64.v":2)
+WARN  (EX3791) : Expression size 33 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_divide64.v":16)
+Compiling module 'pose_isqrt'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\pose_math.v":45)
+Compiling module 'imu_quaternion_normalize'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_quaternion_normalize.v":3)
+Extracting RAM for identifier 'q'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\imu_quaternion_normalize.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":62)
+WARN  (EX3791) : Expression size 41 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":70)
+WARN  (EX3791) : Expression size 41 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":71)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":72)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":76)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":77)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":78)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":85)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":89)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":90)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":91)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":92)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":114)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":114)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":114)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\mpu6050_fusion.v":114)
+Compiling module 'quaternion_pose(HORIZONTAL_HEADING=1'b1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":7)
+Compiling module 'pose_atan2'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\pose_math.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\pose_math.v":32)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":168)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":168)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":169)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":169)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":188)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":35)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":36)
+Compiling module 'gesture_control(BUTTON_TRIGGER=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\gesture_control.v":10)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\gesture_control.v":100)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\gesture_control.v":171)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\gesture_control.v":172)
+Compiling module 'expression_stream_guard(POSE_HZ=200)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\expression_stream_guard.v":3)
+Compiling module 'hand_expression(POSE_HZ=200)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v":42)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v":81)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\hand_expression.v":38)
+Compiling module 'bno_i2c_hand(DIRECT_MPU=1'b0,BUTTON_TRIGGER=1,EXTERNAL_STREAM=1'b0,RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":3)
+Compiling module 'bno_i2c_host(REPORT_BACKPRESSURE=1,RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_host.v":3)
+Compiling module 'shtp_i2c_link(HALF_DIV=65)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":5)
+Extracting RAM for identifier 'buffer'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":35)
+Compiling module 'i2c_byte_master(HALF_DIV=65)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\i2c_byte_master.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\i2c_byte_master.v":45)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":96)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":108)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":121)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_i2c_link.v":133)
+Compiling module 'shtp_report_decode(REPORT_BACKPRESSURE=1)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_report_decode.v":3)
+Extracting RAM for identifier 'next_sequence'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\shtp_report_decode.v":27)
+Compiling module 'quaternion_pose(HORIZONTAL_HEADING=1'b0)'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":7)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":168)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":168)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":169)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":169)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\quaternion_pose.v":188)
+Compiling module 'lesson_event_pipeline'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\lesson_event_pipeline.v":3)
+Compiling module 'duo27_lesson'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo27_lesson.v":1)
+Compiling module 'duo04_lesson'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_lesson.v":1)
+Compiling module 'score_lesson'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_lesson.v":2)
+Compiling module 'unsigned_ge12'("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\score_lesson.v":47)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\top_duo04.v":631)
+NOTE  (EX0101) : Current top module is "top_duo04"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+WARN  (IF0007) : Attribute value of 'syn_ramstyle/syn_romstyle' is not applicable("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\duo04_panel.v":32)
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "release_button" instantiated to "pedal" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_controls.v":57)
+WARN  (NL0002) : The module "release_button" instantiated to "wrist[0].key" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_controls.v":62)
+WARN  (NL0002) : The module "release_button" instantiated to "wrist[1].key" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\performance_controls.v":62)
+WARN  (NL0002) : The module "expression_stream_guard" instantiated to "cadence" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":217)
+WARN  (NL0002) : The module "hand_expression" instantiated to "expression" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":220)
+WARN  (NL0002) : The module "prehit_snapshot" instantiated to "history" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":97)
+WARN  (NL0002) : The module "expression_stream_guard" instantiated to "cadence" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":217)
+WARN  (NL0002) : The module "hand_expression" instantiated to "expression" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\bno_i2c_hand.v":220)
+WARN  (NL0002) : The module "sine_lut" instantiated to "fm_modulator" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\four_timbres.v":35)
+WARN  (NL0002) : The module "epoch_match32" instantiated to "input_left" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":53)
+WARN  (NL0002) : The module "epoch_match32" instantiated to "input_right" is swept in optimizing("C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\rtl\dual_voice_scheduler.v":54)
+[95%] Generate netlist file "C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\impl\gwsynthesis\tanglab_duo04_score27_routefix2.vg" completed
+[100%] Generate report file "C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\gest27-mpu-yforward-v14-20261102\project\impl\gwsynthesis\tanglab_duo04_score27_routefix2_syn.rpt.html" completed
+GowinSynthesis finish

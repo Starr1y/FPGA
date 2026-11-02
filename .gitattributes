@@ -46,3 +46,9 @@
 /fpga/tools/check_audio_monitor_core.py -text -whitespace
 /fpga/tools/synth_audio_monitor_core.py -text -whitespace
 /fpga/tools/verify_audio_monitor_core.py -text -whitespace
+
+# V14 frozen source, ROM and report bytes must survive Git unchanged.
+/fpga/current/** -text -whitespace
+/experiments/2026-10-29-GEST26-stable/** -text -whitespace
+*.zip binary
+/verification/** -text -whitespace

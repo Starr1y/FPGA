@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-11-02T15:25:14.921665+00:00",
+  "release": "V14-YFORWARD-20261102",
+  "base_commit": "e16aaf42515aa47f3d8796b693c2edb623edec7a",
+  "scope": "Replayed simulations and archive verification; no new EDA build or hardware test",
+  "input_manifest_sha256": "5b20b1c3f537eadf4bb5e7b25837a8aabf029f29cd63309e25d5f8e99386e57b",
+  "bitstream_sha256": "8ba0470c1df1ac357156439d23122be474c355b1ec2593f43e918f5ec9bfebdb",
+  "tests_passed": [
+    "tb_yforward_mpu_hand",
+    "tb_native_mpu_hand",
+    "tb_button_trigger",
+    "tb_pose_axes",
+    "tb_yforward_heading",
+    "tb_yforward_pins"
+  ],
+  "files_sha256": {
+    "repository-review.json": "9f5d5f0a889ef9328921ce843bd41b929f593a905d0f973502e1622a1a79f15a",
+    "results.json": "eb9641e89d254cb9082ab16a0427459e897858ceed1b9c07e7975e97d3ab5397",
+    "tb_button_trigger-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_button_trigger.log": "76d90cef3bbf57061d3bba250bca39e3e56f14ab91289251440f282f39945506",
+    "tb_native_mpu_hand-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_native_mpu_hand.log": "51aad54bc9740c4700c9b35d2f2a58e81164d9cb854d5a0556cb2dbbfd2a18bf",
+    "tb_pose_axes-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_pose_axes.log": "f3d333d0b5e354749f5a292fff1b4d126c50fc40d7a2e2bf66c02b1903e906ff",
+    "tb_yforward_heading-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_yforward_heading.log": "ed6673bc3e5425fae2b8a40f1032ae460710ddc7f48929e5c85c524af2460117",
+    "tb_yforward_mpu_hand-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_yforward_mpu_hand.log": "3a305a143f6470591210a83e13168254e96fecc337253c4b9a264d513800a95d",
+    "tb_yforward_pins-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tb_yforward_pins.log": "32464f51b5df0e0b4726a71475c9b77b0f19ea4b210e11ae572cefd6303a2aa6"
+  }
+}

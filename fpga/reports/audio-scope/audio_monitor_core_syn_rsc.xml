@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="audio_monitor_core" T_Register="2000(0)" T_Alu="516(0)" T_Lut="1666(0)" T_MULTALU27X18="2(0)" T_Bsram="11(0)">
- <SubModule name="observer" Register="744" Alu="352" Lut="463" MULTALU27X18="2" Bsram="9" T_Register="744(744)" T_Alu="352(352)" T_Lut="463(463)" T_MULTALU27X18="2(2)" T_Bsram="9(9)"/>
- <SubModule name="snapshot" Register="1256" Alu="164" Lut="1203" Bsram="2" T_Register="1256(1256)" T_Alu="164(164)" T_Lut="1203(1203)" T_Bsram="2(2)"/>
-</Module>

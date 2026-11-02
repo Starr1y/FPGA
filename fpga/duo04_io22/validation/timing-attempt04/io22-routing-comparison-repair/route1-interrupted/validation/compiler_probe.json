@@ -1,8 +1,0 @@
-{
-  "scope": "isolated scheduler only, not full implementation",
-  "status": "GowinSynthesis finish",
-  "source_sha256": "b8d8059551c6a6cda685b882a3862969c1c9aa48e3698a80fc83b6c72bd018c3",
-  "probe_source_sha256": "b8d8059551c6a6cda685b882a3862969c1c9aa48e3698a80fc83b6c72bd018c3",
-  "netlist_sha256": "e10c25f64829a08d67ad5059f6cb081d1a6bf82a904b607724d9624a2059df67",
-  "tool": "V1.9.12.03"
-}

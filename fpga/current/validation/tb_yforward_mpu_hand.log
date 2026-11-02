@@ -1,0 +1,2 @@
+TB_PASS vertical +X gravity / +X angular velocity endpoint:startup bias,manualcenter,zero heading,45deg selection,buttononly,hold,offline,reconnect origin invalidation
+tb/tb_yforward_mpu_hand.sv:42: $finish called at 32850050000 (1ps)

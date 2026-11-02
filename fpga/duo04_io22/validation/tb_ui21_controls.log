@@ -1,2 +1,0 @@
-TB_PASS UI keys debounce/reset/chords/menu/encoder/context/bounds/STOP
-tb/tb_ui21_controls.sv:35: $finish called at 2110000 (1ps)

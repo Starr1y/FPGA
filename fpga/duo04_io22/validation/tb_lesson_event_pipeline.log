@@ -1,2 +1,0 @@
-TB_PASS lesson observer: paired back-to-back hands, accepted-only hits, gain/invalid rejection, epoch cancellation, STOP flush/restart
-tb/tb_lesson_event_pipeline.sv:30: $finish called at 351000 (1ps)

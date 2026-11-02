@@ -1,8 +1,0 @@
-Noto Serif SC字形来源（字体内嵌元数据）：
-(c) 2017-2024 Adobe (http://www.adobe.com/).
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org
-
-https://openfontlicense.org
-Font source: https://github.com/notofonts/noto-cjk
-Rendered glyph ROM only; SIL Open Font License 1.1.

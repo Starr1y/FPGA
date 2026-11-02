@@ -1,0 +1,2 @@
+TB_PASS direct fusion endpoint:startup bias,manualcenter,zero heading,45deg selection,buttononly,hold,offline,reconnect origin invalidation
+tb/tb_native_mpu_hand.sv:37: $finish called at 21940050000 (1ps)

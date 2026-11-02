@@ -1,0 +1,13 @@
+PROGRESS samples100 tick7057 flags00cc0001 bias99 fusionstate0
+PROGRESS samples200 tick12057 flags00cc0001 bias199 fusionstate0
+PROGRESS samples300 tick17057 flags00cc0001 bias299 fusionstate0
+PROGRESS samples400 tick22057 flags00cc0001 bias399 fusionstate0
+PROGRESS samples500 tick27057 flags00cc0405 bias79 fusionstate0
+PROGRESS samples600 tick32057 flags00cc0405 bias179 fusionstate0
+PROGRESS samples700 tick37057 flags00cc0405 bias279 fusionstate0
+PROGRESS samples800 tick42057 flags00cc0405 bias379 fusionstate0
+PROGRESS samples100 tick50575 flags00cf2293 bias400 fusionstate0
+PROGRESS samples200 tick55575 flags00d32293 bias400 fusionstate0
+PROGRESS samples300 tick60575 flags00d72293 bias400 fusionstate0
+TB_PASS full pin-level MPU->raw->fusion->relative origin->45degree selection->button;clockstretch,hold,missingINT;starts2466 stops1237 ACK17094 NACK1229
+C:\Users\starry\Documents\Codex\2026-10-29\fpga-handoff-md-tanglab-ui23\work\release-v14-publish\fpga\current\validation\tb_yforward_pins.sv:98: $finish called at 63675790000 (1ps)

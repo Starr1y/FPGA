@@ -1,2 +1,0 @@
-TB_PASS scheduler lookup pipeline preserves mid-flight bend/revision and immutable backpressure
-tb/tb_scheduler_pipeline.sv:37: $finish called at 1160000 (1ps)
