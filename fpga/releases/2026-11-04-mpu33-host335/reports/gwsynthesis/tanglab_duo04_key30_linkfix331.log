@@ -1,0 +1,377 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v'
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":296)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":301)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":302)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":309)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":420)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":426)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":448)
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_note_map.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_lesson.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v'
+Analyzing included file 'rtl\ui32_menu_fields.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":14)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":14)
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_pll.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_controls.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_fan.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_font.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_key_events.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_keys.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_menu_panel.v'
+Analyzing included file 'rtl\menu_labels.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_menu_panel.v":5)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_menu_panel.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_menu_panel.v":5)
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_page_mux.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_panel.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_parameters.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_text.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\expression_stream_guard.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\fm_limits.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\gesture_control.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\i2c_byte_master.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\instrument_waves.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\menu_ascii.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\menu_font.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\menu_labels.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\parameter_stereo_output.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_controls.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\pose_math.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\pt8211_output.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\release_button.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\sine_lut.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_makeup_limiter.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_output_path.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\svo_tmds.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\timbre_presets.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_event_queue.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_i2c_core.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_synth.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\uart.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_duo_hdmi.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_font.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_pll_125.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_status_cdc.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v'
+Analyzing included file 'rtl\ui23_labels.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":36)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":36)
+Analyzing included file 'rtl\ui_decimal_u8.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":91)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":91)
+Analyzing included file 'rtl\ui32_menu_fields.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":94)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":94)
+Analyzing included file 'rtl\ui23_note_labels.vh'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":203)
+Back to file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":203)
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_serial_output.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lesson_event_pipeline.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\event_register_slice.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\prehit_snapshot.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_store.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_lesson.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo27_lesson.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_hand.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_host.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_registers.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_hand_keys.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\s1s2_keys.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\screen_pll_245.v'
+Analyzing Verilog file 'C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\ui_decimal_cache.v'
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\ui_decimal_cache.v":31)
+WARN  (EX3261) : Loop variable declaration is not allowed in this mode of Verilog("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\ui_decimal_cache.v":33)
+Compiling module 'top_duo04'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v":2)
+Extracting RAM for identifier 'capture_mem'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v":236)
+Compiling module 'duo04_pll'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_pll.v":10)
+Compiling module 'screen_pll_245'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\screen_pll_245.v":10)
+Compiling module 'uart_rx'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\uart.v":1)
+Compiling module 'frame_rx'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":1)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":31)
+Compiling module 'event_register_slice'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\event_register_slice.v":4)
+Compiling module 'two_hand_event_queue'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_event_queue.v":3)
+Extracting RAM for identifier 'mem0'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_event_queue.v":11)
+Extracting RAM for identifier 'mem1'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_event_queue.v":11)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_event_queue.v":26)
+Compiling module 'two_hand_synth(ENABLE_EXPRESSION=1)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_synth.v":2)
+Compiling module 'dual_voice_scheduler(HOLD_TICKS=3000000)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":3)
+Extracting RAM for identifier 'ftw'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":28)
+Extracting RAM for identifier 'ticks'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":28)
+Extracting RAM for identifier 'epoch'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":28)
+Extracting RAM for identifier 'revision'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":32)
+Extracting RAM for identifier 'ids'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":33)
+Extracting RAM for identifier 'age'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":33)
+Extracting RAM for identifier 'gain'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":33)
+Extracting RAM for identifier 'preset'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":34)
+Extracting RAM for identifier 'tail'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":34)
+Extracting RAM for identifier 'midi_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":36)
+Extracting RAM for identifier 'cent_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":37)
+Extracting RAM for identifier 'voice_bend'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":75)
+WARN  (EX2526) : Entry size 20 at rtl/wrist_ratio.hex:0 does not match memory width 17("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":40)
+Compiling module 'dual_note_map'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_note_map.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 5("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":69)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":83)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":84)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":85)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":86)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":88)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":89)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 11("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":90)
+Compiling module 'timbre_presets'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\timbre_presets.v":2)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_voice_scheduler.v":124)
+Compiling module 'dual_audio_core(VOICES=32,MASTER_SHIFT=4,ENABLE_EXPRESSION=1)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":5)
+Extracting RAM for identifier 'render_memory'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":24)
+Extracting RAM for identifier 'envelope_config'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":29)
+Extracting RAM for identifier 'freq'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":39)
+Extracting RAM for identifier 'mod_freq'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":41)
+Extracting RAM for identifier 'wave'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":43)
+Extracting RAM for identifier 'preset'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":44)
+Extracting RAM for identifier 'piano_body'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":47)
+Extracting RAM for identifier 'piano_fraction'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":48)
+Extracting RAM for identifier 'tail'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":49)
+Extracting RAM for identifier 'old_gate'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":51)
+Extracting RAM for identifier 'local_voice'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":52)
+Extracting RAM for identifier 'retrigger'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":53)
+Extracting RAM for identifier 'preset_mode'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":54)
+Extracting RAM for identifier 'index_env'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":60)
+Extracting RAM for identifier 'stage'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":63)
+Extracting RAM for identifier 'fast_release'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":64)
+Extracting RAM for identifier 'hold_remaining'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":67)
+Extracting RAM for identifier 'hold_snapshot'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":68)
+Extracting RAM for identifier 'pitch_start'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":75)
+Extracting RAM for identifier 'pitch_target'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":76)
+Extracting RAM for identifier 'pitch_position'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":77)
+Extracting RAM for identifier 'gain_target'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":90)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":167)
+Compiling module 'four_timbres'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":3)
+Extracting RAM for identifier 'energy'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":10)
+Extracting RAM for identifier 'fraction'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":10)
+Extracting RAM for identifier 'seed_words'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'pointer'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'valid_words'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":11)
+Extracting RAM for identifier 'delay_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":12)
+Extracting RAM for identifier 'reciprocal_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":13)
+Extracting RAM for identifier 'previous'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":16)
+Extracting RAM for identifier 'string_memory'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":17)
+WARN  (EX2526) : Entry size 24 at rtl/string_delays.hex:0 does not match memory width 23("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":37)
+WARN  (EX2526) : Entry size 24 at rtl/string_reciprocal.hex:0 does not match memory width 23("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":37)
+WARN  (EX3791) : Expression size 39 truncated to fit in target size 23("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":15)
+Compiling module 'sine_lut'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\sine_lut.v":3)
+WARN  (EX3791) : Expression size 40 truncated to fit in target size 24("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":89)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":98)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 18("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":102)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":107)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":108)
+WARN  (EX3791) : Expression size 33 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":113)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":338)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\dual_audio_core.v":430)
+Compiling module 'stereo_output_path(MAKEUP_SHIFT=3)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_output_path.v":3)
+Compiling module 'stereo_fx'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":4)
+Extracting RAM for identifier 'memory_left'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":13)
+Extracting RAM for identifier 'memory_right'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":14)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":83)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 19("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":84)
+WARN  (EX3791) : Expression size 25 truncated to fit in target size 24("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_fx.v":134)
+Compiling module 'stereo_makeup_limiter'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_makeup_limiter.v":4)
+Compiling module 'stereo_serial_output'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\stereo_serial_output.v":5)
+Compiling module 'duo04_keys'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":111)
+Extracting RAM for identifier 'db'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":113)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v":196)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 8("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v":197)
+Compiling module 'score_store'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_store.v":3)
+Extracting RAM for identifier 'bank0'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_store.v":10)
+Extracting RAM for identifier 'bank1'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_store.v":11)
+Compiling module 'video_duo_hdmi'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_duo_hdmi.v":3)
+Compiling module 'video_status_cdc(WIDTH=1088)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\video_status_cdc.v":3)
+Compiling module 'duo04_panel'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":2)
+Extracting RAM for identifier 'text_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":31)
+Extracting RAM for identifier 'font_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":32)
+Extracting RAM for identifier 'hand_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":33)
+Extracting RAM for identifier 'logo_rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":34)
+Extracting RAM for identifier 'seen_hits'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":113)
+Extracting RAM for identifier 'hit_timer'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":113)
+Extracting RAM for identifier 'last_hit_zone'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":114)
+Extracting RAM for identifier 'last_hit_profile'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":114)
+WARN  (EX2526) : Entry size 12 at rtl/ui23_text.hex:0 does not match memory width 9("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":35)
+Compiling module 'ui_decimal_cache'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\ui_decimal_cache.v":3)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":135)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":141)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":144)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":152)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":153)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":154)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":155)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":96)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":180)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":180)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":181)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":181)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":183)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":183)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":184)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":186)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":3)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":4)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":4)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":5)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":6)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":6)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":7)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":7)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":8)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":8)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":9)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":9)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":12)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":12)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":13)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":13)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":14)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":14)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":15)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":15)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":16)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":16)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":19)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":19)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":20)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":20)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":21)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":21)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":22)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":22)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":23)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":23)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":24)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":24)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":25)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":25)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":26)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":26)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":27)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":27)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":28)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":28)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":29)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":29)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("rtl\ui23_note_labels.vh":30)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("rtl\ui23_note_labels.vh":30)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":207)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":207)
+Compiling module 'duo_fan'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_fan.v":1)
+Extracting RAM for identifier 'rom'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_fan.v":3)
+WARN  (EX2526) : Entry size 236 at rtl/ui23_spans.hex:0 does not match memory width 234("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo_fan.v":4)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 5("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":233)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":236)
+Compiling module 'svo_tmds'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\svo_tmds.v":23)
+Compiling module 'frame_tx'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":37)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":65)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":72)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\framing.v":73)
+Compiling module 'uart_tx'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\uart.v":25)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\uart.v":37)
+Compiling module 'lite_hand_gesture'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":2)
+Compiling module 's1s2_keys'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\s1s2_keys.v":2)
+Extracting RAM for identifier 'db'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\s1s2_keys.v":9)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":66)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":68)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":69)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":71)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":75)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":79)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":82)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":89)
+Compiling module 'performance_controls(LONG_MS=800)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_controls.v":3)
+Compiling module 'release_button(LONG_MS=800)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\release_button.v":4)
+Compiling module 'duo04_menu'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":2)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":64)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_menu.v":86)
+WARN  (EX3073) : Port 'accepted' remains unconnected for this instance("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_i2c_core.v":49)
+Compiling module 'two_hand_i2c_core'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\two_hand_i2c_core.v":3)
+WARN  (EX3073) : Port 'discontinuities' remains unconnected for this instance("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_hand.v":131)
+Compiling module 'mpu6050_hand(RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_hand.v":3)
+Compiling module 'prehit_snapshot'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\prehit_snapshot.v":3)
+Extracting RAM for identifier 'memory'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\prehit_snapshot.v":11)
+Compiling module 'mpu6050_host(RESET_TICKS=500000,BOOT_TICKS=37500000,RESET_SETUP_TICKS=500000)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_host.v":6)
+Compiling module 'mpu6050_registers'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_registers.v":3)
+Compiling module 'i2c_byte_master'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\i2c_byte_master.v":5)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\i2c_byte_master.v":45)
+Compiling module 'mpu6050_fusion'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":4)
+WARN  (EX3791) : Expression size 40 truncated to fit in target size 32("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":177)
+WARN  (EX3791) : Expression size 34 truncated to fit in target size 32("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":178)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":179)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":189)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":189)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":189)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":191)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":191)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":191)
+WARN  (EX3791) : Expression size 22 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":191)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":192)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":193)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":193)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_fusion.v":193)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\mpu6050_host.v":96)
+Compiling module 'quaternion_pose'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":7)
+Compiling module 'pose_atan2'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\pose_math.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\pose_math.v":32)
+Compiling module 'pose_isqrt'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\pose_math.v":45)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":154)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":155)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":155)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\quaternion_pose.v":170)
+Compiling module 'gesture_control'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\gesture_control.v":8)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 17("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\gesture_control.v":68)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\gesture_control.v":129)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\gesture_control.v":130)
+Compiling module 'expression_stream_guard(POSE_HZ=200)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\expression_stream_guard.v":3)
+Compiling module 'hand_expression(POSE_HZ=200)'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v":42)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v":34)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v":81)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\hand_expression.v":38)
+Compiling module 'lesson_event_pipeline'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lesson_event_pipeline.v":3)
+Compiling module 'duo27_lesson'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo27_lesson.v":1)
+Compiling module 'duo04_lesson'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_lesson.v":1)
+Compiling module 'score_lesson'("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\score_lesson.v":2)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\top_duo04.v":656)
+NOTE  (EX0101) : Current top module is "top_duo04"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+WARN  (IF0007) : Attribute value of 'syn_ramstyle/syn_romstyle' is not applicable("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\duo04_panel.v":32)
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "release_button" instantiated to "pedal" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_controls.v":57)
+WARN  (NL0002) : The module "release_button" instantiated to "wrist[0].key" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_controls.v":62)
+WARN  (NL0002) : The module "release_button" instantiated to "wrist[1].key" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\performance_controls.v":62)
+WARN  (NL0002) : The module "sine_lut" instantiated to "fm_modulator" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\four_timbres.v":35)
+WARN  (NL0002) : The module "dual_note_map" instantiated to "live_map" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":17)
+WARN  (NL0002) : The module "dual_note_map" instantiated to "live_map" is swept in optimizing("C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\rtl\lite_hand_gesture.v":17)
+[95%] Generate netlist file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\impl\gwsynthesis\tanglab_duo04_key30_linkfix331.vg" completed
+[100%] Generate report file "C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\fpga\duo04-key30-linkfix331\impl\gwsynthesis\tanglab_duo04_key30_linkfix331_syn.rpt.html" completed
+GowinSynthesis finish

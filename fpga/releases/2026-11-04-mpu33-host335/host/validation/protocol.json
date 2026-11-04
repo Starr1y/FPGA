@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "wrong hand/note still sent to board, no PC judging",
+    "short pulse uses existing mouse49/76 path",
+    "stale position/CRC/feedback rejected before send",
+    "waits for changed board counters"
+  ],
+  "hardware": "not tested"
+}

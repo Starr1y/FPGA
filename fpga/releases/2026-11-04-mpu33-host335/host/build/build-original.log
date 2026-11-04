@@ -1,0 +1,105 @@
+501 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.7
+501 INFO: Python: 3.12.14
+864 INFO: Platform: Windows-11-10.0.26200-SP0
+864 INFO: Python environment: C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\.venv
+866 INFO: wrote C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\TangLab.spec
+881 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\key30-keyboard335-work\\source',
+ 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip',
+ 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs',
+ 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib',
+ 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python',
+ 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv',
+ 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages',
+ 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages',
+ 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\key30-keyboard335-work\\source']
+1945 INFO: Appending 'datas' from .spec
+1949 INFO: checking Analysis
+1949 INFO: Building Analysis because Analysis-00.toc is non existent
+1949 INFO: Looking for Python shared library...
+1949 INFO: Using Python shared library: C:\Users\LPC\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python312.dll
+1949 INFO: Running Analysis Analysis-00.toc
+1949 INFO: Target bytecode optimization level: 0
+1949 INFO: Initializing module dependency graph...
+1951 INFO: Initializing module graph hook caches...
+1976 INFO: Analyzing modules for base_library.zip ...
+4996 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5080 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7066 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7274 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8847 INFO: Caching module dependency graph...
+8886 INFO: Analyzing C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\source\lite29.py
+8931 INFO: Processing standard module hook 'hook-numpy.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9545 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9760 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9910 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10129 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10797 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10873 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+11466 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12128 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+12130 INFO: SetuptoolsInfo: initializing cached setuptools info...
+14419 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+14751 INFO: Processing standard module hook 'hook-pyqtgraph.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+1251 WARNING: Failed to collect submodules for 'pyqtgraph.opengl' because importing 'pyqtgraph.opengl' raised: ModuleNotFoundError: No module named 'OpenGL'
+18281 INFO: hook-pyqtgraph: selected 'PySide6' as the only available Qt bindings.
+18376 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+18395 INFO: Processing standard module hook 'hook-PySide6.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+18407 INFO: Processing standard module hook 'hook-shiboken6.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+18556 INFO: Processing standard module hook 'hook-PySide6.QtNetwork.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+22176 INFO: Processing standard module hook 'hook-PySide6.QtCore.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+27355 INFO: Processing standard module hook 'hook-PySide6.QtGui.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+54404 INFO: Processing standard module hook 'hook-PySide6.QtWidgets.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+59473 INFO: Processing standard module hook 'hook-PySide6.QtSvg.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+60175 INFO: Processing standard module hook 'hook-PySide6.QtOpenGLWidgets.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+60916 INFO: Processing standard module hook 'hook-PySide6.QtTest.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+62500 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+63807 INFO: Processing standard module hook 'hook-jsonschema.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+64225 INFO: Processing standard module hook 'hook-jsonschema_specifications.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+64316 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+64403 INFO: Processing standard module hook 'hook-PySide6.QtPdf.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+66055 INFO: Processing module hooks (post-graph stage)...
+67736 INFO: Processing standard module hook 'hook-PySide6.QtOpenGL.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+73598 INFO: Performing binary vs. data reclassification (254 entries)
+73765 INFO: Looking for ctypes DLLs
+73792 WARNING: Ignoring /System/Library/Frameworks/IOKit.framework/IOKit imported from C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\.venv\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+73792 WARNING: Ignoring /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation imported from C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\.venv\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+73816 INFO: Analyzing run-time hooks ...
+73820 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+73824 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+73828 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+73831 INFO: Including run-time hook 'pyi_rth_pyside6.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+73833 INFO: Processing pre-find-module-path hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+73838 INFO: Processing standard module hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+73843 INFO: Including run-time hook 'pyi_rth_pyqtgraph_multiprocess.py' from 'C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+73861 INFO: Creating base_library.zip...
+73886 INFO: Looking for dynamic libraries
+75539 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\LPC\\Desktop\\fpga_gowin\\bno085_pc_tool\\.venv\\Lib\\site-packages\\shiboken6', 'C:\\Users\\LPC\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\numpy.libs']
+75539 INFO: Extra DLL search directories (PATH): []
+78536 INFO: Warnings written to C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\build\TangLab\warn-TangLab.txt
+78602 INFO: Graph cross-reference written to C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\build\TangLab\xref-TangLab.html
+78650 INFO: checking PYZ
+78651 INFO: Building PYZ because PYZ-00.toc is non existent
+78651 INFO: Building PYZ (ZlibArchive) C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\build\TangLab\PYZ-00.pyz
+79265 INFO: Building PYZ (ZlibArchive) C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\build\TangLab\PYZ-00.pyz completed successfully.
+79278 INFO: checking PKG
+79278 INFO: Building PKG because PKG-00.toc is non existent
+79278 INFO: Building PKG (CArchive) TangLab.pkg
+79328 INFO: Building PKG (CArchive) TangLab.pkg completed successfully.
+79330 INFO: Bootloader C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+79330 INFO: checking EXE
+79330 INFO: Building EXE because EXE-00.toc is non existent
+79330 INFO: Building EXE from EXE-00.toc
+79330 INFO: Copying bootloader EXE to C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\build\TangLab\TangLab.exe
+79343 INFO: Copying icon to EXE
+79353 INFO: Copying 0 resources to EXE
+79353 INFO: Embedding manifest in EXE
+79361 INFO: Appending PKG archive to EXE
+79366 INFO: Fixing EXE headers
+79423 INFO: Building EXE from EXE-00.toc completed successfully.
+79426 INFO: checking COLLECT
+79426 INFO: Building COLLECT because COLLECT-00.toc is non existent
+79427 INFO: Building COLLECT COLLECT-00.toc
+80450 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+80455 INFO: Build complete! The results are available in: C:\Users\LPC\Desktop\fpga_gowin\bno085_pc_tool\key30-keyboard335-work\build\dist
+EXE_BUILD_COMPLETE bno085_pc_tool\dist\TangLab-数字教学3.3.5

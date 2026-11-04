@@ -1,0 +1,41 @@
+{
+  "firmware": "DUO04 KEY30 L331 / 3.3.1 connection fix",
+  "host": "TangLab 3.3.5",
+  "archive_date": "2026-11-04",
+  "top": "top_duo04",
+  "device": "GW5AST-LV138PG484AC1/I0",
+  "core_mhz": 50,
+  "audio_hz": 48000,
+  "display": "1024x600",
+  "uart_baud": 921600,
+  "bitstream_generated": true,
+  "implementation_completed_at": "2026-11-03 18:18:35",
+  "setup_violated_endpoints": 238,
+  "hold_violated_endpoints": 0,
+  "worst_setup_slack_ns": -5.009,
+  "timing_pass": false,
+  "PR1014_retained": true,
+  "resources": {
+    "Logic": {
+      "used": 75383,
+      "total": 138240
+    },
+    "Register": {
+      "used": 32626,
+      "total": 139095
+    },
+    "BSRAM": {
+      "used": 140,
+      "total": 340
+    },
+    "DSP": {
+      "used": 106,
+      "total": 298
+    }
+  },
+  "bitstream_sha256": "18bb7d657e181285b2c0535deb488af359cf716d10a12a9cb3230145315f3ef3",
+  "rtl_newer_than_bitstream": [],
+  "hardware_validation": "not rerun during this packaging task",
+  "source_to_netlist_provenance": "not independently rebuilt in this task",
+  "historical_BUILD_STATUS": "project/BUILD_STATUS.json was written before EDA; use this file and reports for the saved implementation result"
+}

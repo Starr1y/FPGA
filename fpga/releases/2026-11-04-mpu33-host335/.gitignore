@@ -1,0 +1,8 @@
+**/__pycache__/
+**/*.pyc
+**/ai-key.dpapi
+**/ai-settings.json
+**/.agent-session.json
+**/.env*
+**/build-output/
+**/dist/

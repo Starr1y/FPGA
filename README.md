@@ -1,6 +1,18 @@
 # TangLab：FPGA 姿态选音乐器
 
-当前发布：**V14 / 2026-11-02，左手 MPU6050 + 右手 BNO085，外接按钮发声**。不是双 MPU6050。正式演奏链路由 FPGA 执行，PC 上位机用于调试与曲谱导入。
+## 最新双MPU完整主线配套归档 2026-11-04
+
+新增 **33／3.3.1双MPU6050连接修复工程＋TangLab 3.3.5数字教学上位机**，包含可浏览RTL/ROM/约束、上位机源码及构建入口、现有`.fs`、原始报告、完整便携程序和SHA256。
+
+- [版本目录与接线、使用说明](fpga/releases/2026-11-04-mpu33-host335/README.md)
+- [完整配套ZIP](fpga/releases/2026-11-04-mpu33-host335/downloads/TangLab-MPU33-Host335-complete.zip)
+- [归档状态](fpga/releases/2026-11-04-mpu33-host335/IMPLEMENTATION_STATUS.json) · [本次打包及离线检查](fpga/releases/2026-11-04-mpu33-host335/PUBLICATION_CHECKS.json)
+
+该分支为双MPU、四音色、32复音、S1/S2、和弦、整体波形和AI曲谱教学完整主线，区别于下方V14混合传感器冻结成果。现有位流已生成，但报告仍有setup违例238、最差−5.009ns、PR1014，**未标记为时序闭环稳定版**。本次未运行EDA或自动烧录，也未覆盖`fpga/current`或旧上位机。
+
+## 原V14冻结成果说明
+
+原冻结发布：**V14 / 2026-11-02，左手 MPU6050 + 右手 BNO085，外接按钮发声**。不是双 MPU6050。正式演奏链路由 FPGA 执行，PC 上位机用于调试与曲谱导入。
 
 - [当前工程与操作](fpga/current/README.md) · [位流](fpga/current/bitstream/MPU_LEFT_YFORWARD_V14_TIMING_PASS.fs)
 - [三分钟演示拍摄脚本](docs/三分钟演示拍摄脚本.md)

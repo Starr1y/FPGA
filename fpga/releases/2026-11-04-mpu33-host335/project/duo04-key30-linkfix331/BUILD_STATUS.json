@@ -1,0 +1,12 @@
+{
+  "version": "3.3.1",
+  "tests": {
+    "tb_linkfix331": "TB_PASS old75 periodic reset reproduced,new75 200Hz>1s stable,no timeout widening,bus failure retained,68 DATA_RDY timeout retained",
+    "tb_who75_33": "TB_PASS all256 identity values:68/75 accepted,other254 rejected",
+    "tb_linkfix331_pins": "TB_PASS real I2C START/repeatedSTART/ACK14bytes:WHO75 noDRDY+68 standard,200Hz schedule,bus disconnect isolation,failure register capture"
+  },
+  "synthesis": "not_run",
+  "place_route": "not_run",
+  "hardware": "not_tested",
+  "known_baseline_setup_violations": 238
+}

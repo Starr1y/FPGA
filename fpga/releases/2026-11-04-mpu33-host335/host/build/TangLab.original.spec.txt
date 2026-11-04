@@ -1,0 +1,44 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/key30-keyboard335-work/source/lite29.py'],
+    pathex=[],
+    binaries=[],
+    datas=[('C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/key30-keyboard335-work/source/score_assets', 'score_assets'), ('C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/.venv/Lib/site-packages/PySide6/translations/qtbase_zh_CN.qm', 'PySide6/translations'), ('C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/key30-keyboard335-work/source/theme_assets', 'theme_assets')],
+    hiddenimports=['serial.tools.list_ports_windows'],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=['matplotlib', 'scipy', 'pandas', 'torch', 'tensorflow', 'cv2', 'IPython', 'notebook', 'pytest', 'tkinter', 'PyQt5', 'PyQt6', 'PySide2'],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    [],
+    exclude_binaries=True,
+    name='TangLab',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name='TangLab',
+)

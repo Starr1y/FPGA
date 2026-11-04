@@ -1,0 +1,17 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov  3 16:42:41 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_who75_33_sim/xsim_script.tcl
+# xsim {tb_who75_33_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB_PASS all256 identity values:68/75 accepted,other254 rejected
+$finish called at time : 7686 ns : File "C:/Users/LPC/Desktop/fpga_gowin/bno085_pc_tool/fpga/duo04-key30-linkfix331/tb/tb_who75_33.sv" Line 12
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov  3 16:42:43 2026...

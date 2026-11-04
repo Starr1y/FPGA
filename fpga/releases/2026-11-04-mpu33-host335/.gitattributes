@@ -1,0 +1,4 @@
+* -text -whitespace
+*.fs binary
+*.zip binary
+*.png binary

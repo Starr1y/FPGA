@@ -1,0 +1,24 @@
+{
+  "format": "tanglab.score",
+  "version": 2,
+  "title": "三档练习",
+  "tempo_bpm": 90,
+  "steps": [
+    {
+      "hand": "right",
+      "midi": 60,
+      "hold_ms": 500
+    },
+    {
+      "hand": "left",
+      "midi": 48,
+      "hold_ms": 500
+    },
+    {
+      "hand": "right",
+      "midi": 72,
+      "hold_ms": 500,
+      "rest_ms": 200
+    }
+  ]
+}

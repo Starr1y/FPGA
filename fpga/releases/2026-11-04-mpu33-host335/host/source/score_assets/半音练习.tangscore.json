@@ -1,0 +1,39 @@
+{
+  "format": "tanglab.score",
+  "version": 1,
+  "title": "半音与低音练习",
+  "tempo_bpm": 90,
+  "ticks_per_quarter": 480,
+  "steps": [
+    {
+      "hand": "right",
+      "midi": 36,
+      "duration_ticks": 240
+    },
+    {
+      "hand": "right",
+      "midi": 49,
+      "duration_ticks": 240
+    },
+    {
+      "hand": "right",
+      "midi": 61,
+      "duration_ticks": 240
+    },
+    {
+      "hand": "right",
+      "midi": 66,
+      "duration_ticks": 240
+    },
+    {
+      "hand": "right",
+      "midi": 72,
+      "duration_ticks": 240
+    },
+    {
+      "hand": "right",
+      "midi": 83,
+      "duration_ticks": 240
+    }
+  ]
+}

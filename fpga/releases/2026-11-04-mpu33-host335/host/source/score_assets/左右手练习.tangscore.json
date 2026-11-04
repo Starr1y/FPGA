@@ -1,0 +1,49 @@
+{
+  "format": "tanglab.score",
+  "version": 1,
+  "title": "左右手短练习",
+  "tempo_bpm": 90,
+  "ticks_per_quarter": 480,
+  "steps": [
+    {
+      "hand": "left",
+      "midi": 60,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "right",
+      "midi": 62,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "left",
+      "midi": 64,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "right",
+      "midi": 65,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "left",
+      "midi": 67,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "right",
+      "midi": 69,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "left",
+      "midi": 71,
+      "duration_ticks": 480
+    },
+    {
+      "hand": "right",
+      "midi": 72,
+      "duration_ticks": 480
+    }
+  ]
+}
